@@ -1,0 +1,282 @@
+Interviewer:
+So, what is, can you please tell me what is your role on campus?
+
+Interviewee:
+00:14
+So, I am doing PhD in Computer Science.
+Also, I'm working as a graduate teaching assistant.
+Yeah, that.
+
+Interviewer:
+00:25
+Yo!
+Okay. Then, how familiar are you with PFK?
+
+Interviewee:
+00:32
+So, previously, when I started my PhD in computer science, so my lab was at PFT, Multisarch Lab.
+And, all my classes are also, like, most of the classes are held in PFT, so I'm, like, very familiar with it.
+
+Interviewer:
+00:51
+Okay, then, can you, please, tell me that how would you describe the navigating inside PFT?
+
+Interviewee:
+01:04
+the navigation inside the PFT is… is okay for me. It was very difficult at first when I was new.
+So, in the first semester, it was… Difficult to find.
+any room. But after that, it became easy.
+
+Interviewer:
+01:24
+Okay, can you, describe a specific time or event when you had trouble in finding a room or office inside PFT?
+
+Interviewee:
+01:35
+So, basically, when we have the first class in every semester, so the room is different in every class.
+So, at the, like, in the first class, it is very difficult to find the room. So, the PFT has several zones, 1, 2, and 3.
+So, like, whenever we see the room number, like, for example, 1253, something like that, so I know it's in first floor, then in second zone, then the room number is 53. So then I started… first I go to that zone.
+And then I started looking at the number. So…
+it is very difficult at the beginning, like, I didn't know about it, like, there is zone 1, 2, and 3.
+So, if the people know about it at the beginning, so it will be easy for them to, like, find that home.
+But it was very difficult. For example, recently, my room has changed. So, the room was 1221, and then I did not know where the location is. So, after going to Zone 2, I have to look for every room, and then find the 21 number room.
+
+Interviewer:
+02:48
+In that case, how much extra time did you require?
+
+Interviewee:
+02:55
+I generally come before the class, 5 to 10 minutes, so it covers around, I think, 5 to 10 minutes.
+
+Interviewer:
+03:04
+Hmm.
+And did you have ever stuck in somewhere inside PFT?
+
+Interviewee:
+03:11
+Stuck? No, I haven't stuck in any cases.
+
+Interviewer:
+03:20
+Okay, so, when you cannot find the location inside PFT, then what do you usually do?
+
+Interviewee:
+03:28
+So, if I cannot find… so…
+I just go to the location, like, as I told you, so we have zone numbers, so I go to that zone, and on the top, there is written, like, from this number to this number, there in left or right.
+So, I go and follow the direction that is given on the top, and then…
+I tried to find the room.
+
+Interviewer:
+03:56
+Okay, have you ever used any kind of static map?
+
+Interviewee:
+04:00
+I used once.
+before my PhD qualifying exam, so one room was booked for my exam, so I didn't recognize that room, so I used the PFD map, and then I found out the location that where the room is.
+
+Interviewer:
+04:20
+In that time, yeah, did you need someone to help?
+
+Interviewee:
+04:26
+No, like, when I used the map.
+So, it was easy to understand. When you see the map, then it will be easy to, like, locate the room number there, because the room numbers are clearly given on that map.
+
+Interviewer:
+04:41
+Do you use your phone to search?
+
+Interviewee:
+04:45
+No, I do not use my phone for searching. I prepare myself previously, because PFT is very big, and if I do not prepare myself from, like, from before.
+So it will be difficult to find at that time. So, I generally look for the room before the class.
+That'll be for my exam.
+
+Interviewer:
+05:09
+Okay, then please tell me that what parts of PFT feel most confusing or slow to navigate for you.
+
+Interviewee:
+05:20
+For PFT, I think… It is difficult for the…
+I think it's for the third floor, because there are some stairs that only goes to second floor, not to the third floor, so sometimes it is very difficult. Like, if you're moving from floor number 2 to floor number 3,
+And, you will see there is not, like, stairs for that one.
+But, like, you have to go around another way and then find the lift or stairs.
+For the third floor. So I think these are the confusing thing.
+Like, they're not Enough, like, locations or, like, availability or accessibility to reach from one level to another level.
+
+Interviewer:
+06:08
+K, so…
+For now, room number… in the… in case of room number and signage, what do you feel?
+It is, what do you feel that… that confused you most, or do you feel anything missing in that case?
+
+Interviewee:
+06:26
+The only missing thing I felt like is…
+The people or the students should know about the sequence for the room numbers from before, like, when they are getting admitted to the…
+university or the department, department also should inform them, like, how the PFT location works. Otherwise, it will be very difficult, because, as I told you, like, 2217, you will not understand what does 2217 means.
+And where you have to go. So, it should be, like, clear for the student that the first two means floor number, the second two means zone number, and the last two means the room number. So I think this should be given at the beginning, or at the beginning of the semester.
+Interviewer:
+07:16
+So, do you ever feel that hallways… I mean, do hallways look similar to you? Making it hard to tell that what you are?
+
+Interviewee:
+07:24
+Yes, the hallways, I sometimes feel they are very similar.
+There are… in the first floor, there are two hallways, and they look exactly similar, so it will be very confusing if someone do not, like, check the room number.
+Before entering the hallway, or the location, or the symbols before entering the hallway.
+
+Interviewer:
+07:49
+What cues help you the most when navigating inside a building?
+
+Interviewee:
+07:56
+So, when I navigate inside the building, I follow the rules.
+Like, and also there are some symbols at the top of, like, all the hallways, so if you see there, there are, like, room number from this room number to that room number. This will be in this direction, so I just follow those directions and try to find the room I'm looking for.
+
+Interviewer:
+08:24
+About the landmarks, like, stairs, elevators, vending machine, glass doors, is that… is that helping for you?
+
+Interviewee:
+08:35
+Sometimes, yes, they help for me, sometimes the vending machine.
+Does not work. For example, I'm also teaching one class, so in that class, the students
+And have to bring the blue book, so if they forgot, they can also buy it from the vending machine of PFT. But sometimes the vending machine does not work, and they could not buy it from there.
+So I think, it sometimes helps, but not necessary all the time.
+
+Interviewer:
+09:08
+What do you feel about asking people or using MAP during this navigation process? I mean, is that helpful for you?
+What do you feel about that?
+
+Interviewee:
+09:20
+I haven't asked for anyone for the room location yet, but if there is a map, then it will be helpful.
+So that we don't have to, like, think which direction we have to go, and, like, we don't have to brainstorm just to find our room.
+
+Interviewer:
+09:41
+And… Do you have any preferences when navigating buildings?
+
+Interviewee:
+09:47
+Not much. I try to use the shortest path so that I don't have to, like, move around here and there.
+So, like, when I start my journey inside the PFD, I try to use the shortest path from the gate to that room.
+
+Interviewer:
+10:10
+Okay, I mean, what about, elevator… among the elevators and stairs, what do you prefer most?
+
+Interviewee:
+10:17
+Now, among these two, I prefer elevators.
+I don't profess tear, so…
+And they love it to serve somehow good.
+there were some issues previously with elevators. They were closed, but now they're working.
+And my classes are mostly in the first floor, so I don't have to use them much.
+
+Interviewer:
+10:35
+Okay.
+
+Interviewee:
+10:35
+But if I have to use, I always prefer elevators.
+
+Interviewer:
+10:41
+Okay, as you have said, that you are… you prefer the shortest path most, so,
+In that case, if you, need to pass through the crowded areas, are that okay for you, or you don't, I mean, you try to avoid the crowd?
+Here you go, Simon.
+
+Interviewee:
+10:59
+Oh.
+Generally, I try to avoid the crowded area.
+So that, like, I can reach faster to the room.
+Because I don't like to, like, go inside the crowd and then look for the loop. So I would prefer less crowded area.
+
+Interviewer:
+11:19
+Have you ever struggled to find an accessible road inside PFT, like an elevator, or automatic doors, or a…
+
+Interviewee:
+11:28
+I think, I haven't, checked about the ramp.
+But I haven't, seen any automated door yet in the PFT.
+But, other than that, the elevators are good.
+
+Interviewer:
+11:46
+what I have done.
+So, as a pedestrian, do you use any digital navigation system outdoors, like Google Maps or Apple Maps?
+
+Interviewee:
+11:56
+So, yes, I use Google Maps all the time when… I'm navigating or going anywhere.
+
+Interviewer:
+12:03
+So, what do you like about that system?
+
+Interviewee:
+12:08
+So, for Google Map, you can, like.
+First, you can use the map for, like, from going from one place to another place, and one important thing I like is if I miss somehow, like, a turn, then they give me an alternate path to reach to my location, so I like that one.
+
+Interviewer:
+12:35
+Okay, so… The voice guidance, or…
+the step-by-step direction, what do you feel about that?
+
+Interviewee:
+12:47
+For the voice, it is good. So, like, the voice always tell me, like, there will be a turn next, so I am prepared before that I have to take a turn. So, I like that one also.
+The voice one, and also the step-by-step navigation, that is also good, but whenever we are, like, giving the direction, so the… it automatically shows the next step once we reach into one step.
+So, this… both of the functions for the Google Map is very good.
+
+Interviewer:
+13:24
+Tim?
+So, would you use a digital indoor navigation system for PFT?
+
+Interviewee:
+13:32
+If there is one, I will choose.
+But, not regularly, because once I know the location of my room, then I might not have to use it for the whole semester. But at the beginning of the semester, yes, definitely I will use it.
+
+Interviewer:
+13:50
+So… So, if you star, if you,
+start using a digital indoor navigation system, and if you stop it somehow, then what might stop you from using it? What do you think?
+
+Interviewee:
+14:07
+The reason I told you, so…
+The reason is, like, when… for the indoor, the location is, like, there are not much places to visit, so there is only a small, several places.
+And once you know the route from one place to another place, or one room to another room, then you do not need to use the app all the time, once you know the route. So, I think this might be the reason, like, once I know the route, like, from this gate to my room, then I will not use it in the next day.
+
+Interviewer:
+14:43
+Okay, those are all of my questions. Is there anything else that you would like to share about navigating inside PFT?
+Anything that we did not cover?
+
+Interviewee:
+14:56
+No, I do not have any more questions.
+
+Interviewer:
+15:00
+Okay, thank you so much for your time.
+
+Interviewee:
+15:03
+Thank you.

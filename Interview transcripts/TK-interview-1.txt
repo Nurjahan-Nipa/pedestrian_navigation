@@ -1,0 +1,275 @@
+Interviewer: Okay, so, what, can you please tell me what is your role on campus?
+
+Interviewee:
+00:15
+Okay, so…
+
+Interviewer: 
+00:16
+anyways. Hmm.
+
+Interviewee:
+00:17
+I'm a graduate student. Currently, I am doing my PhD in computer science, and I'm also working as a research assistant.
+
+Interviewer: 
+00:27
+Okay.
+Then, can you please tell me that how familiar are you with PFT?
+
+Interviewee:
+00:34
+Okay, so, I'm familiar… quite familiar with PFT, especially with the second floor, because my lab is situated in the second floor.
+And also, I am familiar with the cafeteria that is called Panera. I used to go there, so these two places are most familiar thing in PFT.
+
+Interviewer: 
+00:59
+Yeah, then what types of… okay, you already said that what types of places usually look for PFT?
+So then, I would love to ask you, that how would you describe your navigating inside PFT?
+
+Interviewee:
+01:16
+Okay, so, I can give you two different pictures. So, at first, when I was a new student, especially I… inside of PFT, I look into the different banners and sign boards.
+And the signboards, they, give different directions, like the numbers, suppose, from 3 to 1023 to 50, these will be in the east direction. This would be in the, left direction, right direction. So, there is numbers, and there is arrow. So, with that, I, actually figured it out.
+And when I got, familiar with, the route, then actually I figured out the shortest path, and then, currently I'm using the shortest path to go my lab and
+The cafeteria, I don't, need to look at the signs and banners.
+
+Interviewer: 
+02:20
+Can you, please, describe a specific time or event.
+When you had trouble in finding a room, or… office inside PFT?
+
+Interviewee:
+02:35
+Okay, so, Gary, was a situation
+Like this. We had to find a room of one of our professors.
+And we couldn't, find it. So, from second floor to third floor, we took the elevator, and then we followed the numbers and the arrows, and… but it ended up with a different segment of the building.
+Then we actually reheard back, where we, where, started, and, it happened at least 2 or 3 times. Then, finally, we figured out, yeah, this is the right direction we have to go. And that's how… this was the situation, yeah.
+
+Interviewer: 
+03:25
+So in that, in that, time, did you start anywhere?
+
+Interviewee:
+03:32
+Sorry?
+
+Interviewer: 
+03:34
+Did you stuck anywhere, while, at that time?
+
+Interviewee:
+03:38
+It's great.
+
+Interviewer: 
+03:39
+Correct.
+
+Interviewee:
+03:40
+Yes, yes, so we stuck, we stuck, in the, starting place, or where we started, and we, come back again and again, and that, place, and, like, starting again. Like, it's more like,
+We started from point A, and we are trying to reach point B. So, while reaching point B, we actually divert.
+into… in different directions. Then, we thought that, why not, let's start from, point A again, so that we can go to the right direction.
+
+Interviewer: 
+04:19
+Fair.
+So, what do you feel at that time? Did you take extra time?
+Or…
+
+Interviewee:
+04:29
+So, I felt like, it is taking my, time, number one, and number two, it is giving me cognitive load, and number three, it's actually making me confu- confused. So, though there is
+Lots of signs and numbers and arrows, but sometimes it's messy, and sometimes it actually doesn't
+Showcase its actual purpose.
+
+Interviewer: 
+05:01
+Okay.
+So, now I would love to ask you that
+when you, cannot find a location inside PFT, then what do you usually do?
+
+Interviewee:
+05:17
+Okay, so, at first, the Google… I used the Google Map, because the Google Map actually shows the entire building's 3D map, and the specific room numbers, and, like.
+In which segment the room is situated.
+And, after that, I figure out, which floor is it, like, the rooms starting with 2, so they are in second floor, the room starting with 3, they are…
+On the third floor. And, this is how, I actually get a, overview, I mean, the whole picture of the building, and then I start from
+Start using the signs and the banners and the arrows.
+
+Interviewer: 
+06:07
+Okay.
+So, Did you take any kind of help from someone?
+
+Interviewee:
+06:14
+Yeah, at first, I took help from two or three of my friends. They were experienced.
+So, I took, their help to navigate, to the drinking water center, I mean, the drinking water corner, and also the room of my advisor and, the lab.
+
+Interviewer: 
+06:43
+So, as you have told me that you use Google Maps, so I would love to ask you that which device you usually use to wire… access that map?
+Which kind of device do you use?
+
+Interviewee:
+06:55
+So, I usually use the mobile device, and from mobile device, I, used both Android and iOS.
+
+Interviewer: 
+07:03
+Oh, okay.
+Did you ever use any kind of static map?
+
+Interviewee:
+07:08
+No, I never used a static map, because, I think Google Maps serves my purpose, because it
+Shows the real-time, identification, like, real-time, location where you are actually standing, and based on that, you can figure out, you know, the direction easily.
+
+Interviewer: 
+07:30
+Okay, then,
+Then please tell me that what parts of PFT you feel most confusing, or you feel that it can slow your navigation process?
+
+Interviewee:
+07:46
+So, it's more like the, purple part of the PFT. So, it's…
+The purple part and the third floor, especially the third floor makes me more confused, because, the rooms…
+And the rooms are okay, but the signs and the arrows are confusing, like, in what direction should I go? And, from there, which number will start, and where the other rooms are situated, yeah.
+
+Interviewer: 
+08:23
+Okay, so,
+Do the hallways look similar to you? I mean, making it hard to tell that while you are…
+Have you ever faced that?
+
+Interviewee:
+08:36
+Yes, the hallway, quite similar, though they are separated by different, three different colors, but sometimes they look similar.
+
+Interviewer: 
+08:50
+How about the floor transition? Like, stairs or elevators? Are they confusing to you, or you can understand?
+
+Interviewee:
+09:00
+I can understand the stairs and elevators, there is no problem with that, but I'm confused with the direction.
+
+Interviewer: 
+09:10
+Okay. Are you, are you, comfortable with the landmarks about, I mean, with the landmarks about elevators, stairs?
+Stairwells, are you okay with that?
+
+Interviewee:
+09:24
+Yes.
+
+Interviewer: 
+09:24
+Do you think that it helps?
+
+Interviewee:
+09:26
+Yes, there, that helps, because, you can actually…
+See, yeah, this is the elevator, here are the stairs. And, like, the exit sign actually helps me a lot. Like, whenever I saw the exit side, I actually followed it, and then I found a stair.
+
+Interviewer: 
+09:52
+Okay.
+Can you please tell me that what… what cues help you the most when navigating inside a building?
+
+Interviewee:
+10:02
+So, in terms of, PFT, I will say the exit sign, number one, and then number two, the
+arrows.
+And number 3, the numbers, the room numbers.
+
+Interviewer: 
+10:19
+Okay.
+So, can you please tell me, that do you have any preferences when navigating a building?
+
+Interviewee:
+10:34
+Preferences of what? I mean, the science.
+
+Interviewer: 
+10:37
+I mean, a sign is, it could be elevator versus stairs, or shortest path versus easiest path.
+To avoid some kind of crowded area,
+this kind of, preferences, I mean, do you,
+Have these kind of preferences when navigating?
+
+Interviewee:
+11:01
+Okay, so as far as I am understanding, I think you are mentioning, like, I want to go to a specific place of a building, so do I have any preferences, like, which path should I take, right?
+
+Interviewer: 
+11:14
+Yes.
+
+Interviewee:
+11:15
+Okay, so yeah, I have preferences, like, I love to work
+Along the hallway, so it's more like, there are people sitting, studying, eating their lunch, so I, love to walk between them. I'm, actually comfortable with people, so I don't want to, stay away from people. So, I want to… I would prefer the hallway, walking in the hallway. And, like, elevator. Elevator, I will…
+prefer sometime when I am, like, sick or I am weak in that case, but I will especially, prefer the working,
+Walking across the hallway to reach my destination, yeah.
+
+Interviewer: 
+12:03
+Okay,
+Have you ever struggled to find an accessible road inside PFT, like an elevator, a ramp, or automatic doors?
+
+Interviewee:
+12:16
+I, found difficult
+to entering the building, because some doors are locked from inside, so there's no accessible key or something from outside.
+And I think that's for security purpose, but, yeah, this is… this was one hurdle. So, another thing, to find the elevator, sometimes I found it struggling.
+
+Interviewer: 
+12:49
+What did you do in that case?
+
+Interviewee:
+12:53
+In that case, I asked for a help, from my friends or my, advisor, so that they can actually, open the door from inside, so that I can enter.
+
+Interviewer: 
+13:08
+Okay. As a pedestrian, pedestrian, do you use any digital navigation system outdoors?
+
+Interviewee:
+13:17
+I always use Google Map. Google Map actually helps me when I am not familiar with a new place, and then I start working using the Google Map direction.
+
+Interviewer: 
+13:34
+Okay.
+What do you like about that system?
+
+Interviewee:
+13:40
+So, it actually shows you the real-time movement direction.
+And also, it will tell you, invoice system, like, go right side from, 10 meter, go left side from 10 meter, this kind of things.
+And also, you can see what kind of vehicles and public transportation are available, around you.
+
+Interviewer: 
+14:15
+Okay, so, those are all my questions. Is there anything else you would like to share about navigating inside PFT?
+That you feel that we did not cover?
+
+Interviewee:
+14:28
+No, actually, I don't have anything, but, like, if you are designing a system to navigating inside a building like PFT, so I think, it will be more, like,
+It actually depends on what kind of users are using it.
+But I am comfortable when using Google Maps and this kind of things may be more robust, and maybe there will be some additional features that actually shows the direction and, specifically in which direction should I go.
+To find a particular room, not a particular segment of the building, a particular room, yeah.
+
+Interviewer: 
+15:19
+Okay, thank you so much for your time.
+
+Interviewee:
+15:23
+Yeah, you are welcome.
