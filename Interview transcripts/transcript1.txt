@@ -1,0 +1,158 @@
+22:08:52
+So, this is an interview for our Human-Computer Interaction class.
+
+22:08:58
+We are discussing the indoor navigation experience in the Patrick F. Taylor (PFT) engineering building.
+
+22:09:12
+I’m going to ask you some questions. It may take around 15–20 minutes. Is that okay?
+
+22:09:20
+Yeah, that’s okay for me.
+
+22:09:25
+For privacy reasons, we will only record the transcript of this interview, and your name will not be included.
+
+22:09:41
+Okay, that would be great.
+
+22:09:44
+So first, let me ask about your background. What’s your role on campus? Are you a student or are you working on campus?
+
+22:09:53
+I’m a student, and I have a graduate assistantship.
+
+22:10:01
+How familiar are you with the PFT building?
+
+22:10:04
+I’ve had two classes there, so I’m kind of familiar with it.
+
+22:10:11
+How long have you been going there, and how often do you go to PFT?
+
+22:10:19
+It has been two semesters, and I go there regularly for classes.
+
+22:10:29
+When you are in PFT, what type of rooms are you usually looking for?
+
+22:10:37
+I mostly go to classrooms and attend labs. Sometimes I look for professors’ offices, and occasionally I go to Panera.
+
+22:10:52
+So mostly classrooms, and sometimes Panera or professors’ offices?
+
+22:10:57
+Yes.
+
+22:11:14
+How would you describe the process of navigating inside PFT? Is it easy or hard?
+
+22:11:29
+I think it’s relatively easy. But once, when I tried to find one of the auditoriums, it took me some time.
+
+22:11:42
+Can you tell me more about what happened?
+
+22:12:17
+I entered from a side door near the Business building, close to Panera. I followed the overhead signs that told me to go straight. But when I got there, I saw another sign and got confused.
+
+22:13:09
+The room numbers didn’t match what I expected. I turned around, and finally realized the auditorium was actually in a corner. It was close, but I had missed a left turn before reaching it.
+
+22:13:53
+How long did it take compared to if you had known where it was?
+
+22:14:19
+If I knew the room, it would take less than one minute. But it probably took about five minutes to find it the first time.
+
+22:14:42
+What did you do when you had trouble finding the room? Did you ask someone or just look at signs?
+
+22:14:54
+I’m kind of shy, so I didn’t ask anyone. I looked at the signs again and checked the room number ranges. When I noticed the numbers were going in the wrong direction, I went back and tried again until I found it.
+
+22:15:25
+What do you think is most confusing in PFT? Room numbers, signs, hallways, or floor transitions?
+
+22:16:00
+Panera is easy to find because it has a very big sign. But some room numbers are small, and you need to check door by door. The overhead hallway signs are easy to see.
+
+22:16:47
+So once you are near the area, it’s more about noticing the specific room?
+
+22:16:50
+Yes. I just missed it because I turned left too early. If I had gone straight a little more, the room was there.
+
+22:17:14
+What helps you the most when you are looking for a room in PFT?
+
+22:17:49
+I usually remember the first route I took and repeat it every time. I don’t really rely on landmarks except for major ones like Panera.
+
+22:18:09
+Do you prefer stairs or elevators?
+
+22:18:22
+Mostly stairs. If my class is upstairs, I take the stairs.
+
+22:19:26
+If your usual route is blocked, what would you do?
+
+22:19:46
+I would follow the signs and adjust. If I need to turn left, I turn left; if right, I turn right. I’ll find another way.
+
+22:20:07
+After several visits, do you feel familiar enough to always find your way?
+
+22:20:10
+Yes, after going several times, you know where to go.
+
+22:20:43
+When navigating outdoors as a pedestrian, do you use any digital navigation system like Google Maps?
+
+22:20:53
+I live very close to PFT. It takes me about six minutes to walk there, so I don’t need navigation.
+
+22:21:15
+How do you remember the path?
+
+22:21:30
+I just go the same route every time. There aren’t many choices. I cross the road and keep going straight.
+
+22:22:02
+How about navigating between buildings on campus?
+
+22:22:09
+If I can’t remember, I use Google Maps.
+
+22:22:16
+What do you like or dislike about Google Maps?
+
+22:22:40
+It generally gives good directions. Sometimes it may not give the absolute shortest path, but you can still reach your destination.
+
+22:23:12
+We are trying to develop an indoor navigation app specifically for PFT. Would you use it?
+
+22:23:32
+Yes, I would be interested.
+
+22:23:53
+What might stop you from using it?
+
+22:24:02
+If it’s slow or not accurate. Some 3D maps take too long to load or zoom, which can be frustrating.
+
+22:24:38
+The room I had trouble finding was 1202. If you enter from the Panera side, you might turn left too early and miss it.
+
+22:25:06
+Thank you for participating.
+
+22:25:10
+No problem.
+
+22:25:14
+Thank you.
