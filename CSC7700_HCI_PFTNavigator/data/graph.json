@@ -1,0 +1,2704 @@
+[
+  {
+    "id": "w_anchor_main",
+    "type": "anchor",
+    "floor": 1,
+    "nx": 0.9229,
+    "ny": 0.3799,
+    "label": "PFT Main Entrance",
+    "roomId": "",
+    "edges": [
+      "w_cor_m9"
+    ]
+  },
+  {
+    "id": "w_anchor_south",
+    "type": "anchor",
+    "floor": 1,
+    "nx": 0.4448,
+    "ny": 0.9432,
+    "label": "South Entrance",
+    "roomId": "",
+    "edges": [
+      "w_cor_c3"
+    ]
+  },
+  {
+    "id": "w_elev_a_1",
+    "type": "elevator",
+    "floor": 1,
+    "nx": 0.4596,
+    "ny": 0.31,
+    "label": "Elevator A",
+    "roomId": "",
+    "edges": [
+      "w_cor_m4",
+      "w_cor_n3"
+    ],
+    "shaftId": "elev_a"
+  },
+  {
+    "id": "w_stair_b_1",
+    "type": "stair",
+    "floor": 1,
+    "nx": 0.2313,
+    "ny": 0.31,
+    "label": "Stair B",
+    "roomId": "",
+    "edges": [
+      "w_cor_m2",
+      "w_cor_n1"
+    ],
+    "shaftId": "stair_b"
+  },
+  {
+    "id": "w_stair_c_1",
+    "type": "stair",
+    "floor": 1,
+    "nx": 0.5967,
+    "ny": 0.6507,
+    "label": "Stair C",
+    "roomId": "",
+    "edges": [
+      "w_cor_c5"
+    ],
+    "shaftId": "stair_c"
+  },
+  {
+    "id": "w_cor_n1",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2313,
+    "ny": 0.1921,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_n2",
+      "w_cor_m2",
+      "w_stair_b_1",
+      "w_d1_1367"
+    ]
+  },
+  {
+    "id": "w_cor_n2",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.341,
+    "ny": 0.1921,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_n1",
+      "w_cor_n3",
+      "w_d1_1357",
+      "w_d1_1355",
+      "w_d1_1358",
+      "w_d1_1356"
+    ]
+  },
+  {
+    "id": "w_cor_n3",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4225,
+    "ny": 0.1921,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_n2",
+      "w_cor_n4",
+      "w_cor_m4",
+      "w_elev_a_1",
+      "w_d1_1331",
+      "w_d1_1329"
+    ]
+  },
+  {
+    "id": "w_cor_n4",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.493,
+    "ny": 0.1921,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_n3",
+      "w_d1_1325",
+      "w_d1_1323"
+    ]
+  },
+  {
+    "id": "w_cor_m1",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.1149,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m2",
+      "w_d1_1375",
+      "w_d1_1280"
+    ]
+  },
+  {
+    "id": "w_cor_m2",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2313,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m1",
+      "w_cor_m3",
+      "w_cor_n1",
+      "w_stair_b_1",
+      "w_cor_s1"
+    ]
+  },
+  {
+    "id": "w_cor_m3",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.341,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m2",
+      "w_cor_m4",
+      "w_d1_1360",
+      "w_d1_1254"
+    ]
+  },
+  {
+    "id": "w_cor_m4",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4225,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m3",
+      "w_cor_m5",
+      "w_cor_n3",
+      "w_elev_a_1",
+      "w_cor_s3",
+      "w_d1_1350",
+      "w_d1_1245"
+    ]
+  },
+  {
+    "id": "w_cor_m5",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.493,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m4",
+      "w_cor_m6",
+      "w_d1_1344",
+      "w_d1_1342"
+    ]
+  },
+  {
+    "id": "w_cor_m6",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5634,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m5",
+      "w_cor_m7",
+      "w_d1_1340a"
+    ]
+  },
+  {
+    "id": "w_cor_m7",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6486,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m6",
+      "w_cor_m8",
+      "w_d1_1321",
+      "w_d1_1322",
+      "w_d1_1340"
+    ]
+  },
+  {
+    "id": "w_cor_m8",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7265,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m7",
+      "w_cor_m9",
+      "w_cor_s7",
+      "w_d1_1321a",
+      "w_d1_1311",
+      "w_d1_1300",
+      "w_d1_1330"
+    ]
+  },
+  {
+    "id": "w_cor_m9",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8525,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m8",
+      "w_anchor_main",
+      "w_d1_1269"
+    ]
+  },
+  {
+    "id": "w_cor_s1",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2313,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s2",
+      "w_cor_m2",
+      "w_cor_c1",
+      "w_d1_1225",
+      "w_d1_1221"
+    ]
+  },
+  {
+    "id": "w_cor_s2",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3188,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s1",
+      "w_cor_s3",
+      "w_d1_1212",
+      "w_d1_1218b",
+      "w_d1_1216",
+      "w_d1_1238"
+    ]
+  },
+  {
+    "id": "w_cor_s3",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.404,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s2",
+      "w_cor_s4",
+      "w_cor_m4",
+      "w_cor_c3",
+      "w_d1_1240",
+      "w_d1_1272",
+      "w_d1_1264",
+      "w_d1_1253"
+    ]
+  },
+  {
+    "id": "w_cor_s4",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4855,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s3",
+      "w_cor_s5",
+      "w_d1_1246"
+    ]
+  },
+  {
+    "id": "w_cor_s5",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5634,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s4",
+      "w_cor_s6",
+      "w_cor_c5",
+      "w_d1_1256",
+      "w_d1_1258",
+      "w_d1_1206"
+    ]
+  },
+  {
+    "id": "w_cor_s6",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6486,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s5",
+      "w_cor_s7",
+      "w_d1_1262",
+      "w_d1_1263"
+    ]
+  },
+  {
+    "id": "w_cor_s7",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7265,
+    "ny": 0.5066,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_s6",
+      "w_cor_m8",
+      "w_d1_1202",
+      "w_d1_1200"
+    ]
+  },
+  {
+    "id": "w_cor_c1",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2313,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c2",
+      "w_cor_s1"
+    ]
+  },
+  {
+    "id": "w_cor_c2",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3262,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c1",
+      "w_cor_c3",
+      "w_d1_1154"
+    ]
+  },
+  {
+    "id": "w_cor_c3",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4225,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c2",
+      "w_cor_c4",
+      "w_cor_s3",
+      "w_anchor_south"
+    ]
+  },
+  {
+    "id": "w_cor_c4",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5041,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c3",
+      "w_cor_c5",
+      "w_d1_1114",
+      "w_d1_1124"
+    ]
+  },
+  {
+    "id": "w_cor_c5",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5967,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c4",
+      "w_cor_c6",
+      "w_cor_s5",
+      "w_stair_c_1"
+    ]
+  },
+  {
+    "id": "w_cor_c6",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6746,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_c5",
+      "w_d1_1100"
+    ]
+  },
+  {
+    "id": "w_d1_1367",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.1297,
+    "ny": 0.1528,
+    "label": "Cheme Machine Shop",
+    "roomId": "1367",
+    "edges": [
+      "w_cor_n1"
+    ]
+  },
+  {
+    "id": "w_d1_1357",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2965,
+    "ny": 0.1354,
+    "label": "Thermal System Lab",
+    "roomId": "1357",
+    "edges": [
+      "w_cor_n2"
+    ]
+  },
+  {
+    "id": "w_d1_1355",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2965,
+    "ny": 0.2166,
+    "label": "Thermal Science Lab",
+    "roomId": "1355",
+    "edges": [
+      "w_cor_n2"
+    ]
+  },
+  {
+    "id": "w_d1_1358",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3632,
+    "ny": 0.1467,
+    "label": "Instrumentation Lab",
+    "roomId": "1358",
+    "edges": [
+      "w_cor_n2"
+    ]
+  },
+  {
+    "id": "w_d1_1356",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3632,
+    "ny": 0.2166,
+    "label": "Materials Lab",
+    "roomId": "1356",
+    "edges": [
+      "w_cor_n2"
+    ]
+  },
+  {
+    "id": "w_d1_1331",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4374,
+    "ny": 0.0978,
+    "label": "Enchanced Oil Recovery",
+    "roomId": "1331",
+    "edges": [
+      "w_cor_n3"
+    ]
+  },
+  {
+    "id": "w_d1_1329",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4374,
+    "ny": 0.1572,
+    "label": "Rock Mechanics",
+    "roomId": "1329",
+    "edges": [
+      "w_cor_n3"
+    ]
+  },
+  {
+    "id": "w_d1_1325",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5337,
+    "ny": 0.1293,
+    "label": "Concrete Lab",
+    "roomId": "1325",
+    "edges": [
+      "w_cor_n4"
+    ]
+  },
+  {
+    "id": "w_d1_1321",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6301,
+    "ny": 0.1135,
+    "label": "Strength & Materials Lab",
+    "roomId": "1321",
+    "edges": [
+      "w_cor_m7"
+    ]
+  },
+  {
+    "id": "w_d1_1323",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5337,
+    "ny": 0.1921,
+    "label": "Germano Computer Lab",
+    "roomId": "1323",
+    "edges": [
+      "w_cor_n4"
+    ]
+  },
+  {
+    "id": "w_d1_1322",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6301,
+    "ny": 0.1921,
+    "label": "Strength & Materials Lab 2",
+    "roomId": "1322",
+    "edges": [
+      "w_cor_m7"
+    ]
+  },
+  {
+    "id": "w_d1_1321a",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7116,
+    "ny": 0.1135,
+    "label": "Asphalt Lab",
+    "roomId": "1321A",
+    "edges": [
+      "w_cor_m8"
+    ]
+  },
+  {
+    "id": "w_d1_1311",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7858,
+    "ny": 0.1135,
+    "label": "Geotech Lab",
+    "roomId": "1311",
+    "edges": [
+      "w_cor_m8"
+    ]
+  },
+  {
+    "id": "w_d1_1375",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.1038,
+    "ny": 0.2969,
+    "label": "Restaurant",
+    "roomId": "1375",
+    "edges": [
+      "w_cor_m1"
+    ]
+  },
+  {
+    "id": "w_d1_1360",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2928,
+    "ny": 0.2795,
+    "label": "System Integration Classroom",
+    "roomId": "1360",
+    "edges": [
+      "w_cor_m3"
+    ]
+  },
+  {
+    "id": "w_d1_1254",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3632,
+    "ny": 0.2795,
+    "label": "Human Factors Lab",
+    "roomId": "1254",
+    "edges": [
+      "w_cor_m3"
+    ]
+  },
+  {
+    "id": "w_d1_1350",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4225,
+    "ny": 0.2795,
+    "label": "Campus Computer Lab",
+    "roomId": "1350",
+    "edges": [
+      "w_cor_m4"
+    ]
+  },
+  {
+    "id": "w_d1_1344",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5115,
+    "ny": 0.2795,
+    "label": "Room 1344",
+    "roomId": "1344",
+    "edges": [
+      "w_cor_m5"
+    ]
+  },
+  {
+    "id": "w_d1_1342",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5115,
+    "ny": 0.3581,
+    "label": "Room 1342",
+    "roomId": "1342",
+    "edges": [
+      "w_cor_m5"
+    ]
+  },
+  {
+    "id": "w_d1_1340a",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5634,
+    "ny": 0.2795,
+    "label": "Capstone Design Space Annex",
+    "roomId": "1340A",
+    "edges": [
+      "w_cor_m6"
+    ]
+  },
+  {
+    "id": "w_d1_1340",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6523,
+    "ny": 0.2751,
+    "label": "Capstone Design Space",
+    "roomId": "1340",
+    "edges": [
+      "w_cor_m7"
+    ]
+  },
+  {
+    "id": "w_d1_1300",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7339,
+    "ny": 0.2751,
+    "label": "Robotics Lab",
+    "roomId": "1300",
+    "edges": [
+      "w_cor_m8"
+    ]
+  },
+  {
+    "id": "w_d1_1330",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7858,
+    "ny": 0.2751,
+    "label": "EE Micro Grid",
+    "roomId": "1330",
+    "edges": [
+      "w_cor_m8"
+    ]
+  },
+  {
+    "id": "w_d1_1269",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8154,
+    "ny": 0.3974,
+    "label": "Center for Engineering Ed",
+    "roomId": "1269",
+    "edges": [
+      "w_cor_m9"
+    ]
+  },
+  {
+    "id": "w_d1_1280",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.1297,
+    "ny": 0.4148,
+    "label": "Student Leadership Incubator",
+    "roomId": "1280",
+    "edges": [
+      "w_cor_m1"
+    ]
+  },
+  {
+    "id": "w_d1_1245",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4151,
+    "ny": 0.3974,
+    "label": "Classroom 1245",
+    "roomId": "1245",
+    "edges": [
+      "w_cor_m4"
+    ]
+  },
+  {
+    "id": "w_d1_1225",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.1631,
+    "ny": 0.4672,
+    "label": "Classroom 1225",
+    "roomId": "1225",
+    "edges": [
+      "w_cor_s1"
+    ]
+  },
+  {
+    "id": "w_d1_1221",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.1631,
+    "ny": 0.5328,
+    "label": "Classroom 1221",
+    "roomId": "1221",
+    "edges": [
+      "w_cor_s1"
+    ]
+  },
+  {
+    "id": "w_d1_1212",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2669,
+    "ny": 0.4716,
+    "label": "Classroom 1212",
+    "roomId": "1212",
+    "edges": [
+      "w_cor_s2"
+    ]
+  },
+  {
+    "id": "w_d1_1218b",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2669,
+    "ny": 0.5371,
+    "label": "Classroom 1218B",
+    "roomId": "1218B",
+    "edges": [
+      "w_cor_s2"
+    ]
+  },
+  {
+    "id": "w_d1_1216",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3113,
+    "ny": 0.5371,
+    "label": "Classroom 1216",
+    "roomId": "1216",
+    "edges": [
+      "w_cor_s2"
+    ]
+  },
+  {
+    "id": "w_d1_1238",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3188,
+    "ny": 0.4716,
+    "label": "Classroom 1238",
+    "roomId": "1238",
+    "edges": [
+      "w_cor_s2"
+    ]
+  },
+  {
+    "id": "w_d1_1240",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3781,
+    "ny": 0.4716,
+    "label": "Classroom 1240",
+    "roomId": "1240",
+    "edges": [
+      "w_cor_s3"
+    ]
+  },
+  {
+    "id": "w_d1_1272",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3781,
+    "ny": 0.5371,
+    "label": "Classroom 1272",
+    "roomId": "1272",
+    "edges": [
+      "w_cor_s3"
+    ]
+  },
+  {
+    "id": "w_d1_1264",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4188,
+    "ny": 0.4716,
+    "label": "Seminar 1264",
+    "roomId": "1264",
+    "edges": [
+      "w_cor_s3"
+    ]
+  },
+  {
+    "id": "w_d1_1253",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4299,
+    "ny": 0.5371,
+    "label": "Classroom 1253",
+    "roomId": "1253",
+    "edges": [
+      "w_cor_s3"
+    ]
+  },
+  {
+    "id": "w_d1_1246",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4633,
+    "ny": 0.4716,
+    "label": "Computer Room 1246",
+    "roomId": "1246",
+    "edges": [
+      "w_cor_s4"
+    ]
+  },
+  {
+    "id": "w_d1_1256",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5152,
+    "ny": 0.4716,
+    "label": "Computer Room 1256",
+    "roomId": "1256",
+    "edges": [
+      "w_cor_s5"
+    ]
+  },
+  {
+    "id": "w_d1_1258",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5745,
+    "ny": 0.4716,
+    "label": "Modular 1258",
+    "roomId": "1258",
+    "edges": [
+      "w_cor_s5"
+    ]
+  },
+  {
+    "id": "w_d1_1262",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6264,
+    "ny": 0.4716,
+    "label": "Modular 1262",
+    "roomId": "1262",
+    "edges": [
+      "w_cor_s6"
+    ]
+  },
+  {
+    "id": "w_d1_1206",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5745,
+    "ny": 0.5371,
+    "label": "Modular 1206",
+    "roomId": "1206",
+    "edges": [
+      "w_cor_s5"
+    ]
+  },
+  {
+    "id": "w_d1_1263",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6338,
+    "ny": 0.5371,
+    "label": "Classroom 1263",
+    "roomId": "1263",
+    "edges": [
+      "w_cor_s6"
+    ]
+  },
+  {
+    "id": "w_d1_1202",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7153,
+    "ny": 0.5066,
+    "label": "Pete Classroom",
+    "roomId": "1202",
+    "edges": [
+      "w_cor_s7"
+    ]
+  },
+  {
+    "id": "w_d1_1200",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7821,
+    "ny": 0.5066,
+    "label": "Classroom 1200",
+    "roomId": "1200",
+    "edges": [
+      "w_cor_s7"
+    ]
+  },
+  {
+    "id": "w_d1_1154",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.315,
+    "ny": 0.69,
+    "label": "Sustainable Living Lab",
+    "roomId": "1154",
+    "edges": [
+      "w_cor_c2"
+    ]
+  },
+  {
+    "id": "w_d1_1114",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5745,
+    "ny": 0.69,
+    "label": "Unit Operations Lab",
+    "roomId": "1114",
+    "edges": [
+      "w_cor_c4"
+    ]
+  },
+  {
+    "id": "w_d1_1124",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6079,
+    "ny": 0.7686,
+    "label": "Computer Lab 1124",
+    "roomId": "1124",
+    "edges": [
+      "w_cor_c4"
+    ]
+  },
+  {
+    "id": "w_d1_1100",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7858,
+    "ny": 0.7162,
+    "label": "Auditorium",
+    "roomId": "1100",
+    "edges": [
+      "w_cor_c6"
+    ]
+  },
+  {
+    "id": "w_elev_a_2",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.4596,
+    "ny": 0.31,
+    "label": "Elevator A",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m3"
+    ],
+    "shaftId": "elev_a"
+  },
+  {
+    "id": "w_stair_b_2",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.31,
+    "label": "Stair B",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m1"
+    ],
+    "shaftId": "stair_b"
+  },
+  {
+    "id": "w_stair_c_2",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.5967,
+    "ny": 0.6507,
+    "label": "Stair C",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c5"
+    ],
+    "shaftId": "stair_c"
+  },
+  {
+    "id": "w_cor2_n1",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n2",
+      "w_d2_2301"
+    ]
+  },
+  {
+    "id": "w_cor2_n2",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.4596,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n1",
+      "w_cor2_n3",
+      "w_cor2_m3",
+      "w_d2_2303",
+      "w_d2_2307"
+    ]
+  },
+  {
+    "id": "w_cor2_n3",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.556,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n2",
+      "w_cor2_n4",
+      "w_d2_2305",
+      "w_d2_2309"
+    ]
+  },
+  {
+    "id": "w_cor2_n4",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.6523,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n3",
+      "w_cor2_n5",
+      "w_d2_2302"
+    ]
+  },
+  {
+    "id": "w_cor2_n5",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.7487,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n4",
+      "w_cor2_n6",
+      "w_d2_2308"
+    ]
+  },
+  {
+    "id": "w_cor2_n6",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.8451,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_n5",
+      "w_d2_2310"
+    ]
+  },
+  {
+    "id": "w_cor2_m1",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m2",
+      "w_stair_b_2",
+      "w_cor2_s1",
+      "w_d2_2250"
+    ]
+  },
+  {
+    "id": "w_cor2_m2",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.3188,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m1",
+      "w_cor2_m3",
+      "w_d2_2355",
+      "w_d2_2248"
+    ]
+  },
+  {
+    "id": "w_cor2_m3",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.4225,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m2",
+      "w_cor2_m4",
+      "w_elev_a_2",
+      "w_cor2_s3",
+      "w_cor2_n2"
+    ]
+  },
+  {
+    "id": "w_cor2_m4",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.5041,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m3",
+      "w_cor2_m5",
+      "w_d2_2304"
+    ]
+  },
+  {
+    "id": "w_cor2_m5",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.5856,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m4",
+      "w_cor2_m6",
+      "w_cor2_s4",
+      "w_d2_2399"
+    ]
+  },
+  {
+    "id": "w_cor2_m6",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.682,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m5",
+      "w_cor2_m7"
+    ]
+  },
+  {
+    "id": "w_cor2_m7",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.7858,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m6",
+      "w_cor2_m8",
+      "w_d2_2229",
+      "w_d2_2200",
+      "w_d2_2214"
+    ]
+  },
+  {
+    "id": "w_cor2_m8",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.8821,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_m7",
+      "w_cor2_s5"
+    ]
+  },
+  {
+    "id": "w_cor2_s1",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_s2",
+      "w_cor2_m1",
+      "w_cor2_c1",
+      "w_d2_2249"
+    ]
+  },
+  {
+    "id": "w_cor2_s2",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.3188,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_s1",
+      "w_cor2_s3",
+      "w_d2_2241",
+      "w_d2_2224"
+    ]
+  },
+  {
+    "id": "w_cor2_s3",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.4151,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_s2",
+      "w_cor2_s4",
+      "w_cor2_m3",
+      "w_cor2_c3",
+      "w_d2_2241b"
+    ]
+  },
+  {
+    "id": "w_cor2_s4",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.5041,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_s3",
+      "w_cor2_s5",
+      "w_cor2_m5",
+      "w_cor2_c4",
+      "w_d2_2249b"
+    ]
+  },
+  {
+    "id": "w_cor2_s5",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.593,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_s4",
+      "w_cor2_m8",
+      "w_d2_2271"
+    ]
+  },
+  {
+    "id": "w_cor2_c1",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c2",
+      "w_cor2_s1",
+      "w_d2_2279"
+    ]
+  },
+  {
+    "id": "w_cor2_c2",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.3262,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c1",
+      "w_cor2_c3",
+      "w_d2_2277",
+      "w_d2_2275",
+      "w_d2_2154",
+      "w_d2_2147",
+      "w_d2_2217"
+    ]
+  },
+  {
+    "id": "w_cor2_c3",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.4225,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c2",
+      "w_cor2_c4",
+      "w_cor2_s3",
+      "w_d2_2274",
+      "w_d2_2215",
+      "w_d2_2145"
+    ]
+  },
+  {
+    "id": "w_cor2_c4",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.5189,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c3",
+      "w_cor2_c5",
+      "w_cor2_s4",
+      "w_d2_2248b",
+      "w_d2_2141",
+      "w_d2_2132",
+      "w_d2_2130"
+    ]
+  },
+  {
+    "id": "w_cor2_c5",
+    "type": "corridor",
+    "floor": 2,
+    "nx": 0.6153,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor2_c4",
+      "w_stair_c_2",
+      "w_d2_2128",
+      "w_d2_2215b"
+    ]
+  },
+  {
+    "id": "w_d2_2301",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2301",
+    "roomId": "2301",
+    "edges": [
+      "w_cor2_n1"
+    ]
+  },
+  {
+    "id": "w_d2_2303",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.4596,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2303",
+    "roomId": "2303",
+    "edges": [
+      "w_cor2_n2"
+    ]
+  },
+  {
+    "id": "w_d2_2307",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5041,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2307",
+    "roomId": "2307",
+    "edges": [
+      "w_cor2_n2"
+    ]
+  },
+  {
+    "id": "w_d2_2305",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.556,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2305",
+    "roomId": "2305",
+    "edges": [
+      "w_cor2_n3"
+    ]
+  },
+  {
+    "id": "w_d2_2309",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.6004,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2309",
+    "roomId": "2309",
+    "edges": [
+      "w_cor2_n3"
+    ]
+  },
+  {
+    "id": "w_d2_2302",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.6523,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2302",
+    "roomId": "2302",
+    "edges": [
+      "w_cor2_n4"
+    ]
+  },
+  {
+    "id": "w_d2_2308",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.7487,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2308",
+    "roomId": "2308",
+    "edges": [
+      "w_cor2_n5"
+    ]
+  },
+  {
+    "id": "w_d2_2310",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.8451,
+    "ny": 0.0786,
+    "label": "Comp Sci Research Lab 2310",
+    "roomId": "2310",
+    "edges": [
+      "w_cor2_n6"
+    ]
+  },
+  {
+    "id": "w_d2_2355",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.2341,
+    "label": "Materials & Manufacturing Lab",
+    "roomId": "2355",
+    "edges": [
+      "w_cor2_m2"
+    ]
+  },
+  {
+    "id": "w_d2_2250",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.2795,
+    "label": "CMR Computer Classroom",
+    "roomId": "2250",
+    "edges": [
+      "w_cor2_m1"
+    ]
+  },
+  {
+    "id": "w_d2_2248",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3039,
+    "ny": 0.2795,
+    "label": "CMR BIM Lab",
+    "roomId": "2248",
+    "edges": [
+      "w_cor2_m2"
+    ]
+  },
+  {
+    "id": "w_d2_2304",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5189,
+    "ny": 0.2533,
+    "label": "Comp Sci Teaching",
+    "roomId": "2304",
+    "edges": [
+      "w_cor2_m4"
+    ]
+  },
+  {
+    "id": "w_d2_2399",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.6153,
+    "ny": 0.2533,
+    "label": "Mech CAD Classroom",
+    "roomId": "2399",
+    "edges": [
+      "w_cor2_m5"
+    ]
+  },
+  {
+    "id": "w_d2_2229",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.8154,
+    "ny": 0.3406,
+    "label": "Student Services Suite",
+    "roomId": "2229",
+    "edges": [
+      "w_cor2_m7"
+    ]
+  },
+  {
+    "id": "w_d2_2200",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.8154,
+    "ny": 0.4891,
+    "label": "COES Admin Suite",
+    "roomId": "2200",
+    "edges": [
+      "w_cor2_m7"
+    ]
+  },
+  {
+    "id": "w_d2_2214",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.8154,
+    "ny": 0.5939,
+    "label": "Dean's Suite",
+    "roomId": "2214",
+    "edges": [
+      "w_cor2_m7"
+    ]
+  },
+  {
+    "id": "w_d2_2249",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.4279,
+    "label": "EE Circuits 1",
+    "roomId": "2249",
+    "edges": [
+      "w_cor2_s1"
+    ]
+  },
+  {
+    "id": "w_d2_2241",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2965,
+    "ny": 0.4279,
+    "label": "EE Circuits 2",
+    "roomId": "2241",
+    "edges": [
+      "w_cor2_s2"
+    ]
+  },
+  {
+    "id": "w_d2_2224",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.4279,
+    "label": "Petro Computational",
+    "roomId": "2224",
+    "edges": [
+      "w_cor2_s2"
+    ]
+  },
+  {
+    "id": "w_d2_2241b",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.4374,
+    "ny": 0.4279,
+    "label": "CS Computer Lab",
+    "roomId": "2241B",
+    "edges": [
+      "w_cor2_s3"
+    ]
+  },
+  {
+    "id": "w_d2_2249b",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5189,
+    "ny": 0.4279,
+    "label": "CBE Simulations Lab",
+    "roomId": "2249B",
+    "edges": [
+      "w_cor2_s4"
+    ]
+  },
+  {
+    "id": "w_d2_2271",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.593,
+    "ny": 0.4279,
+    "label": "CE Fluids Mechanics",
+    "roomId": "2271",
+    "edges": [
+      "w_cor2_s5"
+    ]
+  },
+  {
+    "id": "w_d2_2279",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2313,
+    "ny": 0.5677,
+    "label": "EE Power",
+    "roomId": "2279",
+    "edges": [
+      "w_cor2_c1"
+    ]
+  },
+  {
+    "id": "w_d2_2277",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2965,
+    "ny": 0.5677,
+    "label": "EE Optics",
+    "roomId": "2277",
+    "edges": [
+      "w_cor2_c2"
+    ]
+  },
+  {
+    "id": "w_d2_2275",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.5677,
+    "label": "EE Petro Absorbance",
+    "roomId": "2275",
+    "edges": [
+      "w_cor2_c2"
+    ]
+  },
+  {
+    "id": "w_d2_2274",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.4374,
+    "ny": 0.5677,
+    "label": "Petro Teaching Electric Drive",
+    "roomId": "2274",
+    "edges": [
+      "w_cor2_c3"
+    ]
+  },
+  {
+    "id": "w_d2_2248b",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5189,
+    "ny": 0.5677,
+    "label": "Petro Teaching",
+    "roomId": "2248B",
+    "edges": [
+      "w_cor2_c4"
+    ]
+  },
+  {
+    "id": "w_d2_2215",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.6987,
+    "label": "Characterization Lab",
+    "roomId": "2215",
+    "edges": [
+      "w_cor2_c3"
+    ]
+  },
+  {
+    "id": "w_d2_2154",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2891,
+    "ny": 0.7598,
+    "label": "Petro Lab",
+    "roomId": "2154",
+    "edges": [
+      "w_cor2_c2"
+    ]
+  },
+  {
+    "id": "w_d2_2147",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.2891,
+    "ny": 0.821,
+    "label": "Petro Lab 2147",
+    "roomId": "2147",
+    "edges": [
+      "w_cor2_c2"
+    ]
+  },
+  {
+    "id": "w_d2_2217",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.3632,
+    "ny": 0.7598,
+    "label": "Drilling Fluids Teaching Lab",
+    "roomId": "2217",
+    "edges": [
+      "w_cor2_c2"
+    ]
+  },
+  {
+    "id": "w_d2_2145",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.4448,
+    "ny": 0.7598,
+    "label": "Reservoir Dynamics Teaching Lab",
+    "roomId": "2145",
+    "edges": [
+      "w_cor2_c3"
+    ]
+  },
+  {
+    "id": "w_d2_2141",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5189,
+    "ny": 0.7598,
+    "label": "Rock/Fluids Properties Lab",
+    "roomId": "2141",
+    "edges": [
+      "w_cor2_c4"
+    ]
+  },
+  {
+    "id": "w_d2_2132",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.4818,
+    "ny": 0.821,
+    "label": "Cheme Research Lab",
+    "roomId": "2132",
+    "edges": [
+      "w_cor2_c4"
+    ]
+  },
+  {
+    "id": "w_d2_2130",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.5486,
+    "ny": 0.821,
+    "label": "Cheme Biotech Lab",
+    "roomId": "2130",
+    "edges": [
+      "w_cor2_c4"
+    ]
+  },
+  {
+    "id": "w_d2_2128",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.6153,
+    "ny": 0.821,
+    "label": "Student Lounge",
+    "roomId": "2128",
+    "edges": [
+      "w_cor2_c5"
+    ]
+  },
+  {
+    "id": "w_d2_2215b",
+    "type": "door",
+    "floor": 2,
+    "nx": 0.8154,
+    "ny": 0.7598,
+    "label": "CBE Classroom",
+    "roomId": "2215B",
+    "edges": [
+      "w_cor2_c5"
+    ]
+  },
+  {
+    "id": "w_elev_a_3",
+    "type": "elevator",
+    "floor": 3,
+    "nx": 0.4596,
+    "ny": 0.31,
+    "label": "Elevator A",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m3"
+    ],
+    "shaftId": "elev_a"
+  },
+  {
+    "id": "w_stair_b_3",
+    "type": "stair",
+    "floor": 3,
+    "nx": 0.2313,
+    "ny": 0.31,
+    "label": "Stair B",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m1"
+    ],
+    "shaftId": "stair_b"
+  },
+  {
+    "id": "w_stair_c_3",
+    "type": "stair",
+    "floor": 3,
+    "nx": 0.5967,
+    "ny": 0.6507,
+    "label": "Stair C",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c5"
+    ],
+    "shaftId": "stair_c"
+  },
+  {
+    "id": "w_cor3_n1",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.2965,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_n2",
+      "w_d3_3336",
+      "w_d3_3329",
+      "w_d3_3325b"
+    ]
+  },
+  {
+    "id": "w_cor3_n2",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.4299,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_n1",
+      "w_cor3_n3",
+      "w_cor3_m3",
+      "w_d3_3327"
+    ]
+  },
+  {
+    "id": "w_cor3_n3",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.5634,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_n2",
+      "w_cor3_n4",
+      "w_d3_3315"
+    ]
+  },
+  {
+    "id": "w_cor3_n4",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.6968,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_n3",
+      "w_cor3_n5",
+      "w_d3_3314",
+      "w_d3_3305"
+    ]
+  },
+  {
+    "id": "w_cor3_n5",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.8302,
+    "ny": 0.1266,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_n4",
+      "w_d3_3308",
+      "w_d3_3312"
+    ]
+  },
+  {
+    "id": "w_cor3_m1",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.2313,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m2",
+      "w_stair_b_3",
+      "w_cor3_s1"
+    ]
+  },
+  {
+    "id": "w_cor3_m2",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.3262,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m1",
+      "w_cor3_m3",
+      "w_d3_3325",
+      "w_d3_3261",
+      "w_d3_3324"
+    ]
+  },
+  {
+    "id": "w_cor3_m3",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.4374,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m2",
+      "w_cor3_m4",
+      "w_elev_a_3",
+      "w_cor3_n2",
+      "w_cor3_s3",
+      "w_d3_3319",
+      "w_d3_3255"
+    ]
+  },
+  {
+    "id": "w_cor3_m4",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.5411,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m3",
+      "w_cor3_m5",
+      "w_d3_3267"
+    ]
+  },
+  {
+    "id": "w_cor3_m5",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.6449,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m4",
+      "w_cor3_m6",
+      "w_cor3_s5",
+      "w_d3_3287"
+    ]
+  },
+  {
+    "id": "w_cor3_m6",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.7487,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m5",
+      "w_cor3_m7"
+    ]
+  },
+  {
+    "id": "w_cor3_m7",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.8525,
+    "ny": 0.3406,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_m6",
+      "w_cor3_s6",
+      "w_d3_3229"
+    ]
+  },
+  {
+    "id": "w_cor3_s1",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.2313,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s2",
+      "w_cor3_m1",
+      "w_cor3_c1",
+      "w_d3_3280"
+    ]
+  },
+  {
+    "id": "w_cor3_s2",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.341,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s1",
+      "w_cor3_s3",
+      "w_d3_3277",
+      "w_d3_3275"
+    ]
+  },
+  {
+    "id": "w_cor3_s3",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.4522,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s2",
+      "w_cor3_s4",
+      "w_cor3_m3",
+      "w_cor3_c3",
+      "w_d3_3265",
+      "w_d3_3258"
+    ]
+  },
+  {
+    "id": "w_cor3_s4",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.5634,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s3",
+      "w_cor3_s5",
+      "w_cor3_c4",
+      "w_d3_3252",
+      "w_d3_3240"
+    ]
+  },
+  {
+    "id": "w_cor3_s5",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.6746,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s4",
+      "w_cor3_s6",
+      "w_cor3_m5",
+      "w_d3_3230"
+    ]
+  },
+  {
+    "id": "w_cor3_s6",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.7858,
+    "ny": 0.4891,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_s5",
+      "w_cor3_m7",
+      "w_d3_3212",
+      "w_d3_3228"
+    ]
+  },
+  {
+    "id": "w_cor3_c1",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.2313,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c2",
+      "w_cor3_s1",
+      "w_d3_3319b"
+    ]
+  },
+  {
+    "id": "w_cor3_c2",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.3336,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c1",
+      "w_cor3_c3",
+      "w_d3_3323",
+      "w_d3_3321",
+      "w_d3_3322"
+    ]
+  },
+  {
+    "id": "w_cor3_c3",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.4374,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c2",
+      "w_cor3_c4",
+      "w_cor3_s3",
+      "w_d3_3325c",
+      "w_d3_3311"
+    ]
+  },
+  {
+    "id": "w_cor3_c4",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.5411,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c3",
+      "w_cor3_c5",
+      "w_cor3_s4",
+      "w_d3_3025"
+    ]
+  },
+  {
+    "id": "w_cor3_c5",
+    "type": "corridor",
+    "floor": 3,
+    "nx": 0.6449,
+    "ny": 0.6507,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor3_c4",
+      "w_stair_c_3",
+      "w_d3_3297",
+      "w_d3_3020"
+    ]
+  },
+  {
+    "id": "w_d3_3325",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2965,
+    "ny": 0.2795,
+    "label": "ECEE & CSE Suite",
+    "roomId": "3325",
+    "edges": [
+      "w_cor3_m2"
+    ]
+  },
+  {
+    "id": "w_d3_3319",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4151,
+    "ny": 0.2795,
+    "label": "CME Suite",
+    "roomId": "3319",
+    "edges": [
+      "w_cor3_m3"
+    ]
+  },
+  {
+    "id": "w_d3_3255",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4374,
+    "ny": 0.3755,
+    "label": "ChE & EEvEG Suite",
+    "roomId": "3255",
+    "edges": [
+      "w_cor3_m3"
+    ]
+  },
+  {
+    "id": "w_d3_3261",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3188,
+    "ny": 0.393,
+    "label": "ME & ISE Suite",
+    "roomId": "3261",
+    "edges": [
+      "w_cor3_m2"
+    ]
+  },
+  {
+    "id": "w_d3_3267",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5708,
+    "ny": 0.2795,
+    "label": "Cheme Suite",
+    "roomId": "3267",
+    "edges": [
+      "w_cor3_m4"
+    ]
+  },
+  {
+    "id": "w_d3_3287",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6449,
+    "ny": 0.3755,
+    "label": "PETE Suite",
+    "roomId": "3287",
+    "edges": [
+      "w_cor3_m5"
+    ]
+  },
+  {
+    "id": "w_d3_3324",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2891,
+    "ny": 0.2314,
+    "label": "COES HR / Finance",
+    "roomId": "3324",
+    "edges": [
+      "w_cor3_m2"
+    ]
+  },
+  {
+    "id": "w_d3_3297",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8302,
+    "ny": 0.7162,
+    "label": "Dean's Seminar Suite",
+    "roomId": "3297",
+    "edges": [
+      "w_cor3_c5"
+    ]
+  },
+  {
+    "id": "w_d3_3336",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.126,
+    "ny": 0.1266,
+    "label": "Office 3336",
+    "roomId": "3336",
+    "edges": [
+      "w_cor3_n1"
+    ]
+  },
+  {
+    "id": "w_d3_3329",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.1927,
+    "ny": 0.1266,
+    "label": "Office 3329",
+    "roomId": "3329",
+    "edges": [
+      "w_cor3_n1"
+    ]
+  },
+  {
+    "id": "w_d3_3325b",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.252,
+    "ny": 0.0873,
+    "label": "Office 3325b",
+    "roomId": "3325b",
+    "edges": [
+      "w_cor3_n1"
+    ]
+  },
+  {
+    "id": "w_d3_3327",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3188,
+    "ny": 0.0873,
+    "label": "Office 3327",
+    "roomId": "3327",
+    "edges": [
+      "w_cor3_n2"
+    ]
+  },
+  {
+    "id": "w_d3_3315",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5634,
+    "ny": 0.0786,
+    "label": "Office 3315",
+    "roomId": "3315",
+    "edges": [
+      "w_cor3_n3"
+    ]
+  },
+  {
+    "id": "w_d3_3314",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6968,
+    "ny": 0.0786,
+    "label": "Office 3314",
+    "roomId": "3314",
+    "edges": [
+      "w_cor3_n4"
+    ]
+  },
+  {
+    "id": "w_d3_3305",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7487,
+    "ny": 0.0786,
+    "label": "Office 3305",
+    "roomId": "3305",
+    "edges": [
+      "w_cor3_n4"
+    ]
+  },
+  {
+    "id": "w_d3_3308",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8006,
+    "ny": 0.0786,
+    "label": "Office 3308",
+    "roomId": "3308",
+    "edges": [
+      "w_cor3_n5"
+    ]
+  },
+  {
+    "id": "w_d3_3312",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8525,
+    "ny": 0.0786,
+    "label": "Office 3312",
+    "roomId": "3312",
+    "edges": [
+      "w_cor3_n5"
+    ]
+  },
+  {
+    "id": "w_d3_3280",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2313,
+    "ny": 0.4279,
+    "label": "Office 3280",
+    "roomId": "3280",
+    "edges": [
+      "w_cor3_s1"
+    ]
+  },
+  {
+    "id": "w_d3_3277",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2965,
+    "ny": 0.4279,
+    "label": "Office 3277",
+    "roomId": "3277",
+    "edges": [
+      "w_cor3_s2"
+    ]
+  },
+  {
+    "id": "w_d3_3275",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3632,
+    "ny": 0.4279,
+    "label": "Office 3275",
+    "roomId": "3275",
+    "edges": [
+      "w_cor3_s2"
+    ]
+  },
+  {
+    "id": "w_d3_3265",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4522,
+    "ny": 0.4279,
+    "label": "Office 3265",
+    "roomId": "3265",
+    "edges": [
+      "w_cor3_s3"
+    ]
+  },
+  {
+    "id": "w_d3_3258",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5189,
+    "ny": 0.4279,
+    "label": "Office 3258",
+    "roomId": "3258",
+    "edges": [
+      "w_cor3_s3"
+    ]
+  },
+  {
+    "id": "w_d3_3252",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6301,
+    "ny": 0.4279,
+    "label": "Office 3252",
+    "roomId": "3252",
+    "edges": [
+      "w_cor3_s4"
+    ]
+  },
+  {
+    "id": "w_d3_3240",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5634,
+    "ny": 0.5371,
+    "label": "Office 3240",
+    "roomId": "3240",
+    "edges": [
+      "w_cor3_s4"
+    ]
+  },
+  {
+    "id": "w_d3_3230",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6746,
+    "ny": 0.5371,
+    "label": "Office 3230",
+    "roomId": "3230",
+    "edges": [
+      "w_cor3_s5"
+    ]
+  },
+  {
+    "id": "w_d3_3212",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7858,
+    "ny": 0.5371,
+    "label": "Office 3212",
+    "roomId": "3212",
+    "edges": [
+      "w_cor3_s6"
+    ]
+  },
+  {
+    "id": "w_d3_3229",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8154,
+    "ny": 0.4279,
+    "label": "Office 3229",
+    "roomId": "3229",
+    "edges": [
+      "w_cor3_m7"
+    ]
+  },
+  {
+    "id": "w_d3_3228",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8154,
+    "ny": 0.4891,
+    "label": "Office 3228",
+    "roomId": "3228",
+    "edges": [
+      "w_cor3_s6"
+    ]
+  },
+  {
+    "id": "w_d3_3323",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2817,
+    "ny": 0.6987,
+    "label": "CM Detailing/Controls Lab",
+    "roomId": "3323",
+    "edges": [
+      "w_cor3_c2"
+    ]
+  },
+  {
+    "id": "w_d3_3321",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3484,
+    "ny": 0.6987,
+    "label": "Mfg Industrial Systems",
+    "roomId": "3321",
+    "edges": [
+      "w_cor3_c2"
+    ]
+  },
+  {
+    "id": "w_d3_3325c",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4151,
+    "ny": 0.6987,
+    "label": "CM Exterior Teaching",
+    "roomId": "3325C",
+    "edges": [
+      "w_cor3_c3"
+    ]
+  },
+  {
+    "id": "w_d3_3322",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3558,
+    "ny": 0.7686,
+    "label": "CM Senior Project Lab",
+    "roomId": "3322",
+    "edges": [
+      "w_cor3_c2"
+    ]
+  },
+  {
+    "id": "w_d3_3311",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4744,
+    "ny": 0.7686,
+    "label": "Shared Learning Lab",
+    "roomId": "3311",
+    "edges": [
+      "w_cor3_c3"
+    ]
+  },
+  {
+    "id": "w_d3_3025",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5634,
+    "ny": 0.6987,
+    "label": "Pollution Control Lab II",
+    "roomId": "3025",
+    "edges": [
+      "w_cor3_c4"
+    ]
+  },
+  {
+    "id": "w_d3_3020",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6672,
+    "ny": 0.6987,
+    "label": "Pollution Control Lab",
+    "roomId": "3020",
+    "edges": [
+      "w_cor3_c5"
+    ]
+  },
+  {
+    "id": "w_d3_3319b",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2817,
+    "ny": 0.7686,
+    "label": "Verandah",
+    "roomId": "3319B",
+    "edges": [
+      "w_cor3_c1"
+    ]
+  }
+]
