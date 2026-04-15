@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFT Annotator</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; }
+
+  #toolbar {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    padding: 8px 10px; background: #2a2a2a; border-bottom: 1px solid #444; flex-shrink: 0;
+  }
+  #toolbar label { color: #aaa; }
+  #toolbar input[type=file] { color: #ccc; }
+  #floor-tabs { display: flex; gap: 4px; }
+  .tab {
+    padding: 4px 10px; border-radius: 4px; cursor: pointer;
+    background: #3a3a3a; border: 1px solid #555; color: #ccc;
+  }
+  .tab.active { background: #2060c0; border-color: #4080e0; color: #fff; }
+
+  #mode-btns { display: flex; gap: 4px; }
+  .mode-btn {
+    padding: 4px 10px; border-radius: 4px; cursor: pointer;
+    background: #3a3a3a; border: 1px solid #555; color: #ccc; font-family: monospace; font-size: 13px;
+  }
+  .mode-btn.active { background: #206020; border-color: #40a040; color: #fff; }
+  .mode-btn.del { }
+  .mode-btn.del.active { background: #802020; border-color: #c04040; color: #fff; }
+
+  #action-btns { display: flex; gap: 4px; margin-left: auto; }
+  .action-btn {
+    padding: 4px 12px; border-radius: 4px; cursor: pointer;
+    background: #404040; border: 1px solid #666; color: #ddd; font-family: monospace; font-size: 13px;
+  }
+  .action-btn:hover { background: #505050; }
+  .action-btn.primary { background: #205090; border-color: #4080d0; color: #fff; }
+  .action-btn.primary:hover { background: #2a60b0; }
+
+  #main { display: flex; flex: 1; overflow: hidden; }
+
+  #map-area {
+    flex: 1; overflow: hidden; position: relative; cursor: crosshair; background: #111;
+  }
+  #map-container {
+    position: absolute; transform-origin: 0 0;
+  }
+  #map-img { display: block; max-width: none; }
+  #overlay { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+  #sidebar {
+    width: 280px; background: #222; border-left: 1px solid #444;
+    display: flex; flex-direction: column; flex-shrink: 0; overflow: hidden;
+  }
+  #sidebar-tabs { display: flex; border-bottom: 1px solid #444; }
+  .stab { flex: 1; padding: 6px; text-align: center; cursor: pointer; color: #888; border-bottom: 2px solid transparent; }
+  .stab.active { color: #ddd; border-bottom-color: #4080e0; }
+
+  #node-panel, #edge-panel, #export-panel { flex: 1; overflow-y: auto; padding: 8px; display: none; }
+  #node-panel.active, #edge-panel.active, #export-panel.active { display: block; }
+
+  .node-item {
+    padding: 5px 7px; margin-bottom: 3px; border-radius: 4px;
+    border: 1px solid #444; cursor: pointer; display: flex; align-items: center; gap: 6px;
+  }
+  .node-item:hover { background: #2a2a2a; }
+  .node-item.selected { border-color: #4080e0; background: #1a2a40; }
+  .node-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .node-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .node-id { color: #666; font-size: 11px; }
+
+  #node-form { padding: 8px; background: #1a1a1a; border-top: 1px solid #444; flex-shrink: 0; }
+  #node-form label { display: block; color: #888; margin-bottom: 2px; margin-top: 6px; }
+  #node-form input, #node-form select {
+    width: 100%; padding: 4px 6px; background: #2a2a2a; border: 1px solid #555;
+    color: #ddd; border-radius: 3px; font-family: monospace; font-size: 12px;
+  }
+  #node-form .save-btn {
+    margin-top: 8px; width: 100%; padding: 5px; background: #205090;
+    border: 1px solid #4080d0; color: #fff; border-radius: 3px; cursor: pointer; font-family: monospace;
+  }
+
+  #edge-list { }
+  .edge-item {
+    padding: 4px 7px; margin-bottom: 3px; border-radius: 3px;
+    border: 1px solid #444; font-size: 12px; display: flex; justify-content: space-between; align-items: center;
+  }
+  .edge-del { color: #c04040; cursor: pointer; padding: 0 4px; }
+  .edge-del:hover { color: #ff6060; }
+
+  #export-area {
+    width: 100%; height: 200px; background: #111; border: 1px solid #444;
+    color: #8fc; font-family: monospace; font-size: 11px; padding: 6px;
+    resize: none; border-radius: 3px;
+  }
+
+  #status {
+    padding: 4px 10px; background: #222; border-top: 1px solid #444;
+    color: #888; font-size: 12px; flex-shrink: 0;
+  }
+
+  /* node type colors */
+  .dot-door     { background: #378ADD; }
+  .dot-corridor { background: #1D9E75; }
+  .dot-stair    { background: #D85A30; }
+  .dot-elevator { background: #9B59B6; }
+  .dot-anchor   { background: #F39C12; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <label>Floor:</label>
+  <div id="floor-tabs">
+    <div class="tab active" data-floor="1">1F</div>
+    <div class="tab" data-floor="2">2F</div>
+    <div class="tab" data-floor="3">3F</div>
+  </div>
+
+  <label style="margin-left:10px">Map image:</label>
+  <input type="file" id="img-upload" accept="image/*">
+
+  <div style="margin-left:10px">Mode:</div>
+  <div id="mode-btns">
+    <button class="mode-btn active" data-mode="door">Door</button>
+    <button class="mode-btn" data-mode="corridor">Corridor</button>
+    <button class="mode-btn" data-mode="stair">Stair</button>
+    <button class="mode-btn" data-mode="elevator">Elevator</button>
+    <button class="mode-btn" data-mode="anchor">QR Anchor</button>
+    <button class="mode-btn" data-mode="edge">Edge</button>
+    <button class="mode-btn del" data-mode="delete">Delete</button>
+  </div>
+
+  <div id="action-btns">
+    <button class="action-btn" id="btn-undo">Undo</button>
+    <button class="action-btn" id="btn-clear-floor">Clear Floor</button>
+    <button class="action-btn primary" id="btn-export">Export JSON</button>
+  </div>
+</div>
+
+<div id="main">
+  <div id="map-area">
+    <div id="map-container">
+      <img id="map-img" src="" alt="">
+      <canvas id="overlay"></canvas>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <div id="sidebar-tabs">
+      <div class="stab active" data-stab="nodes">Nodes</div>
+      <div class="stab" data-stab="edges">Edges</div>
+      <div class="stab" data-stab="export">Export</div>
+    </div>
+
+    <div id="node-panel" class="active">
+      <div id="node-list"></div>
+    </div>
+    <div id="edge-panel">
+      <div id="edge-list"></div>
+    </div>
+    <div id="export-panel">
+      <div style="margin-bottom:6px;color:#888">Copy and save as graph.json</div>
+      <textarea id="export-area" readonly></textarea>
+      <button class="action-btn primary" style="margin-top:6px;width:100%" id="btn-copy">Copy to clipboard</button>
+      <div style="margin-top:12px;color:#888">rooms.json template:</div>
+      <textarea id="rooms-area" readonly style="width:100%;height:160px;background:#111;border:1px solid #444;color:#8cf;font-family:monospace;font-size:11px;padding:6px;resize:none;border-radius:3px;margin-top:4px"></textarea>
+    </div>
+
+    <div id="node-form">
+      <div style="color:#aaa;margin-bottom:4px">Selected node</div>
+      <label>ID</label>
+      <input id="form-id" type="text" placeholder="e.g. w_1340d">
+      <label>Label</label>
+      <input id="form-label" type="text" placeholder="e.g. Room 1340 door">
+      <label>Room ID (door nodes only)</label>
+      <input id="form-room" type="text" placeholder="e.g. 1340">
+      <button class="save-btn" id="btn-save-node">Save</button>
+    </div>
+  </div>
+</div>
+
+<div id="status">Click on map to place node. Use Edge mode to connect nodes. Scroll to zoom, drag to pan.</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────
+const STATE = {
+  floor: 1,
+  mode: 'door',
+  nodes: { 1: [], 2: [], 3: [] },   // floor → node[]
+  edges: { 1: [], 2: [], 3: [] },   // floor → edge[]
+  selectedNode: null,
+  edgeStart: null,
+  scale: 1,
+  panX: 0,
+  panY: 0,
+  imgW: 1, imgH: 1,
+  isPanning: false,
+  panStartX: 0, panStartY: 0,
+  panOriginX: 0, panOriginY: 0,
+  history: []   // for undo
+};
+
+const TYPE_COLORS = {
+  door: '#378ADD', corridor: '#1D9E75',
+  stair: '#D85A30', elevator: '#9B59B6', anchor: '#F39C12'
+};
+const TYPE_RADIUS = {
+  door: 7, corridor: 5, stair: 9, elevator: 9, anchor: 8
+};
+
+// ── DOM refs ───────────────────────────────────────────────────
+const mapImg    = document.getElementById('map-img');
+const overlay   = document.getElementById('overlay');
+const ctx       = overlay.getContext('2d');
+const mapArea   = document.getElementById('map-area');
+const mapCont   = document.getElementById('map-container');
+const statusEl  = document.getElementById('status');
+const nodeList  = document.getElementById('node-list');
+const edgeList  = document.getElementById('edge-list');
+const exportArea= document.getElementById('export-area');
+const roomsArea = document.getElementById('rooms-area');
+
+// ── Image upload ───────────────────────────────────────────────
+document.getElementById('img-upload').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  mapImg.onload = () => {
+    STATE.imgW = mapImg.naturalWidth;
+    STATE.imgH = mapImg.naturalHeight;
+    overlay.width  = STATE.imgW;
+    overlay.height = STATE.imgH;
+    // fit to view
+    const areaW = mapArea.clientWidth;
+    const areaH = mapArea.clientHeight;
+    STATE.scale = Math.min(areaW / STATE.imgW, areaH / STATE.imgH) * 0.95;
+    STATE.panX = (areaW - STATE.imgW * STATE.scale) / 2;
+    STATE.panY = (areaH - STATE.imgH * STATE.scale) / 2;
+    applyTransform();
+    redraw();
+    setStatus(`Loaded ${file.name} (${STATE.imgW}×${STATE.imgH})`);
+  };
+  mapImg.src = url;
+});
+
+// ── Floor tabs ─────────────────────────────────────────────────
+document.getElementById('floor-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.tab');
+  if (!tab) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  STATE.floor = parseInt(tab.dataset.floor);
+  STATE.selectedNode = null;
+  STATE.edgeStart = null;
+  redraw();
+  renderSidebar();
+  setStatus(`Floor ${STATE.floor} — ${STATE.nodes[STATE.floor].length} nodes, ${STATE.edges[STATE.floor].length} edges`);
+});
+
+// ── Mode buttons ───────────────────────────────────────────────
+document.getElementById('mode-btns').addEventListener('click', e => {
+  const btn = e.target.closest('.mode-btn');
+  if (!btn) return;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  STATE.mode = btn.dataset.mode;
+  STATE.edgeStart = null;
+  redraw();
+  setStatus(modeHint());
+});
+
+function modeHint() {
+  const hints = {
+    door:     'Door mode: click at room door openings',
+    corridor: 'Corridor mode: click at hallway junctions',
+    stair:    'Stair mode: click on stairwell access point',
+    elevator: 'Elevator mode: click on elevator door',
+    anchor:   'QR Anchor mode: click at QR code scan position',
+    edge:     'Edge mode: click first node, then second to connect',
+    delete:   'Delete mode: click a node to remove it (edges removed too)'
+  };
+  return hints[STATE.mode] || '';
+}
+
+// ── Map interaction ────────────────────────────────────────────
+function applyTransform() {
+  mapCont.style.transform = `translate(${STATE.panX}px, ${STATE.panY}px) scale(${STATE.scale})`;
+  mapCont.style.transformOrigin = '0 0';
+}
+
+// Convert screen coords to image (normalised) coords
+function screenToImg(sx, sy) {
+  const rect = mapArea.getBoundingClientRect();
+  const rx = sx - rect.left;
+  const ry = sy - rect.top;
+  const ix = (rx - STATE.panX) / STATE.scale;
+  const iy = (ry - STATE.panY) / STATE.scale;
+  return { nx: ix / STATE.imgW, ny: iy / STATE.imgH };
+}
+
+// Convert normalised coords to canvas pixel coords
+function imgToCanvas(nx, ny) {
+  return { x: nx * STATE.imgW, y: ny * STATE.imgH };
+}
+
+// Hit test: find node near canvas point
+function hitNode(nx, ny) {
+  const nodes = STATE.nodes[STATE.floor];
+  for (let i = nodes.length - 1; i >= 0; i--) {
+    const n = nodes[i];
+    const dx = (n.nx - nx) * STATE.imgW;
+    const dy = (n.ny - ny) * STATE.imgH;
+    const r = TYPE_RADIUS[n.type] + 4;
+    if (dx*dx + dy*dy < r*r) return n;
+  }
+  return null;
+}
+
+// Pointer events on map area
+mapArea.addEventListener('pointerdown', e => {
+  if (e.pointerType === 'mouse' && e.button === 1) return; // middle click pan handled separately
+  if (e.touches && e.touches.length > 1) return; // pinch handled separately
+
+  // Right click or two-finger = pan
+  if (e.button === 2 || (e.pointerType === 'touch' && e.buttons === 0)) {
+    return;
+  }
+
+  const { nx, ny } = screenToImg(e.clientX, e.clientY);
+
+  if (STATE.mode === 'delete') {
+    const hit = hitNode(nx, ny);
+    if (hit) deleteNode(hit);
+    return;
+  }
+
+  if (STATE.mode === 'edge') {
+    const hit = hitNode(nx, ny);
+    if (!hit) return;
+    if (!STATE.edgeStart) {
+      STATE.edgeStart = hit;
+      setStatus(`Edge: selected "${hit.id}" — now click target node`);
+      redraw();
+    } else {
+      if (STATE.edgeStart.id !== hit.id) {
+        addEdge(STATE.edgeStart, hit);
+      }
+      STATE.edgeStart = null;
+      redraw();
+    }
+    return;
+  }
+
+  // Place node
+  if (nx < 0 || nx > 1 || ny < 0 || ny > 1) return;
+  const id = generateId(STATE.mode);
+  const node = { id, type: STATE.mode, floor: STATE.floor, nx, ny, label: '', roomId: '' };
+  pushHistory();
+  STATE.nodes[STATE.floor].push(node);
+  selectNode(node);
+  redraw();
+  renderSidebar();
+  setStatus(`Placed ${STATE.mode} node "${id}" at (${nx.toFixed(4)}, ${ny.toFixed(4)})`);
+});
+
+// Pan with mouse drag (no button held = left drag)
+let panDragging = false, panStartClient = null;
+mapArea.addEventListener('mousedown', e => {
+  if (e.button !== 0 || STATE.mode !== 'edge' && false) return; // always allow pan on right
+  if (e.button === 2) { panDragging = true; panStartClient = {x: e.clientX, y: e.clientY}; panOriginXY(); }
+});
+mapArea.addEventListener('contextmenu', e => e.preventDefault());
+
+// Scroll to zoom
+mapArea.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.1 : 0.91;
+  const rect = mapArea.getBoundingClientRect();
+  const cx = e.clientX - rect.left;
+  const cy = e.clientY - rect.top;
+  STATE.panX = cx - (cx - STATE.panX) * factor;
+  STATE.panY = cy - (cy - STATE.panY) * factor;
+  STATE.scale *= factor;
+  applyTransform();
+}, { passive: false });
+
+// Touch pan & pinch zoom
+let lastTouches = null;
+mapArea.addEventListener('touchstart', e => {
+  lastTouches = Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
+  if (e.touches.length === 1 && STATE.mode !== 'edge' && STATE.mode !== 'delete') {
+    // single touch on non-place modes = pan
+  }
+}, { passive: true });
+mapArea.addEventListener('touchmove', e => {
+  e.preventDefault();
+  const touches = Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
+  if (touches.length === 2 && lastTouches && lastTouches.length === 2) {
+    const prevDist = Math.hypot(lastTouches[1].x - lastTouches[0].x, lastTouches[1].y - lastTouches[0].y);
+    const currDist = Math.hypot(touches[1].x - touches[0].x, touches[1].y - touches[0].y);
+    const factor = currDist / prevDist;
+    const cx = (touches[0].x + touches[1].x) / 2 - mapArea.getBoundingClientRect().left;
+    const cy = (touches[0].y + touches[1].y) / 2 - mapArea.getBoundingClientRect().top;
+    STATE.panX = cx - (cx - STATE.panX) * factor;
+    STATE.panY = cy - (cy - STATE.panY) * factor;
+    STATE.scale *= factor;
+    // also pan
+    const dx = ((touches[0].x + touches[1].x) - (lastTouches[0].x + lastTouches[1].x)) / 2;
+    const dy = ((touches[0].y + touches[1].y) - (lastTouches[0].y + lastTouches[1].y)) / 2;
+    STATE.panX += dx; STATE.panY += dy;
+    applyTransform();
+  } else if (touches.length === 1 && lastTouches && lastTouches.length === 1) {
+    STATE.panX += touches[0].x - lastTouches[0].x;
+    STATE.panY += touches[0].y - lastTouches[0].y;
+    applyTransform();
+  }
+  lastTouches = touches;
+}, { passive: false });
+
+// Mouse pan (right drag)
+mapArea.addEventListener('mousemove', e => {
+  if (!(e.buttons & 2)) { panDragging = false; return; }
+  if (!panDragging) { panDragging = true; panStartClient = {x: e.clientX, y: e.clientY}; STATE._panOriX = STATE.panX; STATE._panOriY = STATE.panY; }
+  STATE.panX = STATE._panOriX + e.clientX - panStartClient.x;
+  STATE.panY = STATE._panOriY + e.clientY - panStartClient.y;
+  applyTransform();
+});
+function panOriginXY() { STATE._panOriX = STATE.panX; STATE._panOriY = STATE.panY; }
+
+// ── Node operations ────────────────────────────────────────────
+let nodeCounter = { door:0, corridor:0, stair:0, elevator:0, anchor:0 };
+function generateId(type) {
+  nodeCounter[type] = (nodeCounter[type] || 0) + 1;
+  return `w_${type[0]}${STATE.floor}_${nodeCounter[type]}`;
+}
+
+function deleteNode(node) {
+  pushHistory();
+  STATE.nodes[STATE.floor] = STATE.nodes[STATE.floor].filter(n => n.id !== node.id);
+  STATE.edges[STATE.floor] = STATE.edges[STATE.floor].filter(e => e[0] !== node.id && e[1] !== node.id);
+  if (STATE.selectedNode?.id === node.id) STATE.selectedNode = null;
+  redraw(); renderSidebar();
+  setStatus(`Deleted node "${node.id}"`);
+}
+
+function addEdge(a, b) {
+  const exists = STATE.edges[STATE.floor].some(e => (e[0]===a.id&&e[1]===b.id)||(e[0]===b.id&&e[1]===a.id));
+  if (exists) { setStatus('Edge already exists'); return; }
+  pushHistory();
+  STATE.edges[STATE.floor].push([a.id, b.id]);
+  renderSidebar();
+  setStatus(`Edge: ${a.id} ↔ ${b.id}`);
+}
+
+function selectNode(node) {
+  STATE.selectedNode = node;
+  document.getElementById('form-id').value    = node.id;
+  document.getElementById('form-label').value = node.label || '';
+  document.getElementById('form-room').value  = node.roomId || '';
+  // highlight in list
+  document.querySelectorAll('.node-item').forEach(el => {
+    el.classList.toggle('selected', el.dataset.nid === node.id);
+  });
+}
+
+document.getElementById('btn-save-node').addEventListener('click', () => {
+  if (!STATE.selectedNode) return;
+  STATE.selectedNode.id    = document.getElementById('form-id').value.trim() || STATE.selectedNode.id;
+  STATE.selectedNode.label = document.getElementById('form-label').value.trim();
+  STATE.selectedNode.roomId= document.getElementById('form-room').value.trim();
+  redraw(); renderSidebar();
+  setStatus(`Saved node "${STATE.selectedNode.id}"`);
+});
+
+// ── Undo ───────────────────────────────────────────────────────
+function pushHistory() {
+  STATE.history.push(JSON.stringify({ nodes: STATE.nodes, edges: STATE.edges }));
+  if (STATE.history.length > 50) STATE.history.shift();
+}
+document.getElementById('btn-undo').addEventListener('click', () => {
+  if (!STATE.history.length) return;
+  const prev = JSON.parse(STATE.history.pop());
+  STATE.nodes = prev.nodes;
+  STATE.edges = prev.edges;
+  STATE.selectedNode = null;
+  redraw(); renderSidebar();
+  setStatus('Undo');
+});
+
+document.getElementById('btn-clear-floor').addEventListener('click', () => {
+  if (!confirm(`Clear all nodes on floor ${STATE.floor}?`)) return;
+  pushHistory();
+  STATE.nodes[STATE.floor] = [];
+  STATE.edges[STATE.floor] = [];
+  STATE.selectedNode = null;
+  redraw(); renderSidebar();
+});
+
+// ── Draw ───────────────────────────────────────────────────────
+function redraw() {
+  ctx.clearRect(0, 0, overlay.width, overlay.height);
+  const edges = STATE.edges[STATE.floor];
+  const nodes = STATE.nodes[STATE.floor];
+  const nodeMap = {};
+  nodes.forEach(n => nodeMap[n.id] = n);
+
+  // Draw edges
+  ctx.strokeStyle = 'rgba(255,255,100,0.55)';
+  ctx.lineWidth = 2;
+  edges.forEach(([aid, bid]) => {
+    const a = nodeMap[aid], b = nodeMap[bid];
+    if (!a || !b) return;
+    const pa = imgToCanvas(a.nx, a.ny);
+    const pb = imgToCanvas(b.nx, b.ny);
+    ctx.beginPath();
+    ctx.moveTo(pa.x, pa.y);
+    ctx.lineTo(pb.x, pb.y);
+    ctx.stroke();
+  });
+
+  // In-progress edge
+  if (STATE.edgeStart) {
+    const pa = imgToCanvas(STATE.edgeStart.nx, STATE.edgeStart.ny);
+    ctx.strokeStyle = 'rgba(255,200,0,0.8)';
+    ctx.setLineDash([5,4]);
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(pa.x, pa.y);
+    ctx.lineTo(pa.x, pa.y); // will be updated on mousemove
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Draw nodes
+  nodes.forEach(n => {
+    const { x, y } = imgToCanvas(n.nx, n.ny);
+    const r = TYPE_RADIUS[n.type];
+    const color = TYPE_COLORS[n.type];
+    const isSelected = STATE.selectedNode?.id === n.id;
+    const isEdgeStart = STATE.edgeStart?.id === n.id;
+
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI*2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    if (isSelected || isEdgeStart) {
+      ctx.beginPath();
+      ctx.arc(x, y, r + 4, 0, Math.PI*2);
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // Label
+    if (n.label || n.roomId) {
+      const txt = n.roomId || n.label;
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 11px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(txt, x, y - r - 3);
+    }
+  });
+}
+
+// Mousemove: update in-progress edge endpoint
+mapArea.addEventListener('mousemove', e => {
+  if (STATE.mode !== 'edge' || !STATE.edgeStart) return;
+  redraw();
+  const { nx, ny } = screenToImg(e.clientX, e.clientY);
+  const pa = imgToCanvas(STATE.edgeStart.nx, STATE.edgeStart.ny);
+  const pb = imgToCanvas(nx, ny);
+  ctx.strokeStyle = 'rgba(255,200,0,0.8)';
+  ctx.setLineDash([5,4]);
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(pa.x, pa.y);
+  ctx.lineTo(pb.x, pb.y);
+  ctx.stroke();
+  ctx.setLineDash([]);
+});
+
+// ── Sidebar render ─────────────────────────────────────────────
+function renderSidebar() {
+  renderNodeList();
+  renderEdgeList();
+}
+
+function renderNodeList() {
+  const nodes = STATE.nodes[STATE.floor];
+  nodeList.innerHTML = nodes.length === 0
+    ? '<div style="color:#666;padding:8px">No nodes on this floor yet</div>'
+    : nodes.map(n => `
+      <div class="node-item ${STATE.selectedNode?.id===n.id?'selected':''}" data-nid="${n.id}">
+        <div class="node-dot dot-${n.type}"></div>
+        <div class="node-label">${n.label || n.id}</div>
+        <div class="node-id">${n.type}</div>
+      </div>`).join('');
+  nodeList.querySelectorAll('.node-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const node = STATE.nodes[STATE.floor].find(n => n.id === el.dataset.nid);
+      if (node) { selectNode(node); redraw(); }
+    });
+  });
+}
+
+function renderEdgeList() {
+  const edges = STATE.edges[STATE.floor];
+  edgeList.innerHTML = edges.length === 0
+    ? '<div style="color:#666;padding:8px">No edges on this floor yet</div>'
+    : edges.map((e, i) => `
+      <div class="edge-item">
+        <span>${e[0]} ↔ ${e[1]}</span>
+        <span class="edge-del" data-i="${i}">✕</span>
+      </div>`).join('');
+  edgeList.querySelectorAll('.edge-del').forEach(el => {
+    el.addEventListener('click', () => {
+      pushHistory();
+      STATE.edges[STATE.floor].splice(parseInt(el.dataset.i), 1);
+      renderSidebar();
+      redraw();
+    });
+  });
+}
+
+// ── Sidebar tabs ───────────────────────────────────────────────
+document.getElementById('sidebar-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.stab');
+  if (!tab) return;
+  document.querySelectorAll('.stab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  document.querySelectorAll('#node-panel,#edge-panel,#export-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`${tab.dataset.stab}-panel`).classList.add('active');
+  if (tab.dataset.stab === 'export') buildExport();
+});
+
+// ── Export ─────────────────────────────────────────────────────
+document.getElementById('btn-export').addEventListener('click', () => {
+  buildExport();
+  document.querySelectorAll('.stab').forEach(t => t.classList.remove('active'));
+  document.querySelector('[data-stab="export"]').classList.add('active');
+  document.querySelectorAll('#node-panel,#edge-panel,#export-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('export-panel').classList.add('active');
+});
+
+function buildExport() {
+  // Build graph.json: flat list of all nodes across all floors with edges
+  const allNodes = [];
+  const allEdges = [];
+  [1,2,3].forEach(f => {
+    STATE.nodes[f].forEach(n => allNodes.push({ ...n }));
+    STATE.edges[f].forEach(e => allEdges.push({ floor: f, from: e[0], to: e[1] }));
+  });
+  // Build adjacency on nodes
+  const nodeMap = {};
+  allNodes.forEach(n => { n.edges = []; nodeMap[n.id] = n; });
+  allEdges.forEach(e => {
+    if (nodeMap[e.from]) nodeMap[e.from].edges.push(e.to);
+    if (nodeMap[e.to])   nodeMap[e.to].edges.push(e.from);
+  });
+  exportArea.value = JSON.stringify(allNodes, null, 2);
+
+  // Build rooms.json template (door nodes only)
+  const doorNodes = allNodes.filter(n => n.type === 'door' && n.roomId);
+  const rooms = doorNodes.map(n => ({
+    id: n.roomId,
+    floor: n.floor,
+    label: n.label || n.roomId,
+    doorNode: n.id,
+    keywords: [n.roomId, n.label].filter(Boolean)
+  }));
+  roomsArea.value = JSON.stringify(rooms, null, 2);
+}
+
+document.getElementById('btn-copy').addEventListener('click', () => {
+  navigator.clipboard.writeText(exportArea.value).then(() => setStatus('Copied to clipboard'));
+});
+
+// ── Status ─────────────────────────────────────────────────────
+function setStatus(msg) { statusEl.textContent = msg; }
+
+// ── Init ───────────────────────────────────────────────────────
+setStatus('Load a floor map image to begin. Right-drag to pan, scroll to zoom.');
+</script>
+</body>
+</html>

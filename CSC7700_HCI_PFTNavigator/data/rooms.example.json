@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1340",
+    "floor": 1,
+    "label": "Capstone Design Space",
+    "doorNode": "w_d1_1340",
+    "keywords": ["1340", "capstone", "design", "senior project", "cen 4027"]
+  },
+  {
+    "id": "1300",
+    "floor": 1,
+    "label": "Robotics Lab",
+    "doorNode": "w_d1_1300",
+    "keywords": ["1300", "robotics", "mee", "robot"]
+  },
+  {
+    "id": "2355",
+    "floor": 2,
+    "label": "Materials and Manufacturing Lab",
+    "doorNode": "w_d2_2355",
+    "keywords": ["2355", "materials", "manufacturing", "mfg", "mme"]
+  }
+]

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>PFT Navigator</title>
+<style>
+/* ── Reset & base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; background: #111; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #f0f0f0; }
+
+/* ── Layout shell ─────────────────────────────── */
+#app { display: flex; flex-direction: column; height: 100dvh; }
+
+/* ── Top bar ──────────────────────────────────── */
+#topbar {
+  flex-shrink: 0;
+  padding: 10px 12px 8px;
+  background: #1c1c1e;
+  border-bottom: 1px solid #2c2c2e;
+  display: flex; flex-direction: column; gap: 8px;
+  z-index: 10;
+}
+#search-row { display: flex; gap: 8px; align-items: center; }
+#search-wrap {
+  flex: 1; position: relative;
+}
+#search-input {
+  width: 100%; padding: 9px 36px 9px 14px;
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 12px; color: #f0f0f0;
+  font-size: 16px; /* prevents iOS zoom */
+  outline: none; appearance: none;
+}
+#search-input:focus { border-color: #0a84ff; }
+#search-input::placeholder { color: #636366; }
+#search-clear {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: #636366; border: none; border-radius: 50%;
+  width: 18px; height: 18px; color: #111; font-size: 11px;
+  cursor: pointer; display: none; align-items: center; justify-content: center;
+  line-height: 1;
+}
+#search-clear.visible { display: flex; }
+
+/* floor tabs */
+#floor-tabs { display: flex; gap: 6px; }
+.ftab {
+  flex: 1; padding: 6px 0; text-align: center;
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 8px; font-size: 13px; font-weight: 500; color: #8e8e93;
+  cursor: pointer; transition: all 0.15s;
+}
+.ftab.active { background: #0a84ff22; border-color: #0a84ff; color: #0a84ff; }
+
+/* ── Map area ─────────────────────────────────── */
+#map-area {
+  flex: 1; overflow: hidden; position: relative;
+  background: #000; touch-action: none;
+}
+#map-container {
+  position: absolute; transform-origin: 0 0; will-change: transform;
+}
+#map-img { display: block; max-width: none; user-select: none; -webkit-user-drag: none; }
+#path-canvas { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+/* ── Destination card ─────────────────────────── */
+#dest-card {
+  flex-shrink: 0;
+  background: #1c1c1e;
+  border-top: 1px solid #2c2c2e;
+  padding: 14px 16px 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+#dest-card.visible { transform: translateY(0); }
+#dest-card-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+#dest-info { flex: 1; min-width: 0; }
+#dest-room {
+  font-size: 22px; font-weight: 700; color: #f0f0f0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#dest-label { font-size: 14px; color: #8e8e93; margin-top: 2px; }
+#dest-floor { font-size: 13px; color: #0a84ff; margin-top: 4px; }
+#btn-clear-dest {
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 10px; color: #8e8e93;
+  padding: 6px 14px; font-size: 14px; cursor: pointer;
+  white-space: nowrap; flex-shrink: 0;
+}
+
+/* ── Search results dropdown ──────────────────── */
+#results-panel {
+  position: absolute; left: 12px; right: 12px;
+  top: calc(100% + 4px);
+  background: #2c2c2e; border: 1px solid #3a3a3c;
+  border-radius: 12px; overflow: hidden;
+  max-height: 280px; overflow-y: auto;
+  z-index: 100; display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+#results-panel.open { display: block; }
+.result-item {
+  padding: 12px 16px; border-bottom: 1px solid #3a3a3c;
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+}
+.result-item:last-child { border-bottom: none; }
+.result-item:active { background: #3a3a3c; }
+.result-room { font-size: 15px; font-weight: 600; color: #f0f0f0; }
+.result-label { font-size: 13px; color: #8e8e93; margin-top: 1px; }
+.result-floor { font-size: 12px; color: #0a84ff; background: #0a84ff22; padding: 2px 7px; border-radius: 6px; white-space: nowrap; }
+.result-empty { padding: 16px; color: #636366; text-align: center; font-size: 14px; }
+
+/* ── Cross-floor instruction banner ──────────────*/
+#crossfloor-banner {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: #ff9f0a22; border-top: 1px solid #ff9f0a55;
+  color: #ff9f0a; font-size: 13px; text-align: center;
+  padding: 8px 16px; display: none; pointer-events: none;
+}
+#crossfloor-banner.visible { display: block; }
+
+/* ── Loading overlay ──────────────────────────── */
+#loading {
+  position: absolute; inset: 0;
+  background: #111; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  z-index: 50;
+}
+#loading.hidden { display: none; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid #3a3a3c; border-top-color: #0a84ff;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+#loading p { color: #8e8e93; font-size: 14px; }
+
+/* ── No-route notice ──────────────────────────── */
+#no-route {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: #2c2c2eee; border: 1px solid #3a3a3c; border-radius: 14px;
+  padding: 18px 24px; text-align: center; color: #8e8e93;
+  font-size: 14px; display: none; pointer-events: none; z-index: 20;
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- Top bar -->
+  <div id="topbar">
+    <div id="search-row">
+      <div id="search-wrap">
+        <input id="search-input" type="search" autocomplete="off" autocorrect="off"
+               spellcheck="false" placeholder="Room, course, professor…">
+        <button id="search-clear" aria-label="Clear">✕</button>
+        <!-- Results dropdown sits inside search-wrap for positioning -->
+        <div id="results-panel"></div>
+      </div>
+    </div>
+    <div id="floor-tabs">
+      <div class="ftab active" data-floor="1">1F</div>
+      <div class="ftab" data-floor="2">2F</div>
+      <div class="ftab" data-floor="3">3F</div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div id="map-area">
+    <div id="map-container">
+      <img id="map-img" alt="Floor map">
+      <canvas id="path-canvas"></canvas>
+    </div>
+    <div id="crossfloor-banner"></div>
+    <div id="no-route">No path found to this room</div>
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading map…</p>
+    </div>
+  </div>
+
+  <!-- Destination card -->
+  <div id="dest-card">
+    <div id="dest-card-inner">
+      <div id="dest-info">
+        <div id="dest-room">—</div>
+        <div id="dest-label"></div>
+        <div id="dest-floor"></div>
+      </div>
+      <button id="btn-clear-dest">Clear</button>
+    </div>
+  </div>
+
+</div>
+<script>
+// ═══════════════════════════════════════════════════════
+// CONFIG — adjust paths to match your repo structure
+// ═══════════════════════════════════════════════════════
+const CONFIG = {
+  floors: {
+    1: 'assets/floor1.png',
+    2: 'assets/floor2.png',
+    3: 'assets/floor3.png',
+  },
+  graphFile:  'data/graph.json',
+  roomsFile:  'data/rooms.json',
+};
+
+// QR anchor param format: ?floor=1&anchor=w_anchor_main_entrance
+// If present, sets start node. Otherwise default start per floor is
+// the first anchor-type node found on that floor.
+
+// ═══════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════
+const S = {
+  floor: 1,
+  nodes: {},        // id → node
+  rooms: [],        // room objects
+  roomIndex: [],    // { room, tokens[] } for search
+  imgW: 1, imgH: 1,
+  scale: 1, panX: 0, panY: 0,
+  dest: null,       // selected room object
+  startNodeId: null,// current-position node id
+  path: null,       // [ nodeId, … ] for current floor segment
+  crossFloor: null, // { via: nodeId, targetFloor, targetNodeId } | null
+};
+
+// ═══════════════════════════════════════════════════════
+// DOM
+// ═══════════════════════════════════════════════════════
+const mapImg      = document.getElementById('map-img');
+const canvas      = document.getElementById('path-canvas');
+const ctx         = canvas.getContext('2d');
+const mapArea     = document.getElementById('map-area');
+const mapCont     = document.getElementById('map-container');
+const loading     = document.getElementById('loading');
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+const resultsPanel= document.getElementById('results-panel');
+const destCard    = document.getElementById('dest-card');
+const destRoom    = document.getElementById('dest-room');
+const destLabel   = document.getElementById('dest-label');
+const destFloor   = document.getElementById('dest-floor');
+const noRoute     = document.getElementById('no-route');
+const banner      = document.getElementById('crossfloor-banner');
+
+// ═══════════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════════
+async function boot() {
+  // Parse QR params
+  const params = new URLSearchParams(location.search);
+  const qrFloor  = parseInt(params.get('floor'))  || 1;
+  const qrAnchor = params.get('anchor') || null;
+
+  // Load data files in parallel
+  const [graphData, roomsData] = await Promise.all([
+    fetch(CONFIG.graphFile).then(r => r.json()).catch(() => []),
+    fetch(CONFIG.roomsFile).then(r => r.json()).catch(() => []),
+  ]);
+
+  // Index nodes
+  graphData.forEach(n => { S.nodes[n.id] = n; });
+
+  // Index rooms for search
+  S.rooms = roomsData;
+  S.roomIndex = roomsData.map(r => ({
+    room: r,
+    tokens: [
+      r.id, r.label,
+      ...(r.keywords || []),
+    ].filter(Boolean).map(t => t.toString().toLowerCase()),
+  }));
+
+  // Determine start node
+  if (qrAnchor && S.nodes[qrAnchor]) {
+    S.startNodeId = qrAnchor;
+    S.floor = S.nodes[qrAnchor].floor || qrFloor;
+  } else {
+    S.floor = qrFloor;
+    S.startNodeId = defaultStart(S.floor);
+  }
+
+  // Sync floor tabs
+  setFloor(S.floor, false);
+
+  // Load map image for initial floor
+  await loadFloorImage(S.floor);
+  loading.classList.add('hidden');
+}
+
+function defaultStart(floor) {
+  // First anchor or stair on this floor as fallback start
+  const n = Object.values(S.nodes).find(n => n.floor === floor && (n.type === 'anchor' || n.type === 'stair'));
+  return n ? n.id : null;
+}
+
+// ═══════════════════════════════════════════════════════
+// IMAGE LOADING
+// ═══════════════════════════════════════════════════════
+const imgCache = {};
+
+function loadFloorImage(floor) {
+  return new Promise(resolve => {
+    if (imgCache[floor]) {
+      applyImage(imgCache[floor]);
+      resolve();
+      return;
+    }
+    const img = new Image();
+    img.onload = () => {
+      imgCache[floor] = img;
+      applyImage(img);
+      resolve();
+    };
+    img.onerror = () => resolve(); // graceful fail
+    img.src = CONFIG.floors[floor];
+  });
+}
+
+function applyImage(img) {
+  mapImg.src = img.src;
+  S.imgW = img.naturalWidth;
+  S.imgH = img.naturalHeight;
+  canvas.width  = S.imgW;
+  canvas.height = S.imgH;
+  fitToView();
+}
+
+function fitToView() {
+  const aw = mapArea.clientWidth;
+  const ah = mapArea.clientHeight;
+  S.scale = Math.min(aw / S.imgW, ah / S.imgH);
+  S.panX = (aw - S.imgW * S.scale) / 2;
+  S.panY = (ah - S.imgH * S.scale) / 2;
+  applyTransform();
+}
+
+// ═══════════════════════════════════════════════════════
+// FLOOR SWITCHING
+// ═══════════════════════════════════════════════════════
+function setFloor(floor, redrawPath = true) {
+  S.floor = floor;
+  document.querySelectorAll('.ftab').forEach(t => {
+    t.classList.toggle('active', parseInt(t.dataset.floor) === floor);
+  });
+  loadFloorImage(floor).then(() => {
+    if (redrawPath) drawRoute();
+  });
+}
+
+document.getElementById('floor-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.ftab');
+  if (!tab) return;
+  const floor = parseInt(tab.dataset.floor);
+  if (floor !== S.floor) setFloor(floor);
+});
+
+// ═══════════════════════════════════════════════════════
+// SEARCH
+// ═══════════════════════════════════════════════════════
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim();
+  searchClear.classList.toggle('visible', q.length > 0);
+  if (q.length < 1) { closeResults(); return; }
+  const results = search(q);
+  renderResults(results);
+});
+
+searchInput.addEventListener('focus', () => {
+  if (searchInput.value.trim().length > 0) {
+    renderResults(search(searchInput.value.trim()));
+  }
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+  closeResults();
+  searchInput.focus();
+});
+
+document.addEventListener('pointerdown', e => {
+  if (!resultsPanel.contains(e.target) && e.target !== searchInput) closeResults();
+});
+
+function search(q) {
+  const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const scored = [];
+  S.roomIndex.forEach(({ room, tokens }) => {
+    let score = 0;
+    terms.forEach(term => {
+      tokens.forEach(tok => {
+        if (tok === term) score += 10;
+        else if (tok.startsWith(term)) score += 6;
+        else if (tok.includes(term)) score += 2;
+      });
+    });
+    if (score > 0) scored.push({ room, score });
+  });
+  return scored.sort((a, b) => b.score - a.score).slice(0, 8).map(x => x.room);
+}
+
+function renderResults(rooms) {
+  if (rooms.length === 0) {
+    resultsPanel.innerHTML = '<div class="result-empty">No results</div>';
+  } else {
+    resultsPanel.innerHTML = rooms.map(r => `
+      <div class="result-item" data-rid="${r.id}">
+        <div>
+          <div class="result-room">${r.id}</div>
+          <div class="result-label">${r.label || ''}</div>
+        </div>
+        <div class="result-floor">Floor ${r.floor}</div>
+      </div>`).join('');
+    resultsPanel.querySelectorAll('.result-item').forEach(el => {
+      el.addEventListener('pointerdown', e => {
+        e.preventDefault();
+        selectRoom(S.rooms.find(r => r.id === el.dataset.rid));
+      });
+    });
+  }
+  resultsPanel.classList.add('open');
+}
+
+function closeResults() {
+  resultsPanel.classList.remove('open');
+}
+
+// ═══════════════════════════════════════════════════════
+// ROOM SELECTION & ROUTING
+// ═══════════════════════════════════════════════════════
+function selectRoom(room) {
+  if (!room) return;
+  S.dest = room;
+  closeResults();
+  searchInput.blur();
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+
+  // Update destination card
+  destRoom.textContent  = room.id;
+  destLabel.textContent = room.label || '';
+  destFloor.textContent = `Floor ${room.floor}`;
+  destCard.classList.add('visible');
+  noRoute.style.display = 'none';
+
+  // Compute route
+  const route = computeRoute(S.startNodeId, room.doorNode, S.floor, room.floor);
+
+  if (!route) {
+    noRoute.style.display = 'block';
+    setTimeout(() => { noRoute.style.display = 'none'; }, 2500);
+    return;
+  }
+
+  S.path = route.segment;
+  S.crossFloor = route.crossFloor || null;
+
+  // Switch to start floor to show first segment
+  setFloor(S.floor, false);
+  // Animate to show path
+  setTimeout(() => {
+    drawRoute();
+    zoomToPath(S.path);
+    updateBanner(route);
+  }, 50);
+}
+
+document.getElementById('btn-clear-dest').addEventListener('click', clearDest);
+
+function clearDest() {
+  S.dest = null;
+  S.path = null;
+  S.crossFloor = null;
+  destCard.classList.remove('visible');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  banner.classList.remove('visible');
+}
+
+// ═══════════════════════════════════════════════════════
+// PATHFINDING  (BFS)
+// ═══════════════════════════════════════════════════════
+function computeRoute(startId, destDoorId, startFloor, destFloor) {
+  if (!startId || !destDoorId) return null;
+
+  if (startFloor === destFloor) {
+    const path = bfs(startId, destDoorId, startFloor);
+    if (!path) return null;
+    return { segment: path };
+  }
+
+  // Cross-floor: find shortest path to any stair/elevator on start floor,
+  // then from corresponding node on dest floor to destination.
+  const transits = Object.values(S.nodes).filter(
+    n => n.floor === startFloor && (n.type === 'stair' || n.type === 'elevator')
+  );
+
+  let best = null;
+  for (const t of transits) {
+    const seg1 = bfs(startId, t.id, startFloor);
+    if (!seg1) continue;
+
+    // Find partner node on dest floor (same shaftId)
+    const partner = findPartner(t, destFloor);
+    if (!partner) continue;
+
+    const seg2 = bfs(partner.id, destDoorId, destFloor);
+    if (!seg2) continue;
+
+    const total = seg1.length + seg2.length;
+    if (!best || total < best.total) {
+      best = {
+        total,
+        segment: seg1,
+        crossFloor: {
+          via: t,
+          partner,
+          seg2,
+          targetFloor: destFloor,
+        }
+      };
+    }
+  }
+  return best || null;
+}
+
+// BFS within a single floor
+function bfs(startId, goalId, floor) {
+  if (startId === goalId) return [startId];
+  const visited = new Set([startId]);
+  const queue = [[startId, [startId]]];
+  while (queue.length) {
+    const [cur, path] = queue.shift();
+    const node = S.nodes[cur];
+    if (!node) continue;
+    for (const neighborId of (node.edges || [])) {
+      if (visited.has(neighborId)) continue;
+      const nb = S.nodes[neighborId];
+      if (!nb || nb.floor !== floor) continue;
+      const newPath = [...path, neighborId];
+      if (neighborId === goalId) return newPath;
+      visited.add(neighborId);
+      queue.push([neighborId, newPath]);
+    }
+  }
+  return null;
+}
+
+// Find same stairwell/elevator on another floor.
+// Convention: shaft nodes share a `shaftId` field, OR their id follows
+// pattern  w_stair_<shaft>_<floor>  →  strip floor suffix.
+function findPartner(node, targetFloor) {
+  if (node.shaftId) {
+    return Object.values(S.nodes).find(
+      n => n.shaftId === node.shaftId && n.floor === targetFloor
+    ) || null;
+  }
+  // Fallback: same type, same approximate position (within 5% of image)
+  return Object.values(S.nodes).find(n =>
+    n.floor === targetFloor &&
+    n.type === node.type &&
+    Math.abs(n.nx - node.nx) < 0.05 &&
+    Math.abs(n.ny - node.ny) < 0.05
+  ) || null;
+}
+
+// ═══════════════════════════════════════════════════════
+// DRAW ROUTE
+// ═══════════════════════════════════════════════════════
+function drawRoute() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!S.path || !S.dest) return;
+
+  const isOnDestFloor = S.floor === S.dest.floor;
+  const isOnStartFloor = !S.crossFloor || S.floor !== S.crossFloor.targetFloor;
+
+  // Which segment to draw?
+  let segment = S.path;
+  if (S.crossFloor && S.floor === S.crossFloor.targetFloor) {
+    segment = S.crossFloor.seg2;
+  }
+
+  const pts = segment
+    .map(id => S.nodes[id])
+    .filter(n => n && n.floor === S.floor);
+
+  if (pts.length < 2) {
+    // Single node (destination is adjacent) — just draw the dot
+    if (pts.length === 1) drawDestDot(pts[0]);
+    return;
+  }
+
+  const coords = pts.map(n => ({
+    x: n.nx * S.imgW,
+    y: n.ny * S.imgH,
+  }));
+
+  // ── Animated dashed path ──
+  const totalLen = pathLength(coords);
+  const dashLen = 28;
+  const gapLen  = 14;
+  const offset  = (Date.now() / 30) % (dashLen + gapLen);
+
+  ctx.save();
+  ctx.strokeStyle = '#0a84ff';
+  ctx.lineWidth   = 7;
+  ctx.lineCap     = 'round';
+  ctx.lineJoin    = 'round';
+  ctx.setLineDash([dashLen, gapLen]);
+  ctx.lineDashOffset = -offset;
+
+  ctx.beginPath();
+  ctx.moveTo(coords[0].x, coords[0].y);
+  for (let i = 1; i < coords.length; i++) ctx.lineTo(coords[i].x, coords[i].y);
+  ctx.stroke();
+
+  // White underline for contrast
+  ctx.globalAlpha = 0.25;
+  ctx.strokeStyle = '#ffffff';
+  ctx.lineWidth   = 10;
+  ctx.setLineDash([]);
+  ctx.lineDashOffset = 0;
+  ctx.beginPath();
+  ctx.moveTo(coords[0].x, coords[0].y);
+  for (let i = 1; i < coords.length; i++) ctx.lineTo(coords[i].x, coords[i].y);
+  ctx.stroke();
+  ctx.restore();
+
+  // ── Start dot (you are here) ──
+  drawYouAreHere(coords[0]);
+
+  // ── End marker ──
+  if (isOnDestFloor) {
+    drawDestDot(pts[pts.length - 1]);
+  } else {
+    // Cross-floor: draw stair/elevator icon at path end
+    drawTransitMarker(coords[coords.length - 1], S.crossFloor.via.type);
+  }
+
+  // Animate
+  requestAnimationFrame(drawRoute);
+}
+
+function pathLength(coords) {
+  let len = 0;
+  for (let i = 1; i < coords.length; i++) {
+    const dx = coords[i].x - coords[i-1].x;
+    const dy = coords[i].y - coords[i-1].y;
+    len += Math.sqrt(dx*dx + dy*dy);
+  }
+  return len;
+}
+
+function drawYouAreHere(pt) {
+  ctx.save();
+  // Outer pulse ring
+  ctx.beginPath();
+  ctx.arc(pt.x, pt.y, 18, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(10,132,255,0.2)';
+  ctx.fill();
+  // Inner dot
+  ctx.beginPath();
+  ctx.arc(pt.x, pt.y, 9, 0, Math.PI*2);
+  ctx.fillStyle = '#0a84ff';
+  ctx.fill();
+  ctx.strokeStyle = '#fff';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawDestDot(node) {
+  const x = node.nx * S.imgW;
+  const y = node.ny * S.imgH;
+  ctx.save();
+  // Pin shadow
+  ctx.beginPath();
+  ctx.arc(x, y, 16, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(255,55,95,0.25)';
+  ctx.fill();
+  // Pin body
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.fillStyle = '#ff375f';
+  ctx.fill();
+  ctx.strokeStyle = '#fff';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+  // Room label above pin
+  const label = S.dest?.id || '';
+  ctx.font = 'bold 22px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#fff';
+  ctx.strokeStyle = '#000';
+  ctx.lineWidth = 4;
+  ctx.strokeText(label, x, y - 20);
+  ctx.fillText(label, x, y - 20);
+  ctx.restore();
+}
+
+function drawTransitMarker(pt, type) {
+  const label = type === 'elevator' ? 'Elevator' : 'Stairs';
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(pt.x, pt.y, 14, 0, Math.PI*2);
+  ctx.fillStyle = '#ff9f0a';
+  ctx.fill();
+  ctx.strokeStyle = '#fff';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+  ctx.font = 'bold 18px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#fff';
+  ctx.strokeStyle = '#000';
+  ctx.lineWidth = 4;
+  ctx.strokeText(label, pt.x, pt.y - 22);
+  ctx.fillText(label, pt.x, pt.y - 22);
+  ctx.restore();
+}
+
+// ═══════════════════════════════════════════════════════
+// ZOOM TO PATH
+// ═══════════════════════════════════════════════════════
+function zoomToPath(segment) {
+  const pts = segment
+    .map(id => S.nodes[id])
+    .filter(n => n && n.floor === S.floor);
+  if (pts.length === 0) return;
+
+  const pad = 80;
+  const minNx = Math.min(...pts.map(n => n.nx));
+  const maxNx = Math.max(...pts.map(n => n.nx));
+  const minNy = Math.min(...pts.map(n => n.ny));
+  const maxNy = Math.max(...pts.map(n => n.ny));
+
+  const pxW = (maxNx - minNx) * S.imgW || S.imgW * 0.3;
+  const pxH = (maxNy - minNy) * S.imgH || S.imgH * 0.3;
+
+  const aw = mapArea.clientWidth;
+  const ah = mapArea.clientHeight;
+  const scaleX = (aw - pad*2) / pxW;
+  const scaleY = (ah - pad*2) / pxH;
+  const newScale = Math.min(scaleX, scaleY, 3); // cap at 3×
+
+  const cx = (minNx + maxNx) / 2 * S.imgW;
+  const cy = (minNy + maxNy) / 2 * S.imgH;
+  S.scale = newScale;
+  S.panX = aw/2 - cx * S.scale;
+  S.panY = ah/2 - cy * S.scale;
+  applyTransform();
+}
+
+// ═══════════════════════════════════════════════════════
+// CROSS-FLOOR BANNER
+// ═══════════════════════════════════════════════════════
+function updateBanner(route) {
+  if (!route.crossFloor) {
+    banner.classList.remove('visible');
+    return;
+  }
+  const { via, targetFloor } = route.crossFloor;
+  const verb = via.type === 'elevator' ? 'Take elevator' : 'Take stairs';
+  banner.textContent = `${verb} to floor ${targetFloor} → tap floor tab to continue`;
+  banner.classList.add('visible');
+}
+
+// ═══════════════════════════════════════════════════════
+// PAN & ZOOM (touch + mouse)
+// ═══════════════════════════════════════════════════════
+function applyTransform() {
+  mapCont.style.transform = `translate(${S.panX}px,${S.panY}px) scale(${S.scale})`;
+}
+
+let lastTouches = null;
+mapArea.addEventListener('touchstart', e => {
+  lastTouches = getTouches(e);
+}, { passive: true });
+
+mapArea.addEventListener('touchmove', e => {
+  e.preventDefault();
+  const cur = getTouches(e);
+  if (!lastTouches) { lastTouches = cur; return; }
+
+  if (cur.length === 1 && lastTouches.length === 1) {
+    S.panX += cur[0].x - lastTouches[0].x;
+    S.panY += cur[0].y - lastTouches[0].y;
+  } else if (cur.length >= 2 && lastTouches.length >= 2) {
+    const prevD = dist(lastTouches[0], lastTouches[1]);
+    const curD  = dist(cur[0], cur[1]);
+    const f = curD / prevD;
+    const cx = (cur[0].x + cur[1].x) / 2 - mapArea.getBoundingClientRect().left;
+    const cy = (cur[0].y + cur[1].y) / 2 - mapArea.getBoundingClientRect().top;
+    S.panX = cx - (cx - S.panX) * f;
+    S.panY = cy - (cy - S.panY) * f;
+    S.scale *= f;
+    // also pan by centroid movement
+    const pcx = (lastTouches[0].x + lastTouches[1].x) / 2;
+    const pcy = (lastTouches[0].y + lastTouches[1].y) / 2;
+    const ncx = (cur[0].x + cur[1].x) / 2;
+    const ncy = (cur[0].y + cur[1].y) / 2;
+    S.panX += ncx - pcx;
+    S.panY += ncy - pcy;
+  }
+  lastTouches = cur;
+  applyTransform();
+}, { passive: false });
+
+mapArea.addEventListener('touchend', () => { lastTouches = null; });
+
+// Mouse wheel zoom (desktop testing)
+mapArea.addEventListener('wheel', e => {
+  e.preventDefault();
+  const f = e.deltaY < 0 ? 1.1 : 0.91;
+  const rect = mapArea.getBoundingClientRect();
+  const cx = e.clientX - rect.left;
+  const cy = e.clientY - rect.top;
+  S.panX = cx - (cx - S.panX) * f;
+  S.panY = cy - (cy - S.panY) * f;
+  S.scale *= f;
+  applyTransform();
+}, { passive: false });
+
+// Mouse drag (desktop testing)
+let mouseDrag = false, mouseOrigin = null, mouseOriginPan = null;
+mapArea.addEventListener('mousedown', e => {
+  if (e.button !== 0) return;
+  mouseDrag = true;
+  mouseOrigin = { x: e.clientX, y: e.clientY };
+  mouseOriginPan = { x: S.panX, y: S.panY };
+});
+window.addEventListener('mousemove', e => {
+  if (!mouseDrag) return;
+  S.panX = mouseOriginPan.x + e.clientX - mouseOrigin.x;
+  S.panY = mouseOriginPan.y + e.clientY - mouseOrigin.y;
+  applyTransform();
+});
+window.addEventListener('mouseup', () => { mouseDrag = false; });
+
+function getTouches(e) {
+  return Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
+}
+function dist(a, b) {
+  return Math.hypot(b.x - a.x, b.y - a.y);
+}
+
+// ═══════════════════════════════════════════════════════
+// RESIZE
+// ═══════════════════════════════════════════════════════
+window.addEventListener('resize', () => {
+  if (S.imgW > 1) fitToView();
+});
+
+// ═══════════════════════════════════════════════════════
+// START
+// ═══════════════════════════════════════════════════════
+boot().catch(console.error);
+</script>
+</body>
+</html>
