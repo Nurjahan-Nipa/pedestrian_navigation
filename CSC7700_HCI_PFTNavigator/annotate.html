@@ -130,12 +130,14 @@
     <button class="mode-btn" data-mode="elevator">Elevator</button>
     <button class="mode-btn" data-mode="anchor">QR Anchor</button>
     <button class="mode-btn" data-mode="edge">Edge</button>
+    <button class="mode-btn" data-mode="move">Move</button>
     <button class="mode-btn del" data-mode="delete">Delete</button>
   </div>
 
   <div id="action-btns">
     <button class="action-btn" id="btn-undo">Undo</button>
     <button class="action-btn" id="btn-clear-floor">Clear Floor</button>
+    <label class="action-btn" style="cursor:pointer">Import JSON<input type="file" id="json-upload" accept=".json" style="display:none"></label>
     <button class="action-btn primary" id="btn-export">Export JSON</button>
   </div>
 </div>
@@ -353,6 +355,9 @@ mapArea.addEventListener('pointerdown', e => {
     }
     return;
   }
+
+  // Move mode handled by its own listener below
+  if (STATE.mode === 'move') return;
 
   // Place node
   if (nx < 0 || nx > 1 || ny < 0 || ny > 1) return;
@@ -677,6 +682,99 @@ function buildExport() {
 
 document.getElementById('btn-copy').addEventListener('click', () => {
   navigator.clipboard.writeText(exportArea.value).then(() => setStatus('Copied to clipboard'));
+});
+
+// ── Import JSON ────────────────────────────────────────────────
+document.getElementById('json-upload').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const raw = JSON.parse(ev.target.result);
+      if (!Array.isArray(raw)) { alert('graph.json must be an array of nodes'); return; }
+      pushHistory();
+
+      // Reset state
+      STATE.nodes = { 1: [], 2: [], 3: [] };
+      STATE.edges = { 1: [], 2: [], 3: [] };
+
+      // Track which edge pairs we've already added per floor
+      const edgeSeen = { 1: new Set(), 2: new Set(), 3: new Set() };
+
+      raw.forEach(n => {
+        const f = n.floor;
+        if (![1,2,3].includes(f)) return;
+        // Store node without edges array (we rebuild edges separately)
+        STATE.nodes[f].push({
+          id: n.id,
+          type: n.type || 'corridor',
+          floor: f,
+          nx: n.nx,
+          ny: n.ny,
+          label: n.label || '',
+          roomId: n.roomId || '',
+          ...(n.shaftId ? { shaftId: n.shaftId } : {})
+        });
+        // Rebuild edges as [a,b] pairs (undirected, deduped)
+        (n.edges || []).forEach(neighborId => {
+          const key = [n.id, neighborId].sort().join('||');
+          if (!edgeSeen[f].has(key)) {
+            edgeSeen[f].add(key);
+            STATE.edges[f].push([n.id, neighborId]);
+          }
+        });
+      });
+
+      STATE.selectedNode = null;
+      STATE.edgeStart = null;
+      redraw();
+      renderSidebar();
+      const total = raw.length;
+      const byFloor = [1,2,3].map(f => `${f}F:${STATE.nodes[f].length}`).join(' ');
+      setStatus(`Imported ${total} nodes (${byFloor}) — load map image if not already loaded`);
+    } catch(err) {
+      alert('Failed to parse JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = ''; // allow re-importing same file
+});
+
+// ── Move mode ──────────────────────────────────────────────────
+let moveDragging = false;
+let moveNode = null;
+
+// Override pointerdown to handle move mode
+const _origPointerdown = mapArea.onpointerdown;
+mapArea.addEventListener('pointerdown', e => {
+  if (STATE.mode !== 'move') return;
+  const { nx, ny } = screenToImg(e.clientX, e.clientY);
+  const hit = hitNode(nx, ny);
+  if (!hit) return;
+  moveDragging = true;
+  moveNode = hit;
+  selectNode(hit);
+  setStatus(`Moving "${hit.id}" — release to drop`);
+});
+
+mapArea.addEventListener('pointermove', e => {
+  if (!moveDragging || !moveNode) return;
+  const { nx, ny } = screenToImg(e.clientX, e.clientY);
+  moveNode.nx = Math.max(0, Math.min(1, nx));
+  moveNode.ny = Math.max(0, Math.min(1, ny));
+  redraw();
+});
+
+mapArea.addEventListener('pointerup', e => {
+  if (!moveDragging || !moveNode) return;
+  moveDragging = false;
+  const { nx, ny } = screenToImg(e.clientX, e.clientY);
+  moveNode.nx = Math.max(0, Math.min(1, nx));
+  moveNode.ny = Math.max(0, Math.min(1, ny));
+  redraw();
+  setStatus(`Moved "${moveNode.id}" to (${moveNode.nx.toFixed(4)}, ${moveNode.ny.toFixed(4)})`);
+  moveNode = null;
 });
 
 // ── Status ─────────────────────────────────────────────────────
