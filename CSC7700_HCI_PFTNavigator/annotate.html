@@ -652,14 +652,14 @@ document.getElementById('btn-export').addEventListener('click', () => {
 });
 
 function buildExport() {
-  // Build graph.json: flat list of all nodes across all floors with edges
+  // Deep-clone to avoid mutating STATE.nodes edges arrays
   const allNodes = [];
   const allEdges = [];
   [1,2,3].forEach(f => {
-    STATE.nodes[f].forEach(n => allNodes.push({ ...n }));
+    STATE.nodes[f].forEach(n => allNodes.push(JSON.parse(JSON.stringify(n))));
     STATE.edges[f].forEach(e => allEdges.push({ floor: f, from: e[0], to: e[1] }));
   });
-  // Build adjacency on nodes
+  // Rebuild edges on clones only — never touches STATE
   const nodeMap = {};
   allNodes.forEach(n => { n.edges = []; nodeMap[n.id] = n; });
   allEdges.forEach(e => {
