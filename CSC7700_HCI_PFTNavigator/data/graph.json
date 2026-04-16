@@ -1,2704 +1,7271 @@
 [
   {
-    "id": "w_anchor_main",
+    "id": "Etr_N_02",
     "type": "anchor",
     "floor": 1,
-    "nx": 0.9229,
-    "ny": 0.3799,
-    "label": "PFT Main Entrance",
+    "nx": 0.1734066268347343,
+    "ny": 0.37541603956552433,
+    "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m9"
+      "w_c1_469"
     ]
   },
   {
-    "id": "w_anchor_south",
+    "id": "Etr_N_01",
     "type": "anchor",
     "floor": 1,
-    "nx": 0.4448,
-    "ny": 0.9432,
-    "label": "South Entrance",
+    "nx": 0.15527136029960478,
+    "ny": 0.2453599758547,
+    "label": "",
     "roomId": "",
-    "edges": [
-      "w_cor_c3"
-    ]
+    "edges": []
   },
   {
-    "id": "w_elev_a_1",
-    "type": "elevator",
+    "id": "Etr_N_03",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.4596,
-    "ny": 0.31,
-    "label": "Elevator A",
-    "roomId": "",
-    "edges": [
-      "w_cor_m4",
-      "w_cor_n3"
-    ],
-    "shaftId": "elev_a"
-  },
-  {
-    "id": "w_stair_b_1",
-    "type": "stair",
-    "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.31,
-    "label": "Stair B",
-    "roomId": "",
-    "edges": [
-      "w_cor_m2",
-      "w_cor_n1"
-    ],
-    "shaftId": "stair_b"
-  },
-  {
-    "id": "w_stair_c_1",
-    "type": "stair",
-    "floor": 1,
-    "nx": 0.5967,
-    "ny": 0.6507,
-    "label": "Stair C",
-    "roomId": "",
-    "edges": [
-      "w_cor_c5"
-    ],
-    "shaftId": "stair_c"
-  },
-  {
-    "id": "w_cor_n1",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.1921,
+    "nx": 0.26092900011296805,
+    "ny": 0.7107748895627215,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_n2",
-      "w_cor_m2",
-      "w_stair_b_1",
-      "w_d1_1367"
+      "w_c1_138",
+      "w_c1_139"
     ]
   },
   {
-    "id": "w_cor_n2",
-    "type": "corridor",
+    "id": "Etr_W_01",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.341,
-    "ny": 0.1921,
+    "nx": 0.5786904094024111,
+    "ny": 0.8807767442704418,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_n1",
-      "w_cor_n3",
-      "w_d1_1357",
-      "w_d1_1355",
-      "w_d1_1358",
-      "w_d1_1356"
+      "w_c1_242"
     ]
   },
   {
-    "id": "w_cor_n3",
-    "type": "corridor",
+    "id": "Etr_W_02",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.4225,
-    "ny": 0.1921,
+    "nx": 0.7553121356575855,
+    "ny": 0.8826346880377394,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_n2",
-      "w_cor_n4",
-      "w_cor_m4",
-      "w_elev_a_1",
-      "w_d1_1331",
-      "w_d1_1329"
+      "w_c1_243"
     ]
   },
   {
-    "id": "w_cor_n4",
-    "type": "corridor",
+    "id": "Etr_S_04",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.493,
-    "ny": 0.1921,
+    "nx": 0.8909323897463801,
+    "ny": 0.7079879739117753,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_n3",
-      "w_d1_1325",
-      "w_d1_1323"
+      "w_c1_197"
     ]
   },
   {
-    "id": "w_cor_m1",
-    "type": "corridor",
+    "id": "Etr_S_01",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.1149,
-    "ny": 0.3406,
+    "nx": 0.872008633361897,
+    "ny": 0.2425730602037538,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m2",
-      "w_d1_1375",
-      "w_d1_1280"
+      "Stair_S01",
+      "w_c1_68"
     ]
   },
   {
-    "id": "w_cor_m2",
-    "type": "corridor",
+    "id": "Etr_S_02",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.3406,
+    "nx": 0.8696431638138367,
+    "ny": 0.37727398333282186,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m1",
-      "w_cor_m3",
-      "w_cor_n1",
-      "w_stair_b_1",
-      "w_cor_s1"
+      "w_c1_97"
     ]
   },
   {
-    "id": "w_cor_m3",
-    "type": "corridor",
+    "id": "Etr_S_03",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.341,
-    "ny": 0.3406,
+    "nx": 0.8680661841151299,
+    "ny": 0.5101169626945925,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m2",
-      "w_cor_m4",
-      "w_d1_1360",
-      "w_d1_1254"
+      "Stair_S02",
+      "w_c1_332"
     ]
   },
   {
-    "id": "w_cor_m4",
-    "type": "corridor",
+    "id": "Etr_E_01",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.4225,
-    "ny": 0.3406,
+    "nx": 0.2845836955935717,
+    "ny": 0.09579550258725203,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m3",
-      "w_cor_m5",
-      "w_cor_n3",
-      "w_elev_a_1",
-      "w_cor_s3",
-      "w_d1_1350",
-      "w_d1_1245"
+      "w_c1_98"
     ]
   },
   {
-    "id": "w_cor_m5",
-    "type": "corridor",
+    "id": "Etr_E_02",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.493,
-    "ny": 0.3406,
+    "nx": 0.4060111323940041,
+    "ny": 0.10229830577279325,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m4",
-      "w_cor_m6",
-      "w_d1_1344",
-      "w_d1_1342"
+      "w_c1_457"
     ]
   },
   {
-    "id": "w_cor_m6",
-    "type": "corridor",
+    "id": "Etr_E_03",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.5634,
-    "ny": 0.3406,
+    "nx": 0.57159400075823,
+    "ny": 0.06978428984508718,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m5",
-      "w_cor_m7",
-      "w_d1_1340a"
+      "w_c1_34"
     ]
   },
   {
-    "id": "w_cor_m7",
-    "type": "corridor",
+    "id": "Etr_E_04",
+    "type": "anchor",
     "floor": 1,
-    "nx": 0.6486,
-    "ny": 0.3406,
+    "nx": 0.7639855240004735,
+    "ny": 0.09022167128535957,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor_m6",
-      "w_cor_m8",
-      "w_d1_1321",
-      "w_d1_1322",
-      "w_d1_1340"
+      "w_c1_71"
     ]
   },
   {
-    "id": "w_cor_m8",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.7265,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_m7",
-      "w_cor_m9",
-      "w_cor_s7",
-      "w_d1_1321a",
-      "w_d1_1311",
-      "w_d1_1300",
-      "w_d1_1330"
-    ]
-  },
-  {
-    "id": "w_cor_m9",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.8525,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_m8",
-      "w_anchor_main",
-      "w_d1_1269"
-    ]
-  },
-  {
-    "id": "w_cor_s1",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s2",
-      "w_cor_m2",
-      "w_cor_c1",
-      "w_d1_1225",
-      "w_d1_1221"
-    ]
-  },
-  {
-    "id": "w_cor_s2",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.3188,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s1",
-      "w_cor_s3",
-      "w_d1_1212",
-      "w_d1_1218b",
-      "w_d1_1216",
-      "w_d1_1238"
-    ]
-  },
-  {
-    "id": "w_cor_s3",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.404,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s2",
-      "w_cor_s4",
-      "w_cor_m4",
-      "w_cor_c3",
-      "w_d1_1240",
-      "w_d1_1272",
-      "w_d1_1264",
-      "w_d1_1253"
-    ]
-  },
-  {
-    "id": "w_cor_s4",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.4855,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s3",
-      "w_cor_s5",
-      "w_d1_1246"
-    ]
-  },
-  {
-    "id": "w_cor_s5",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.5634,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s4",
-      "w_cor_s6",
-      "w_cor_c5",
-      "w_d1_1256",
-      "w_d1_1258",
-      "w_d1_1206"
-    ]
-  },
-  {
-    "id": "w_cor_s6",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.6486,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s5",
-      "w_cor_s7",
-      "w_d1_1262",
-      "w_d1_1263"
-    ]
-  },
-  {
-    "id": "w_cor_s7",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.7265,
-    "ny": 0.5066,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_s6",
-      "w_cor_m8",
-      "w_d1_1202",
-      "w_d1_1200"
-    ]
-  },
-  {
-    "id": "w_cor_c1",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c2",
-      "w_cor_s1"
-    ]
-  },
-  {
-    "id": "w_cor_c2",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.3262,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c1",
-      "w_cor_c3",
-      "w_d1_1154"
-    ]
-  },
-  {
-    "id": "w_cor_c3",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.4225,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c2",
-      "w_cor_c4",
-      "w_cor_s3",
-      "w_anchor_south"
-    ]
-  },
-  {
-    "id": "w_cor_c4",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.5041,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c3",
-      "w_cor_c5",
-      "w_d1_1114",
-      "w_d1_1124"
-    ]
-  },
-  {
-    "id": "w_cor_c5",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.5967,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c4",
-      "w_cor_c6",
-      "w_cor_s5",
-      "w_stair_c_1"
-    ]
-  },
-  {
-    "id": "w_cor_c6",
-    "type": "corridor",
-    "floor": 1,
-    "nx": 0.6746,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor_c5",
-      "w_d1_1100"
-    ]
-  },
-  {
-    "id": "w_d1_1367",
+    "id": "1375",
     "type": "door",
     "floor": 1,
-    "nx": 0.1297,
-    "ny": 0.1528,
-    "label": "Cheme Machine Shop",
-    "roomId": "1367",
-    "edges": [
-      "w_cor_n1"
-    ]
-  },
-  {
-    "id": "w_d1_1357",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.2965,
-    "ny": 0.1354,
-    "label": "Thermal System Lab",
-    "roomId": "1357",
-    "edges": [
-      "w_cor_n2"
-    ]
-  },
-  {
-    "id": "w_d1_1355",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.2965,
-    "ny": 0.2166,
-    "label": "Thermal Science Lab",
-    "roomId": "1355",
-    "edges": [
-      "w_cor_n2"
-    ]
-  },
-  {
-    "id": "w_d1_1358",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.3632,
-    "ny": 0.1467,
-    "label": "Instrumentation Lab",
-    "roomId": "1358",
-    "edges": [
-      "w_cor_n2"
-    ]
-  },
-  {
-    "id": "w_d1_1356",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.3632,
-    "ny": 0.2166,
-    "label": "Materials Lab",
-    "roomId": "1356",
-    "edges": [
-      "w_cor_n2"
-    ]
-  },
-  {
-    "id": "w_d1_1331",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.4374,
-    "ny": 0.0978,
-    "label": "Enchanced Oil Recovery",
-    "roomId": "1331",
-    "edges": [
-      "w_cor_n3"
-    ]
-  },
-  {
-    "id": "w_d1_1329",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.4374,
-    "ny": 0.1572,
-    "label": "Rock Mechanics",
-    "roomId": "1329",
-    "edges": [
-      "w_cor_n3"
-    ]
-  },
-  {
-    "id": "w_d1_1325",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.5337,
-    "ny": 0.1293,
-    "label": "Concrete Lab",
-    "roomId": "1325",
-    "edges": [
-      "w_cor_n4"
-    ]
-  },
-  {
-    "id": "w_d1_1321",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.6301,
-    "ny": 0.1135,
-    "label": "Strength & Materials Lab",
-    "roomId": "1321",
-    "edges": [
-      "w_cor_m7"
-    ]
-  },
-  {
-    "id": "w_d1_1323",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.5337,
-    "ny": 0.1921,
-    "label": "Germano Computer Lab",
-    "roomId": "1323",
-    "edges": [
-      "w_cor_n4"
-    ]
-  },
-  {
-    "id": "w_d1_1322",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.6301,
-    "ny": 0.1921,
-    "label": "Strength & Materials Lab 2",
-    "roomId": "1322",
-    "edges": [
-      "w_cor_m7"
-    ]
-  },
-  {
-    "id": "w_d1_1321a",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.7116,
-    "ny": 0.1135,
-    "label": "Asphalt Lab",
-    "roomId": "1321A",
-    "edges": [
-      "w_cor_m8"
-    ]
-  },
-  {
-    "id": "w_d1_1311",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.7858,
-    "ny": 0.1135,
-    "label": "Geotech Lab",
-    "roomId": "1311",
-    "edges": [
-      "w_cor_m8"
-    ]
-  },
-  {
-    "id": "w_d1_1375",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.1038,
-    "ny": 0.2969,
-    "label": "Restaurant",
+    "nx": 0.19356442234251636,
+    "ny": 0.35803643736573615,
+    "label": "Panera",
     "roomId": "1375",
     "edges": [
-      "w_cor_m1"
+      "w_c1_469",
+      "w_c1_470"
     ]
   },
   {
-    "id": "w_d1_1360",
+    "id": "1366",
     "type": "door",
     "floor": 1,
-    "nx": 0.2928,
-    "ny": 0.2795,
-    "label": "System Integration Classroom",
-    "roomId": "1360",
+    "nx": 0.2971238297738059,
+    "ny": 0.17448448602680922,
+    "label": "",
+    "roomId": "1366",
     "edges": [
-      "w_cor_m3"
+      "w_c1_102",
+      "w_c1_103",
+      "w_c1_104"
     ]
   },
   {
-    "id": "w_d1_1254",
+    "id": "1368",
     "type": "door",
     "floor": 1,
-    "nx": 0.3632,
-    "ny": 0.2795,
-    "label": "Human Factors Lab",
-    "roomId": "1254",
+    "nx": 0.2968201364968813,
+    "ny": 0.14085118500174268,
+    "label": "",
+    "roomId": "1368",
     "edges": [
-      "w_cor_m3"
+      "w_c1_100",
+      "w_c1_101"
     ]
   },
   {
-    "id": "w_d1_1350",
+    "id": "1364",
     "type": "door",
     "floor": 1,
-    "nx": 0.4225,
-    "ny": 0.2795,
-    "label": "Campus Computer Lab",
-    "roomId": "1350",
+    "nx": 0.29408689700455987,
+    "ny": 0.20239296985611974,
+    "label": "",
+    "roomId": "1364",
     "edges": [
-      "w_cor_m4"
+      "w_c1_105",
+      "w_c1_104",
+      "w_c1_106"
     ]
   },
   {
-    "id": "w_d1_1344",
+    "id": "1367",
     "type": "door",
     "floor": 1,
-    "nx": 0.5115,
-    "ny": 0.2795,
-    "label": "Room 1344",
-    "roomId": "1344",
+    "nx": 0.2743468340044607,
+    "ny": 0.18557631934358645,
+    "label": "",
+    "roomId": "1367",
     "edges": [
-      "w_cor_m5"
+      "w_c1_103",
+      "w_c1_104",
+      "w_c1_105"
     ]
   },
   {
-    "id": "w_d1_1342",
+    "id": "1280",
     "type": "door",
     "floor": 1,
-    "nx": 0.5115,
-    "ny": 0.3581,
-    "label": "Room 1342",
-    "roomId": "1342",
-    "edges": [
-      "w_cor_m5"
-    ]
-  },
-  {
-    "id": "w_d1_1340a",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.5634,
-    "ny": 0.2795,
-    "label": "Capstone Design Space Annex",
-    "roomId": "1340A",
-    "edges": [
-      "w_cor_m6"
-    ]
-  },
-  {
-    "id": "w_d1_1340",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.6523,
-    "ny": 0.2751,
-    "label": "Capstone Design Space",
-    "roomId": "1340",
-    "edges": [
-      "w_cor_m7"
-    ]
-  },
-  {
-    "id": "w_d1_1300",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.7339,
-    "ny": 0.2751,
-    "label": "Robotics Lab",
-    "roomId": "1300",
-    "edges": [
-      "w_cor_m8"
-    ]
-  },
-  {
-    "id": "w_d1_1330",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.7858,
-    "ny": 0.2751,
-    "label": "EE Micro Grid",
-    "roomId": "1330",
-    "edges": [
-      "w_cor_m8"
-    ]
-  },
-  {
-    "id": "w_d1_1269",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.8154,
-    "ny": 0.3974,
-    "label": "Center for Engineering Ed",
-    "roomId": "1269",
-    "edges": [
-      "w_cor_m9"
-    ]
-  },
-  {
-    "id": "w_d1_1280",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.1297,
-    "ny": 0.4148,
-    "label": "Student Leadership Incubator",
+    "nx": 0.19360906678478645,
+    "ny": 0.3952659741591922,
+    "label": "",
     "roomId": "1280",
     "edges": [
-      "w_cor_m1"
+      "w_c1_469",
+      "w_c1_470"
     ]
   },
   {
-    "id": "w_d1_1245",
+    "id": "1360",
     "type": "door",
     "floor": 1,
-    "nx": 0.4151,
-    "ny": 0.3974,
-    "label": "Classroom 1245",
+    "nx": 0.31632543189992923,
+    "ny": 0.2572366122522956,
+    "label": "",
+    "roomId": "1360",
+    "edges": [
+      "w_c1_12",
+      "w_c1_13"
+    ]
+  },
+  {
+    "id": "1354",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.42983670182057165,
+    "ny": 0.25778696250701894,
+    "label": "",
+    "roomId": "1354",
+    "edges": [
+      "w_c1_22",
+      "w_c1_23",
+      "w_c1_24"
+    ]
+  },
+  {
+    "id": "1327",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5623338075406871,
+    "ny": 0.20082096403969116,
+    "label": "",
+    "roomId": "1327",
+    "edges": [
+      "w_c1_42",
+      "w_c1_43"
+    ]
+  },
+  {
+    "id": "1350",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.51950719761141,
+    "ny": 0.3531523906871475,
+    "label": "",
+    "roomId": "1350",
+    "edges": []
+  },
+  {
+    "id": "1357",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3970356560641705,
+    "ny": 0.13608807242624993,
+    "label": "",
+    "roomId": "1357",
+    "edges": [
+      "w_c1_459",
+      "w_c1_458",
+      "w_c1_460"
+    ]
+  },
+  {
+    "id": "1355",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.39722824252830985,
+    "ny": 0.21572955555592851,
+    "label": "",
+    "roomId": "1355",
+    "edges": [
+      "w_c1_466",
+      "w_c1_467",
+      "w_c1_465",
+      "w_c1_468"
+    ]
+  },
+  {
+    "id": "1358",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4141758513725659,
+    "ny": 0.15151719166504807,
+    "label": "",
+    "roomId": "1358",
+    "edges": [
+      "w_c1_460",
+      "w_c1_459",
+      "w_c1_461"
+    ]
+  },
+  {
+    "id": "1356",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.41475361076498374,
+    "ny": 0.21572955555592851,
+    "label": "",
+    "roomId": "1356",
+    "edges": [
+      "w_c1_466",
+      "w_c1_467",
+      "w_c1_465",
+      "w_c1_468"
+    ]
+  },
+  {
+    "id": "1329",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5616215511169437,
+    "ny": 0.1568842049433932,
+    "label": "",
+    "roomId": "1329",
+    "edges": [
+      "w_c1_39",
+      "w_c1_40"
+    ]
+  },
+  {
+    "id": "1331",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5620410276458914,
+    "ny": 0.10943976092169151,
+    "label": "",
+    "roomId": "1331",
+    "edges": [
+      "w_c1_36",
+      "w_c1_35",
+      "w_c1_37"
+    ]
+  },
+  {
+    "id": "1636",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5802696144987326,
+    "ny": 0.200057510358365,
+    "label": "",
+    "roomId": "1636",
+    "edges": [
+      "w_c1_43",
+      "w_c1_42"
+    ]
+  },
+  {
+    "id": "1324",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.701307104362867,
+    "ny": 0.16183613308896191,
+    "label": "",
+    "roomId": "1324",
+    "edges": [
+      "w_c1_444",
+      "w_c1_445",
+      "w_c1_446"
+    ]
+  },
+  {
+    "id": "1322",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7140142451660028,
+    "ny": 0.16217052509596325,
+    "label": "",
+    "roomId": "1322",
+    "edges": [
+      "w_c1_446",
+      "w_c1_445",
+      "w_c1_447"
+    ]
+  },
+  {
+    "id": "1325",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6821872088360964,
+    "ny": 0.14108643716877597,
+    "label": "",
+    "roomId": "1325",
+    "edges": [
+      "w_c1_443",
+      "w_c1_444"
+    ]
+  },
+  {
+    "id": "1323",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7144135209362722,
+    "ny": 0.1419301692410348,
+    "label": "",
+    "roomId": "1323",
+    "edges": [
+      "w_c1_445",
+      "w_c1_446",
+      "w_c1_447"
+    ]
+  },
+  {
+    "id": "1330",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5804664939529691,
+    "ny": 0.13575965382261393,
+    "label": "",
+    "roomId": "1330",
+    "edges": [
+      "w_c1_38",
+      "w_c1_37",
+      "w_c1_39",
+      "w_c1_436"
+    ]
+  },
+  {
+    "id": "1321",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7833676159259331,
+    "ny": 0.1406218184522795,
+    "label": "",
+    "roomId": "1321",
+    "edges": [
+      "w_c1_74",
+      "w_c1_450",
+      "w_c1_451",
+      "w_c1_452"
+    ]
+  },
+  {
+    "id": "1317",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8480547318607795,
+    "ny": 0.14225493609537573,
+    "label": "",
+    "roomId": "1317",
+    "edges": [
+      "w_c1_455",
+      "w_c1_456"
+    ]
+  },
+  {
+    "id": "1317A",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8635334346023321,
+    "ny": 0.11993566163972738,
+    "label": "",
+    "roomId": "1317A",
+    "edges": []
+  },
+  {
+    "id": "1312",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7836591321849788,
+    "ny": 0.16115609090634914,
+    "label": "",
+    "roomId": "1312",
+    "edges": [
+      "w_c1_76",
+      "w_c1_450",
+      "w_c1_451",
+      "w_c1_452"
+    ]
+  },
+  {
+    "id": "1307",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7961922742896718,
+    "ny": 0.2342835479543842,
+    "label": "",
+    "roomId": "1307",
+    "edges": [
+      "w_c1_62",
+      "w_c1_63",
+      "w_c1_64"
+    ]
+  },
+  {
+    "id": "Stair_S01",
+    "type": "stair",
+    "floor": 1,
+    "nx": 0.8540564735662389,
+    "ny": 0.2338950205696328,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_S_01",
+      "w_c1_67",
+      "w_c1_68"
+    ]
+  },
+  {
+    "id": "Stair_S02",
+    "type": "stair",
+    "floor": 1,
+    "nx": 0.8535225084774897,
+    "ny": 0.5226783339011188,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_S_03",
+      "w_c1_331",
+      "w_c1_332",
+      "w_c1_333"
+    ]
+  },
+  {
+    "id": "1100R",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7993251152930404,
+    "ny": 0.2550690972292375,
+    "label": "",
+    "roomId": "1100R",
+    "edges": [
+      "w_c1_63",
+      "w_c1_62",
+      "w_c1_64"
+    ]
+  },
+  {
+    "id": "1300",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8361838473872125,
+    "ny": 0.3653440634873875,
+    "label": "",
+    "roomId": "1300",
+    "edges": [
+      "w_c1_95",
+      "w_c1_96"
+    ]
+  },
+  {
+    "id": "1269",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8366306198974448,
+    "ny": 0.39034674080128784,
+    "label": "",
+    "roomId": "1269",
+    "edges": []
+  },
+  {
+    "id": "1245",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5191419965803907,
+    "ny": 0.4006264977312087,
+    "label": "",
     "roomId": "1245",
     "edges": [
-      "w_cor_m4"
+      "w_c1_376"
     ]
   },
   {
-    "id": "w_d1_1225",
+    "id": "1342",
     "type": "door",
     "floor": 1,
-    "nx": 0.1631,
-    "ny": 0.4672,
-    "label": "Classroom 1225",
-    "roomId": "1225",
+    "nx": 0.6007382215839964,
+    "ny": 0.32284209802671077,
+    "label": "",
+    "roomId": "1342",
     "edges": [
-      "w_cor_s1"
+      "w_c1_429"
     ]
   },
   {
-    "id": "w_d1_1221",
+    "id": "1340",
     "type": "door",
     "floor": 1,
-    "nx": 0.1631,
-    "ny": 0.5328,
-    "label": "Classroom 1221",
-    "roomId": "1221",
+    "nx": 0.6941948137009785,
+    "ny": 0.33544698254595706,
+    "label": "",
+    "roomId": "1340",
     "edges": [
-      "w_cor_s1"
+      "w_c1_390"
     ]
   },
   {
-    "id": "w_d1_1212",
+    "id": "1344",
     "type": "door",
     "floor": 1,
-    "nx": 0.2669,
-    "ny": 0.4716,
-    "label": "Classroom 1212",
-    "roomId": "1212",
+    "nx": 0.6362957802008953,
+    "ny": 0.2549981607613555,
+    "label": "",
+    "roomId": "1344",
     "edges": [
-      "w_cor_s2"
+      "w_c1_49",
+      "w_c1_50"
     ]
   },
   {
-    "id": "w_d1_1218b",
+    "id": "1278",
     "type": "door",
     "floor": 1,
-    "nx": 0.2669,
-    "ny": 0.5371,
-    "label": "Classroom 1218B",
-    "roomId": "1218B",
+    "nx": 0.26614346048083876,
+    "ny": 0.39673198135199633,
+    "label": "",
+    "roomId": "1278",
     "edges": [
-      "w_cor_s2"
+      "w_c1_119"
     ]
   },
   {
-    "id": "w_d1_1216",
+    "id": "1518",
     "type": "door",
     "floor": 1,
-    "nx": 0.3113,
-    "ny": 0.5371,
-    "label": "Classroom 1216",
-    "roomId": "1216",
+    "nx": 0.27169116124978554,
+    "ny": 0.4768598739494196,
+    "label": "Restroom",
+    "roomId": "1518",
     "edges": [
-      "w_cor_s2"
+      "w_c1_124",
+      "w_c1_125"
     ]
   },
   {
-    "id": "w_d1_1238",
+    "id": "1371",
     "type": "door",
     "floor": 1,
-    "nx": 0.3188,
-    "ny": 0.4716,
-    "label": "Classroom 1238",
-    "roomId": "1238",
+    "nx": 0.2724681237622428,
+    "ny": 0.2782793604826533,
+    "label": "Restroom",
+    "roomId": "1371",
     "edges": [
-      "w_cor_s2"
+      "w_c1_109",
+      "w_c1_110"
     ]
   },
   {
-    "id": "w_d1_1240",
+    "id": "1232",
     "type": "door",
     "floor": 1,
-    "nx": 0.3781,
-    "ny": 0.4716,
-    "label": "Classroom 1240",
+    "nx": 0.29753499020522484,
+    "ny": 0.5213817214084916,
+    "label": "",
+    "roomId": "1232",
+    "edges": [
+      "w_c1_127",
+      "w_c1_261",
+      "w_c1_263"
+    ]
+  },
+  {
+    "id": "1236",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3535100724826153,
+    "ny": 0.5206407333706897,
+    "label": "",
+    "roomId": "1236",
+    "edges": [
+      "w_c1_266",
+      "w_c1_265",
+      "w_c1_267"
+    ]
+  },
+  {
+    "id": "1240",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.40153931288599354,
+    "ny": 0.5199901498283532,
+    "label": "",
     "roomId": "1240",
     "edges": [
-      "w_cor_s3"
+      "w_c1_268",
+      "w_c1_275",
+      "w_c1_276"
     ]
   },
   {
-    "id": "w_d1_1272",
+    "id": "1244",
     "type": "door",
     "floor": 1,
-    "nx": 0.3781,
-    "ny": 0.5371,
-    "label": "Classroom 1272",
-    "roomId": "1272",
+    "nx": 0.4799985344441672,
+    "ny": 0.5207267074572749,
+    "label": "",
+    "roomId": "1244",
     "edges": [
-      "w_cor_s3"
+      "w_c1_280",
+      "w_c1_281"
     ]
   },
   {
-    "id": "w_d1_1264",
+    "id": "1246",
     "type": "door",
     "floor": 1,
-    "nx": 0.4188,
-    "ny": 0.4716,
-    "label": "Seminar 1264",
-    "roomId": "1264",
-    "edges": [
-      "w_cor_s3"
-    ]
-  },
-  {
-    "id": "w_d1_1253",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.4299,
-    "ny": 0.5371,
-    "label": "Classroom 1253",
-    "roomId": "1253",
-    "edges": [
-      "w_cor_s3"
-    ]
-  },
-  {
-    "id": "w_d1_1246",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.4633,
-    "ny": 0.4716,
-    "label": "Computer Room 1246",
+    "nx": 0.4928145825871358,
+    "ny": 0.5196218710138922,
+    "label": "",
     "roomId": "1246",
     "edges": [
-      "w_cor_s4"
+      "w_c1_281",
+      "w_c1_282"
     ]
   },
   {
-    "id": "w_d1_1256",
+    "id": "1443",
     "type": "door",
     "floor": 1,
-    "nx": 0.5152,
-    "ny": 0.4716,
-    "label": "Computer Room 1256",
-    "roomId": "1256",
+    "nx": 0.5442130515101576,
+    "ny": 0.4992599280122871,
+    "label": "Restroom",
+    "roomId": "1443",
     "edges": [
-      "w_cor_s5"
+      "w_c1_284",
+      "w_c1_285"
     ]
   },
   {
-    "id": "w_d1_1258",
+    "id": "1348",
     "type": "door",
     "floor": 1,
-    "nx": 0.5745,
-    "ny": 0.4716,
-    "label": "Modular 1258",
-    "roomId": "1258",
+    "nx": 0.5438667191187168,
+    "ny": 0.25505669103242024,
+    "label": "Restroom",
+    "roomId": "1348",
     "edges": [
-      "w_cor_s5"
+      "w_c1_31",
+      "w_c1_32"
     ]
   },
   {
-    "id": "w_d1_1262",
+    "id": "1218",
     "type": "door",
     "floor": 1,
-    "nx": 0.6264,
-    "ny": 0.4716,
-    "label": "Modular 1262",
-    "roomId": "1262",
+    "nx": 0.34049901185995946,
+    "ny": 0.6523133599963774,
+    "label": "",
+    "roomId": "1218",
+    "edges": []
+  },
+  {
+    "id": "1216",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.35329065692633593,
+    "ny": 0.6525934096905063,
+    "label": "",
+    "roomId": "1216",
+    "edges": []
+  },
+  {
+    "id": "1212",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.40332752125283056,
+    "ny": 0.6442462621879127,
+    "label": "",
+    "roomId": "1212",
+    "edges": []
+  },
+  {
+    "id": "1253",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5622000533771069,
+    "ny": 0.6764788786438461,
+    "label": "",
+    "roomId": "1253",
     "edges": [
-      "w_cor_s6"
+      "w_c1_163",
+      "w_c1_164",
+      "w_c1_304"
     ]
   },
   {
-    "id": "w_d1_1206",
+    "id": "1208",
     "type": "door",
     "floor": 1,
-    "nx": 0.5745,
-    "ny": 0.5371,
-    "label": "Modular 1206",
+    "nx": 0.5855085606178235,
+    "ny": 0.6834925475668773,
+    "label": "",
+    "roomId": "1208",
+    "edges": [
+      "w_c1_163",
+      "w_c1_164"
+    ]
+  },
+  {
+    "id": "1206",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6363933839407854,
+    "ny": 0.6817858951134695,
+    "label": "",
     "roomId": "1206",
+    "edges": []
+  },
+  {
+    "id": "Stair_Cambre",
+    "type": "stair",
+    "floor": 1,
+    "nx": 0.7513572141600805,
+    "ny": 0.6947179700398515,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor_s5"
+      "w_c1_344",
+      "w_c1_345",
+      "w_c1_346"
     ]
   },
   {
-    "id": "w_d1_1263",
-    "type": "door",
+    "id": "Stair_S03",
+    "type": "stair",
     "floor": 1,
-    "nx": 0.6338,
-    "ny": 0.5371,
-    "label": "Classroom 1263",
-    "roomId": "1263",
+    "nx": 0.8322121236508525,
+    "ny": 0.8687495356403324,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor_s6"
+      "w_c1_259",
+      "w_c1_260"
     ]
   },
   {
-    "id": "w_d1_1202",
+    "id": "1106",
     "type": "door",
     "floor": 1,
-    "nx": 0.7153,
-    "ny": 0.5066,
-    "label": "Pete Classroom",
-    "roomId": "1202",
+    "nx": 0.7914799951386572,
+    "ny": 0.7351851708896394,
+    "label": "Restroom",
+    "roomId": "1106",
+    "edges": []
+  },
+  {
+    "id": "1100",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8185398007936121,
+    "ny": 0.7539781468344606,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor_s7"
+      "w_c1_192",
+      "w_c1_193"
     ]
   },
   {
-    "id": "w_d1_1200",
+    "id": "1112",
     "type": "door",
     "floor": 1,
-    "nx": 0.7821,
-    "ny": 0.5066,
-    "label": "Classroom 1200",
-    "roomId": "1200",
+    "nx": 0.7464752657335743,
+    "ny": 0.7341784043211669,
+    "label": "",
+    "roomId": "1112",
     "edges": [
-      "w_cor_s7"
+      "w_c1_183",
+      "w_c1_246"
     ]
   },
   {
-    "id": "w_d1_1154",
+    "id": "1114",
     "type": "door",
     "floor": 1,
-    "nx": 0.315,
-    "ny": 0.69,
-    "label": "Sustainable Living Lab",
-    "roomId": "1154",
-    "edges": [
-      "w_cor_c2"
-    ]
-  },
-  {
-    "id": "w_d1_1114",
-    "type": "door",
-    "floor": 1,
-    "nx": 0.5745,
-    "ny": 0.69,
-    "label": "Unit Operations Lab",
+    "nx": 0.6271272807922466,
+    "ny": 0.7338428154650094,
+    "label": "",
     "roomId": "1114",
+    "edges": []
+  },
+  {
+    "id": "1150",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3031185863135244,
+    "ny": 0.8355793800518015,
+    "label": "",
+    "roomId": "1150",
     "edges": [
-      "w_cor_c4"
+      "w_c1_208",
+      "w_c1_209"
     ]
   },
   {
-    "id": "w_d1_1124",
+    "id": "1148",
     "type": "door",
     "floor": 1,
-    "nx": 0.6079,
-    "ny": 0.7686,
-    "label": "Computer Lab 1124",
+    "nx": 0.31669888615159275,
+    "ny": 0.8358047300054463,
+    "label": "",
+    "roomId": "1148",
+    "edges": [
+      "w_c1_209",
+      "w_c1_210"
+    ]
+  },
+  {
+    "id": "1146",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.2811223260124277,
+    "ny": 0.8414384788465664,
+    "label": "",
+    "roomId": "1146",
+    "edges": [
+      "w_c1_205"
+    ]
+  },
+  {
+    "id": "1147",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.30254477082740877,
+    "ny": 0.81439648440919,
+    "label": "",
+    "roomId": "1147",
+    "edges": [
+      "w_c1_204",
+      "w_c1_208",
+      "w_c1_209"
+    ]
+  },
+  {
+    "id": "1145",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.33984277742492053,
+    "ny": 0.8198048832966653,
+    "label": "",
+    "roomId": "1145",
+    "edges": [
+      "w_c1_211",
+      "w_c1_210",
+      "w_c1_212"
+    ]
+  },
+  {
+    "id": "1143",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3522754462907578,
+    "ny": 0.8175513837602173,
+    "label": "",
+    "roomId": "1143",
+    "edges": [
+      "w_c1_211",
+      "w_c1_212",
+      "w_c1_213"
+    ]
+  },
+  {
+    "id": "1139",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3884258219160384,
+    "ny": 0.7339465509579954,
+    "label": "",
+    "roomId": "1139",
+    "edges": []
+  },
+  {
+    "id": "1137",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.41214352867548176,
+    "ny": 0.8195795333430205,
+    "label": "",
+    "roomId": "1137",
+    "edges": [
+      "w_c1_215",
+      "w_c1_216",
+      "w_c1_217"
+    ]
+  },
+  {
+    "id": "1135",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4243849257126138,
+    "ny": 0.8171006838529277,
+    "label": "",
+    "roomId": "1135",
+    "edges": [
+      "w_c1_216",
+      "w_c1_217",
+      "w_c1_218"
+    ]
+  },
+  {
+    "id": "1133",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4471462733285313,
+    "ny": 0.7343972508652851,
+    "label": "",
+    "roomId": "1133",
+    "edges": []
+  },
+  {
+    "id": "1131",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4632131069397671,
+    "ny": 0.8180020836675069,
+    "label": "",
+    "roomId": "1131",
+    "edges": [
+      "w_c1_219",
+      "w_c1_220",
+      "w_c1_221"
+    ]
+  },
+  {
+    "id": "1127",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.5628138477584945,
+    "ny": 0.7930900933219666,
+    "label": "Restroom",
+    "roomId": "1127",
+    "edges": [
+      "w_c1_237",
+      "w_c1_236",
+      "w_c1_238"
+    ]
+  },
+  {
+    "id": "Ele_W01",
+    "type": "elevator",
+    "floor": 1,
+    "nx": 0.5538656144592775,
+    "ny": 0.7634239782981442,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_235"
+    ]
+  },
+  {
+    "id": "1108",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7727426589573594,
+    "ny": 0.7914931361253167,
+    "label": "",
+    "roomId": "1108",
+    "edges": [
+      "w_c1_250",
+      "w_c1_249",
+      "w_c1_251"
+    ]
+  },
+  {
+    "id": "1124",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7398130829363588,
+    "ny": 0.8460540265977344,
+    "label": "",
     "roomId": "1124",
     "edges": [
-      "w_cor_c4"
+      "w_c1_254"
     ]
   },
   {
-    "id": "w_d1_1100",
+    "id": "1126",
     "type": "door",
     "floor": 1,
-    "nx": 0.7858,
-    "ny": 0.7162,
-    "label": "Auditorium",
-    "roomId": "1100",
+    "nx": 0.5550201795993055,
+    "ny": 0.8396652291312575,
+    "label": "",
+    "roomId": "1126",
     "edges": [
-      "w_cor_c6"
+      "w_c1_229",
+      "w_c1_228",
+      "w_c1_232",
+      "w_c1_240"
     ]
   },
   {
-    "id": "w_elev_a_2",
+    "id": "1144",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.35508295645138344,
+    "ny": 0.8377957114628125,
+    "label": "",
+    "roomId": "1144",
+    "edges": [
+      "w_c1_212",
+      "w_c1_211",
+      "w_c1_213"
+    ]
+  },
+  {
+    "id": "1142",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3747196480105543,
+    "ny": 0.8382630908799238,
+    "label": "",
+    "roomId": "1142",
+    "edges": [
+      "w_c1_213",
+      "w_c1_214"
+    ]
+  },
+  {
+    "id": "1140",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.38721572445729946,
+    "ny": 0.8380294011713681,
+    "label": "",
+    "roomId": "1140",
+    "edges": [
+      "w_c1_214",
+      "w_c1_215"
+    ]
+  },
+  {
+    "id": "1138",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4096293218935248,
+    "ny": 0.8394315394227019,
+    "label": "",
+    "roomId": "1138",
+    "edges": [
+      "w_c1_215",
+      "w_c1_216",
+      "w_c1_217"
+    ]
+  },
+  {
+    "id": "1134",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4473159016535499,
+    "ny": 0.8370946423371457,
+    "label": "",
+    "roomId": "1134",
+    "edges": [
+      "w_c1_219",
+      "w_c1_218",
+      "w_c1_220"
+    ]
+  },
+  {
+    "id": "1132",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.4613987814586118,
+    "ny": 0.8382630908799238,
+    "label": "",
+    "roomId": "1132",
+    "edges": [
+      "w_c1_220",
+      "w_c1_219",
+      "w_c1_221"
+    ]
+  },
+  {
+    "id": "1130",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.42787756051416853,
+    "ny": 0.8410673673825911,
+    "label": "",
+    "roomId": "1130",
+    "edges": [
+      "w_c1_217",
+      "w_c1_218"
+    ]
+  },
+  {
+    "id": "1154",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.31927948019441926,
+    "ny": 0.7341045341352755,
+    "label": "",
+    "roomId": "1154",
+    "edges": []
+  },
+  {
+    "id": "1233",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.3161856859578956,
+    "ny": 0.5000960954613308,
+    "label": "",
+    "roomId": "1233",
+    "edges": [
+      "w_c1_263",
+      "w_c1_264"
+    ]
+  },
+  {
+    "id": "1237",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.38226866048011177,
+    "ny": 0.4998238692035653,
+    "label": "",
+    "roomId": "1237",
+    "edges": [
+      "w_c1_267",
+      "w_c1_268",
+      "w_c1_275"
+    ]
+  },
+  {
+    "id": "1272",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6011591333246247,
+    "ny": 0.4318881448153286,
+    "label": "",
+    "roomId": "1272",
+    "edges": []
+  },
+  {
+    "id": "1257",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6355618794373665,
+    "ny": 0.5005997788522079,
+    "label": "",
+    "roomId": "1257",
+    "edges": [
+      "w_c1_308",
+      "w_c1_309",
+      "w_c1_310"
+    ]
+  },
+  {
+    "id": "1259",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7040397264617765,
+    "ny": 0.4998277380203328,
+    "label": "",
+    "roomId": "1259",
+    "edges": [
+      "w_c1_316",
+      "w_c1_314",
+      "w_c1_319"
+    ]
+  },
+  {
+    "id": "1269",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7728452186872603,
+    "ny": 0.4357483489747038,
+    "label": "",
+    "roomId": "1269",
+    "edges": [
+      "w_c1_351",
+      "w_c1_352",
+      "w_c1_95",
+      "w_c1_96",
+      "w_c1_350",
+      "w_c1_356"
+    ]
+  },
+  {
+    "id": "1258",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6348474150621067,
+    "ny": 0.5201750145555221,
+    "label": "",
+    "roomId": "1258",
+    "edges": [
+      "w_c1_309",
+      "w_c1_308",
+      "w_c1_310"
+    ]
+  },
+  {
+    "id": "1262",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.6952881863834013,
+    "ny": 0.5197185449523846,
+    "label": "",
+    "roomId": "1262",
+    "edges": [
+      "w_c1_313",
+      "w_c1_314",
+      "w_c1_316"
+    ]
+  },
+  {
+    "id": "1263",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7541791943374831,
+    "ny": 0.5786031237571264,
+    "label": "",
+    "roomId": "1263",
+    "edges": [
+      "w_c1_337",
+      "w_c1_338"
+    ]
+  },
+  {
+    "id": "1202",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.7820749349473115,
+    "ny": 0.6803958452567965,
+    "label": "",
+    "roomId": "1202",
+    "edges": [
+      "w_c1_344",
+      "w_c1_190"
+    ]
+  },
+  {
+    "id": "1200",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.8440654696358186,
+    "ny": 0.6803958452567965,
+    "label": "",
+    "roomId": "1200",
+    "edges": [
+      "w_c1_194"
+    ]
+  },
+  {
+    "id": "Ele_Mid",
     "type": "elevator",
-    "floor": 2,
-    "nx": 0.4596,
-    "ny": 0.31,
-    "label": "Elevator A",
+    "floor": 1,
+    "nx": 0.5444355031105119,
+    "ny": 0.3333706828491522,
+    "label": "",
     "roomId": "",
-    "edges": [
-      "w_cor2_m3"
-    ],
-    "shaftId": "elev_a"
+    "edges": []
   },
   {
-    "id": "w_stair_b_2",
+    "id": "Stair_Mid",
     "type": "stair",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.31,
-    "label": "Stair B",
+    "floor": 1,
+    "nx": 0.6398425480951183,
+    "ny": 0.37729865548684927,
+    "label": "",
     "roomId": "",
-    "edges": [
-      "w_cor2_m1"
-    ],
-    "shaftId": "stair_b"
+    "edges": []
   },
   {
-    "id": "w_stair_c_2",
+    "id": "Stair_Commons",
     "type": "stair",
-    "floor": 2,
-    "nx": 0.5967,
-    "ny": 0.6507,
-    "label": "Stair C",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c5"
-    ],
-    "shaftId": "stair_c"
-  },
-  {
-    "id": "w_cor2_n1",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.421410646136336,
+    "ny": 0.38666682134645813,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor2_n2",
-      "w_d2_2301"
+      "w_c1_367",
+      "w_c1_368",
+      "w_c1_369"
     ]
   },
   {
-    "id": "w_cor2_n2",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.4596,
-    "ny": 0.1266,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_n1",
-      "w_cor2_n3",
-      "w_cor2_m3",
-      "w_d2_2303",
-      "w_d2_2307"
-    ]
-  },
-  {
-    "id": "w_cor2_n3",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.556,
-    "ny": 0.1266,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_n2",
-      "w_cor2_n4",
-      "w_d2_2305",
-      "w_d2_2309"
-    ]
-  },
-  {
-    "id": "w_cor2_n4",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.6523,
-    "ny": 0.1266,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_n3",
-      "w_cor2_n5",
-      "w_d2_2302"
-    ]
-  },
-  {
-    "id": "w_cor2_n5",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.7487,
-    "ny": 0.1266,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_n4",
-      "w_cor2_n6",
-      "w_d2_2308"
-    ]
-  },
-  {
-    "id": "w_cor2_n6",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.8451,
-    "ny": 0.1266,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_n5",
-      "w_d2_2310"
-    ]
-  },
-  {
-    "id": "w_cor2_m1",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m2",
-      "w_stair_b_2",
-      "w_cor2_s1",
-      "w_d2_2250"
-    ]
-  },
-  {
-    "id": "w_cor2_m2",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.3188,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m1",
-      "w_cor2_m3",
-      "w_d2_2355",
-      "w_d2_2248"
-    ]
-  },
-  {
-    "id": "w_cor2_m3",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.4225,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m2",
-      "w_cor2_m4",
-      "w_elev_a_2",
-      "w_cor2_s3",
-      "w_cor2_n2"
-    ]
-  },
-  {
-    "id": "w_cor2_m4",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.5041,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m3",
-      "w_cor2_m5",
-      "w_d2_2304"
-    ]
-  },
-  {
-    "id": "w_cor2_m5",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.5856,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m4",
-      "w_cor2_m6",
-      "w_cor2_s4",
-      "w_d2_2399"
-    ]
-  },
-  {
-    "id": "w_cor2_m6",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.682,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m5",
-      "w_cor2_m7"
-    ]
-  },
-  {
-    "id": "w_cor2_m7",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.7858,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m6",
-      "w_cor2_m8",
-      "w_d2_2229",
-      "w_d2_2200",
-      "w_d2_2214"
-    ]
-  },
-  {
-    "id": "w_cor2_m8",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.8821,
-    "ny": 0.3406,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_m7",
-      "w_cor2_s5"
-    ]
-  },
-  {
-    "id": "w_cor2_s1",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.4891,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_s2",
-      "w_cor2_m1",
-      "w_cor2_c1",
-      "w_d2_2249"
-    ]
-  },
-  {
-    "id": "w_cor2_s2",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.3188,
-    "ny": 0.4891,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_s1",
-      "w_cor2_s3",
-      "w_d2_2241",
-      "w_d2_2224"
-    ]
-  },
-  {
-    "id": "w_cor2_s3",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.4151,
-    "ny": 0.4891,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_s2",
-      "w_cor2_s4",
-      "w_cor2_m3",
-      "w_cor2_c3",
-      "w_d2_2241b"
-    ]
-  },
-  {
-    "id": "w_cor2_s4",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.5041,
-    "ny": 0.4891,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_s3",
-      "w_cor2_s5",
-      "w_cor2_m5",
-      "w_cor2_c4",
-      "w_d2_2249b"
-    ]
-  },
-  {
-    "id": "w_cor2_s5",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.593,
-    "ny": 0.4891,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_s4",
-      "w_cor2_m8",
-      "w_d2_2271"
-    ]
-  },
-  {
-    "id": "w_cor2_c1",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c2",
-      "w_cor2_s1",
-      "w_d2_2279"
-    ]
-  },
-  {
-    "id": "w_cor2_c2",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.3262,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c1",
-      "w_cor2_c3",
-      "w_d2_2277",
-      "w_d2_2275",
-      "w_d2_2154",
-      "w_d2_2147",
-      "w_d2_2217"
-    ]
-  },
-  {
-    "id": "w_cor2_c3",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.4225,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c2",
-      "w_cor2_c4",
-      "w_cor2_s3",
-      "w_d2_2274",
-      "w_d2_2215",
-      "w_d2_2145"
-    ]
-  },
-  {
-    "id": "w_cor2_c4",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.5189,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c3",
-      "w_cor2_c5",
-      "w_cor2_s4",
-      "w_d2_2248b",
-      "w_d2_2141",
-      "w_d2_2132",
-      "w_d2_2130"
-    ]
-  },
-  {
-    "id": "w_cor2_c5",
-    "type": "corridor",
-    "floor": 2,
-    "nx": 0.6153,
-    "ny": 0.6507,
-    "label": "",
-    "roomId": "",
-    "edges": [
-      "w_cor2_c4",
-      "w_stair_c_2",
-      "w_d2_2128",
-      "w_d2_2215b"
-    ]
-  },
-  {
-    "id": "w_d2_2301",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2301",
-    "roomId": "2301",
-    "edges": [
-      "w_cor2_n1"
-    ]
-  },
-  {
-    "id": "w_d2_2303",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.4596,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2303",
-    "roomId": "2303",
-    "edges": [
-      "w_cor2_n2"
-    ]
-  },
-  {
-    "id": "w_d2_2307",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5041,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2307",
-    "roomId": "2307",
-    "edges": [
-      "w_cor2_n2"
-    ]
-  },
-  {
-    "id": "w_d2_2305",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.556,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2305",
-    "roomId": "2305",
-    "edges": [
-      "w_cor2_n3"
-    ]
-  },
-  {
-    "id": "w_d2_2309",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.6004,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2309",
-    "roomId": "2309",
-    "edges": [
-      "w_cor2_n3"
-    ]
-  },
-  {
-    "id": "w_d2_2302",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.6523,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2302",
-    "roomId": "2302",
-    "edges": [
-      "w_cor2_n4"
-    ]
-  },
-  {
-    "id": "w_d2_2308",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.7487,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2308",
-    "roomId": "2308",
-    "edges": [
-      "w_cor2_n5"
-    ]
-  },
-  {
-    "id": "w_d2_2310",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.8451,
-    "ny": 0.0786,
-    "label": "Comp Sci Research Lab 2310",
-    "roomId": "2310",
-    "edges": [
-      "w_cor2_n6"
-    ]
-  },
-  {
-    "id": "w_d2_2355",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.2341,
-    "label": "Materials & Manufacturing Lab",
-    "roomId": "2355",
-    "edges": [
-      "w_cor2_m2"
-    ]
-  },
-  {
-    "id": "w_d2_2250",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.2795,
-    "label": "CMR Computer Classroom",
-    "roomId": "2250",
-    "edges": [
-      "w_cor2_m1"
-    ]
-  },
-  {
-    "id": "w_d2_2248",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3039,
-    "ny": 0.2795,
-    "label": "CMR BIM Lab",
-    "roomId": "2248",
-    "edges": [
-      "w_cor2_m2"
-    ]
-  },
-  {
-    "id": "w_d2_2304",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5189,
-    "ny": 0.2533,
-    "label": "Comp Sci Teaching",
-    "roomId": "2304",
-    "edges": [
-      "w_cor2_m4"
-    ]
-  },
-  {
-    "id": "w_d2_2399",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.6153,
-    "ny": 0.2533,
-    "label": "Mech CAD Classroom",
-    "roomId": "2399",
-    "edges": [
-      "w_cor2_m5"
-    ]
-  },
-  {
-    "id": "w_d2_2229",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.8154,
-    "ny": 0.3406,
-    "label": "Student Services Suite",
-    "roomId": "2229",
-    "edges": [
-      "w_cor2_m7"
-    ]
-  },
-  {
-    "id": "w_d2_2200",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.8154,
-    "ny": 0.4891,
-    "label": "COES Admin Suite",
-    "roomId": "2200",
-    "edges": [
-      "w_cor2_m7"
-    ]
-  },
-  {
-    "id": "w_d2_2214",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.8154,
-    "ny": 0.5939,
-    "label": "Dean's Suite",
-    "roomId": "2214",
-    "edges": [
-      "w_cor2_m7"
-    ]
-  },
-  {
-    "id": "w_d2_2249",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.4279,
-    "label": "EE Circuits 1",
-    "roomId": "2249",
-    "edges": [
-      "w_cor2_s1"
-    ]
-  },
-  {
-    "id": "w_d2_2241",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2965,
-    "ny": 0.4279,
-    "label": "EE Circuits 2",
-    "roomId": "2241",
-    "edges": [
-      "w_cor2_s2"
-    ]
-  },
-  {
-    "id": "w_d2_2224",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.4279,
-    "label": "Petro Computational",
-    "roomId": "2224",
-    "edges": [
-      "w_cor2_s2"
-    ]
-  },
-  {
-    "id": "w_d2_2241b",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.4374,
-    "ny": 0.4279,
-    "label": "CS Computer Lab",
-    "roomId": "2241B",
-    "edges": [
-      "w_cor2_s3"
-    ]
-  },
-  {
-    "id": "w_d2_2249b",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5189,
-    "ny": 0.4279,
-    "label": "CBE Simulations Lab",
-    "roomId": "2249B",
-    "edges": [
-      "w_cor2_s4"
-    ]
-  },
-  {
-    "id": "w_d2_2271",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.593,
-    "ny": 0.4279,
-    "label": "CE Fluids Mechanics",
-    "roomId": "2271",
-    "edges": [
-      "w_cor2_s5"
-    ]
-  },
-  {
-    "id": "w_d2_2279",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2313,
-    "ny": 0.5677,
-    "label": "EE Power",
-    "roomId": "2279",
-    "edges": [
-      "w_cor2_c1"
-    ]
-  },
-  {
-    "id": "w_d2_2277",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2965,
-    "ny": 0.5677,
-    "label": "EE Optics",
-    "roomId": "2277",
-    "edges": [
-      "w_cor2_c2"
-    ]
-  },
-  {
-    "id": "w_d2_2275",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.5677,
-    "label": "EE Petro Absorbance",
-    "roomId": "2275",
-    "edges": [
-      "w_cor2_c2"
-    ]
-  },
-  {
-    "id": "w_d2_2274",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.4374,
-    "ny": 0.5677,
-    "label": "Petro Teaching Electric Drive",
-    "roomId": "2274",
-    "edges": [
-      "w_cor2_c3"
-    ]
-  },
-  {
-    "id": "w_d2_2248b",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5189,
-    "ny": 0.5677,
-    "label": "Petro Teaching",
-    "roomId": "2248B",
-    "edges": [
-      "w_cor2_c4"
-    ]
-  },
-  {
-    "id": "w_d2_2215",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.6987,
-    "label": "Characterization Lab",
-    "roomId": "2215",
-    "edges": [
-      "w_cor2_c3"
-    ]
-  },
-  {
-    "id": "w_d2_2154",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2891,
-    "ny": 0.7598,
-    "label": "Petro Lab",
-    "roomId": "2154",
-    "edges": [
-      "w_cor2_c2"
-    ]
-  },
-  {
-    "id": "w_d2_2147",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.2891,
-    "ny": 0.821,
-    "label": "Petro Lab 2147",
-    "roomId": "2147",
-    "edges": [
-      "w_cor2_c2"
-    ]
-  },
-  {
-    "id": "w_d2_2217",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.3632,
-    "ny": 0.7598,
-    "label": "Drilling Fluids Teaching Lab",
-    "roomId": "2217",
-    "edges": [
-      "w_cor2_c2"
-    ]
-  },
-  {
-    "id": "w_d2_2145",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.4448,
-    "ny": 0.7598,
-    "label": "Reservoir Dynamics Teaching Lab",
-    "roomId": "2145",
-    "edges": [
-      "w_cor2_c3"
-    ]
-  },
-  {
-    "id": "w_d2_2141",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5189,
-    "ny": 0.7598,
-    "label": "Rock/Fluids Properties Lab",
-    "roomId": "2141",
-    "edges": [
-      "w_cor2_c4"
-    ]
-  },
-  {
-    "id": "w_d2_2132",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.4818,
-    "ny": 0.821,
-    "label": "Cheme Research Lab",
-    "roomId": "2132",
-    "edges": [
-      "w_cor2_c4"
-    ]
-  },
-  {
-    "id": "w_d2_2130",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.5486,
-    "ny": 0.821,
-    "label": "Cheme Biotech Lab",
-    "roomId": "2130",
-    "edges": [
-      "w_cor2_c4"
-    ]
-  },
-  {
-    "id": "w_d2_2128",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.6153,
-    "ny": 0.821,
-    "label": "Student Lounge",
-    "roomId": "2128",
-    "edges": [
-      "w_cor2_c5"
-    ]
-  },
-  {
-    "id": "w_d2_2215b",
-    "type": "door",
-    "floor": 2,
-    "nx": 0.8154,
-    "ny": 0.7598,
-    "label": "CBE Classroom",
-    "roomId": "2215B",
-    "edges": [
-      "w_cor2_c5"
-    ]
-  },
-  {
-    "id": "w_elev_a_3",
-    "type": "elevator",
-    "floor": 3,
-    "nx": 0.4596,
-    "ny": 0.31,
-    "label": "Elevator A",
-    "roomId": "",
-    "edges": [
-      "w_cor3_m3"
-    ],
-    "shaftId": "elev_a"
-  },
-  {
-    "id": "w_stair_b_3",
+    "id": "Stair_N01",
     "type": "stair",
-    "floor": 3,
-    "nx": 0.2313,
-    "ny": 0.31,
-    "label": "Stair B",
+    "floor": 1,
+    "nx": 0.264868740471005,
+    "ny": 0.1115069284348527,
+    "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m1"
-    ],
-    "shaftId": "stair_b"
+      "w_c1_98"
+    ]
   },
   {
-    "id": "w_stair_c_3",
+    "id": "Stair_N02",
     "type": "stair",
-    "floor": 3,
-    "nx": 0.5967,
-    "ny": 0.6507,
-    "label": "Stair C",
-    "roomId": "",
-    "edges": [
-      "w_cor3_c5"
-    ],
-    "shaftId": "stair_c"
-  },
-  {
-    "id": "w_cor3_n1",
-    "type": "corridor",
-    "floor": 3,
-    "nx": 0.2965,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.2689095963861057,
+    "ny": 0.7361237313925538,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_n2",
-      "w_d3_3336",
-      "w_d3_3329",
-      "w_d3_3325b"
+      "w_c1_139",
+      "w_c1_198",
+      "w_c1_199"
     ]
   },
   {
-    "id": "w_cor3_n2",
+    "id": "w_c1_5",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.4299,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.1765202464755013,
+    "ny": 0.24692400346424487,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_n1",
-      "w_cor3_n3",
-      "w_cor3_m3",
-      "w_d3_3327"
+      "w_c1_6"
     ]
   },
   {
-    "id": "w_cor3_n3",
+    "id": "w_c1_6",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.5634,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.19565131734965324,
+    "ny": 0.24726551219269835,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_n2",
-      "w_cor3_n4",
-      "w_d3_3315"
+      "w_c1_5",
+      "w_c1_7"
     ]
   },
   {
-    "id": "w_cor3_n4",
+    "id": "w_c1_7",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.6968,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.21507225293401958,
+    "ny": 0.24760702092115186,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_n3",
-      "w_cor3_n5",
-      "w_d3_3314",
-      "w_d3_3305"
+      "w_c1_6",
+      "w_c1_8"
     ]
   },
   {
-    "id": "w_cor3_n5",
+    "id": "w_c1_8",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.8302,
-    "ny": 0.1266,
+    "floor": 1,
+    "nx": 0.23217427083667053,
+    "ny": 0.24658249473579136,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_n4",
-      "w_d3_3308",
-      "w_d3_3312"
+      "w_c1_7",
+      "w_c1_9"
     ]
   },
   {
-    "id": "w_cor3_m1",
+    "id": "w_c1_9",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.2313,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.2492762887393215,
+    "ny": 0.24726551219269835,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m2",
-      "w_stair_b_3",
-      "w_cor3_s1"
+      "w_c1_8",
+      "w_c1_10"
     ]
   },
   {
-    "id": "w_cor3_m2",
+    "id": "w_c1_10",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.3262,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.26521884780111477,
+    "ny": 0.24555796855043088,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m1",
-      "w_cor3_m3",
-      "w_d3_3325",
-      "w_d3_3261",
-      "w_d3_3324"
+      "w_c1_9",
+      "w_c1_11"
     ]
   },
   {
-    "id": "w_cor3_m3",
+    "id": "w_c1_11",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.4374,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.28492964809569554,
+    "ny": 0.2448749510935239,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m2",
-      "w_cor3_m4",
-      "w_elev_a_3",
-      "w_cor3_n2",
-      "w_cor3_s3",
-      "w_d3_3319",
-      "w_d3_3255"
+      "w_c1_10",
+      "w_c1_12",
+      "w_c1_107",
+      "w_c1_108"
     ]
   },
   {
-    "id": "w_cor3_m4",
+    "id": "w_c1_12",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.5411,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.3046404483902763,
+    "ny": 0.24385042490816336,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m3",
-      "w_cor3_m5",
-      "w_d3_3267"
+      "1360",
+      "w_c1_11",
+      "w_c1_13"
     ]
   },
   {
-    "id": "w_cor3_m5",
+    "id": "w_c1_13",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.6449,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.32319178984399943,
+    "ny": 0.2448749510935239,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m4",
-      "w_cor3_m6",
-      "w_cor3_s5",
-      "w_d3_3287"
+      "1360",
+      "w_c1_12",
+      "w_c1_14"
     ]
   },
   {
-    "id": "w_cor3_m6",
+    "id": "w_c1_14",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.7487,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.3402938077466504,
+    "ny": 0.24521645982197737,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m5",
-      "w_cor3_m7"
+      "w_c1_13",
+      "w_c1_15"
     ]
   },
   {
-    "id": "w_cor3_m7",
+    "id": "w_c1_15",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.8525,
-    "ny": 0.3406,
+    "floor": 1,
+    "nx": 0.35443052641137074,
+    "ny": 0.24454658818576783,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_m6",
-      "w_cor3_s6",
-      "w_d3_3229"
+      "w_c1_14",
+      "w_c1_16"
     ]
   },
   {
-    "id": "w_cor3_s1",
+    "id": "w_c1_16",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.2313,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.36932747204424343,
+    "ny": 0.24544664325949955,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s2",
-      "w_cor3_m1",
-      "w_cor3_c1",
-      "w_d3_3280"
+      "w_c1_15",
+      "w_c1_17"
     ]
   },
   {
-    "id": "w_cor3_s2",
+    "id": "w_c1_17",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.341,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.38384244471217066,
+    "ny": 0.24544664325949955,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s1",
-      "w_cor3_s3",
-      "w_d3_3277",
-      "w_d3_3275"
+      "w_c1_16",
+      "w_c1_19"
     ]
   },
   {
-    "id": "w_cor3_s3",
+    "id": "w_c1_19",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.4522,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.39682952552031603,
+    "ny": 0.2449966157226337,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s2",
-      "w_cor3_s4",
-      "w_cor3_m3",
-      "w_cor3_c3",
-      "w_d3_3265",
-      "w_d3_3258"
+      "w_c1_17",
+      "w_c1_20",
+      "w_c1_468"
     ]
   },
   {
-    "id": "w_cor3_s4",
+    "id": "w_c1_20",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.5634,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.40790674150373424,
+    "ny": 0.2449966157226337,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s3",
-      "w_cor3_s5",
-      "w_cor3_c4",
-      "w_d3_3252",
-      "w_d3_3240"
+      "w_c1_19",
+      "w_c1_22",
+      "w_c1_468"
     ]
   },
   {
-    "id": "w_cor3_s5",
+    "id": "w_c1_22",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.6746,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.41936593045209775,
+    "ny": 0.24454658818576783,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s4",
-      "w_cor3_s6",
-      "w_cor3_m5",
-      "w_d3_3230"
+      "1354",
+      "w_c1_20",
+      "w_c1_23"
     ]
   },
   {
-    "id": "w_cor3_s6",
+    "id": "w_c1_23",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.7858,
-    "ny": 0.4891,
+    "floor": 1,
+    "nx": 0.43311695719013416,
+    "ny": 0.2449966157226337,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_s5",
-      "w_cor3_m7",
-      "w_d3_3212",
-      "w_d3_3228"
+      "1354",
+      "w_c1_22",
+      "w_c1_24"
     ]
   },
   {
-    "id": "w_cor3_c1",
+    "id": "w_c1_24",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.2313,
-    "ny": 0.6507,
+    "floor": 1,
+    "nx": 0.44495811910344324,
+    "ny": 0.2449966157226337,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_c2",
-      "w_cor3_s1",
-      "w_d3_3319b"
+      "1354",
+      "w_c1_23",
+      "w_c1_25"
     ]
   },
   {
-    "id": "w_cor3_c2",
+    "id": "w_c1_25",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.3336,
-    "ny": 0.6507,
+    "floor": 1,
+    "nx": 0.46023703770126134,
+    "ny": 0.24409656064890198,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_c1",
-      "w_cor3_c3",
-      "w_d3_3323",
-      "w_d3_3321",
-      "w_d3_3322"
+      "w_c1_24",
+      "w_c1_26"
     ]
   },
   {
-    "id": "w_cor3_c3",
+    "id": "w_c1_26",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.4374,
-    "ny": 0.6507,
+    "floor": 1,
+    "nx": 0.47589792926402485,
+    "ny": 0.2449966157226337,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_c2",
-      "w_cor3_c4",
-      "w_cor3_s3",
-      "w_d3_3325c",
-      "w_d3_3311"
+      "w_c1_25",
+      "w_c1_27"
     ]
   },
   {
-    "id": "w_cor3_c4",
+    "id": "w_c1_27",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.5411,
-    "ny": 0.6507,
+    "floor": 1,
+    "nx": 0.491176847861843,
+    "ny": 0.24454658818576783,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_c3",
-      "w_cor3_c5",
-      "w_cor3_s4",
-      "w_d3_3025"
+      "w_c1_26",
+      "w_c1_28"
     ]
   },
   {
-    "id": "w_cor3_c5",
+    "id": "w_c1_28",
     "type": "corridor",
-    "floor": 3,
-    "nx": 0.6449,
-    "ny": 0.6507,
+    "floor": 1,
+    "nx": 0.5033999827400975,
+    "ny": 0.24454658818576783,
     "label": "",
     "roomId": "",
     "edges": [
-      "w_cor3_c4",
-      "w_stair_c_3",
-      "w_d3_3297",
-      "w_d3_3020"
+      "w_c1_27",
+      "w_c1_29"
     ]
   },
   {
-    "id": "w_d3_3325",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2965,
-    "ny": 0.2795,
-    "label": "ECEE & CSE Suite",
-    "roomId": "3325",
+    "id": "w_c1_29",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5156231176183521,
+    "ny": 0.24454658818576783,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m2"
+      "w_c1_28",
+      "w_c1_30"
     ]
   },
   {
-    "id": "w_d3_3319",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.4151,
-    "ny": 0.2795,
-    "label": "CME Suite",
-    "roomId": "3319",
+    "id": "w_c1_30",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5263183606368247,
+    "ny": 0.24409656064890198,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m3"
+      "w_c1_29",
+      "w_c1_31"
     ]
   },
   {
-    "id": "w_d3_3255",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.4374,
-    "ny": 0.3755,
-    "label": "ChE & EEvEG Suite",
-    "roomId": "3255",
+    "id": "w_c1_31",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5412153062696974,
+    "ny": 0.24409656064890198,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m3"
+      "1348",
+      "w_c1_30",
+      "w_c1_32"
     ]
   },
   {
-    "id": "w_d3_3261",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.3188,
-    "ny": 0.393,
-    "label": "ME & ISE Suite",
-    "roomId": "3261",
+    "id": "w_c1_32",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5545843600427883,
+    "ny": 0.24454658818576783,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m2"
+      "1348",
+      "w_c1_31",
+      "w_c1_33"
     ]
   },
   {
-    "id": "w_d3_3267",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.5708,
-    "ny": 0.2795,
-    "label": "Cheme Suite",
-    "roomId": "3267",
+    "id": "w_c1_33",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5717731434653337,
+    "ny": 0.24544664325949955,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m4"
+      "w_c1_32",
+      "w_c1_45",
+      "w_c1_46",
+      "w_c1_424"
     ]
   },
   {
-    "id": "w_d3_3287",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.6449,
-    "ny": 0.3755,
-    "label": "PETE Suite",
-    "roomId": "3287",
+    "id": "w_c1_34",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5717294348767908,
+    "ny": 0.0841930457097356,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m5"
+      "Etr_E_03",
+      "w_c1_35"
     ]
   },
   {
-    "id": "w_d3_3324",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2891,
-    "ny": 0.2314,
-    "label": "COES HR / Finance",
-    "roomId": "3324",
+    "id": "w_c1_35",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5714698427612436,
+    "ny": 0.09703843442823364,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m2"
+      "1331",
+      "w_c1_34",
+      "w_c1_36"
     ]
   },
   {
-    "id": "w_d3_3297",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.8302,
-    "ny": 0.7162,
-    "label": "Dean's Seminar Suite",
-    "roomId": "3297",
+    "id": "w_c1_36",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5714698427612436,
+    "ny": 0.11141303608941001,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c5"
+      "1331",
+      "w_c1_35",
+      "w_c1_37"
     ]
   },
   {
-    "id": "w_d3_3336",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.126,
-    "ny": 0.1266,
-    "label": "Office 3336",
-    "roomId": "3336",
+    "id": "w_c1_37",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5714698427612436,
+    "ny": 0.12487010998497938,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n1"
+      "1331",
+      "1330",
+      "w_c1_36",
+      "w_c1_38"
     ]
   },
   {
-    "id": "w_d3_3329",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.1927,
-    "ny": 0.1266,
-    "label": "Office 3329",
-    "roomId": "3329",
+    "id": "w_c1_38",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5712102506456962,
+    "ny": 0.1386330264690844,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n1"
+      "1330",
+      "w_c1_37",
+      "w_c1_39",
+      "w_c1_436"
     ]
   },
   {
-    "id": "w_d3_3325b",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.252,
-    "ny": 0.0873,
-    "label": "Office 3325b",
-    "roomId": "3325b",
+    "id": "w_c1_39",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5727678033389801,
+    "ny": 0.15178425777611812,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n1"
+      "w_c1_436",
+      "1329",
+      "1330",
+      "w_c1_38",
+      "w_c1_40"
     ]
   },
   {
-    "id": "w_d3_3327",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.3188,
-    "ny": 0.0873,
-    "label": "Office 3327",
-    "roomId": "3327",
+    "id": "w_c1_40",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5719890269923382,
+    "ny": 0.16187706319779516,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n2"
+      "1329",
+      "w_c1_39",
+      "w_c1_41",
+      "w_c1_436"
     ]
   },
   {
-    "id": "w_d3_3315",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.5634,
-    "ny": 0.0786,
-    "label": "Office 3315",
-    "roomId": "3315",
+    "id": "w_c1_41",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5719890269923382,
+    "ny": 0.17686335003604284,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n3"
+      "w_c1_40",
+      "w_c1_42"
     ]
   },
   {
-    "id": "w_d3_3314",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.6968,
-    "ny": 0.0786,
-    "label": "Office 3314",
-    "roomId": "3314",
+    "id": "w_c1_42",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5727678033389801,
+    "ny": 0.19154379428575488,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n4"
+      "1327",
+      "1636",
+      "w_c1_41",
+      "w_c1_43"
     ]
   },
   {
-    "id": "w_d3_3305",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.7487,
-    "ny": 0.0786,
-    "label": "Office 3305",
-    "roomId": "3305",
+    "id": "w_c1_43",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5719890269923382,
+    "ny": 0.20500086818132424,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n4"
+      "1636",
+      "1327",
+      "w_c1_42",
+      "w_c1_44"
     ]
   },
   {
-    "id": "w_d3_3308",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.8006,
-    "ny": 0.0786,
-    "label": "Office 3308",
-    "roomId": "3308",
+    "id": "w_c1_44",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5732869875700748,
+    "ny": 0.21998715501957194,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n5"
+      "w_c1_43",
+      "w_c1_45"
     ]
   },
   {
-    "id": "w_d3_3312",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.8525,
-    "ny": 0.0786,
-    "label": "Office 3312",
-    "roomId": "3312",
+    "id": "w_c1_45",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5730273954545274,
+    "ny": 0.23405591409221263,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_n5"
+      "w_c1_33",
+      "w_c1_44",
+      "w_c1_46"
     ]
   },
   {
-    "id": "w_d3_3280",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2313,
-    "ny": 0.4279,
-    "label": "Office 3280",
-    "roomId": "3280",
+    "id": "w_c1_46",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.583151487960873,
+    "ny": 0.2450662472794967,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s1"
+      "w_c1_33",
+      "w_c1_45",
+      "w_c1_47",
+      "w_c1_424"
     ]
   },
   {
-    "id": "w_d3_3277",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2965,
-    "ny": 0.4279,
-    "label": "Office 3277",
-    "roomId": "3277",
+    "id": "w_c1_47",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5969098700848812,
+    "ny": 0.245677932456568,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s2"
+      "w_c1_46",
+      "w_c1_48"
     ]
   },
   {
-    "id": "w_d3_3275",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.3632,
-    "ny": 0.4279,
-    "label": "Office 3275",
-    "roomId": "3275",
+    "id": "w_c1_48",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6166388708664777,
+    "ny": 0.24537208986803233,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s2"
+      "w_c1_47",
+      "w_c1_49"
     ]
   },
   {
-    "id": "w_d3_3265",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.4522,
-    "ny": 0.4279,
-    "label": "Office 3265",
-    "roomId": "3265",
+    "id": "w_c1_49",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6316952135682226,
+    "ny": 0.2450662472794967,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s3"
+      "1344",
+      "w_c1_48",
+      "w_c1_50"
     ]
   },
   {
-    "id": "w_d3_3258",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.5189,
-    "ny": 0.4279,
-    "label": "Office 3258",
-    "roomId": "3258",
+    "id": "w_c1_50",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6433768587678521,
+    "ny": 0.24445456210242536,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s3"
+      "1344",
+      "w_c1_49",
+      "w_c1_51"
     ]
   },
   {
-    "id": "w_d3_3252",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.6301,
-    "ny": 0.4279,
-    "label": "Office 3252",
-    "roomId": "3252",
+    "id": "w_c1_51",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6605099383939754,
+    "ny": 0.24476040469096103,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s4"
+      "w_c1_50",
+      "w_c1_52"
     ]
   },
   {
-    "id": "w_d3_3240",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.5634,
-    "ny": 0.5371,
-    "label": "Office 3240",
-    "roomId": "3240",
+    "id": "w_c1_52",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6768642416734568,
+    "ny": 0.245677932456568,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s4"
+      "w_c1_51",
+      "w_c1_53"
     ]
   },
   {
-    "id": "w_d3_3230",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.6746,
-    "ny": 0.5371,
-    "label": "Office 3230",
-    "roomId": "3230",
+    "id": "w_c1_53",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6955548739928641,
+    "ny": 0.2450662472794967,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s5"
+      "w_c1_52",
+      "w_c1_54"
     ]
   },
   {
-    "id": "w_d3_3212",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.7858,
-    "ny": 0.5371,
-    "label": "Office 3212",
-    "roomId": "3212",
+    "id": "w_c1_54",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7139859141967241,
+    "ny": 0.2450662472794967,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s6"
+      "w_c1_53",
+      "w_c1_55"
     ]
   },
   {
-    "id": "w_d3_3229",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.8154,
-    "ny": 0.4279,
-    "label": "Office 3229",
-    "roomId": "3229",
+    "id": "w_c1_55",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7298210332451108,
+    "ny": 0.2459837750451037,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_m7"
+      "w_c1_54",
+      "w_c1_56"
     ]
   },
   {
-    "id": "w_d3_3228",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.8154,
-    "ny": 0.4891,
-    "label": "Office 3228",
-    "roomId": "3228",
+    "id": "w_c1_56",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7422814547913823,
+    "ny": 0.24659546022217502,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_s6"
+      "w_c1_55",
+      "w_c1_59"
     ]
   },
   {
-    "id": "w_d3_3323",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2817,
-    "ny": 0.6987,
-    "label": "CM Detailing/Controls Lab",
-    "roomId": "3323",
+    "id": "w_c1_59",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7526073487841111,
+    "ny": 0.24564887645946995,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c2"
+      "w_c1_56",
+      "w_c1_60",
+      "w_c1_81"
     ]
   },
   {
-    "id": "w_d3_3321",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.3484,
-    "ny": 0.6987,
-    "label": "Mfg Industrial Systems",
-    "roomId": "3321",
+    "id": "w_c1_60",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7632701586925388,
+    "ny": 0.245397625270536,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c2"
+      "w_c1_59",
+      "w_c1_61",
+      "w_c1_81",
+      "w_c1_82"
     ]
   },
   {
-    "id": "w_d3_3325c",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.4151,
-    "ny": 0.6987,
-    "label": "CM Exterior Teaching",
-    "roomId": "3325C",
+    "id": "w_c1_61",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7777715801680004,
+    "ny": 0.24464387170373414,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c3"
+      "w_c1_60",
+      "w_c1_62",
+      "w_c1_81"
     ]
   },
   {
-    "id": "w_d3_3322",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.3558,
-    "ny": 0.7686,
-    "label": "CM Senior Project Lab",
-    "roomId": "3322",
+    "id": "w_c1_62",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7901404396617765,
+    "ny": 0.24564887645946995,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c2"
+      "1307",
+      "1100R",
+      "w_c1_61",
+      "w_c1_63"
     ]
   },
   {
-    "id": "w_d3_3311",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.4744,
-    "ny": 0.7686,
-    "label": "Shared Learning Lab",
-    "roomId": "3311",
+    "id": "w_c1_63",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8005899933720357,
+    "ny": 0.2459001276484039,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c3"
+      "1100R",
+      "1307",
+      "w_c1_62",
+      "w_c1_64"
     ]
   },
   {
-    "id": "w_d3_3025",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.5634,
-    "ny": 0.6987,
-    "label": "Pollution Control Lab II",
-    "roomId": "3025",
+    "id": "w_c1_64",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8125323404694748,
+    "ny": 0.24564887645946995,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c4"
+      "1307",
+      "1100R",
+      "w_c1_63",
+      "w_c1_65"
     ]
   },
   {
-    "id": "w_d3_3020",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.6672,
-    "ny": 0.6987,
-    "label": "Pollution Control Lab",
-    "roomId": "3020",
+    "id": "w_c1_65",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8259674809540936,
+    "ny": 0.2448951228926681,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c5"
+      "w_c1_64",
+      "w_c1_66"
     ]
   },
   {
-    "id": "w_d3_3319b",
-    "type": "door",
-    "floor": 3,
-    "nx": 0.2817,
-    "ny": 0.7686,
-    "label": "Verandah",
-    "roomId": "3319B",
+    "id": "w_c1_66",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8364170346643527,
+    "ny": 0.24640263002627183,
+    "label": "",
+    "roomId": "",
     "edges": [
-      "w_cor3_c1"
+      "w_c1_65",
+      "w_c1_67"
+    ]
+  },
+  {
+    "id": "w_c1_67",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8498521751489716,
+    "ny": 0.245397625270536,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_S01",
+      "w_c1_66",
+      "w_c1_68"
+    ]
+  },
+  {
+    "id": "w_c1_68",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8609414974537365,
+    "ny": 0.24514637408160203,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_S_01",
+      "Stair_S01",
+      "w_c1_67"
+    ]
+  },
+  {
+    "id": "w_c1_71",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7633706332547147,
+    "ny": 0.10370537645899873,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_E_04",
+      "w_c1_72"
+    ]
+  },
+  {
+    "id": "w_c1_72",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7629848276027663,
+    "ny": 0.11529622495174882,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_71",
+      "w_c1_73"
+    ]
+  },
+  {
+    "id": "w_c1_73",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7627919247767921,
+    "ny": 0.1282507026789401,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_72",
+      "w_c1_74"
+    ]
+  },
+  {
+    "id": "w_c1_74",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7641422445586115,
+    "ny": 0.1414324519452049,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1321",
+      "w_c1_73",
+      "w_c1_75",
+      "w_c1_449",
+      "w_c1_450"
+    ]
+  },
+  {
+    "id": "w_c1_75",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7637564389066631,
+    "ny": 0.15211421428166086,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_74",
+      "w_c1_76",
+      "w_c1_449",
+      "w_c1_450"
+    ]
+  },
+  {
+    "id": "w_c1_76",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7645280502105599,
+    "ny": 0.1662050497042198,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1312",
+      "w_c1_75",
+      "w_c1_77",
+      "w_c1_449",
+      "w_c1_450"
+    ]
+  },
+  {
+    "id": "w_c1_77",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7631777304287406,
+    "ny": 0.17847771281419048,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_76",
+      "w_c1_78"
+    ]
+  },
+  {
+    "id": "w_c1_78",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7637564389066631,
+    "ny": 0.19370490593211706,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_77",
+      "w_c1_79"
+    ]
+  },
+  {
+    "id": "w_c1_79",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7639493417326374,
+    "ny": 0.2071139267374554,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_78",
+      "w_c1_80"
+    ]
+  },
+  {
+    "id": "w_c1_80",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7639493417326374,
+    "ny": 0.2209774906209408,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_79",
+      "w_c1_81"
+    ]
+  },
+  {
+    "id": "w_c1_81",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7639493417326374,
+    "ny": 0.23325015373091146,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_59",
+      "w_c1_60",
+      "w_c1_61",
+      "w_c1_80"
+    ]
+  },
+  {
+    "id": "w_c1_82",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7640526602100872,
+    "ny": 0.2642596439175998,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_60",
+      "w_c1_83"
+    ]
+  },
+  {
+    "id": "w_c1_83",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7638002323252042,
+    "ny": 0.27675052522912896,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_82",
+      "w_c1_84"
+    ]
+  },
+  {
+    "id": "w_c1_84",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7635478044403212,
+    "ny": 0.290728416220602,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_83",
+      "w_c1_85"
+    ]
+  },
+  {
+    "id": "w_c1_85",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7640526602100872,
+    "ny": 0.3064907188280078,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_84",
+      "w_c1_86"
+    ]
+  },
+  {
+    "id": "w_c1_86",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7638002323252042,
+    "ny": 0.31838679626755934,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_85",
+      "w_c1_87"
+    ]
+  },
+  {
+    "id": "w_c1_87",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7635478044403212,
+    "ny": 0.3317698833870548,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_86",
+      "w_c1_88"
+    ]
+  },
+  {
+    "id": "w_c1_88",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7640526602100872,
+    "ny": 0.3466399801864943,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_87",
+      "w_c1_89",
+      "w_c1_395"
+    ]
+  },
+  {
+    "id": "w_c1_89",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7650623717496193,
+    "ny": 0.3618074789219225,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_88",
+      "w_c1_90",
+      "w_c1_395"
+    ]
+  },
+  {
+    "id": "w_c1_90",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7650623717496193,
+    "ny": 0.37667757572136196,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_89",
+      "w_c1_91",
+      "w_c1_348"
+    ]
+  },
+  {
+    "id": "w_c1_91",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7799556169577161,
+    "ny": 0.37638017378537314,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_90",
+      "w_c1_92"
+    ]
+  },
+  {
+    "id": "w_c1_92",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7935867227413979,
+    "ny": 0.37638017378537314,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_91",
+      "w_c1_93"
+    ]
+  },
+  {
+    "id": "w_c1_93",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8064605448704308,
+    "ny": 0.37667757572136196,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_92",
+      "w_c1_94"
+    ]
+  },
+  {
+    "id": "w_c1_94",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8190819391145806,
+    "ny": 0.3775697815293283,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_93",
+      "w_c1_95"
+    ]
+  },
+  {
+    "id": "w_c1_95",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8317033333587305,
+    "ny": 0.3784619873372947,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1300",
+      "1269",
+      "w_c1_94",
+      "w_c1_96"
+    ]
+  },
+  {
+    "id": "w_c1_96",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8450820112575294,
+    "ny": 0.3778671834653171,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1300",
+      "1269",
+      "w_c1_95",
+      "w_c1_97"
+    ]
+  },
+  {
+    "id": "w_c1_97",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8571985497319132,
+    "ny": 0.3778671834653171,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_S_02",
+      "w_c1_96"
+    ]
+  },
+  {
+    "id": "w_c1_98",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.11057415849763753,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_E_01",
+      "Stair_N01",
+      "w_c1_99"
+    ]
+  },
+  {
+    "id": "w_c1_99",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28501423305056955,
+    "ny": 0.12344100417567952,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_98",
+      "w_c1_100"
+    ]
+  },
+  {
+    "id": "w_c1_100",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28501423305056955,
+    "ny": 0.1347941033033636,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1368",
+      "w_c1_99",
+      "w_c1_101"
+    ]
+  },
+  {
+    "id": "w_c1_101",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.14841782225658456,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1368",
+      "w_c1_100",
+      "w_c1_102"
+    ]
+  },
+  {
+    "id": "w_c1_102",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28501423305056955,
+    "ny": 0.1620415412098055,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1366",
+      "w_c1_101",
+      "w_c1_103"
+    ]
+  },
+  {
+    "id": "w_c1_103",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.1749083868878475,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1366",
+      "1367",
+      "w_c1_102",
+      "w_c1_104"
+    ]
+  },
+  {
+    "id": "w_c1_104",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.18777523256588946,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1366",
+      "1364",
+      "1367",
+      "w_c1_103",
+      "w_c1_105"
+    ]
+  },
+  {
+    "id": "w_c1_105",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.2006420782439315,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1364",
+      "1367",
+      "w_c1_104",
+      "w_c1_106"
+    ]
+  },
+  {
+    "id": "w_c1_106",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.21502267047233134,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1364",
+      "w_c1_105",
+      "w_c1_107"
+    ]
+  },
+  {
+    "id": "w_c1_107",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.22788951615037334,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_11",
+      "w_c1_106"
+    ]
+  },
+  {
+    "id": "w_c1_108",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2856566495813923,
+    "ny": 0.2574075738823521,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_11",
+      "w_c1_109"
+    ]
+  },
+  {
+    "id": "w_c1_109",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28501423305056955,
+    "ny": 0.271031292835573,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1371",
+      "w_c1_108",
+      "w_c1_110"
+    ]
+  },
+  {
+    "id": "w_c1_110",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.28389813851361495,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1371",
+      "w_c1_109",
+      "w_c1_111"
+    ]
+  },
+  {
+    "id": "w_c1_111",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2856566495813923,
+    "ny": 0.3013062238427306,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_110",
+      "w_c1_112"
+    ]
+  },
+  {
+    "id": "w_c1_112",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2856566495813923,
+    "ny": 0.31644368934630945,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_111",
+      "w_c1_113"
+    ]
+  },
+  {
+    "id": "w_c1_113",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28437181651974686,
+    "ny": 0.334608647950604,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_112",
+      "w_c1_114",
+      "w_c1_115"
+    ]
+  },
+  {
+    "id": "w_c1_114",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2856566495813923,
+    "ny": 0.34974611345418277,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_115",
+      "w_c1_113",
+      "w_c1_116",
+      "w_c1_117"
+    ]
+  },
+  {
+    "id": "w_c1_115",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2856566495813923,
+    "ny": 0.34974611345418277,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_114",
+      "w_c1_113",
+      "w_c1_116",
+      "w_c1_117"
+    ]
+  },
+  {
+    "id": "w_c1_116",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.36412670568258265,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_117",
+      "w_c1_114",
+      "w_c1_115",
+      "w_c1_118",
+      "w_c1_476"
+    ]
+  },
+  {
+    "id": "w_c1_117",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.36488357895776163,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_116",
+      "w_c1_114",
+      "w_c1_115",
+      "w_c1_118",
+      "w_c1_476"
+    ]
+  },
+  {
+    "id": "w_c1_118",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.37850729791098253,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_116",
+      "w_c1_117",
+      "w_c1_119",
+      "w_c1_359",
+      "w_c1_476"
+    ]
+  },
+  {
+    "id": "w_c1_119",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.3921310168642035,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1278",
+      "w_c1_118",
+      "w_c1_120",
+      "w_c1_359",
+      "w_c1_476"
+    ]
+  },
+  {
+    "id": "w_c1_120",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.4072684823677823,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_119",
+      "w_c1_121",
+      "w_c1_359"
+    ]
+  },
+  {
+    "id": "w_c1_121",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.42089220132100325,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_120",
+      "w_c1_122"
+    ]
+  },
+  {
+    "id": "w_c1_122",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28180215039645584,
+    "ny": 0.4375434133749399,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_121",
+      "w_c1_123"
+    ]
+  },
+  {
+    "id": "w_c1_123",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28308698345810135,
+    "ny": 0.4526808788785187,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_122",
+      "w_c1_124"
+    ]
+  },
+  {
+    "id": "w_c1_124",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2837293999889241,
+    "ny": 0.46706147110691865,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1518",
+      "w_c1_123",
+      "w_c1_125"
+    ]
+  },
+  {
+    "id": "w_c1_125",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28501423305056955,
+    "ny": 0.48068519006013954,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1518",
+      "w_c1_124",
+      "w_c1_126"
+    ]
+  },
+  {
+    "id": "w_c1_126",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2824445669272786,
+    "ny": 0.4973364021140763,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_125",
+      "w_c1_127",
+      "w_c1_261"
+    ]
+  },
+  {
+    "id": "w_c1_127",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28180215039645584,
+    "ny": 0.512473867617655,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1232",
+      "w_c1_126",
+      "w_c1_261",
+      "w_c1_1"
+    ]
+  },
+  {
+    "id": "w_c1_130",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27537798508822836,
+    "ny": 0.5321525727723075,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_296",
+      "w_c1_1"
+    ]
+  },
+  {
+    "id": "w_c1_131",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27280831896493735,
+    "ny": 0.5556156443028547,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_293",
+      "w_c1_296"
+    ]
+  },
+  {
+    "id": "w_c1_132",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27152348590329184,
+    "ny": 0.5828630822092965,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_293",
+      "w_c1_294"
+    ]
+  },
+  {
+    "id": "w_c1_133",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27216590243411465,
+    "ny": 0.6093536468405595,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_294",
+      "w_c1_295"
+    ]
+  },
+  {
+    "id": "w_c1_134",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27280831896493735,
+    "ny": 0.6366010847470014,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_135",
+      "w_c1_295"
+    ]
+  },
+  {
+    "id": "w_c1_135",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2734507354957601,
+    "ny": 0.6562797899016538,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_134",
+      "w_c1_136"
+    ]
+  },
+  {
+    "id": "w_c1_136",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2745760733129136,
+    "ny": 0.6692688366950929,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_135",
+      "w_c1_137"
+    ]
+  },
+  {
+    "id": "w_c1_137",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2737081105161309,
+    "ny": 0.6866531081523999,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_136",
+      "w_c1_140",
+      "w_c1_138"
+    ]
+  },
+  {
+    "id": "w_c1_138",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2737081105161309,
+    "ny": 0.7081277964231909,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_N_03",
+      "w_c1_139",
+      "w_c1_137"
+    ]
+  },
+  {
+    "id": "w_c1_139",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2737081105161309,
+    "ny": 0.7224442552703848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_N_03",
+      "Stair_N02",
+      "w_c1_138",
+      "w_c1_198"
+    ]
+  },
+  {
+    "id": "w_c1_140",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.287161533866262,
+    "ny": 0.6881870144574563,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_137",
+      "w_c1_141"
+    ]
+  },
+  {
+    "id": "w_c1_141",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.30278486420834966,
+    "ny": 0.6897209207625129,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_140",
+      "w_c1_142"
+    ]
+  },
+  {
+    "id": "w_c1_142",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3171062503552634,
+    "ny": 0.6897209207625129,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_141",
+      "w_c1_143"
+    ]
+  },
+  {
+    "id": "w_c1_143",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3292577295102205,
+    "ny": 0.6902322228641984,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_142",
+      "w_c1_144"
+    ]
+  },
+  {
+    "id": "w_c1_144",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.34271115286035153,
+    "ny": 0.6912548270675694,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_143",
+      "w_c1_145"
+    ]
+  },
+  {
+    "id": "w_c1_145",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3570325390072653,
+    "ny": 0.6922774312709404,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_144",
+      "w_c1_146"
+    ]
+  },
+  {
+    "id": "w_c1_146",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.371353925154179,
+    "ny": 0.6948339417793679,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_145",
+      "w_c1_147"
+    ]
+  },
+  {
+    "id": "w_c1_147",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3869772554962666,
+    "ny": 0.6973904522877954,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_146",
+      "w_c1_148"
+    ]
+  },
+  {
+    "id": "w_c1_148",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.399562716049615,
+    "ny": 0.6973904522877954,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_147",
+      "w_c1_149"
+    ]
+  },
+  {
+    "id": "w_c1_149",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.41431808359492006,
+    "ny": 0.6994356606945374,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_148",
+      "w_c1_150"
+    ]
+  },
+  {
+    "id": "w_c1_150",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.42950743253861645,
+    "ny": 0.7004582648979084,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_149",
+      "w_c1_151"
+    ]
+  },
+  {
+    "id": "w_c1_151",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4455647442790954,
+    "ny": 0.7009695669995939,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_150",
+      "w_c1_152"
+    ]
+  },
+  {
+    "id": "w_c1_152",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.46205603741796575,
+    "ny": 0.703014775406336,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_151",
+      "w_c1_153"
+    ]
+  },
+  {
+    "id": "w_c1_153",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4794152933536187,
+    "ny": 0.7035260775080214,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_152",
+      "w_c1_154"
+    ]
+  },
+  {
+    "id": "w_c1_154",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.49286871670374977,
+    "ny": 0.7045486817113924,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_153",
+      "w_c1_155"
+    ]
+  },
+  {
+    "id": "w_c1_155",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5106619540377941,
+    "ny": 0.7060825880164489,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_154",
+      "w_c1_156"
+    ]
+  },
+  {
+    "id": "w_c1_156",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5293231541686211,
+    "ny": 0.7065938901181344,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_155",
+      "w_c1_157"
+    ]
+  },
+  {
+    "id": "w_c1_157",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5458144473074914,
+    "ny": 0.7086390985248764,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_156",
+      "w_c1_167"
+    ]
+  },
+  {
+    "id": "w_c1_162",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.570117471648499,
+    "ny": 0.7080804690542941,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_164",
+      "w_c1_165",
+      "w_c1_167",
+      "w_c1_170"
+    ]
+  },
+  {
+    "id": "w_c1_163",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5705610966404974,
+    "ny": 0.6782886293078054,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1253",
+      "w_c1_304",
+      "1208",
+      "w_c1_164"
+    ]
+  },
+  {
+    "id": "w_c1_164",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5710047216324957,
+    "ny": 0.692923217253449,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1253",
+      "1208",
+      "w_c1_162",
+      "w_c1_163",
+      "w_c1_170"
+    ]
+  },
+  {
+    "id": "w_c1_165",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5716701591204933,
+    "ny": 0.722453725072337,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_162",
+      "w_c1_166",
+      "w_c1_170"
+    ]
+  },
+  {
+    "id": "w_c1_166",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.571226534128495,
+    "ny": 0.7378723088007828,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_165",
+      "w_c1_233"
+    ]
+  },
+  {
+    "id": "w_c1_167",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5569478239772857,
+    "ny": 0.7081545293543764,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_157",
+      "w_c1_162"
+    ]
+  },
+  {
+    "id": "w_c1_170",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5809392274855076,
+    "ny": 0.7089221857817605,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_162",
+      "w_c1_164",
+      "w_c1_165",
+      "w_c1_171"
+    ]
+  },
+  {
+    "id": "w_c1_171",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5928968026130832,
+    "ny": 0.7089221857817605,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_170",
+      "w_c1_172"
+    ]
+  },
+  {
+    "id": "w_c1_172",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6083087883330695,
+    "ny": 0.7101744531352471,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_171",
+      "w_c1_173",
+      "w_c1_174"
+    ]
+  },
+  {
+    "id": "w_c1_173",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.623455050161332,
+    "ny": 0.7114267204887337,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_174",
+      "w_c1_172",
+      "w_c1_175"
+    ]
+  },
+  {
+    "id": "w_c1_174",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6229236023778841,
+    "ny": 0.7108005868119904,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_173",
+      "w_c1_172",
+      "w_c1_175"
+    ]
+  },
+  {
+    "id": "w_c1_175",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6393984836647661,
+    "ny": 0.712052854165477,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_173",
+      "w_c1_174",
+      "w_c1_176"
+    ]
+  },
+  {
+    "id": "w_c1_176",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6529504021426851,
+    "ny": 0.7126789878422203,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_175",
+      "w_c1_177"
+    ]
+  },
+  {
+    "id": "w_c1_177",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6686281117543954,
+    "ny": 0.713931255195707,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_176",
+      "w_c1_178"
+    ]
+  },
+  {
+    "id": "w_c1_178",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.68324292579921,
+    "ny": 0.7151835225491936,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_177",
+      "w_c1_179"
+    ]
+  },
+  {
+    "id": "w_c1_179",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6944033292516139,
+    "ny": 0.7154965893875652,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_178",
+      "w_c1_180"
+    ]
+  },
+  {
+    "id": "w_c1_180",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.707689523837809,
+    "ny": 0.7154965893875652,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_179",
+      "w_c1_181"
+    ]
+  },
+  {
+    "id": "w_c1_181",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7220386139908997,
+    "ny": 0.7151835225491936,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_180",
+      "w_c1_182"
+    ]
+  },
+  {
+    "id": "w_c1_182",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7347933607936471,
+    "ny": 0.7154965893875652,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_181",
+      "w_c1_183"
+    ]
+  },
+  {
+    "id": "w_c1_183",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7504710704053573,
+    "ny": 0.7151835225491936,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1112",
+      "w_c1_182",
+      "w_c1_184"
+    ]
+  },
+  {
+    "id": "w_c1_184",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7658830561253437,
+    "ny": 0.7158096562259368,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_183",
+      "w_c1_189",
+      "w_c1_246",
+      "w_c1_346"
+    ]
+  },
+  {
+    "id": "w_c1_189",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7763376256374644,
+    "ny": 0.7150387381631007,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_184",
+      "w_c1_190"
+    ]
+  },
+  {
+    "id": "w_c1_190",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.787356424774229,
+    "ny": 0.7143554763825676,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_189",
+      "w_c1_191",
+      "1202"
+    ]
+  },
+  {
+    "id": "w_c1_191",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7986651923093294,
+    "ny": 0.7140138454923012,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_190",
+      "w_c1_192"
+    ]
+  },
+  {
+    "id": "w_c1_192",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8114238018361093,
+    "ny": 0.7146971072728341,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_191",
+      "w_c1_193",
+      "1100"
+    ]
+  },
+  {
+    "id": "w_c1_193",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8262121901512405,
+    "ny": 0.7157219999436336,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_192",
+      "w_c1_194",
+      "1100"
+    ]
+  },
+  {
+    "id": "w_c1_194",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8418704836613794,
+    "ny": 0.7157219999436336,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_193",
+      "w_c1_195",
+      "1200"
+    ]
+  },
+  {
+    "id": "w_c1_195",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8540491563914877,
+    "ny": 0.7167468926144331,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_194",
+      "w_c1_196"
+    ]
+  },
+  {
+    "id": "w_c1_196",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8665177975199316,
+    "ny": 0.7170885235046996,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_195",
+      "w_c1_197"
+    ]
+  },
+  {
+    "id": "w_c1_197",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8798563438433833,
+    "ny": 0.7143554763825676,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_S_04",
+      "w_c1_196"
+    ]
+  },
+  {
+    "id": "w_c1_198",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28479580772510743,
+    "ny": 0.7308636290809439,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_N02",
+      "w_c1_139",
+      "w_c1_199"
+    ]
+  },
+  {
+    "id": "w_c1_199",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28479580772510743,
+    "ny": 0.746016878969794,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_N02",
+      "w_c1_198",
+      "w_c1_200"
+    ]
+  },
+  {
+    "id": "w_c1_200",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2852107021779335,
+    "ny": 0.7606813143461005,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_199",
+      "w_c1_201"
+    ]
+  },
+  {
+    "id": "w_c1_201",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2852107021779335,
+    "ny": 0.7763233787474941,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_200",
+      "w_c1_202"
+    ]
+  },
+  {
+    "id": "w_c1_202",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28562559663075954,
+    "ny": 0.7890325560736264,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_201",
+      "w_c1_203"
+    ]
+  },
+  {
+    "id": "w_c1_203",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2852107021779335,
+    "ny": 0.8027193624248459,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_202",
+      "w_c1_204"
+    ]
+  },
+  {
+    "id": "w_c1_204",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2852107021779335,
+    "ny": 0.8164061687760653,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_205",
+      "1147",
+      "w_c1_203",
+      "w_c1_208"
+    ]
+  },
+  {
+    "id": "w_c1_205",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.28355112436662916,
+    "ny": 0.8261824590269362,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_204",
+      "1146",
+      "w_c1_208"
+    ]
+  },
+  {
+    "id": "w_c1_208",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.29599795795141126,
+    "ny": 0.8266712735394798,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1150",
+      "1147",
+      "w_c1_204",
+      "w_c1_205",
+      "w_c1_209"
+    ]
+  },
+  {
+    "id": "w_c1_209",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.30844479153619325,
+    "ny": 0.8261824590269362,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1150",
+      "1148",
+      "1147",
+      "w_c1_208",
+      "w_c1_210"
+    ]
+  },
+  {
+    "id": "w_c1_210",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.32421078074358384,
+    "ny": 0.8271600880520233,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1148",
+      "1145",
+      "w_c1_209",
+      "w_c1_211"
+    ]
+  },
+  {
+    "id": "w_c1_211",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.33914698104532226,
+    "ny": 0.8276489025645669,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1145",
+      "1143",
+      "1144",
+      "w_c1_210",
+      "w_c1_212"
+    ]
+  },
+  {
+    "id": "w_c1_212",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3532533924414085,
+    "ny": 0.8281377170771105,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1144",
+      "1145",
+      "1143",
+      "w_c1_211",
+      "w_c1_213"
+    ]
+  },
+  {
+    "id": "w_c1_213",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.368189592743147,
+    "ny": 0.8276489025645669,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1143",
+      "1144",
+      "1142",
+      "w_c1_212",
+      "w_c1_214"
+    ]
+  },
+  {
+    "id": "w_c1_214",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.38229600413923326,
+    "ny": 0.8266712735394798,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1142",
+      "1140",
+      "w_c1_213",
+      "w_c1_215"
+    ]
+  },
+  {
+    "id": "w_c1_215",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3943279432711892,
+    "ny": 0.8281377170771105,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1137",
+      "1140",
+      "1138",
+      "w_c1_214",
+      "w_c1_216"
+    ]
+  },
+  {
+    "id": "w_c1_216",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4088492491201016,
+    "ny": 0.8291153461021976,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1137",
+      "1135",
+      "1138",
+      "w_c1_215",
+      "w_c1_217"
+    ]
+  },
+  {
+    "id": "w_c1_217",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4221258716105358,
+    "ny": 0.8296041606147411,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1137",
+      "1135",
+      "1138",
+      "1130",
+      "w_c1_216",
+      "w_c1_218"
+    ]
+  },
+  {
+    "id": "w_c1_218",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4345727051953178,
+    "ny": 0.8291153461021976,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1135",
+      "1134",
+      "1130",
+      "w_c1_217",
+      "w_c1_219"
+    ]
+  },
+  {
+    "id": "w_c1_219",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.448264222138578,
+    "ny": 0.8291153461021976,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1134",
+      "1131",
+      "1132",
+      "w_c1_218",
+      "w_c1_220"
+    ]
+  },
+  {
+    "id": "w_c1_220",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.46361531689314256,
+    "ny": 0.8296041606147411,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1132",
+      "1131",
+      "1134",
+      "w_c1_219",
+      "w_c1_221"
+    ]
+  },
+  {
+    "id": "w_c1_221",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.478551517194881,
+    "ny": 0.8286265315896539,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1131",
+      "1132",
+      "w_c1_220",
+      "w_c1_222"
+    ]
+  },
+  {
+    "id": "w_c1_222",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4924898598296698,
+    "ny": 0.8284486670978579,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_225",
+      "w_c1_221"
+    ]
+  },
+  {
+    "id": "w_c1_225",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5014610381150865,
+    "ny": 0.8284486670978579,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_222",
+      "w_c1_226"
+    ]
+  },
+  {
+    "id": "w_c1_226",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.513048810067083,
+    "ny": 0.8293294618218046,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_225",
+      "w_c1_227"
+    ]
+  },
+  {
+    "id": "w_c1_227",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5272531756856595,
+    "ny": 0.8293294618218046,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_226",
+      "w_c1_228"
+    ]
+  },
+  {
+    "id": "w_c1_228",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.541457541304236,
+    "ny": 0.8293294618218046,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1126",
+      "w_c1_227",
+      "w_c1_229"
+    ]
+  },
+  {
+    "id": "w_c1_229",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5556619069228124,
+    "ny": 0.8306506539077245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1126",
+      "w_c1_228",
+      "w_c1_232"
+    ]
+  },
+  {
+    "id": "w_c1_232",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5702400716366145,
+    "ny": 0.8297698591837779,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1126",
+      "w_c1_229",
+      "w_c1_239",
+      "w_c1_240"
+    ]
+  },
+  {
+    "id": "w_c1_233",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5736042634936458,
+    "ny": 0.7562234997342316,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_166",
+      "w_c1_235"
+    ]
+  },
+  {
+    "id": "w_c1_235",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5732304643984201,
+    "ny": 0.7681142285075117,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Ele_W01",
+      "w_c1_233",
+      "w_c1_236"
+    ]
+  },
+  {
+    "id": "w_c1_236",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.572109067112743,
+    "ny": 0.781766546728685,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1127",
+      "w_c1_235",
+      "w_c1_237"
+    ]
+  },
+  {
+    "id": "w_c1_237",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5724828662079686,
+    "ny": 0.7940976728639381,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1127",
+      "w_c1_236",
+      "w_c1_238"
+    ]
+  },
+  {
+    "id": "w_c1_238",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5724828662079686,
+    "ny": 0.8051076069132714,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1127",
+      "w_c1_237",
+      "w_c1_239"
+    ]
+  },
+  {
+    "id": "w_c1_239",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.572109067112743,
+    "ny": 0.8192003224964179,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_232",
+      "w_c1_238"
+    ]
+  },
+  {
+    "id": "w_c1_240",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5739780625888714,
+    "ny": 0.8434221774049512,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_241",
+      "1126",
+      "w_c1_232"
+    ]
+  },
+  {
+    "id": "w_c1_241",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5784636517315798,
+    "ny": 0.8522301246444177,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_240",
+      "w_c1_242"
+    ]
+  },
+  {
+    "id": "w_c1_242",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5792112499220312,
+    "ny": 0.8627996613317777,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_W_01",
+      "w_c1_241"
+    ]
+  },
+  {
+    "id": "w_c1_243",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7601300120112677,
+    "ny": 0.8724884032951908,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_W_02",
+      "w_c1_255",
+      "w_c1_256"
+    ]
+  },
+  {
+    "id": "w_c1_246",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7642418020587504,
+    "ny": 0.7315612474637252,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1112",
+      "w_c1_184",
+      "w_c1_247"
+    ]
+  },
+  {
+    "id": "w_c1_247",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7646156011539762,
+    "ny": 0.7478559498567384,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_246",
+      "w_c1_248"
+    ]
+  },
+  {
+    "id": "w_c1_248",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7642418020587504,
+    "ny": 0.7641506522497516,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_247",
+      "w_c1_249"
+    ]
+  },
+  {
+    "id": "w_c1_249",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7638680029635248,
+    "ny": 0.7795645599188181,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1108",
+      "w_c1_248",
+      "w_c1_250"
+    ]
+  },
+  {
+    "id": "w_c1_250",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7638680029635248,
+    "ny": 0.795418864949858,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1108",
+      "w_c1_249",
+      "w_c1_251"
+    ]
+  },
+  {
+    "id": "w_c1_251",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7649894002492018,
+    "ny": 0.8068691963611647,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1108",
+      "w_c1_250",
+      "w_c1_252"
+    ]
+  },
+  {
+    "id": "w_c1_252",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.763494203868299,
+    "ny": 0.820521514582338,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_251",
+      "w_c1_253"
+    ]
+  },
+  {
+    "id": "w_c1_253",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7627466056778476,
+    "ny": 0.8350546275274578,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_252",
+      "w_c1_254"
+    ]
+  },
+  {
+    "id": "w_c1_254",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7593824138208163,
+    "ny": 0.8473857536627111,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1124",
+      "w_c1_253",
+      "w_c1_255"
+    ]
+  },
+  {
+    "id": "w_c1_255",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7597562129160421,
+    "ny": 0.860597674521911,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_243",
+      "w_c1_254",
+      "w_c1_256"
+    ]
+  },
+  {
+    "id": "w_c1_256",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7717177839632643,
+    "ny": 0.8711672112092709,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_243",
+      "w_c1_255",
+      "w_c1_257"
+    ]
+  },
+  {
+    "id": "w_c1_257",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.784426953200938,
+    "ny": 0.8702864164853242,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_256",
+      "w_c1_258"
+    ]
+  },
+  {
+    "id": "w_c1_258",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.800500314295643,
+    "ny": 0.8716076085712442,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_257",
+      "w_c1_259"
+    ]
+  },
+  {
+    "id": "w_c1_259",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8132094835333166,
+    "ny": 0.8733691980191376,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_S03",
+      "w_c1_258",
+      "w_c1_260"
+    ]
+  },
+  {
+    "id": "w_c1_260",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8233020591044103,
+    "ny": 0.8733691980191376,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_S03",
+      "w_c1_259"
+    ]
+  },
+  {
+    "id": "w_c1_261",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.29280480136421333,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1232",
+      "w_c1_126",
+      "w_c1_127",
+      "w_c1_263"
+    ]
+  },
+  {
+    "id": "w_c1_263",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.30570530999236367,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1232",
+      "1233",
+      "w_c1_261",
+      "w_c1_264"
+    ]
+  },
+  {
+    "id": "w_c1_264",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3207559033918725,
+    "ny": 0.5125374155985108,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1233",
+      "w_c1_263",
+      "w_c1_265"
+    ]
+  },
+  {
+    "id": "w_c1_265",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3363440179842208,
+    "ny": 0.5131707047593322,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1236",
+      "w_c1_264",
+      "w_c1_266"
+    ]
+  },
+  {
+    "id": "w_c1_266",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3551572597336068,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1236",
+      "w_c1_265",
+      "w_c1_267"
+    ]
+  },
+  {
+    "id": "w_c1_267",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.36967033194027593,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1236",
+      "1237",
+      "w_c1_266",
+      "w_c1_268"
+    ]
+  },
+  {
+    "id": "w_c1_268",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.38848357368966197,
+    "ny": 0.5125374155985108,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1240",
+      "1237",
+      "w_c1_267",
+      "w_c1_275"
+    ]
+  },
+  {
+    "id": "w_c1_275",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.39923399754645394,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1240",
+      "1237",
+      "w_c1_268",
+      "w_c1_276"
+    ]
+  },
+  {
+    "id": "w_c1_276",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4148221121388023,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1240",
+      "w_c1_275",
+      "w_c1_277"
+    ]
+  },
+  {
+    "id": "w_c1_277",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.42933518434547147,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_276",
+      "w_c1_278"
+    ]
+  },
+  {
+    "id": "w_c1_278",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.44331073535930104,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_277",
+      "w_c1_279"
+    ]
+  },
+  {
+    "id": "w_c1_279",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.45836132875880975,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_278",
+      "w_c1_280"
+    ]
+  },
+  {
+    "id": "w_c1_280",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4723368797726394,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1244",
+      "w_c1_279",
+      "w_c1_281"
+    ]
+  },
+  {
+    "id": "w_c1_281",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4895375579435065,
+    "ny": 0.5087376806335817,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1244",
+      "1246",
+      "w_c1_280",
+      "w_c1_282"
+    ]
+  },
+  {
+    "id": "w_c1_282",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5051256725358548,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1246",
+      "w_c1_281",
+      "w_c1_283"
+    ]
+  },
+  {
+    "id": "w_c1_283",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5185637023568449,
+    "ny": 0.5125374155985108,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_282",
+      "w_c1_284"
+    ]
+  },
+  {
+    "id": "w_c1_284",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5325392533706744,
+    "ny": 0.5138039939201537,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1443",
+      "w_c1_283",
+      "w_c1_285"
+    ]
+  },
+  {
+    "id": "w_c1_285",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5481273679630229,
+    "ny": 0.5125374155985108,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1443",
+      "w_c1_284",
+      "w_c1_286"
+    ]
+  },
+  {
+    "id": "w_c1_286",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5631779613625316,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_285",
+      "w_c1_287",
+      "w_c1_290",
+      "w_c1_423"
+    ]
+  },
+  {
+    "id": "w_c1_287",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.573390864026484,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_286",
+      "w_c1_290",
+      "w_c1_305",
+      "w_c1_423"
+    ]
+  },
+  {
+    "id": "w_c1_290",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5717783004479652,
+    "ny": 0.5283696446190482,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_298",
+      "w_c1_286",
+      "w_c1_287"
+    ]
+  },
+  {
+    "id": "w_c1_291",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.573390864026484,
+    "ny": 0.5499014760869793,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_297",
+      "w_c1_298"
+    ]
+  },
+  {
+    "id": "w_c1_292",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.570703258062286,
+    "ny": 0.5764996208414823,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_297",
+      "w_c1_299"
+    ]
+  },
+  {
+    "id": "w_c1_293",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27076643245778975,
+    "ny": 0.5682668617508029,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_131",
+      "w_c1_132",
+      "1221"
+    ]
+  },
+  {
+    "id": "w_c1_294",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27184147484346893,
+    "ny": 0.5961315848269488,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_132",
+      "w_c1_133"
+    ]
+  },
+  {
+    "id": "w_c1_295",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2734540384219878,
+    "ny": 0.6220964404206305,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_133",
+      "w_c1_134"
+    ]
+  },
+  {
+    "id": "w_c1_296",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27506660200050653,
+    "ny": 0.5429352953179428,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_130",
+      "w_c1_131"
+    ]
+  },
+  {
+    "id": "w_c1_297",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5723158216408047,
+    "ny": 0.5613006809817663,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_291",
+      "w_c1_292"
+    ]
+  },
+  {
+    "id": "w_c1_298",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5723158216408047,
+    "ny": 0.5372356928705493,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_290",
+      "w_c1_291"
+    ]
+  },
+  {
+    "id": "w_c1_299",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5701657368694464,
+    "ny": 0.5916985607011984,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_292",
+      "w_c1_300"
+    ]
+  },
+  {
+    "id": "w_c1_300",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5712407792551255,
+    "ny": 0.6056309222392715,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_299",
+      "w_c1_301"
+    ]
+  },
+  {
+    "id": "w_c1_301",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5701657368694464,
+    "ny": 0.6208298620989875,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_300",
+      "w_c1_302"
+    ]
+  },
+  {
+    "id": "w_c1_302",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5701657368694464,
+    "ny": 0.6372953802803465,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_301",
+      "w_c1_303"
+    ]
+  },
+  {
+    "id": "w_c1_303",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5712407792551255,
+    "ny": 0.6550274767833485,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_302",
+      "w_c1_304"
+    ]
+  },
+  {
+    "id": "w_c1_304",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5712407792551255,
+    "ny": 0.6683265491606,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_163",
+      "1253",
+      "w_c1_303"
+    ]
+  },
+  {
+    "id": "w_c1_305",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5852163302689551,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_287",
+      "w_c1_306",
+      "w_c1_423"
+    ]
+  },
+  {
+    "id": "w_c1_306",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5975793177042659,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_305",
+      "w_c1_307"
+    ]
+  },
+  {
+    "id": "w_c1_307",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6088672627538975,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_306",
+      "w_c1_308"
+    ]
+  },
+  {
+    "id": "w_c1_308",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6196176866106895,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1257",
+      "1258",
+      "w_c1_307",
+      "w_c1_309"
+    ]
+  },
+  {
+    "id": "w_c1_309",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6330557164316795,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1258",
+      "1257",
+      "w_c1_308",
+      "w_c1_310"
+    ]
+  },
+  {
+    "id": "w_c1_310",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6448811826741506,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1257",
+      "1258",
+      "w_c1_309",
+      "w_c1_311"
+    ]
+  },
+  {
+    "id": "w_c1_311",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6593942548808198,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_310",
+      "w_c1_312"
+    ]
+  },
+  {
+    "id": "w_c1_312",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6701446787376117,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_313",
+      "w_c1_311"
+    ]
+  },
+  {
+    "id": "w_c1_313",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6798200602087245,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_312",
+      "1262",
+      "w_c1_314"
+    ]
+  },
+  {
+    "id": "w_c1_314",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6916455264511957,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1259",
+      "1262",
+      "w_c1_313",
+      "w_c1_316"
+    ]
+  },
+  {
+    "id": "w_c1_316",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7040085138865065,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1259",
+      "1262",
+      "w_c1_314",
+      "w_c1_319"
+    ]
+  },
+  {
+    "id": "w_c1_319",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7163715013218173,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1259",
+      "w_c1_316",
+      "w_c1_320"
+    ]
+  },
+  {
+    "id": "w_c1_320",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7292720099499677,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_319",
+      "w_c1_321"
+    ]
+  },
+  {
+    "id": "w_c1_321",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7443226033494764,
+    "ny": 0.5119041264376892,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_320",
+      "w_c1_322"
+    ]
+  },
+  {
+    "id": "w_c1_322",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7604482391346643,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_321",
+      "w_c1_323",
+      "w_c1_334"
+    ]
+  },
+  {
+    "id": "w_c1_323",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7722737053771355,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_322",
+      "w_c1_324",
+      "w_c1_334"
+    ]
+  },
+  {
+    "id": "w_c1_324",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7830241292339275,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_323",
+      "w_c1_325"
+    ]
+  },
+  {
+    "id": "w_c1_325",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.795924637862078,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_324",
+      "w_c1_328"
+    ]
+  },
+  {
+    "id": "w_c1_328",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8088251464902282,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_325",
+      "w_c1_329"
+    ]
+  },
+  {
+    "id": "w_c1_329",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8201130915398599,
+    "ny": 0.5112708372768677,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_328",
+      "w_c1_330",
+      "w_c1_333"
+    ]
+  },
+  {
+    "id": "w_c1_330",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8303259942038121,
+    "ny": 0.5093709697944032,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_333",
+      "w_c1_329",
+      "w_c1_331"
+    ]
+  },
+  {
+    "id": "w_c1_331",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8469891511818398,
+    "ny": 0.5106375481160462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_332",
+      "w_c1_333",
+      "Stair_S02",
+      "w_c1_330"
+    ]
+  },
+  {
+    "id": "w_c1_332",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8566645326529526,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_331",
+      "Etr_S_03",
+      "Stair_S02",
+      "w_c1_333"
+    ]
+  },
+  {
+    "id": "w_c1_333",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8383888120964061,
+    "ny": 0.5100042589552247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_330",
+      "w_c1_331",
+      "Stair_S02",
+      "w_c1_329",
+      "w_c1_332"
+    ]
+  },
+  {
+    "id": "w_c1_334",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7620608027131831,
+    "ny": 0.5264697771365838,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_322",
+      "w_c1_323",
+      "w_c1_335"
+    ]
+  },
+  {
+    "id": "w_c1_335",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7620608027131831,
+    "ny": 0.5429352953179428,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_334",
+      "w_c1_336"
+    ]
+  },
+  {
+    "id": "w_c1_336",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7631358450988625,
+    "ny": 0.5581342351776588,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_335",
+      "w_c1_337"
+    ]
+  },
+  {
+    "id": "w_c1_337",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7642108874845415,
+    "ny": 0.5745997533590179,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1263",
+      "w_c1_336",
+      "w_c1_338"
+    ]
+  },
+  {
+    "id": "w_c1_338",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.5897986932187339,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1263",
+      "w_c1_337",
+      "w_c1_339"
+    ]
+  },
+  {
+    "id": "w_c1_339",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.763673366291702,
+    "ny": 0.6043643439176285,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_338",
+      "w_c1_340"
+    ]
+  },
+  {
+    "id": "w_c1_340",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.622729729581452,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_339",
+      "w_c1_341"
+    ]
+  },
+  {
+    "id": "w_c1_341",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7631358450988625,
+    "ny": 0.6385619586019895,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_340",
+      "w_c1_342"
+    ]
+  },
+  {
+    "id": "w_c1_342",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.763673366291702,
+    "ny": 0.651861030979241,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_341",
+      "w_c1_343"
+    ]
+  },
+  {
+    "id": "w_c1_343",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7631358450988625,
+    "ny": 0.6670599708389571,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_342",
+      "w_c1_344"
+    ]
+  },
+  {
+    "id": "w_c1_344",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.6828921998594946,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_Cambre",
+      "1202",
+      "w_c1_343",
+      "w_c1_345",
+      "w_c1_346"
+    ]
+  },
+  {
+    "id": "w_c1_345",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.6955579830759246,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_346",
+      "Stair_Cambre",
+      "w_c1_344"
+    ]
+  },
+  {
+    "id": "w_c1_346",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.6961912722367462,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_345",
+      "Stair_Cambre",
+      "w_c1_184",
+      "w_c1_344"
+    ]
+  },
+  {
+    "id": "w_c1_348",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7658234510630604,
+    "ny": 0.391579185881604,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_90",
+      "w_c1_349"
+    ]
+  },
+  {
+    "id": "w_c1_349",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7668984934487396,
+    "ny": 0.40424496909803403,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_348",
+      "w_c1_350",
+      "w_c1_412"
+    ]
+  },
+  {
+    "id": "w_c1_350",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7674360146415792,
+    "ny": 0.4200771981185716,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1269",
+      "w_c1_349",
+      "w_c1_351",
+      "w_c1_352",
+      "w_c1_412"
+    ]
+  },
+  {
+    "id": "w_c1_351",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7663609722558999,
+    "ny": 0.43654271629993063,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1269",
+      "w_c1_352",
+      "w_c1_350",
+      "w_c1_356"
+    ]
+  },
+  {
+    "id": "w_c1_352",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7668984934487396,
+    "ny": 0.43780929462157364,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1269",
+      "w_c1_351",
+      "w_c1_356",
+      "w_c1_350"
+    ]
+  },
+  {
+    "id": "w_c1_353",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7652859298702208,
+    "ny": 0.45870783692868317,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_356",
+      "w_c1_357"
+    ]
+  },
+  {
+    "id": "w_c1_356",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7663609722558999,
+    "ny": 0.44730863203389615,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_352",
+      "1269",
+      "w_c1_351",
+      "w_c1_353"
+    ]
+  },
+  {
+    "id": "w_c1_357",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7652859298702208,
+    "ny": 0.4739067767883992,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_353",
+      "w_c1_358"
+    ]
+  },
+  {
+    "id": "w_c1_358",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7647484086773813,
+    "ny": 0.4903722949697582,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_357"
+    ]
+  },
+  {
+    "id": "w_c1_359",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.29602992852125093,
+    "ny": 0.39411234252489,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_118",
+      "w_c1_119",
+      "w_c1_120",
+      "w_c1_360"
+    ]
+  },
+  {
+    "id": "w_c1_360",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3094679583422409,
+    "ny": 0.39727878832899755,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_359",
+      "w_c1_361"
+    ]
+  },
+  {
+    "id": "w_c1_361",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3207559033918725,
+    "ny": 0.39727878832899755,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_360",
+      "w_c1_362"
+    ]
+  },
+  {
+    "id": "w_c1_362",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3341939332128624,
+    "ny": 0.3985453666506405,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_361",
+      "w_c1_363"
+    ]
+  },
+  {
+    "id": "w_c1_363",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3497820478052108,
+    "ny": 0.3985453666506405,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_362",
+      "w_c1_364"
+    ]
+  },
+  {
+    "id": "w_c1_364",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3621450352405216,
+    "ny": 0.3985453666506405,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_363",
+      "w_c1_365"
+    ]
+  },
+  {
+    "id": "w_c1_365",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3814957981827471,
+    "ny": 0.39727878832899755,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_364",
+      "w_c1_366"
+    ]
+  },
+  {
+    "id": "w_c1_366",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.3938587856180579,
+    "ny": 0.391579185881604,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_365",
+      "w_c1_367"
+    ]
+  },
+  {
+    "id": "w_c1_367",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4099844214032459,
+    "ny": 0.3846130051125675,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_Commons",
+      "w_c1_366",
+      "w_c1_369"
+    ]
+  },
+  {
+    "id": "w_c1_368",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4395480870094238,
+    "ny": 0.380179980986817,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_370",
+      "Stair_Commons",
+      "w_c1_369"
+    ]
+  },
+  {
+    "id": "w_c1_369",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.42342245122423583,
+    "ny": 0.376380246021888,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Stair_Commons",
+      "w_c1_367",
+      "w_c1_368"
+    ]
+  },
+  {
+    "id": "w_c1_370",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.44761090490201777,
+    "ny": 0.3820798484692815,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_368",
+      "w_c1_371"
+    ]
+  },
+  {
+    "id": "w_c1_371",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4615864559158474,
+    "ny": 0.3833464267909245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_370",
+      "w_c1_372"
+    ]
+  },
+  {
+    "id": "w_c1_372",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4760995281225166,
+    "ny": 0.3833464267909245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_371",
+      "w_c1_373"
+    ]
+  },
+  {
+    "id": "w_c1_373",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4868499519793086,
+    "ny": 0.3846130051125675,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_374",
+      "w_c1_372",
+      "w_c1_375"
+    ]
+  },
+  {
+    "id": "w_c1_374",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4965253334504213,
+    "ny": 0.3846130051125675,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_373",
+      "w_c1_375"
+    ]
+  },
+  {
+    "id": "w_c1_375",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5062007149215342,
+    "ny": 0.3846130051125675,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_374",
+      "w_c1_373",
+      "w_c1_376"
+    ]
+  },
+  {
+    "id": "w_c1_376",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5174886599711657,
+    "ny": 0.3833464267909245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1245",
+      "w_c1_375",
+      "w_c1_377"
+    ]
+  },
+  {
+    "id": "w_c1_377",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5298516474064765,
+    "ny": 0.3833464267909245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_376",
+      "w_c1_378",
+      "w_c1_396"
+    ]
+  },
+  {
+    "id": "w_c1_378",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5416771136489477,
+    "ny": 0.37384708937860195,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_379",
+      "w_c1_377",
+      "w_c1_396"
+    ]
+  },
+  {
+    "id": "w_c1_379",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.549202410348702,
+    "ny": 0.36878077609202997,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_378",
+      "w_c1_380",
+      "w_c1_396",
+      "w_c1_397"
+    ]
+  },
+  {
+    "id": "w_c1_380",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5610278765911731,
+    "ny": 0.36561433028792245,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_379",
+      "w_c1_381",
+      "w_c1_431"
+    ]
+  },
+  {
+    "id": "w_c1_381",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5755409487978423,
+    "ny": 0.3573815711972429,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_380",
+      "w_c1_382",
+      "w_c1_430",
+      "w_c1_431"
+    ]
+  },
+  {
+    "id": "w_c1_382",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5884414574259927,
+    "ny": 0.3504153904282064,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_381",
+      "w_c1_383",
+      "w_c1_430"
+    ]
+  },
+  {
+    "id": "w_c1_383",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6040295720183411,
+    "ny": 0.34724894462409894,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_382",
+      "w_c1_384"
+    ]
+  },
+  {
+    "id": "w_c1_384",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6217677713820479,
+    "ny": 0.3453490771416344,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_383",
+      "w_c1_385"
+    ]
+  },
+  {
+    "id": "w_c1_385",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6352058012030378,
+    "ny": 0.3440824988199914,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_384",
+      "w_c1_386"
+    ]
+  },
+  {
+    "id": "w_c1_386",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.647031267445509,
+    "ny": 0.3440824988199914,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_385",
+      "w_c1_387"
+    ]
+  },
+  {
+    "id": "w_c1_387",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6620818608450179,
+    "ny": 0.3434492096591699,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_386",
+      "w_c1_389"
+    ]
+  },
+  {
+    "id": "w_c1_389",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.673907327087489,
+    "ny": 0.3447157879808129,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_387",
+      "w_c1_390"
+    ]
+  },
+  {
+    "id": "w_c1_390",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6900329628726769,
+    "ny": 0.34851552294574195,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1340",
+      "w_c1_389",
+      "w_c1_391"
+    ]
+  },
+  {
+    "id": "w_c1_391",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7083086834292233,
+    "ny": 0.35168196874984947,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_390",
+      "w_c1_392"
+    ]
+  },
+  {
+    "id": "w_c1_392",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7222842344430529,
+    "ny": 0.3529485470714924,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_391",
+      "w_c1_393"
+    ]
+  },
+  {
+    "id": "w_c1_393",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7378723490354012,
+    "ny": 0.35548170371477844,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_392",
+      "w_c1_395"
+    ]
+  },
+  {
+    "id": "w_c1_395",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7518479000492309,
+    "ny": 0.35991472784052897,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_88",
+      "w_c1_89",
+      "w_c1_393"
+    ]
+  },
+  {
+    "id": "w_c1_396",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5486648891558624,
+    "ny": 0.3820798484692815,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_397",
+      "w_c1_377",
+      "w_c1_378",
+      "w_c1_379",
+      "w_c1_398"
+    ]
+  },
+  {
+    "id": "w_c1_397",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5567277070484563,
+    "ny": 0.3871461617558535,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_396",
+      "w_c1_398",
+      "w_c1_379",
+      "w_c1_432"
+    ]
+  },
+  {
+    "id": "w_c1_398",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5647905249410504,
+    "ny": 0.392845764203247,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_397",
+      "w_c1_396",
+      "w_c1_399",
+      "w_c1_432"
+    ]
+  },
+  {
+    "id": "w_c1_399",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5739283852193235,
+    "ny": 0.4023451016155695,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_398",
+      "w_c1_400",
+      "w_c1_413",
+      "w_c1_432"
+    ]
+  },
+  {
+    "id": "w_c1_400",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5857538514617947,
+    "ny": 0.40931128238460607,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_413",
+      "w_c1_399",
+      "w_c1_401"
+    ]
+  },
+  {
+    "id": "w_c1_401",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5997294024756243,
+    "ny": 0.41184443902789203,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_400",
+      "w_c1_402",
+      "w_c1_413"
+    ]
+  },
+  {
+    "id": "w_c1_402",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6110173475252558,
+    "ny": 0.4112111498670705,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_401",
+      "w_c1_403"
+    ]
+  },
+  {
+    "id": "w_c1_403",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6233803349605667,
+    "ny": 0.4112111498670705,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_402",
+      "w_c1_404"
+    ]
+  },
+  {
+    "id": "w_c1_404",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.638968449552915,
+    "ny": 0.4124777281887136,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_403",
+      "w_c1_405"
+    ]
+  },
+  {
+    "id": "w_c1_405",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6502563946025467,
+    "ny": 0.4124777281887136,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_404",
+      "w_c1_406"
+    ]
+  },
+  {
+    "id": "w_c1_406",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.663156903230697,
+    "ny": 0.4124777281887136,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_405",
+      "w_c1_407"
+    ]
+  },
+  {
+    "id": "w_c1_407",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6782074966302057,
+    "ny": 0.40931128238460607,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_406",
+      "w_c1_408"
+    ]
+  },
+  {
+    "id": "w_c1_408",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6948706536082333,
+    "ny": 0.40741141490214156,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_407",
+      "w_c1_409"
+    ]
+  },
+  {
+    "id": "w_c1_409",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7136838953576193,
+    "ny": 0.40804470406296306,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_408",
+      "w_c1_410"
+    ]
+  },
+  {
+    "id": "w_c1_410",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7265844039857696,
+    "ny": 0.4099445715454275,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_409",
+      "w_c1_411"
+    ]
+  },
+  {
+    "id": "w_c1_411",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7389473914210805,
+    "ny": 0.4099445715454275,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_410",
+      "w_c1_412"
+    ]
+  },
+  {
+    "id": "w_c1_412",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7523854212420704,
+    "ny": 0.40804470406296306,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_349",
+      "w_c1_350",
+      "w_c1_411"
+    ]
+  },
+  {
+    "id": "w_c1_413",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5836037666904363,
+    "ny": 0.4188106197969286,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_400",
+      "w_c1_399",
+      "w_c1_401",
+      "w_c1_418"
+    ]
+  },
+  {
+    "id": "w_c1_418",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5787660759548799,
+    "ny": 0.4295765355308941,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_413",
+      "w_c1_419"
+    ]
+  },
+  {
+    "id": "w_c1_419",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5755409487978423,
+    "ny": 0.4435088970689671,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_418",
+      "w_c1_420"
+    ]
+  },
+  {
+    "id": "w_c1_420",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5750034276050028,
+    "ny": 0.45807454776786166,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_419",
+      "w_c1_421"
+    ]
+  },
+  {
+    "id": "w_c1_421",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5750034276050028,
+    "ny": 0.4713736201451132,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_420",
+      "w_c1_422"
+    ]
+  },
+  {
+    "id": "w_c1_422",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5739283852193235,
+    "ny": 0.4859392708440077,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_421",
+      "w_c1_423"
+    ]
+  },
+  {
+    "id": "w_c1_423",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5739283852193235,
+    "ny": 0.4992383432212592,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_286",
+      "w_c1_287",
+      "w_c1_305",
+      "w_c1_422"
+    ]
+  },
+  {
+    "id": "w_c1_424",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5755409487978423,
+    "ny": 0.25605530546580274,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_33",
+      "w_c1_46",
+      "w_c1_425"
+    ]
+  },
+  {
+    "id": "w_c1_425",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5755409487978423,
+    "ny": 0.26808779952141126,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_424",
+      "w_c1_426"
+    ]
+  },
+  {
+    "id": "w_c1_426",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5760784699906819,
+    "ny": 0.2807535827378413,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_425",
+      "w_c1_427"
+    ]
+  },
+  {
+    "id": "w_c1_427",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5750034276050028,
+    "ny": 0.29595252259755733,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_426",
+      "w_c1_428"
+    ]
+  },
+  {
+    "id": "w_c1_428",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5744659064121632,
+    "ny": 0.31305132993973783,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_427",
+      "w_c1_429"
+    ]
+  },
+  {
+    "id": "w_c1_429",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5739283852193235,
+    "ny": 0.32698369147781087,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_428",
+      "w_c1_430",
+      "1342"
+    ]
+  },
+  {
+    "id": "w_c1_430",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5750034276050028,
+    "ny": 0.3434492096591699,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_381",
+      "w_c1_382",
+      "w_c1_429"
+    ]
+  },
+  {
+    "id": "w_c1_431",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5728533428336443,
+    "ny": 0.371313932735316,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_380",
+      "w_c1_381",
+      "w_c1_432"
+    ]
+  },
+  {
+    "id": "w_c1_432",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5728533428336443,
+    "ny": 0.38587958343421047,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_397",
+      "w_c1_398",
+      "w_c1_399",
+      "w_c1_431"
+    ]
+  },
+  {
+    "id": "w_c1_436",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5822234111388968,
+    "ny": 0.15055830867234185,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_39",
+      "1330",
+      "w_c1_38",
+      "w_c1_40",
+      "w_c1_437"
+    ]
+  },
+  {
+    "id": "w_c1_437",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.5931061241418111,
+    "ny": 0.15172391247074848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_436",
+      "w_c1_438"
+    ]
+  },
+  {
+    "id": "w_c1_438",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6076164081456967,
+    "ny": 0.15133537787127962,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_437",
+      "w_c1_439"
+    ]
+  },
+  {
+    "id": "w_c1_439",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6184991211486109,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_438",
+      "w_c1_440"
+    ]
+  },
+  {
+    "id": "w_c1_440",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6290520549696187,
+    "ny": 0.15211244707021734,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_439",
+      "w_c1_441"
+    ]
+  },
+  {
+    "id": "w_c1_441",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6425730014277848,
+    "ny": 0.1528895162691551,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_440",
+      "w_c1_442"
+    ]
+  },
+  {
+    "id": "w_c1_442",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.659391739705016,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_441",
+      "w_c1_443"
+    ]
+  },
+  {
+    "id": "w_c1_443",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6712637902536498,
+    "ny": 0.15172391247074848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1325",
+      "w_c1_442",
+      "w_c1_444"
+    ]
+  },
+  {
+    "id": "w_c1_444",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6857740742575353,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1324",
+      "1325",
+      "w_c1_443",
+      "w_c1_445"
+    ]
+  },
+  {
+    "id": "w_c1_445",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.6999545790795145,
+    "ny": 0.15172391247074848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1324",
+      "1322",
+      "1323",
+      "w_c1_444",
+      "w_c1_446"
+    ]
+  },
+  {
+    "id": "w_c1_446",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7131457463557742,
+    "ny": 0.1528895162691551,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1322",
+      "1324",
+      "1323",
+      "w_c1_445",
+      "w_c1_447"
+    ]
+  },
+  {
+    "id": "w_c1_447",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7256773552682209,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1322",
+      "1323",
+      "w_c1_446",
+      "w_c1_448"
+    ]
+  },
+  {
+    "id": "w_c1_448",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.741176976817826,
+    "ny": 0.15172391247074848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_447",
+      "w_c1_449"
+    ]
+  },
+  {
+    "id": "w_c1_449",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7520596898207403,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_74",
+      "w_c1_75",
+      "w_c1_76",
+      "w_c1_448"
+    ]
+  },
+  {
+    "id": "w_c1_450",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7754740117361012,
+    "ny": 0.15094684327181074,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_451",
+      "1321",
+      "1312",
+      "w_c1_74",
+      "w_c1_75",
+      "w_c1_76",
+      "w_c1_452"
+    ]
+  },
+  {
+    "id": "w_c1_451",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.784707828829483,
+    "ny": 0.15055830867234185,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_450",
+      "1321",
+      "1312",
+      "w_c1_452"
+    ]
+  },
+  {
+    "id": "w_c1_452",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.7952607626504907,
+    "ny": 0.15133537787127962,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1321",
+      "1312",
+      "w_c1_450",
+      "w_c1_451",
+      "w_c1_453"
+    ]
+  },
+  {
+    "id": "w_c1_453",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8068030340172181,
+    "ny": 0.15094684327181074,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_452",
+      "w_c1_454"
+    ]
+  },
+  {
+    "id": "w_c1_454",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8213133180211037,
+    "ny": 0.15172391247074848,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_453",
+      "w_c1_455"
+    ]
+  },
+  {
+    "id": "w_c1_455",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.8364831603888022,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1317",
+      "w_c1_454",
+      "w_c1_456"
+    ]
+  },
+  {
+    "id": "w_c1_456",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.848355210937436,
+    "ny": 0.15250098166968623,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1317",
+      "w_c1_455"
+    ]
+  },
+  {
+    "id": "w_c1_457",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4068335666147973,
+    "ny": 0.11329361681305722,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_E_02",
+      "w_c1_458"
+    ]
+  },
+  {
+    "id": "w_c1_458",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4059404395225667,
+    "ny": 0.1252191385633481,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1357",
+      "w_c1_457",
+      "w_c1_459"
+    ]
+  },
+  {
+    "id": "w_c1_459",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4065358575840538,
+    "ny": 0.13574165775478123,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1357",
+      "1358",
+      "w_c1_458",
+      "w_c1_460"
+    ]
+  },
+  {
+    "id": "w_c1_460",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.14836868078450097,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1358",
+      "1357",
+      "w_c1_459",
+      "w_c1_461"
+    ]
+  },
+  {
+    "id": "w_c1_461",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.15924195061564853,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1358",
+      "w_c1_460",
+      "w_c1_462"
+    ]
+  },
+  {
+    "id": "w_c1_462",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4065358575840538,
+    "ny": 0.17257047492479716,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_461",
+      "w_c1_463",
+      "w_c1_464"
+    ]
+  },
+  {
+    "id": "w_c1_463",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.18519749795451687,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_464",
+      "w_c1_462",
+      "w_c1_465"
+    ]
+  },
+  {
+    "id": "w_c1_464",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.18589899923394573,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_463",
+      "w_c1_462",
+      "w_c1_465"
+    ]
+  },
+  {
+    "id": "w_c1_465",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4056427304918232,
+    "ny": 0.19922752354309436,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1355",
+      "1356",
+      "w_c1_463",
+      "w_c1_464",
+      "w_c1_466",
+      "w_c1_467"
+    ]
+  },
+  {
+    "id": "w_c1_466",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.21395905041110075,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1355",
+      "1356",
+      "w_c1_467",
+      "w_c1_465",
+      "w_c1_468"
+    ]
+  },
+  {
+    "id": "w_c1_467",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.40623814855331025,
+    "ny": 0.21501130233024404,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1355",
+      "1356",
+      "w_c1_466",
+      "w_c1_465",
+      "w_c1_468"
+    ]
+  },
+  {
+    "id": "w_c1_468",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4056427304918232,
+    "ny": 0.22904132791882154,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1355",
+      "1356",
+      "w_c1_19",
+      "w_c1_20",
+      "w_c1_466",
+      "w_c1_467"
+    ]
+  },
+  {
+    "id": "w_c1_469",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.18539820956831823,
+    "ny": 0.37428401152780694,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "Etr_N_02",
+      "1375",
+      "w_c1_470",
+      "1280"
+    ]
+  },
+  {
+    "id": "w_c1_470",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.1982638464764023,
+    "ny": 0.3739395148190136,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "1375",
+      "w_c1_469",
+      "w_c1_471",
+      "1280"
+    ]
+  },
+  {
+    "id": "w_c1_471",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.20879027667392563,
+    "ny": 0.3749730049453935,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_470",
+      "w_c1_472"
+    ]
+  },
+  {
+    "id": "w_c1_472",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2228255169372901,
+    "ny": 0.37531750165418676,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_473",
+      "w_c1_471"
+    ]
+  },
+  {
+    "id": "w_c1_473",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2327671454571733,
+    "ny": 0.37566199836298003,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_472",
+      "w_c1_474"
+    ]
+  },
+  {
+    "id": "w_c1_474",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2450479806876172,
+    "ny": 0.37738448190694646,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_473",
+      "w_c1_475"
+    ]
+  },
+  {
+    "id": "w_c1_475",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2587908201121616,
+    "ny": 0.3770399851981531,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_474",
+      "w_c1_476"
+    ]
+  },
+  {
+    "id": "w_c1_476",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.27282606037552604,
+    "ny": 0.3763509917805666,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_116",
+      "w_c1_117",
+      "w_c1_118",
+      "w_c1_119",
+      "w_c1_475"
+    ]
+  },
+  {
+    "id": "1221",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.25367019941229096,
+    "ny": 0.5684361221791497,
+    "label": "",
+    "roomId": "1221",
+    "edges": [
+      "w_c1_293"
+    ]
+  },
+  {
+    "id": "1225",
+    "type": "door",
+    "floor": 1,
+    "nx": 0.252752917160619,
+    "ny": 0.5077001805443814,
+    "label": "",
+    "roomId": "1225",
+    "edges": [
+      "w_c1_1"
+    ]
+  },
+  {
+    "id": "w_c1_1",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.2781759994680854,
+    "ny": 0.5221455582305636,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_c1_127",
+      "w_c1_130",
+      "1225"
     ]
   }
 ]

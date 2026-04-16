@@ -1,1279 +1,810 @@
 [
   {
-    "id": "1100",
+    "id": "1375",
     "floor": 1,
-    "label": "Auditorium",
-    "doorNode": "w_d1_1100",
+    "label": "Panera",
+    "doorNode": "1375",
     "keywords": [
-      "1100",
-      "auditorium",
-      "auditorium",
-      "lecture hall"
+      "1375",
+      "Panera"
     ]
   },
   {
-    "id": "1114",
+    "id": "1366",
     "floor": 1,
-    "label": "Unit Operations Lab",
-    "doorNode": "w_d1_1114",
+    "label": "1366",
+    "doorNode": "1366",
     "keywords": [
-      "1114",
-      "unit operations lab",
-      "unit operations",
-      "cheme lab"
+      "1366"
     ]
   },
   {
-    "id": "1124",
+    "id": "1368",
     "floor": 1,
-    "label": "Computer Lab 1124",
-    "doorNode": "w_d1_1124",
+    "label": "1368",
+    "doorNode": "1368",
     "keywords": [
-      "1124",
-      "computer lab 1124"
+      "1368"
     ]
   },
   {
-    "id": "1154",
+    "id": "1364",
     "floor": 1,
-    "label": "Sustainable Living Lab",
-    "doorNode": "w_d1_1154",
+    "label": "1364",
+    "doorNode": "1364",
     "keywords": [
-      "1154",
-      "sustainable living lab",
-      "sustainable living lab",
-      "green"
-    ]
-  },
-  {
-    "id": "1200",
-    "floor": 1,
-    "label": "Classroom 1200",
-    "doorNode": "w_d1_1200",
-    "keywords": [
-      "1200",
-      "classroom 1200"
-    ]
-  },
-  {
-    "id": "1202",
-    "floor": 1,
-    "label": "Pete Classroom",
-    "doorNode": "w_d1_1202",
-    "keywords": [
-      "1202",
-      "pete classroom"
-    ]
-  },
-  {
-    "id": "1206",
-    "floor": 1,
-    "label": "Modular 1206",
-    "doorNode": "w_d1_1206",
-    "keywords": [
-      "1206",
-      "modular 1206"
-    ]
-  },
-  {
-    "id": "1212",
-    "floor": 1,
-    "label": "Classroom 1212",
-    "doorNode": "w_d1_1212",
-    "keywords": [
-      "1212",
-      "classroom 1212"
-    ]
-  },
-  {
-    "id": "1216",
-    "floor": 1,
-    "label": "Classroom 1216",
-    "doorNode": "w_d1_1216",
-    "keywords": [
-      "1216",
-      "classroom 1216"
-    ]
-  },
-  {
-    "id": "1218B",
-    "floor": 1,
-    "label": "Classroom 1218B",
-    "doorNode": "w_d1_1218b",
-    "keywords": [
-      "1218b",
-      "classroom 1218b"
-    ]
-  },
-  {
-    "id": "1221",
-    "floor": 1,
-    "label": "Classroom 1221",
-    "doorNode": "w_d1_1221",
-    "keywords": [
-      "1221",
-      "classroom 1221"
-    ]
-  },
-  {
-    "id": "1225",
-    "floor": 1,
-    "label": "Classroom 1225",
-    "doorNode": "w_d1_1225",
-    "keywords": [
-      "1225",
-      "classroom 1225"
-    ]
-  },
-  {
-    "id": "1238",
-    "floor": 1,
-    "label": "Classroom 1238",
-    "doorNode": "w_d1_1238",
-    "keywords": [
-      "1238",
-      "classroom 1238"
-    ]
-  },
-  {
-    "id": "1240",
-    "floor": 1,
-    "label": "Classroom 1240",
-    "doorNode": "w_d1_1240",
-    "keywords": [
-      "1240",
-      "classroom 1240"
-    ]
-  },
-  {
-    "id": "1245",
-    "floor": 1,
-    "label": "Classroom 1245",
-    "doorNode": "w_d1_1245",
-    "keywords": [
-      "1245",
-      "classroom 1245"
-    ]
-  },
-  {
-    "id": "1246",
-    "floor": 1,
-    "label": "Computer Room 1246",
-    "doorNode": "w_d1_1246",
-    "keywords": [
-      "1246",
-      "computer room 1246"
-    ]
-  },
-  {
-    "id": "1253",
-    "floor": 1,
-    "label": "Classroom 1253",
-    "doorNode": "w_d1_1253",
-    "keywords": [
-      "1253",
-      "classroom 1253"
-    ]
-  },
-  {
-    "id": "1254",
-    "floor": 1,
-    "label": "Human Factors Lab",
-    "doorNode": "w_d1_1254",
-    "keywords": [
-      "1254",
-      "human factors lab",
-      "human factors",
-      "lab"
-    ]
-  },
-  {
-    "id": "1256",
-    "floor": 1,
-    "label": "Computer Room 1256",
-    "doorNode": "w_d1_1256",
-    "keywords": [
-      "1256",
-      "computer room 1256"
-    ]
-  },
-  {
-    "id": "1258",
-    "floor": 1,
-    "label": "Modular 1258",
-    "doorNode": "w_d1_1258",
-    "keywords": [
-      "1258",
-      "modular 1258"
-    ]
-  },
-  {
-    "id": "1262",
-    "floor": 1,
-    "label": "Modular 1262",
-    "doorNode": "w_d1_1262",
-    "keywords": [
-      "1262",
-      "modular 1262"
-    ]
-  },
-  {
-    "id": "1263",
-    "floor": 1,
-    "label": "Classroom 1263",
-    "doorNode": "w_d1_1263",
-    "keywords": [
-      "1263",
-      "classroom 1263"
-    ]
-  },
-  {
-    "id": "1264",
-    "floor": 1,
-    "label": "Seminar 1264",
-    "doorNode": "w_d1_1264",
-    "keywords": [
-      "1264",
-      "seminar 1264"
-    ]
-  },
-  {
-    "id": "1269",
-    "floor": 1,
-    "label": "Center for Engineering Ed",
-    "doorNode": "w_d1_1269",
-    "keywords": [
-      "1269",
-      "center for engineering ed",
-      "center for engineering education",
-      "cee"
-    ]
-  },
-  {
-    "id": "1272",
-    "floor": 1,
-    "label": "Classroom 1272",
-    "doorNode": "w_d1_1272",
-    "keywords": [
-      "1272",
-      "classroom 1272"
-    ]
-  },
-  {
-    "id": "1280",
-    "floor": 1,
-    "label": "Student Leadership Incubator",
-    "doorNode": "w_d1_1280",
-    "keywords": [
-      "1280",
-      "student leadership incubator",
-      "student leadership",
-      "incubator",
-      "sli"
-    ]
-  },
-  {
-    "id": "1300",
-    "floor": 1,
-    "label": "Robotics Lab",
-    "doorNode": "w_d1_1300",
-    "keywords": [
-      "1300",
-      "robotics lab",
-      "robotics",
-      "mee 4900"
-    ]
-  },
-  {
-    "id": "1311",
-    "floor": 1,
-    "label": "Geotech Lab",
-    "doorNode": "w_d1_1311",
-    "keywords": [
-      "1311",
-      "geotech lab"
-    ]
-  },
-  {
-    "id": "1321",
-    "floor": 1,
-    "label": "Strength & Materials Lab",
-    "doorNode": "w_d1_1321",
-    "keywords": [
-      "1321",
-      "strength & materials lab"
-    ]
-  },
-  {
-    "id": "1321A",
-    "floor": 1,
-    "label": "Asphalt Lab",
-    "doorNode": "w_d1_1321a",
-    "keywords": [
-      "1321a",
-      "asphalt lab"
-    ]
-  },
-  {
-    "id": "1322",
-    "floor": 1,
-    "label": "Strength & Materials Lab 2",
-    "doorNode": "w_d1_1322",
-    "keywords": [
-      "1322",
-      "strength & materials lab 2"
-    ]
-  },
-  {
-    "id": "1323",
-    "floor": 1,
-    "label": "Germano Computer Lab",
-    "doorNode": "w_d1_1323",
-    "keywords": [
-      "1323",
-      "germano computer lab"
-    ]
-  },
-  {
-    "id": "1325",
-    "floor": 1,
-    "label": "Concrete Lab",
-    "doorNode": "w_d1_1325",
-    "keywords": [
-      "1325",
-      "concrete lab"
-    ]
-  },
-  {
-    "id": "1329",
-    "floor": 1,
-    "label": "Rock Mechanics",
-    "doorNode": "w_d1_1329",
-    "keywords": [
-      "1329",
-      "rock mechanics"
-    ]
-  },
-  {
-    "id": "1330",
-    "floor": 1,
-    "label": "EE Micro Grid",
-    "doorNode": "w_d1_1330",
-    "keywords": [
-      "1330",
-      "ee micro grid"
-    ]
-  },
-  {
-    "id": "1331",
-    "floor": 1,
-    "label": "Enchanced Oil Recovery",
-    "doorNode": "w_d1_1331",
-    "keywords": [
-      "1331",
-      "enchanced oil recovery"
-    ]
-  },
-  {
-    "id": "1340",
-    "floor": 1,
-    "label": "Capstone Design Space",
-    "doorNode": "w_d1_1340",
-    "keywords": [
-      "1340",
-      "capstone design space",
-      "capstone",
-      "senior design",
-      "cen 4027"
-    ]
-  },
-  {
-    "id": "1340A",
-    "floor": 1,
-    "label": "Capstone Design Space Annex",
-    "doorNode": "w_d1_1340a",
-    "keywords": [
-      "1340a",
-      "capstone design space annex"
-    ]
-  },
-  {
-    "id": "1342",
-    "floor": 1,
-    "label": "Room 1342",
-    "doorNode": "w_d1_1342",
-    "keywords": [
-      "1342",
-      "room 1342"
-    ]
-  },
-  {
-    "id": "1344",
-    "floor": 1,
-    "label": "Room 1344",
-    "doorNode": "w_d1_1344",
-    "keywords": [
-      "1344",
-      "room 1344"
-    ]
-  },
-  {
-    "id": "1350",
-    "floor": 1,
-    "label": "Campus Computer Lab",
-    "doorNode": "w_d1_1350",
-    "keywords": [
-      "1350",
-      "campus computer lab",
-      "campus computer lab",
-      "computer lab"
-    ]
-  },
-  {
-    "id": "1355",
-    "floor": 1,
-    "label": "Thermal Science Lab",
-    "doorNode": "w_d1_1355",
-    "keywords": [
-      "1355",
-      "thermal science lab"
-    ]
-  },
-  {
-    "id": "1356",
-    "floor": 1,
-    "label": "Materials Lab",
-    "doorNode": "w_d1_1356",
-    "keywords": [
-      "1356",
-      "materials lab"
-    ]
-  },
-  {
-    "id": "1357",
-    "floor": 1,
-    "label": "Thermal System Lab",
-    "doorNode": "w_d1_1357",
-    "keywords": [
-      "1357",
-      "thermal system lab"
-    ]
-  },
-  {
-    "id": "1358",
-    "floor": 1,
-    "label": "Instrumentation Lab",
-    "doorNode": "w_d1_1358",
-    "keywords": [
-      "1358",
-      "instrumentation lab"
-    ]
-  },
-  {
-    "id": "1360",
-    "floor": 1,
-    "label": "System Integration Classroom",
-    "doorNode": "w_d1_1360",
-    "keywords": [
-      "1360",
-      "system integration classroom",
-      "system integration",
-      "classroom"
+      "1364"
     ]
   },
   {
     "id": "1367",
     "floor": 1,
-    "label": "Cheme Machine Shop",
-    "doorNode": "w_d1_1367",
+    "label": "1367",
+    "doorNode": "1367",
     "keywords": [
-      "1367",
-      "cheme machine shop"
+      "1367"
     ]
   },
   {
-    "id": "1375",
+    "id": "1280",
     "floor": 1,
-    "label": "Restaurant",
-    "doorNode": "w_d1_1375",
+    "label": "1280",
+    "doorNode": "1280",
     "keywords": [
-      "1375",
-      "restaurant",
-      "restaurant",
-      "food",
-      "cafe"
+      "1280"
     ]
   },
   {
-    "id": "2128",
-    "floor": 2,
-    "label": "Student Lounge",
-    "doorNode": "w_d2_2128",
+    "id": "1360",
+    "floor": 1,
+    "label": "1360",
+    "doorNode": "1360",
     "keywords": [
-      "2128",
-      "student lounge",
-      "student lounge",
-      "lounge"
+      "1360"
     ]
   },
   {
-    "id": "2130",
-    "floor": 2,
-    "label": "Cheme Biotech Lab",
-    "doorNode": "w_d2_2130",
+    "id": "1354",
+    "floor": 1,
+    "label": "1354",
+    "doorNode": "1354",
     "keywords": [
-      "2130",
-      "cheme biotech lab",
-      "cheme biotech",
-      "biotech lab"
+      "1354"
     ]
   },
   {
-    "id": "2132",
-    "floor": 2,
-    "label": "Cheme Research Lab",
-    "doorNode": "w_d2_2132",
+    "id": "1327",
+    "floor": 1,
+    "label": "1327",
+    "doorNode": "1327",
     "keywords": [
-      "2132",
-      "cheme research lab"
+      "1327"
     ]
   },
   {
-    "id": "2141",
-    "floor": 2,
-    "label": "Rock/Fluids Properties Lab",
-    "doorNode": "w_d2_2141",
+    "id": "1350",
+    "floor": 1,
+    "label": "1350",
+    "doorNode": "1350",
     "keywords": [
-      "2141",
-      "rock/fluids properties lab",
-      "rock fluids",
-      "properties lab"
+      "1350"
     ]
   },
   {
-    "id": "2145",
-    "floor": 2,
-    "label": "Reservoir Dynamics Teaching Lab",
-    "doorNode": "w_d2_2145",
+    "id": "1357",
+    "floor": 1,
+    "label": "1357",
+    "doorNode": "1357",
     "keywords": [
-      "2145",
-      "reservoir dynamics teaching lab",
-      "reservoir dynamics",
-      "pete"
+      "1357"
     ]
   },
   {
-    "id": "2147",
-    "floor": 2,
-    "label": "Petro Lab 2147",
-    "doorNode": "w_d2_2147",
+    "id": "1355",
+    "floor": 1,
+    "label": "1355",
+    "doorNode": "1355",
     "keywords": [
-      "2147",
-      "petro lab 2147"
+      "1355"
     ]
   },
   {
-    "id": "2154",
-    "floor": 2,
-    "label": "Petro Lab",
-    "doorNode": "w_d2_2154",
+    "id": "1358",
+    "floor": 1,
+    "label": "1358",
+    "doorNode": "1358",
     "keywords": [
-      "2154",
-      "petro lab"
+      "1358"
     ]
   },
   {
-    "id": "2200",
-    "floor": 2,
-    "label": "COES Admin Suite",
-    "doorNode": "w_d2_2200",
+    "id": "1356",
+    "floor": 1,
+    "label": "1356",
+    "doorNode": "1356",
     "keywords": [
-      "2200",
-      "coes admin suite",
-      "coes admin",
-      "dean office",
-      "administration"
+      "1356"
     ]
   },
   {
-    "id": "2214",
-    "floor": 2,
-    "label": "Dean's Suite",
-    "doorNode": "w_d2_2214",
+    "id": "1329",
+    "floor": 1,
+    "label": "1329",
+    "doorNode": "1329",
     "keywords": [
-      "2214",
-      "dean's suite",
-      "dean",
-      "dean's suite"
+      "1329"
     ]
   },
   {
-    "id": "2215",
-    "floor": 2,
-    "label": "Characterization Lab",
-    "doorNode": "w_d2_2215",
+    "id": "1331",
+    "floor": 1,
+    "label": "1331",
+    "doorNode": "1331",
     "keywords": [
-      "2215",
-      "characterization lab"
+      "1331"
     ]
   },
   {
-    "id": "2215B",
-    "floor": 2,
-    "label": "CBE Classroom",
-    "doorNode": "w_d2_2215b",
+    "id": "1636",
+    "floor": 1,
+    "label": "1636",
+    "doorNode": "1636",
     "keywords": [
-      "2215b",
-      "cbe classroom"
+      "1636"
     ]
   },
   {
-    "id": "2217",
-    "floor": 2,
-    "label": "Drilling Fluids Teaching Lab",
-    "doorNode": "w_d2_2217",
+    "id": "1324",
+    "floor": 1,
+    "label": "1324",
+    "doorNode": "1324",
     "keywords": [
-      "2217",
-      "drilling fluids teaching lab",
-      "drilling fluids",
-      "pete lab"
+      "1324"
     ]
   },
   {
-    "id": "2224",
-    "floor": 2,
-    "label": "Petro Computational",
-    "doorNode": "w_d2_2224",
+    "id": "1322",
+    "floor": 1,
+    "label": "1322",
+    "doorNode": "1322",
     "keywords": [
-      "2224",
-      "petro computational"
+      "1322"
     ]
   },
   {
-    "id": "2229",
-    "floor": 2,
-    "label": "Student Services Suite",
-    "doorNode": "w_d2_2229",
+    "id": "1325",
+    "floor": 1,
+    "label": "1325",
+    "doorNode": "1325",
     "keywords": [
-      "2229",
-      "student services suite",
-      "student services",
-      "advising"
+      "1325"
     ]
   },
   {
-    "id": "2241",
-    "floor": 2,
-    "label": "EE Circuits 2",
-    "doorNode": "w_d2_2241",
+    "id": "1323",
+    "floor": 1,
+    "label": "1323",
+    "doorNode": "1323",
     "keywords": [
-      "2241",
-      "ee circuits 2"
+      "1323"
     ]
   },
   {
-    "id": "2241B",
-    "floor": 2,
-    "label": "CS Computer Lab",
-    "doorNode": "w_d2_2241b",
+    "id": "1330",
+    "floor": 1,
+    "label": "1330",
+    "doorNode": "1330",
     "keywords": [
-      "2241b",
-      "cs computer lab"
+      "1330"
     ]
   },
   {
-    "id": "2248",
-    "floor": 2,
-    "label": "CMR BIM Lab",
-    "doorNode": "w_d2_2248",
+    "id": "1321",
+    "floor": 1,
+    "label": "1321",
+    "doorNode": "1321",
     "keywords": [
-      "2248",
-      "cmr bim lab"
+      "1321"
     ]
   },
   {
-    "id": "2248B",
-    "floor": 2,
-    "label": "Petro Teaching",
-    "doorNode": "w_d2_2248b",
+    "id": "1317",
+    "floor": 1,
+    "label": "1317",
+    "doorNode": "1317",
     "keywords": [
-      "2248b",
-      "petro teaching"
+      "1317"
     ]
   },
   {
-    "id": "2249",
-    "floor": 2,
-    "label": "EE Circuits 1",
-    "doorNode": "w_d2_2249",
+    "id": "1317A",
+    "floor": 1,
+    "label": "1317A",
+    "doorNode": "1317A",
     "keywords": [
-      "2249",
-      "ee circuits 1"
+      "1317A"
     ]
   },
   {
-    "id": "2249B",
-    "floor": 2,
-    "label": "CBE Simulations Lab",
-    "doorNode": "w_d2_2249b",
+    "id": "1312",
+    "floor": 1,
+    "label": "1312",
+    "doorNode": "1312",
     "keywords": [
-      "2249b",
-      "cbe simulations lab"
+      "1312"
     ]
   },
   {
-    "id": "2250",
-    "floor": 2,
-    "label": "CMR Computer Classroom",
-    "doorNode": "w_d2_2250",
+    "id": "1307",
+    "floor": 1,
+    "label": "1307",
+    "doorNode": "1307",
     "keywords": [
-      "2250",
-      "cmr computer classroom"
+      "1307"
     ]
   },
   {
-    "id": "2271",
-    "floor": 2,
-    "label": "CE Fluids Mechanics",
-    "doorNode": "w_d2_2271",
+    "id": "1100",
+    "floor": 1,
+    "label": "1100",
+    "doorNode": "1100",
     "keywords": [
-      "2271",
-      "ce fluids mechanics"
+      "1100"
     ]
   },
   {
-    "id": "2274",
-    "floor": 2,
-    "label": "Petro Teaching Electric Drive",
-    "doorNode": "w_d2_2274",
+    "id": "1300",
+    "floor": 1,
+    "label": "1300",
+    "doorNode": "1300",
     "keywords": [
-      "2274",
-      "petro teaching electric drive"
+      "1300"
     ]
   },
   {
-    "id": "2275",
-    "floor": 2,
-    "label": "EE Petro Absorbance",
-    "doorNode": "w_d2_2275",
+    "id": "1269",
+    "floor": 1,
+    "label": "1269",
+    "doorNode": "1269",
     "keywords": [
-      "2275",
-      "ee petro absorbance"
+      "1269"
     ]
   },
   {
-    "id": "2277",
-    "floor": 2,
-    "label": "EE Optics",
-    "doorNode": "w_d2_2277",
+    "id": "1245",
+    "floor": 1,
+    "label": "1245",
+    "doorNode": "1245",
     "keywords": [
-      "2277",
-      "ee optics"
+      "1245"
     ]
   },
   {
-    "id": "2279",
-    "floor": 2,
-    "label": "EE Power",
-    "doorNode": "w_d2_2279",
+    "id": "1342",
+    "floor": 1,
+    "label": "1342",
+    "doorNode": "1342",
     "keywords": [
-      "2279",
-      "ee power"
+      "1342"
     ]
   },
   {
-    "id": "2301",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2301",
-    "doorNode": "w_d2_2301",
+    "id": "1340",
+    "floor": 1,
+    "label": "1340",
+    "doorNode": "1340",
     "keywords": [
-      "2301",
-      "comp sci research lab 2301"
+      "1340"
     ]
   },
   {
-    "id": "2302",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2302",
-    "doorNode": "w_d2_2302",
+    "id": "1344",
+    "floor": 1,
+    "label": "1344",
+    "doorNode": "1344",
     "keywords": [
-      "2302",
-      "comp sci research lab 2302"
+      "1344"
     ]
   },
   {
-    "id": "2303",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2303",
-    "doorNode": "w_d2_2303",
+    "id": "1278",
+    "floor": 1,
+    "label": "1278",
+    "doorNode": "1278",
     "keywords": [
-      "2303",
-      "comp sci research lab 2303"
+      "1278"
     ]
   },
   {
-    "id": "2304",
-    "floor": 2,
-    "label": "Comp Sci Teaching",
-    "doorNode": "w_d2_2304",
+    "id": "1518",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1518",
     "keywords": [
-      "2304",
-      "comp sci teaching"
+      "1518",
+      "Restroom"
     ]
   },
   {
-    "id": "2305",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2305",
-    "doorNode": "w_d2_2305",
+    "id": "1371",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1371",
     "keywords": [
-      "2305",
-      "comp sci research lab 2305"
+      "1371",
+      "Restroom"
     ]
   },
   {
-    "id": "2307",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2307",
-    "doorNode": "w_d2_2307",
+    "id": "1225",
+    "floor": 1,
+    "label": "1225",
+    "doorNode": "1225",
     "keywords": [
-      "2307",
-      "comp sci research lab 2307"
+      "1225"
     ]
   },
   {
-    "id": "2308",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2308",
-    "doorNode": "w_d2_2308",
+    "id": "1225",
+    "floor": 1,
+    "label": "1225",
+    "doorNode": "1225",
     "keywords": [
-      "2308",
-      "comp sci research lab 2308"
+      "1225"
     ]
   },
   {
-    "id": "2309",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2309",
-    "doorNode": "w_d2_2309",
+    "id": "1232",
+    "floor": 1,
+    "label": "1232",
+    "doorNode": "1232",
     "keywords": [
-      "2309",
-      "comp sci research lab 2309"
+      "1232"
     ]
   },
   {
-    "id": "2310",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2310",
-    "doorNode": "w_d2_2310",
+    "id": "1236",
+    "floor": 1,
+    "label": "1236",
+    "doorNode": "1236",
     "keywords": [
-      "2310",
-      "comp sci research lab 2310"
+      "1236"
     ]
   },
   {
-    "id": "2355",
-    "floor": 2,
-    "label": "Materials & Manufacturing Lab",
-    "doorNode": "w_d2_2355",
+    "id": "1240",
+    "floor": 1,
+    "label": "1240",
+    "doorNode": "1240",
     "keywords": [
-      "2355",
-      "materials & manufacturing lab",
-      "materials",
-      "manufacturing",
-      "mme"
+      "1240"
     ]
   },
   {
-    "id": "2399",
-    "floor": 2,
-    "label": "Mech CAD Classroom",
-    "doorNode": "w_d2_2399",
+    "id": "1244",
+    "floor": 1,
+    "label": "1244",
+    "doorNode": "1244",
     "keywords": [
-      "2399",
-      "mech cad classroom"
+      "1244"
     ]
   },
   {
-    "id": "3020",
-    "floor": 3,
-    "label": "Pollution Control Lab",
-    "doorNode": "w_d3_3020",
+    "id": "1246",
+    "floor": 1,
+    "label": "1246",
+    "doorNode": "1246",
     "keywords": [
-      "3020",
-      "pollution control lab"
+      "1246"
     ]
   },
   {
-    "id": "3025",
-    "floor": 3,
-    "label": "Pollution Control Lab II",
-    "doorNode": "w_d3_3025",
+    "id": "1443",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1443",
     "keywords": [
-      "3025",
-      "pollution control lab ii",
-      "pollution control",
-      "environmental lab"
+      "1443",
+      "Restroom"
     ]
   },
   {
-    "id": "3212",
-    "floor": 3,
-    "label": "Office 3212",
-    "doorNode": "w_d3_3212",
+    "id": "1348",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1348",
     "keywords": [
-      "3212",
-      "office 3212"
+      "1348",
+      "Restroom"
     ]
   },
   {
-    "id": "3228",
-    "floor": 3,
-    "label": "Office 3228",
-    "doorNode": "w_d3_3228",
+    "id": "1218",
+    "floor": 1,
+    "label": "1218",
+    "doorNode": "1218",
     "keywords": [
-      "3228",
-      "office 3228"
+      "1218"
     ]
   },
   {
-    "id": "3229",
-    "floor": 3,
-    "label": "Office 3229",
-    "doorNode": "w_d3_3229",
+    "id": "1216",
+    "floor": 1,
+    "label": "1216",
+    "doorNode": "1216",
     "keywords": [
-      "3229",
-      "office 3229"
+      "1216"
     ]
   },
   {
-    "id": "3230",
-    "floor": 3,
-    "label": "Office 3230",
-    "doorNode": "w_d3_3230",
+    "id": "1212",
+    "floor": 1,
+    "label": "1212",
+    "doorNode": "1212",
     "keywords": [
-      "3230",
-      "office 3230"
+      "1212"
     ]
   },
   {
-    "id": "3240",
-    "floor": 3,
-    "label": "Office 3240",
-    "doorNode": "w_d3_3240",
+    "id": "1253",
+    "floor": 1,
+    "label": "1253",
+    "doorNode": "1253",
     "keywords": [
-      "3240",
-      "office 3240"
+      "1253"
     ]
   },
   {
-    "id": "3252",
-    "floor": 3,
-    "label": "Office 3252",
-    "doorNode": "w_d3_3252",
+    "id": "1208",
+    "floor": 1,
+    "label": "1208",
+    "doorNode": "1208",
     "keywords": [
-      "3252",
-      "office 3252"
+      "1208"
     ]
   },
   {
-    "id": "3255",
-    "floor": 3,
-    "label": "ChE & EEvEG Suite",
-    "doorNode": "w_d3_3255",
+    "id": "1206",
+    "floor": 1,
+    "label": "1206",
+    "doorNode": "1206",
     "keywords": [
-      "3255",
-      "che & eeveg suite",
-      "che",
-      "eveg",
-      "chemical engineering suite"
+      "1206"
     ]
   },
   {
-    "id": "3258",
-    "floor": 3,
-    "label": "Office 3258",
-    "doorNode": "w_d3_3258",
+    "id": "1106",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1106",
     "keywords": [
-      "3258",
-      "office 3258"
+      "1106",
+      "Restroom"
     ]
   },
   {
-    "id": "3261",
-    "floor": 3,
-    "label": "ME & ISE Suite",
-    "doorNode": "w_d3_3261",
+    "id": "1112",
+    "floor": 1,
+    "label": "1112",
+    "doorNode": "1112",
     "keywords": [
-      "3261",
-      "me & ise suite",
-      "me",
-      "ise",
-      "mechanical industrial suite"
+      "1112"
     ]
   },
   {
-    "id": "3265",
-    "floor": 3,
-    "label": "Office 3265",
-    "doorNode": "w_d3_3265",
+    "id": "1114",
+    "floor": 1,
+    "label": "1114",
+    "doorNode": "1114",
     "keywords": [
-      "3265",
-      "office 3265"
+      "1114"
     ]
   },
   {
-    "id": "3267",
-    "floor": 3,
-    "label": "Cheme Suite",
-    "doorNode": "w_d3_3267",
+    "id": "1150",
+    "floor": 1,
+    "label": "1150",
+    "doorNode": "1150",
     "keywords": [
-      "3267",
-      "cheme suite",
-      "cheme suite",
-      "chemical engineering"
+      "1150"
     ]
   },
   {
-    "id": "3275",
-    "floor": 3,
-    "label": "Office 3275",
-    "doorNode": "w_d3_3275",
+    "id": "1148",
+    "floor": 1,
+    "label": "1148",
+    "doorNode": "1148",
     "keywords": [
-      "3275",
-      "office 3275"
+      "1148"
     ]
   },
   {
-    "id": "3277",
-    "floor": 3,
-    "label": "Office 3277",
-    "doorNode": "w_d3_3277",
+    "id": "1146",
+    "floor": 1,
+    "label": "1146",
+    "doorNode": "1146",
     "keywords": [
-      "3277",
-      "office 3277"
+      "1146"
     ]
   },
   {
-    "id": "3280",
-    "floor": 3,
-    "label": "Office 3280",
-    "doorNode": "w_d3_3280",
+    "id": "1147",
+    "floor": 1,
+    "label": "1147",
+    "doorNode": "1147",
     "keywords": [
-      "3280",
-      "office 3280"
+      "1147"
     ]
   },
   {
-    "id": "3287",
-    "floor": 3,
-    "label": "PETE Suite",
-    "doorNode": "w_d3_3287",
+    "id": "1145",
+    "floor": 1,
+    "label": "1145",
+    "doorNode": "1145",
     "keywords": [
-      "3287",
-      "pete suite",
-      "pete suite",
-      "petroleum engineering"
+      "1145"
     ]
   },
   {
-    "id": "3297",
-    "floor": 3,
-    "label": "Dean's Seminar Suite",
-    "doorNode": "w_d3_3297",
+    "id": "1143",
+    "floor": 1,
+    "label": "1143",
+    "doorNode": "1143",
     "keywords": [
-      "3297",
-      "dean's seminar suite",
-      "dean seminar",
-      "seminar suite"
+      "1143"
     ]
   },
   {
-    "id": "3305",
-    "floor": 3,
-    "label": "Office 3305",
-    "doorNode": "w_d3_3305",
+    "id": "1139",
+    "floor": 1,
+    "label": "1139",
+    "doorNode": "1139",
     "keywords": [
-      "3305",
-      "office 3305"
+      "1139"
     ]
   },
   {
-    "id": "3308",
-    "floor": 3,
-    "label": "Office 3308",
-    "doorNode": "w_d3_3308",
+    "id": "1137",
+    "floor": 1,
+    "label": "1137",
+    "doorNode": "1137",
     "keywords": [
-      "3308",
-      "office 3308"
+      "1137"
     ]
   },
   {
-    "id": "3311",
-    "floor": 3,
-    "label": "Shared Learning Lab",
-    "doorNode": "w_d3_3311",
+    "id": "1135",
+    "floor": 1,
+    "label": "1135",
+    "doorNode": "1135",
     "keywords": [
-      "3311",
-      "shared learning lab"
+      "1135"
     ]
   },
   {
-    "id": "3312",
-    "floor": 3,
-    "label": "Office 3312",
-    "doorNode": "w_d3_3312",
+    "id": "1133",
+    "floor": 1,
+    "label": "1133",
+    "doorNode": "1133",
     "keywords": [
-      "3312",
-      "office 3312"
+      "1133"
     ]
   },
   {
-    "id": "3314",
-    "floor": 3,
-    "label": "Office 3314",
-    "doorNode": "w_d3_3314",
+    "id": "1131",
+    "floor": 1,
+    "label": "1131",
+    "doorNode": "1131",
     "keywords": [
-      "3314",
-      "office 3314"
+      "1131"
     ]
   },
   {
-    "id": "3315",
-    "floor": 3,
-    "label": "Office 3315",
-    "doorNode": "w_d3_3315",
+    "id": "1127",
+    "floor": 1,
+    "label": "Restroom",
+    "doorNode": "1127",
     "keywords": [
-      "3315",
-      "office 3315"
+      "1127",
+      "Restroom"
     ]
   },
   {
-    "id": "3319",
-    "floor": 3,
-    "label": "CME Suite",
-    "doorNode": "w_d3_3319",
+    "id": "1108",
+    "floor": 1,
+    "label": "1108",
+    "doorNode": "1108",
     "keywords": [
-      "3319",
-      "cme suite",
-      "cme suite",
-      "construction management"
+      "1108"
     ]
   },
   {
-    "id": "3319B",
-    "floor": 3,
-    "label": "Verandah",
-    "doorNode": "w_d3_3319b",
+    "id": "1124",
+    "floor": 1,
+    "label": "1124",
+    "doorNode": "1124",
     "keywords": [
-      "3319b",
-      "verandah"
+      "1124"
     ]
   },
   {
-    "id": "3321",
-    "floor": 3,
-    "label": "Mfg Industrial Systems",
-    "doorNode": "w_d3_3321",
+    "id": "1126",
+    "floor": 1,
+    "label": "1126",
+    "doorNode": "1126",
     "keywords": [
-      "3321",
-      "mfg industrial systems"
+      "1126"
     ]
   },
   {
-    "id": "3322",
-    "floor": 3,
-    "label": "CM Senior Project Lab",
-    "doorNode": "w_d3_3322",
+    "id": "1144",
+    "floor": 1,
+    "label": "1144",
+    "doorNode": "1144",
     "keywords": [
-      "3322",
-      "cm senior project lab",
-      "cm senior project",
-      "construction management lab"
+      "1144"
     ]
   },
   {
-    "id": "3323",
-    "floor": 3,
-    "label": "CM Detailing/Controls Lab",
-    "doorNode": "w_d3_3323",
+    "id": "1142",
+    "floor": 1,
+    "label": "1142",
+    "doorNode": "1142",
     "keywords": [
-      "3323",
-      "cm detailing/controls lab"
+      "1142"
     ]
   },
   {
-    "id": "3324",
-    "floor": 3,
-    "label": "COES HR / Finance",
-    "doorNode": "w_d3_3324",
+    "id": "1140",
+    "floor": 1,
+    "label": "1140",
+    "doorNode": "1140",
     "keywords": [
-      "3324",
-      "coes hr / finance"
+      "1140"
     ]
   },
   {
-    "id": "3325",
-    "floor": 3,
-    "label": "ECEE & CSE Suite",
-    "doorNode": "w_d3_3325",
+    "id": "1138",
+    "floor": 1,
+    "label": "1138",
+    "doorNode": "1138",
     "keywords": [
-      "3325",
-      "ecee & cse suite",
-      "ecee",
-      "cse",
-      "electrical",
-      "computer science suite"
+      "1138"
     ]
   },
   {
-    "id": "3325C",
-    "floor": 3,
-    "label": "CM Exterior Teaching",
-    "doorNode": "w_d3_3325c",
+    "id": "1134",
+    "floor": 1,
+    "label": "1134",
+    "doorNode": "1134",
     "keywords": [
-      "3325c",
-      "cm exterior teaching"
+      "1134"
     ]
   },
   {
-    "id": "3325b",
-    "floor": 3,
-    "label": "Office 3325b",
-    "doorNode": "w_d3_3325b",
+    "id": "1132",
+    "floor": 1,
+    "label": "1132",
+    "doorNode": "1132",
     "keywords": [
-      "3325b",
-      "office 3325b"
+      "1132"
     ]
   },
   {
-    "id": "3327",
-    "floor": 3,
-    "label": "Office 3327",
-    "doorNode": "w_d3_3327",
+    "id": "1130",
+    "floor": 1,
+    "label": "1130",
+    "doorNode": "1130",
     "keywords": [
-      "3327",
-      "office 3327"
+      "1130"
     ]
   },
   {
-    "id": "3329",
-    "floor": 3,
-    "label": "Office 3329",
-    "doorNode": "w_d3_3329",
+    "id": "1154",
+    "floor": 1,
+    "label": "1154",
+    "doorNode": "1154",
     "keywords": [
-      "3329",
-      "office 3329"
+      "1154"
     ]
   },
   {
-    "id": "3336",
-    "floor": 3,
-    "label": "Office 3336",
-    "doorNode": "w_d3_3336",
+    "id": "1233",
+    "floor": 1,
+    "label": "1233",
+    "doorNode": "1233",
     "keywords": [
-      "3336",
-      "office 3336"
+      "1233"
+    ]
+  },
+  {
+    "id": "1237",
+    "floor": 1,
+    "label": "1237",
+    "doorNode": "1237",
+    "keywords": [
+      "1237"
+    ]
+  },
+  {
+    "id": "1272",
+    "floor": 1,
+    "label": "1272",
+    "doorNode": "1272",
+    "keywords": [
+      "1272"
+    ]
+  },
+  {
+    "id": "1257",
+    "floor": 1,
+    "label": "1257",
+    "doorNode": "1257",
+    "keywords": [
+      "1257"
+    ]
+  },
+  {
+    "id": "1259",
+    "floor": 1,
+    "label": "1259",
+    "doorNode": "1259",
+    "keywords": [
+      "1259"
+    ]
+  },
+  {
+    "id": "1269",
+    "floor": 1,
+    "label": "1269",
+    "doorNode": "1269",
+    "keywords": [
+      "1269"
+    ]
+  },
+  {
+    "id": "1258",
+    "floor": 1,
+    "label": "1258",
+    "doorNode": "1258",
+    "keywords": [
+      "1258"
+    ]
+  },
+  {
+    "id": "1262",
+    "floor": 1,
+    "label": "1262",
+    "doorNode": "1262",
+    "keywords": [
+      "1262"
+    ]
+  },
+  {
+    "id": "1263",
+    "floor": 1,
+    "label": "1263",
+    "doorNode": "1263",
+    "keywords": [
+      "1263"
+    ]
+  },
+  {
+    "id": "1202",
+    "floor": 1,
+    "label": "1202",
+    "doorNode": "1202",
+    "keywords": [
+      "1202"
+    ]
+  },
+  {
+    "id": "1200",
+    "floor": 1,
+    "label": "1200",
+    "doorNode": "1200",
+    "keywords": [
+      "1200"
     ]
   }
 ]
