@@ -1,0 +1,186 @@
+/* ── Reset & base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; background: #111; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #f0f0f0; }
+
+/* ── Layout shell ─────────────────────────────── */
+#app { display: flex; flex-direction: column; height: 100dvh; }
+
+/* ── Top bar ──────────────────────────────────── */
+#topbar {
+  flex-shrink: 0;
+  padding: 10px 12px 8px;
+  background: #1c1c1e;
+  border-bottom: 1px solid #2c2c2e;
+  display: flex; flex-direction: column; gap: 8px;
+  z-index: 10;
+}
+#search-row { display: flex; gap: 8px; align-items: center; }
+#search-wrap {
+  flex: 1; position: relative;
+}
+#search-input {
+  width: 100%; padding: 9px 36px 9px 14px;
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 12px; color: #f0f0f0;
+  font-size: 16px; /* prevents iOS zoom */
+  outline: none; appearance: none;
+}
+#search-input:focus { border-color: #0a84ff; }
+#search-input::placeholder { color: #636366; }
+#search-clear {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: #636366; border: none; border-radius: 50%;
+  width: 18px; height: 18px; color: #111; font-size: 11px;
+  cursor: pointer; display: none; align-items: center; justify-content: center;
+  line-height: 1;
+}
+#search-clear.visible { display: flex; }
+
+/* floor tabs */
+#floor-tabs { display: flex; gap: 6px; }
+.ftab {
+  flex: 1; padding: 6px 0; text-align: center;
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 8px; font-size: 13px; font-weight: 500; color: #8e8e93;
+  cursor: pointer; transition: all 0.15s;
+}
+.ftab.active { background: #0a84ff22; border-color: #0a84ff; color: #0a84ff; }
+
+/* ── Map area ─────────────────────────────────── */
+#map-area {
+  flex: 1; overflow: hidden; position: relative;
+  background: #000; touch-action: none;
+}
+#map-container {
+  position: absolute; transform-origin: 0 0; will-change: transform;
+}
+#map-img { display: block; max-width: none; user-select: none; -webkit-user-drag: none; }
+#path-canvas { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+/* ── Destination card ─────────────────────────── */
+#dest-card {
+  flex-shrink: 0;
+  background: #1c1c1e;
+  border-top: 1px solid #2c2c2e;
+  padding: 14px 16px 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+#dest-card.visible { transform: translateY(0); }
+#dest-card-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+#dest-info { flex: 1; min-width: 0; }
+#dest-room {
+  font-size: 22px; font-weight: 700; color: #f0f0f0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#dest-label { font-size: 14px; color: #8e8e93; margin-top: 2px; }
+#dest-floor { font-size: 13px; color: #0a84ff; margin-top: 4px; }
+#btn-clear-dest {
+  background: #2c2c2e; border: 1.5px solid #3a3a3c;
+  border-radius: 10px; color: #8e8e93;
+  padding: 6px 14px; font-size: 14px; cursor: pointer;
+  white-space: nowrap; flex-shrink: 0;
+}
+
+/* ── Search results dropdown ──────────────────── */
+#results-panel {
+  position: absolute; left: 12px; right: 12px;
+  top: calc(100% + 4px);
+  background: #2c2c2e; border: 1px solid #3a3a3c;
+  border-radius: 12px; overflow: hidden;
+  max-height: 280px; overflow-y: auto;
+  z-index: 100; display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+#results-panel.open { display: block; }
+.result-item {
+  padding: 12px 16px; border-bottom: 1px solid #3a3a3c;
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+}
+.result-item:last-child { border-bottom: none; }
+.result-item:active { background: #3a3a3c; }
+.result-room { font-size: 15px; font-weight: 600; color: #f0f0f0; }
+.result-label { font-size: 13px; color: #8e8e93; margin-top: 1px; }
+.result-floor { font-size: 12px; color: #0a84ff; background: #0a84ff22; padding: 2px 7px; border-radius: 6px; white-space: nowrap; }
+.result-empty { padding: 16px; color: #636366; text-align: center; font-size: 14px; }
+
+/* ── Cross-floor instruction banner ──────────────*/
+#crossfloor-banner {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: #ff9f0a22; border-top: 1px solid #ff9f0a55;
+  color: #ff9f0a; font-size: 13px; text-align: center;
+  padding: 8px 16px; display: none; pointer-events: none;
+}
+#crossfloor-banner.visible { display: block; }
+
+/* ── Loading overlay ──────────────────────────── */
+#loading {
+  position: absolute; inset: 0;
+  background: #111; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  z-index: 50;
+}
+#loading.hidden { display: none; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid #3a3a3c; border-top-color: #0a84ff;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+#loading p { color: #8e8e93; font-size: 14px; }
+
+/* ── No-route notice ──────────────────────────── */
+#no-route {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: #2c2c2eee; border: 1px solid #3a3a3c; border-radius: 14px;
+  padding: 18px 24px; text-align: center; color: #8e8e93;
+  font-size: 14px; display: none; pointer-events: none; z-index: 20;
+}
+
+/* ── Debug toolbar ───────────────────────────── */
+#debug-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.debug-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #c7c7cc;
+}
+
+.debug-toggle input {
+  accent-color: #0a84ff;
+}
+
+#btn-copy-coords {
+  background: #2c2c2e;
+  border: 1.5px solid #3a3a3c;
+  border-radius: 8px;
+  color: #f0f0f0;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#debug-readout {
+  font-size: 12px;
+  color: #8bd3ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  word-break: break-all;
+}
+
+/* make sure canvas stays above image */
+#map-img {
+  position: relative;
+  z-index: 1;
+}
+
+#path-canvas {
+  z-index: 2;
+}
