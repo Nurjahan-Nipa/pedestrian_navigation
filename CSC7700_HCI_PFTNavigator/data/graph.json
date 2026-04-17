@@ -145,23 +145,23 @@
     "id": "w_cor_m2",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.3406,
+    "nx": 0.2892,
+    "ny": 0.3799,
     "label": "",
     "roomId": "",
     "edges": [
       "w_cor_m1",
       "w_cor_m3",
+      "w_cor_m3_1",
       "w_cor_n1",
       "w_stair_b_1",
-      "w_cor_s1"
-    ]
+      "w_cor_s1"    ]
   },
   {
     "id": "w_cor_m3",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.341,
+    "nx": 0.3405,
     "ny": 0.3406,
     "label": "",
     "roomId": "",
@@ -173,14 +173,31 @@
     ]
   },
   {
-    "id": "w_cor_m4",
+    "id": "w_cor_m3_1",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.4225,
-    "ny": 0.3406,
+    "nx": 0.3405,
+    "ny": 0.4220,
     "label": "",
     "roomId": "",
     "edges": [
+      "w_cor_s1",
+      "w_cor_m2",
+      "w_cor_m4",
+      "w_d1_1212",
+      "w_d1_1238"
+    ]
+  },
+  {
+    "id": "w_cor_m4",
+    "type": "corridor",
+    "floor": 1,
+    "nx": 0.4231,
+    "ny": 0.3799,
+    "label": "",
+    "roomId": "",
+    "edges": [
+      "w_cor_m3_1",
       "w_cor_m3",
       "w_cor_m5",
       "w_cor_n3",
@@ -194,8 +211,8 @@
     "id": "w_cor_m5",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.493,
-    "ny": 0.3406,
+    "nx": 0.5390,
+    "ny": 0.3799,
     "label": "",
     "roomId": "",
     "edges": [
@@ -209,7 +226,7 @@
     "id": "w_cor_m6",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.5634,
+    "nx": 0.5796,
     "ny": 0.3406,
     "label": "",
     "roomId": "",
@@ -239,8 +256,8 @@
     "id": "w_cor_m8",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.7265,
-    "ny": 0.3406,
+    "nx": 0.7493,
+    "ny": 0.3799,
     "label": "",
     "roomId": "",
     "edges": [
@@ -257,8 +274,8 @@
     "id": "w_cor_m9",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.8525,
-    "ny": 0.3406,
+    "nx": 0.8554,
+    "ny": 0.3799,
     "label": "",
     "roomId": "",
     "edges": [
@@ -271,8 +288,8 @@
     "id": "w_cor_s1",
     "type": "corridor",
     "floor": 1,
-    "nx": 0.2313,
-    "ny": 0.5066,
+    "nx": 0.2665,
+    "ny": 0.4728,
     "label": "",
     "roomId": "",
     "edges": [
@@ -793,8 +810,8 @@
     "id": "w_d1_1221",
     "type": "door",
     "floor": 1,
-    "nx": 0.1631,
-    "ny": 0.5328,
+    "nx": 0.2532,
+    "ny": 0.5095,
     "label": "Classroom 1221",
     "roomId": "1221",
     "edges": [
