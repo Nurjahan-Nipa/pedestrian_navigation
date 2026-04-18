@@ -12947,5 +12947,705 @@
     "label": "room 2225 door",
     "roomId": "2225",
     "edges": []
+  },
+  {
+    "id": "w_d3_1",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.47970382444118964,
+    "ny": 0.22768260572683657,
+    "label": "room 3320 door",
+    "roomId": "3320",
+    "edges": []
+  },
+  {
+    "id": "w_d3_2",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6347587591816207,
+    "ny": 0.22759712564027754,
+    "label": "room 3300 door",
+    "roomId": "3300",
+    "edges": []
+  },
+  {
+    "id": "w_d3_3",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.22665864239140093,
+    "ny": 0.14031562540523898,
+    "label": "room 3330 door",
+    "roomId": "3330",
+    "edges": []
+  },
+  {
+    "id": "w_d3_4",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.2791605195353221,
+    "ny": 0.1604541006127213,
+    "label": "room 3335 door",
+    "roomId": "3335",
+    "edges": []
+  },
+  {
+    "id": "w_d3_5",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.38057690531118105,
+    "ny": 0.13231532248913966,
+    "label": "room 3316 door",
+    "roomId": "3316",
+    "edges": []
+  },
+  {
+    "id": "w_d3_6",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.31207294615313086,
+    "ny": 0.2095133384393439,
+    "label": "room 3326 door",
+    "roomId": "3326",
+    "edges": []
+  },
+  {
+    "id": "w_d3_7",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.41948645432621035,
+    "ny": 0.20150651101044553,
+    "label": "room 3324 door",
+    "roomId": "3324",
+    "edges": []
+  },
+  {
+    "id": "w_d3_8",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6457637649566779,
+    "ny": 0.11145882922814047,
+    "label": "room 3315 door",
+    "roomId": "3315",
+    "edges": []
+  },
+  {
+    "id": "w_d3_9",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6556667570437982,
+    "ny": 0.22807800064510067,
+    "label": "room 3302 door",
+    "roomId": "3302",
+    "edges": []
+  },
+  {
+    "id": "w_d3_10",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6906235480218488,
+    "ny": 0.23281502990985067,
+    "label": "room 3304 door",
+    "roomId": "3304",
+    "edges": []
+  },
+  {
+    "id": "w_d3_11",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7327999396827679,
+    "ny": 0.22944849459128588,
+    "label": "room 3306 door",
+    "roomId": "3306",
+    "edges": []
+  },
+  {
+    "id": "w_d3_12",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.796919334944959,
+    "ny": 0.23343798170357125,
+    "label": "room 3310 door",
+    "roomId": "3310",
+    "edges": []
+  },
+  {
+    "id": "w_d3_13",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8106557433238677,
+    "ny": 0.23439577008641657,
+    "label": "room 3312 door",
+    "roomId": "3312",
+    "edges": []
+  },
+  {
+    "id": "w_d3_14",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8620323340850793,
+    "ny": 0.16728309684292297,
+    "label": "room 3314 door",
+    "roomId": "3314",
+    "edges": []
+  },
+  {
+    "id": "w_d3_15",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8162560560903772,
+    "ny": 0.10972754236809212,
+    "label": "room 3314 door",
+    "roomId": "3314",
+    "edges": []
+  },
+  {
+    "id": "w_d3_16",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7862871125172743,
+    "ny": 0.3335307611596201,
+    "label": "room 3222 door",
+    "roomId": "3222",
+    "edges": []
+  },
+  {
+    "id": "w_d3_17",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.78578259968347,
+    "ny": 0.4183975605241493,
+    "label": "room 3218 door",
+    "roomId": "3218",
+    "edges": []
+  },
+  {
+    "id": "w_d3_18",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7860469732208347,
+    "ny": 0.19469557139910088,
+    "label": "room 3308 door",
+    "roomId": "3308",
+    "edges": []
+  },
+  {
+    "id": "w_d3_19",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8522394976385276,
+    "ny": 0.40674317071662736,
+    "label": "room 3209 door",
+    "roomId": "3209",
+    "edges": []
+  },
+  {
+    "id": "w_d3_20",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.39040977144171335,
+    "ny": 0.5002015135695524,
+    "label": "room 3261 door",
+    "roomId": "3261",
+    "edges": []
+  },
+  {
+    "id": "w_d3_21",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5078290749494443,
+    "ny": 0.4995526054510935,
+    "label": "room 3255 door",
+    "roomId": "3255",
+    "edges": []
+  },
+  {
+    "id": "w_d3_22",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6678059086344618,
+    "ny": 0.5010840286106566,
+    "label": "room 3207 door",
+    "roomId": "3207",
+    "edges": []
+  },
+  {
+    "id": "w_d3_23",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6686937630974449,
+    "ny": 0.250273253928869,
+    "label": "room 3307 door",
+    "roomId": "3307",
+    "edges": []
+  },
+  {
+    "id": "w_d3_24",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5073642181462447,
+    "ny": 0.25190071548996396,
+    "label": "room 3319 door",
+    "roomId": "3319",
+    "edges": []
+  },
+  {
+    "id": "w_d3_25",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3855475014670139,
+    "ny": 0.25066259879994435,
+    "label": "room 3325 door",
+    "roomId": "3325",
+    "edges": []
+  },
+  {
+    "id": "w_d3_26",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5139140725344558,
+    "ny": 0.13722307716343274,
+    "label": "room 3316 door",
+    "roomId": "3316",
+    "edges": []
+  },
+  {
+    "id": "w_d3_28",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.52664806458419,
+    "ny": 0.6112478620651876,
+    "label": "room 3250 door",
+    "roomId": "3250",
+    "edges": []
+  },
+  {
+    "id": "w_d3_29",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.646107450555252,
+    "ny": 0.5196505876960026,
+    "label": "room 3200 door",
+    "roomId": "3200",
+    "edges": []
+  },
+  {
+    "id": "w_d3_30",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6752039614550513,
+    "ny": 0.5204396599680488,
+    "label": "room 3202 door",
+    "roomId": "3202",
+    "edges": []
+  },
+  {
+    "id": "w_d3_31",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6901741130083288,
+    "ny": 0.5197492217300085,
+    "label": "room 3204 door",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_d3_32",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7320905373575058,
+    "ny": 0.5207589227623305,
+    "label": "room 3206 door",
+    "roomId": "3206",
+    "edges": []
+  },
+  {
+    "id": "w_d3_33",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8613758064672902,
+    "ny": 0.5833058784843472,
+    "label": "room 3212 door",
+    "roomId": "3212",
+    "edges": []
+  },
+  {
+    "id": "w_d3_34",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.781012860446848,
+    "ny": 0.5543697676660279,
+    "label": "room 3229 door",
+    "roomId": "3229",
+    "edges": []
+  },
+  {
+    "id": "w_d3_35",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7959323404054641,
+    "ny": 0.517340474794289,
+    "label": "room 3208 door",
+    "roomId": "3208",
+    "edges": []
+  },
+  {
+    "id": "w_d3_36",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8079723519196158,
+    "ny": 0.5176311856313586,
+    "label": "room 3210 door",
+    "roomId": "3210",
+    "edges": []
+  },
+  {
+    "id": "w_d3_37",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7102334551558773,
+    "ny": 0.6393403923295105,
+    "label": "room 3240 door",
+    "roomId": "3240",
+    "edges": []
+  },
+  {
+    "id": "w_d3_38",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7813146869020061,
+    "ny": 0.6405837002844778,
+    "label": "room 3230 door",
+    "roomId": "3230",
+    "edges": []
+  },
+  {
+    "id": "w_d3_39",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.20805592093158343,
+    "ny": 0.4143691389247564,
+    "label": "room 3272 door",
+    "roomId": "3272",
+    "edges": []
+  },
+  {
+    "id": "w_d3_40",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.41216110422839614,
+    "ny": 0.6134230020782618,
+    "label": "room 3290 door",
+    "roomId": "3290",
+    "edges": []
+  },
+  {
+    "id": "w_d3_41",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.37502323156708645,
+    "ny": 0.5212806448895714,
+    "label": "room 3264 door",
+    "roomId": "3264",
+    "edges": []
+  },
+  {
+    "id": "w_d3_43",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.43673903075206993,
+    "ny": 0.5195441667645754,
+    "label": "room 3260 door",
+    "roomId": "3260",
+    "edges": []
+  },
+  {
+    "id": "w_d3_44",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4511870445690521,
+    "ny": 0.5202865176520923,
+    "label": "room 3256 door",
+    "roomId": "3256",
+    "edges": []
+  },
+  {
+    "id": "w_d3_45",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5120348173063548,
+    "ny": 0.5232273692449482,
+    "label": "room 3252 door",
+    "roomId": "3252",
+    "edges": []
+  },
+  {
+    "id": "w_d3_46",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.20733109681664183,
+    "ny": 0.5459417490234836,
+    "label": "room 3270 door",
+    "roomId": "3270",
+    "edges": []
+  },
+  {
+    "id": "w_d3_47",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.28711682728050425,
+    "ny": 0.6247140033394467,
+    "label": "room 3283 door",
+    "roomId": "3283",
+    "edges": []
+  },
+  {
+    "id": "w_d3_48",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.24511668464449504,
+    "ny": 0.5920531599211732,
+    "label": "room 3285 door",
+    "roomId": "3285",
+    "edges": []
+  },
+  {
+    "id": "w_d3_49",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.29048979299471583,
+    "ny": 0.4185351290452626,
+    "label": "room 3277 door",
+    "roomId": "3277",
+    "edges": []
+  },
+  {
+    "id": "w_d3_50",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.29131155407335785,
+    "ny": 0.3320278899572693,
+    "label": "room 3281 door",
+    "roomId": "3281",
+    "edges": []
+  },
+  {
+    "id": "w_d3_54",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.24764806126476227,
+    "ny": 0.5131069982294632,
+    "label": "room 3268 door",
+    "roomId": "3268",
+    "edges": []
+  },
+  {
+    "id": "w_d3_55",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.25997447744439256,
+    "ny": 0.5136027640319657,
+    "label": "room 3266 door",
+    "roomId": "3266",
+    "edges": []
+  },
+  {
+    "id": "w_d3_56",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.3148826580422344,
+    "ny": 0.8104366981073324,
+    "label": "room 3133 door",
+    "roomId": "3133",
+    "edges": []
+  },
+  {
+    "id": "w_d3_57",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.43392345257913567,
+    "ny": 0.7989120899235024,
+    "label": "room 3129 door",
+    "roomId": "31313129",
+    "edges": []
+  },
+  {
+    "id": "w_d3_58",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.46428675334547426,
+    "ny": 0.8002358624851584,
+    "label": "room 3127 door",
+    "roomId": "3127",
+    "edges": []
+  },
+  {
+    "id": "w_d3_60",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5928405890018829,
+    "ny": 0.7540958996302567,
+    "label": "room 3120 door",
+    "roomId": "3120",
+    "edges": []
+  },
+  {
+    "id": "w_d3_61",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5921994831737734,
+    "ny": 0.7839404818144186,
+    "label": "room 3118 door",
+    "roomId": "3118",
+    "edges": []
+  },
+  {
+    "id": "w_d3_62",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.40324070045514804,
+    "ny": 0.8086431160679121,
+    "label": "room 3131 door",
+    "roomId": "3131",
+    "edges": []
+  },
+  {
+    "id": "w_d3_63",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4991796540519951,
+    "ny": 0.8084847824870082,
+    "label": "room 3125 door",
+    "roomId": "3125",
+    "edges": []
+  },
+  {
+    "id": "w_d3_64",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.634314187675974,
+    "ny": 0.8083238532736303,
+    "label": "room 3113 door",
+    "roomId": "3113",
+    "edges": []
+  },
+  {
+    "id": "w_d3_65",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.7252961374472324,
+    "ny": 0.8097151122796062,
+    "label": "room 3109 door",
+    "roomId": "3109",
+    "edges": []
+  },
+  {
+    "id": "w_d3_66",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.76392331436903,
+    "ny": 0.7828970375599367,
+    "label": "room 3101 door",
+    "roomId": "3101",
+    "edges": []
+  },
+  {
+    "id": "w_d3_68",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.6904318772072594,
+    "ny": 0.8036569060856739,
+    "label": "room 3111 door",
+    "roomId": "3111",
+    "edges": []
+  },
+  {
+    "id": "w_d3_69",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4217060208047436,
+    "ny": 0.8295621601162003,
+    "label": "room 3134 door",
+    "roomId": "3134",
+    "edges": []
+  },
+  {
+    "id": "w_d3_70",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.300469469763596,
+    "ny": 0.8297853171523174,
+    "label": "room 3134 door",
+    "roomId": "3134",
+    "edges": []
+  },
+  {
+    "id": "w_d3_71",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.43830311858589055,
+    "ny": 0.8314985123150073,
+    "label": "room 3130 door",
+    "roomId": "3130",
+    "edges": []
+  },
+  {
+    "id": "w_d3_72",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.4811059525450204,
+    "ny": 0.8303594816098269,
+    "label": "room 3122  door",
+    "roomId": "3122",
+    "edges": []
+  },
+  {
+    "id": "w_d3_73",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5646912414656704,
+    "ny": 0.8294854498850351,
+    "label": "room 3122 door",
+    "roomId": "3122",
+    "edges": []
+  },
+  {
+    "id": "w_d3_74",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.5901373624931849,
+    "ny": 0.8253477465070322,
+    "label": "room 3114 door",
+    "roomId": "3114",
+    "edges": []
+  },
+  {
+    "id": "w_d3_75",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.8443973240791144,
+    "ny": 0.8082855314539192,
+    "label": "room 3100 door",
+    "roomId": "3100",
+    "edges": []
+  },
+  {
+    "id": "w_d3_76",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.827792334192508,
+    "ny": 0.8322423691020641,
+    "label": "room 3104 door",
+    "roomId": "3104",
+    "edges": []
+  },
+  {
+    "id": "w_d3_77",
+    "type": "door",
+    "floor": 3,
+    "nx": 0.9073289730124787,
+    "ny": 0.7770458709499974,
+    "label": "room 3107 door",
+    "roomId": "3107",
+    "edges": []
   }
 ]
