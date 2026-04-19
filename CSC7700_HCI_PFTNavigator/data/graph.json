@@ -20184,13 +20184,13 @@
       "w_c2_345"
     ]
   },
-    {
+  {
     "id": "w_s2_1",
     "type": "stair",
     "floor": 2,
-    "nx": 0.24366318690543656,
-    "ny": 0.09336248304932446,
-    "label": "Stair1_f2",
+    "nx": 0.8851863974203737,
+    "ny": 0.5293190525593479,
+    "label": "Stair0_F2",
     "roomId": "",
     "edges": []
   },
@@ -20198,59 +20198,9 @@
     "id": "w_s2_2",
     "type": "stair",
     "floor": 2,
-    "nx": 0.6121925531609956,
-    "ny": 0.06109174093649423,
-    "label": "Stair2_f2",
-    "roomId": "",
-    "edges": []
-  },
-  {
-    "id": "w_s2_3",
-    "type": "stair",
-    "floor": 2,
-    "nx": 0.8868764766800232,
-    "ny": 0.21258521288414728,
-    "label": "Stair3_f2",
-    "roomId": "",
-    "edges": []
-  },
-  {
-    "id": "w_s2_4",
-    "type": "stair",
-    "floor": 2,
-    "nx": 0.42358079116825215,
-    "ny": 0.39227449985295804,
-    "label": "Stair4_commons_f2",
-    "roomId": "",
-    "edges": []
-  },
-  {
-    "id": "w_s2_5",
-    "type": "stair",
-    "floor": 2,
-    "nx": 0.6338602359770148,
-    "ny": 0.3723083144084827,
-    "label": "Stair5_Capstone_f2",
-    "roomId": "",
-    "edges": []
-  },
-  {
-    "id": "w_s2_6",
-    "type": "stair",
-    "floor": 2,
-    "nx": 0.8828110776916677,
-    "ny": 0.530643324088748,
-    "label": "Stair6_f2",
-    "roomId": "",
-    "edges": []
-  },
-  {
-    "id": "w_s2_7",
-    "type": "stair",
-    "floor": 2,
-    "nx": 0.6276064010242413,
-    "ny": 0.6881008044423024,
-    "label": "Stair7_f2",
+    "nx": 0.879812812082001,
+    "ny": 0.8672571917836196,
+    "label": "Stair1_F2",
     "roomId": "",
     "edges": []
   },
@@ -20258,9 +20208,9 @@
     "id": "w_s2_8",
     "type": "stair",
     "floor": 2,
-    "nx": 0.2612952637969722,
-    "ny": 0.7673624442465731,
-    "label": "Stair8_f2",
+    "nx": 0.6426627321210227,
+    "ny": 0.6869711848726453,
+    "label": "Stair2_F2",
     "roomId": "",
     "edges": []
   },
@@ -20268,9 +20218,159 @@
     "id": "w_s2_9",
     "type": "stair",
     "floor": 2,
-    "nx": 0.8914835677387795,
-    "ny": 0.863794939712778,
-    "label": "Stair9_f2",
+    "nx": 0.26443166088459097,
+    "ny": 0.7683452770924895,
+    "label": "Stair3_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_s2_10",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.6295158655724029,
+    "ny": 0.3696150971294133,
+    "label": "Stair4_F2_Capstone",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_s2_11",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.42468855145222123,
+    "ny": 0.3869167844364207,
+    "label": "Stair5_F2_Commons",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_s2_12",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.2458353721077425,
+    "ny": 0.09518774404888333,
+    "label": "Stair6_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_s2_13",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.6117348233615072,
+    "ny": 0.05891546820625095,
+    "label": "Stair7_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_s2_14",
+    "type": "stair",
+    "floor": 2,
+    "nx": 0.8770447656022545,
+    "ny": 0.2114013460470208,
+    "label": "Stair8_F2",
+    "roomId": "",
+    "edges": []
+  },
+   {
+    "id": "w_e2_1",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.5618070652326949,
+    "ny": 0.7874115961001192,
+    "label": "Ele1_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_2",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.564163425738937,
+    "ny": 0.4691301137941739,
+    "label": "Ele2_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_3",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.2767334878033859,
+    "ny": 0.4703235536785008,
+    "label": "Ele3_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_5",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.5632154646157361,
+    "ny": 0.2705021484470731,
+    "label": "Ele4_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_6",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.27963154038002846,
+    "ny": 0.26569009672096333,
+    "label": "Ele5_F2",
+    "roomId": "",
+    "edges": []
+  },
+     {
+    "id": "w_e2_1",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.5618070652326949,
+    "ny": 0.7874115961001192,
+    "label": "Ele1_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_2",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.564163425738937,
+    "ny": 0.4691301137941739,
+    "label": "Ele2_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_3",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.2767334878033859,
+    "ny": 0.4703235536785008,
+    "label": "Ele3_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_5",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.5632154646157361,
+    "ny": 0.2705021484470731,
+    "label": "Ele4_F2",
+    "roomId": "",
+    "edges": []
+  },
+  {
+    "id": "w_e2_6",
+    "type": "elevator",
+    "floor": 2,
+    "nx": 0.27963154038002846,
+    "ny": 0.26569009672096333,
+    "label": "Ele5_F2",
     "roomId": "",
     "edges": []
   }
