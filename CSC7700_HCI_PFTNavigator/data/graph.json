@@ -11889,16 +11889,6 @@
     "edges": []
   },
   {
-    "id": "2318",
-    "floor": 2,
-    "label": "Comp Sci Research Lab 2318",
-    "doorNode": "w_d2_2318",
-    "keywords": [
-      "2318",
-      "comp sci research lab 2318"
-    ]
-  },
-  {
     "id": "w_d2_2318",
     "type": "door",
     "floor": 2,
