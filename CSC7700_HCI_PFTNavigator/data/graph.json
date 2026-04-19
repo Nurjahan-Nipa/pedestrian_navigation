@@ -12055,7 +12055,7 @@
     "floor": 2,
     "nx": 0.275394184396289,
     "ny": 0.25656462266116603,
-    "label": "room 2365 door",
+    "label": "Restroom",
     "roomId": "2365",
     "edges": []
   },
@@ -12065,7 +12065,7 @@
     "floor": 2,
     "nx": 0.275894340059588,
     "ny": 0.2817044838938201,
-    "label": "room 2363 door",
+    "label": "Restroom",
     "roomId": "2363",
     "edges": []
   },
@@ -12155,7 +12155,7 @@
     "floor": 2,
     "nx": 0.5443010806298897,
     "ny": 0.27103583260407554,
-    "label": "room 2301 door",
+    "label": "Restroom",
     "roomId": "2301",
     "edges": []
   },
@@ -12165,7 +12165,7 @@
     "floor": 2,
     "nx": 0.5652357729235552,
     "ny": 0.2825639663291245,
-    "label": "room 2302 door",
+    "label": "Restroom",
     "roomId": "2302",
     "edges": []
   },
@@ -12245,7 +12245,7 @@
     "floor": 2,
     "nx": 0.5654139759964536,
     "ny": 0.4553627229555754,
-    "label": "room 2203 door",
+    "label": "Restroom", 
     "roomId": "2203",
     "edges": []
   },
@@ -12255,7 +12255,7 @@
     "floor": 2,
     "nx": 0.5463595095971974,
     "ny": 0.4687805172285637,
-    "label": "room 2205 door",
+    "label": "Restroom",
     "roomId": "2205",
     "edges": []
   },
@@ -12605,7 +12605,7 @@
     "floor": 2,
     "nx": 0.5646232901000945,
     "ny": 0.7993461761358227,
-    "label": "room 2139 door",
+    "label": "Restroom",
     "roomId": "2139",
     "edges": []
   },
@@ -12615,7 +12615,7 @@
     "floor": 2,
     "nx": 0.5630880121040248,
     "ny": 0.7748373968706849,
-    "label": "room 2137 door",
+    "label": "Restroom",
     "roomId": "2137",
     "edges": []
   },
@@ -12885,7 +12885,7 @@
     "floor": 2,
     "nx": 0.9225522581075587,
     "ny": 0.8420099161451722,
-    "label": "room 2108 door",
+    "label": "Restroom",
     "roomId": "2108",
     "edges": []
   },
