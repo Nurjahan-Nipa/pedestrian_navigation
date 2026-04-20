@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PFT Annotator v10</title>
+<title>PFT Annotator v19</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
@@ -79,9 +79,8 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <div class="tab" data-floor="2">2F</div>
     <div class="tab" data-floor="3">3F</div>
   </div>
-  <label style="margin-left:8px">Map:</label>
-  <input type="file" id="img-upload" accept="image/*">
-  <span style="color:#555;font-size:11px;margin-left:8px">v10</span>
+  <span id="img-status" style="color:#666;font-size:11px;margin-left:8px">Loading floor 1…</span>
+  <span style="color:#555;font-size:11px;margin-left:8px">v19</span>
   <label style="margin-left:4px">Mode:</label>
   <div style="display:flex;gap:3px">
     <button class="mode-btn active" data-mode="door">Door</button>
@@ -92,16 +91,16 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <button class="mode-btn" data-mode="edge">Edge</button>
     <button class="mode-btn" data-mode="move">Move</button>
     <button class="mode-btn del" data-mode="delete">Delete</button>
+    <button class="mode-btn del" data-mode="deledge">Del Edges</button>
   </div>
   <div id="action-btns">
     <button class="action-btn" id="btn-undo">Undo</button>
     <button class="action-btn" id="btn-clear">Clear Floor</button>
+    <button class="action-btn" id="btn-clear-edges">Clear Edges</button>
     <label class="action-btn" style="cursor:pointer">Import JSON<input type="file" id="json-upload" accept=".json" style="display:none"></label>
     <button class="action-btn" id="btn-autoconnect">Auto-connect</button>
-    <span style="color:#888;font-size:11px">cor-cor</span>
-    <input type="number" id="thresh-cc" value="0.05" step="0.005" min="0.005" max="0.2" style="width:46px;padding:3px 4px;background:#2a2a2a;border:1px solid #555;color:#ddd;border-radius:3px;font-family:monospace;font-size:12px" title="corridor↔corridor max dist">
-    <span style="color:#888;font-size:11px">door-cor</span>
-    <input type="number" id="thresh-dc" value="0.025" step="0.005" min="0.005" max="0.1" style="width:46px;padding:3px 4px;background:#2a2a2a;border:1px solid #555;color:#ddd;border-radius:3px;font-family:monospace;font-size:12px" title="door↔corridor max dist">
+    <input type="number" id="thresh-cc" value="0.04" step="0.005" min="0.005" max="0.2" style="width:64px;padding:4px 6px;background:#2a2a2a;border:1px solid #555;color:#ddd;border-radius:3px;font-family:monospace;font-size:14px" title="max distance (all types)">
+    <button class="action-btn" id="btn-check-dupes">Check Dupes</button>
     <button class="action-btn primary" id="btn-export">Export JSON</button>
   </div>
 </div>
@@ -128,6 +127,7 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
         <span class="fl">Label</span><input id="form-label" placeholder="e.g. Capstone Design Space">
         <span class="fl">Room ID (door only)</span><input id="form-room" placeholder="e.g. 1340">
         <button id="btn-save-node">Save</button>
+        <div id="coord-display" style="margin-top:6px;text-align:right;color:#555;font-size:11px">—</div>
       </div>
     </div>
 
@@ -138,7 +138,8 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <div id="panel-export" class="panel">
       <div class="exp-lbl">graph.json</div>
       <textarea id="export-area" readonly></textarea>
-      <button class="action-btn primary" id="btn-copy" style="width:100%;margin-top:5px">Copy to clipboard</button>
+      <button class="action-btn primary" id="btn-dl-graph" style="width:100%;margin-top:5px">Download graph.json</button>
+      <button class="action-btn primary" id="btn-dl-rooms" style="width:100%;margin-top:5px">Download rooms.json</button>
       <div class="exp-lbl">rooms.json template</div>
       <textarea id="rooms-area" readonly></textarea>
     </div>
@@ -194,7 +195,7 @@ $('floor-tabs').addEventListener('click', e => {
   tab.classList.add('active');
   S.floor = +tab.dataset.floor;
   S.sel = null; S.edgeStart = null;
-  renderNodeList(); renderEdgeList(); redraw();
+  loadFloorImg(S.floor, () => { renderNodeList(); renderEdgeList(); redraw(); });
   st(`Floor ${S.floor} — ${S.nodes[S.floor].length} nodes`);
 });
 
@@ -209,18 +210,28 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
 });
 
 // ── Image ──────────────────────────────────────────────────────
-$('img-upload').addEventListener('change', e => {
-  const file = e.target.files[0]; if (!file) return;
+const FLOOR_IMGS = { 1:'./assets/floor1.png', 2:'./assets/floor2.png', 3:'./assets/floor3.png' };
+
+function loadFloorImg(floor, onDone) {
+  const src = FLOOR_IMGS[floor];
+  const statusEl = $('img-status');
+  if (statusEl) statusEl.textContent = `Loading floor ${floor}…`;
   mapImg.onload = () => {
     S.imgW = mapImg.naturalWidth; S.imgH = mapImg.naturalHeight;
     canvas.width = S.imgW; canvas.height = S.imgH;
     const aw = mapArea.clientWidth, ah = mapArea.clientHeight;
     S.scale = Math.min(aw/S.imgW, ah/S.imgH) * 0.97;
     S.panX = (aw - S.imgW*S.scale)/2; S.panY = (ah - S.imgH*S.scale)/2;
-    applyT(); redraw(); st(`${file.name} (${S.imgW}×${S.imgH})`);
+    applyT(); redraw();
+    if (statusEl) statusEl.textContent = `floor${floor}.png (${S.imgW}×${S.imgH})`;
+    if (onDone) onDone();
   };
-  mapImg.src = URL.createObjectURL(file);
-});
+  mapImg.onerror = () => {
+    if (statusEl) statusEl.textContent = `floor${floor}.png not found`;
+    st(`Could not load ${src} — check assets/ folder`);
+  };
+  mapImg.src = src;
+}
 
 function applyT() {
   mapCont.style.transform = `translate(${S.panX}px,${S.panY}px) scale(${S.scale})`;
@@ -246,6 +257,16 @@ mapArea.addEventListener('pointerdown', e => {
   const {nx,ny} = s2n(e.clientX, e.clientY);
   if (S.mode==='move')   { const h=hitNode(nx,ny); if(h){S.moveDrag=true;S.moveNode=h;selectNode(h);} return; }
   if (S.mode==='delete') { const h=hitNode(nx,ny); if(h) delNode(h); return; }
+  if (S.mode==='deledge') {
+    const h=hitNode(nx,ny); if(!h) return;
+    const before = S.edges[S.floor].length;
+    pushH();
+    S.edges[S.floor] = S.edges[S.floor].filter(([a,b]) => a!==h.id && b!==h.id);
+    const removed = before - S.edges[S.floor].length;
+    renderEdgeList(); redraw();
+    st(`Removed ${removed} edge${removed!==1?'s':''} from "${h.id}"`);
+    return;
+  }
   if (S.mode==='edge') {
     const h=hitNode(nx,ny); if(!h) return;
     if (!S.edgeStart) { S.edgeStart=h; redraw(); st(`Edge from "${h.id}" — click target`); }
@@ -272,7 +293,8 @@ mapArea.addEventListener('pointermove', e => {
 
 mapArea.addEventListener('pointerup', () => {
   if (S.moveDrag) {
-    st(`Moved "${S.moveNode.id}" → (${S.moveNode.nx.toFixed(4)},${S.moveNode.ny.toFixed(4)})`);
+    $('coord-display').textContent=`nx=${S.moveNode.nx.toFixed(4)}  ny=${S.moveNode.ny.toFixed(4)}`;
+  st(`Moved "${S.moveNode.id}" → (${S.moveNode.nx.toFixed(4)},${S.moveNode.ny.toFixed(4)})`);
     S.moveDrag=false; S.moveNode=null;
   }
 });
@@ -311,6 +333,20 @@ function hd(a,b){return Math.hypot(b.x-a.x,b.y-a.y);}
 // ── Node ops ───────────────────────────────────────────────────
 const ctrs={};
 function mkId(type){ctrs[type]=(ctrs[type]||0)+1;return `w_${type[0]}${S.floor}_${ctrs[type]}`;}
+function syncCtrs() {
+  // After import: advance counters past all existing node ids so new nodes never collide
+  // id format: w_{typeChar}{floor}_{n}  e.g. w_d1_7, w_c2_13
+  [1,2,3].flatMap(f => S.nodes[f]).forEach(n => {
+    const m = n.id.match(/^w_([a-z]+)\d+_(\d+)$/);
+    if (!m) return;
+    // match type by first char of type name
+    const typeChar = m[1][0];
+    const num = parseInt(m[2]);
+    const type = Object.keys(ctrs).find(t => t[0]===typeChar)
+               || ['door','corridor','stair','elevator','anchor'].find(t => t[0]===typeChar);
+    if (type) ctrs[type] = Math.max(ctrs[type]||0, num);
+  });
+}
 
 function delNode(n) {
   pushH();
@@ -328,6 +364,7 @@ function addEdge(aid,bid) {
 function selectNode(n) {
   S.sel=n;
   $('form-id').value=n.id; $('form-label').value=n.label||''; $('form-room').value=n.roomId||'';
+  $('coord-display').textContent=`nx=${n.nx.toFixed(4)}  ny=${n.ny.toFixed(4)}`;
   renderNodeList();
 }
 
@@ -353,6 +390,13 @@ $('btn-clear').addEventListener('click',()=>{
   if(!confirm(`Clear floor ${S.floor}?`)) return;
   pushH(); S.nodes[S.floor]=[]; S.edges[S.floor]=[]; S.sel=null;
   renderNodeList(); renderEdgeList(); redraw();
+});
+$('btn-clear-edges').addEventListener('click',()=>{
+  if(!S.edges[S.floor].length) { st('No edges on this floor'); return; }
+  if(!confirm(`Delete all ${S.edges[S.floor].length} edges on floor ${S.floor}?`)) return;
+  pushH(); S.edges[S.floor]=[];
+  renderEdgeList(); redraw();
+  st(`Cleared all edges on floor ${S.floor}`);
 });
 
 // ── Draw ───────────────────────────────────────────────────────
@@ -384,17 +428,28 @@ function redraw(moveEvt) {
       ctx.beginPath(); ctx.arc(x,y,r+4,0,Math.PI*2);
       ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke();
     }
-    const lbl=n.roomId||((['anchor','stair','elevator'].includes(n.type))?(n.label||n.id):'');
-    if(lbl){ctx.font='bold 11px monospace';ctx.textAlign='center';ctx.fillStyle='#fff';ctx.fillText(lbl,x,y-r-3);}
+    // Labels: door shows roomId, stair/elevator/anchor show short id, corridor silent
+    let lbl = '';
+    if (n.type==='door' && n.roomId) lbl = n.roomId;
+    else if (n.type==='stair' || n.type==='elevator' || n.type==='anchor') lbl = n.id.replace(/^w_/,'').slice(0,10);
+    // Always show label for selected node
+    if (S.sel?.id===n.id) lbl = n.roomId || n.id;
+    if(lbl){
+      ctx.font='bold 10px monospace'; ctx.textAlign='center';
+      ctx.fillStyle='#fff'; ctx.strokeStyle='rgba(0,0,0,0.7)';
+      ctx.lineWidth=2; ctx.strokeText(lbl,x,y-r-3); ctx.fillText(lbl,x,y-r-3);
+    }
   });
 }
 
 // ── Render lists ───────────────────────────────────────────────
 const TYPE_ORDER = {stair:0, elevator:1, anchor:2, door:3, corridor:4};
 function renderNodeList() {
-  const nodes = [...S.nodes[S.floor]].sort((a,b) =>
-    (TYPE_ORDER[a.type]??9) - (TYPE_ORDER[b.type]??9)
-  );
+  const nodes = [...S.nodes[S.floor]].sort((a,b) => {
+    const td = (TYPE_ORDER[a.type]??9) - (TYPE_ORDER[b.type]??9);
+    if (td !== 0) return td;
+    return a.id.localeCompare(b.id, undefined, {numeric:true, sensitivity:'base'});
+  });
   nodeList.innerHTML = nodes.length===0
     ? '<div style="color:#555;padding:8px">No nodes on this floor</div>'
     : nodes.map(n=>`
@@ -452,6 +507,7 @@ $('json-upload').addEventListener('change',e=>{
           if(!seen[f].has(k)){seen[f].add(k);S.edges[f].push([n.id,nb]);}
         });
       });
+      syncCtrs();
       S.sel=null; S.edgeStart=null;
       renderNodeList(); renderEdgeList(); redraw();
       st('Imported — '+[1,2,3].map(f=>`${f}F:${S.nodes[f].length}n/${S.edges[f].length}e`).join(' '));
@@ -462,7 +518,29 @@ $('json-upload').addEventListener('change',e=>{
 
 // ── Export ─────────────────────────────────────────────────────
 $('btn-export').addEventListener('click',()=>{buildExport();showPanel('export');});
-$('btn-copy').addEventListener('click',()=>navigator.clipboard.writeText($('export-area').value).then(()=>st('Copied')));
+
+$('btn-check-dupes').addEventListener('click',()=>{
+  const allNodes = [1,2,3].flatMap(f => S.nodes[f]);
+  const seen = {};
+  const dupes = [];
+  allNodes.forEach(n => {
+    if (seen[n.id]) dupes.push(n.id);
+    else seen[n.id] = true;
+  });
+  if (dupes.length === 0) {
+    st('No duplicate IDs found across all floors');
+  } else {
+    st(`Duplicate IDs (${dupes.length}): ${dupes.join(', ')}`);
+    alert('Duplicate node IDs found:\n\n' + dupes.join('\n') + '\n\nRename them in the node form before exporting.');
+  }
+});
+function dlJson(text, filename) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], {type:'application/json'}));
+  a.download = filename; a.click(); URL.revokeObjectURL(a.href);
+}
+$('btn-dl-graph').addEventListener('click', () => { buildExport(); dlJson($('export-area').value, 'graph.json'); st('Downloaded graph.json'); });
+$('btn-dl-rooms').addEventListener('click', () => { buildExport(); dlJson($('rooms-area').value, 'rooms.json'); st('Downloaded rooms.json'); });
 
 function buildExport() {
   const all=[1,2,3].flatMap(f=>S.nodes[f].map(n=>JSON.parse(JSON.stringify(n))));
@@ -482,52 +560,34 @@ $('btn-autoconnect').addEventListener('click', () => autoConnect());
 function autoConnect() {
   const nodes = S.nodes[S.floor];
   if (nodes.length < 2) { st('No nodes to connect'); return; }
-
-  const thCC = parseFloat($('thresh-cc').value) || 0.05;  // corridor↔corridor
-  const thDC = parseFloat($('thresh-dc').value) || 0.025; // door↔corridor/stair/elevator/anchor
-
+  const th = parseFloat($('thresh-cc').value) || 0.04;
   const CORRIDOR_TYPES = new Set(['corridor','stair','elevator','anchor']);
-
   pushH();
   let added = 0;
   const existing = new Set(S.edges[S.floor].map(([a,b]) => [a,b].sort().join('|')));
-
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i+1; j < nodes.length; j++) {
       const a = nodes[i], b = nodes[j];
-
-      // Determine threshold for this pair
-      let th;
-      if (a.type === 'door' && b.type === 'door') continue; // never connect door↔door
-      if (a.type === 'door' || b.type === 'door') {
-        // door must connect to a corridor-family node
-        const other = a.type === 'door' ? b : a;
+      if (a.type==='door' && b.type==='door') continue;
+      if (a.type==='door' || b.type==='door') {
+        const other = a.type==='door' ? b : a;
         if (!CORRIDOR_TYPES.has(other.type)) continue;
-        th = thDC;
-      } else {
-        // both corridor-family
-        th = thCC;
       }
-
-      const dx = a.nx - b.nx, dy = a.ny - b.ny;
-      if (dx*dx + dy*dy > th*th) continue;
-
-      const key = [a.id, b.id].sort().join('|');
-      if (!existing.has(key)) {
-        existing.add(key);
-        S.edges[S.floor].push([a.id, b.id]);
-        added++;
-      }
+      const dx=a.nx-b.nx, dy=a.ny-b.ny;
+      if (dx*dx+dy*dy > th*th) continue;
+      const key=[a.id,b.id].sort().join('|');
+      if (!existing.has(key)) { existing.add(key); S.edges[S.floor].push([a.id,b.id]); added++; }
     }
   }
   renderEdgeList(); redraw();
-  st(`Auto-connect: +${added} edges  (cor-cor≤${thCC}, door-cor≤${thDC})`);
+  st(`Auto-connect: +${added} edges (thresh=${th})`);
 }
 
 function st(msg){$('status').textContent=msg;}
 
 renderNodeList();
 renderEdgeList();
+loadFloorImg(1);
 </script>
 </body>
 </html>

@@ -23,9 +23,9 @@ const S = {
   path: null,
   crossFloor: null,
   debug: {
-    showNodes: true,
-    showEdges: true,
-    showLabels: true,
+    showNodes: false,
+    showEdges: false,
+    showLabels: false,
     lastClick: null,
   }
 };
@@ -330,11 +330,13 @@ function findPartner(node, targetFloor) {
       n => n.shaftId === node.shaftId && n.floor === targetFloor
     ) || null;
   }
+  // Fallback: same type, coords within 0.1, AND the candidate node
+  // must actually exist on targetFloor (handles stairs that only span 1-2F)
   return Object.values(S.nodes).find(n =>
     n.floor === targetFloor &&
     n.type === node.type &&
-    Math.abs(n.nx - node.nx) < 0.05 &&
-    Math.abs(n.ny - node.ny) < 0.05
+    Math.abs(n.nx - node.nx) < 0.1 &&
+    Math.abs(n.ny - node.ny) < 0.1
   ) || null;
 }
 
