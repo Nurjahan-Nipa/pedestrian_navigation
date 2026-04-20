@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PFT Annotator v19</title>
+<title>PFT Annotator v20</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
@@ -80,7 +80,7 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <div class="tab" data-floor="3">3F</div>
   </div>
   <span id="img-status" style="color:#666;font-size:11px;margin-left:8px">Loading floor 1…</span>
-  <span style="color:#555;font-size:11px;margin-left:8px">v19</span>
+  <span style="color:#555;font-size:11px;margin-left:8px">v20</span>
   <label style="margin-left:4px">Mode:</label>
   <div style="display:flex;gap:3px">
     <button class="mode-btn active" data-mode="door">Door</button>
@@ -101,6 +101,7 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <button class="action-btn" id="btn-autoconnect">Auto-connect</button>
     <input type="number" id="thresh-cc" value="0.04" step="0.005" min="0.005" max="0.2" style="width:64px;padding:4px 6px;background:#2a2a2a;border:1px solid #555;color:#ddd;border-radius:3px;font-family:monospace;font-size:14px" title="max distance (all types)">
     <button class="action-btn" id="btn-check-dupes">Check Dupes</button>
+    <button class="action-btn" id="btn-check-isolated">Check Isolated</button>
     <button class="action-btn primary" id="btn-export">Export JSON</button>
   </div>
 </div>
@@ -518,6 +519,29 @@ $('json-upload').addEventListener('change',e=>{
 
 // ── Export ─────────────────────────────────────────────────────
 $('btn-export').addEventListener('click',()=>{buildExport();showPanel('export');});
+
+$('btn-check-isolated').addEventListener('click',()=>{
+  const allNodes = [1,2,3].flatMap(f => S.nodes[f]);
+  const isolated = allNodes.filter(n => {
+    // Check edges in STATE (not yet exported)
+    const floorEdges = S.edges[n.floor] || [];
+    const hasEdge = floorEdges.some(([a,b]) => a===n.id || b===n.id);
+    return !hasEdge;
+  });
+  if (!isolated.length) {
+    st('No isolated nodes found');
+    return;
+  }
+  // Group by floor
+  const byFloor = {1:[],2:[],3:[]};
+  isolated.forEach(n => byFloor[n.floor].push(n.id));
+  const summary = [1,2,3]
+    .filter(f => byFloor[f].length)
+    .map(f => `Floor ${f}: ${byFloor[f].join(', ')}`)
+    .join('\n');
+  st(`Isolated nodes (${isolated.length}): ${isolated.map(n=>n.id).join(', ')}`);
+  alert(`${isolated.length} isolated node(s) with no edges:\n\n${summary}`);
+});
 
 $('btn-check-dupes').addEventListener('click',()=>{
   const allNodes = [1,2,3].flatMap(f => S.nodes[f]);

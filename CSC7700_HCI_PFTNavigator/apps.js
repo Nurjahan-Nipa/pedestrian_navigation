@@ -1,59 +1,71 @@
+// ═══════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════
 const CONFIG = {
-  floors: {
-    1: 'assets/floor1.png',
-    2: 'assets/floor2.png',
-    3: 'assets/floor3.png',
-  },
-  graphFile: 'data/graph.json',
-  roomsFile: 'data/rooms.json',
+  floors: { 1:'assets/floor1.png', 2:'assets/floor2.png', 3:'assets/floor3.png' },
+  graphFile:  'data/graph.json',
+  roomsFile:  'data/rooms.json',
+  historyKey: 'pft_nav_history',
+  historyMax: 10,
 };
 
+const DEPT_COLORS = {
+  'Chemical Engineering':              '#f7c832',
+  'Mechanical/Industrial Engineering': '#c8b4e8',
+  'Civil/Environmental Engineering':   '#e87070',
+  'Petroleum Engineering':             '#7fbfdc',
+  'Electrical/Computer Engineering':   '#b8d8a8',
+  'Computer Science':                  '#f4a460',
+  'Construction Management':           '#5b9a5a',
+  'College':                           '#f5e27a',
+  'University':                        '#888780',
+};
+const deptColor = r => DEPT_COLORS[r?.dept] || '#FDD023';
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
 const S = {
   floor: 1,
-  nodes: {},
-  rooms: [],
-  roomIndex: [],
-  imgW: 1,
-  imgH: 1,
-  scale: 1,
-  panX: 0,
-  panY: 0,
-  dest: null,
-  startNodeId: null,
-  path: null,
-  crossFloor: null,
-  debug: {
-    showNodes: false,
-    showEdges: false,
-    showLabels: false,
-    lastClick: null,
-  }
+  nodes: {}, rooms: [], roomIndex: [],
+  imgW: 1, imgH: 1,
+  scale: 1, panX: 0, panY: 0,
+  dest: null, startNodeId: null,
+  path: null, crossFloor: null,
 };
 
+// ═══════════════════════════════════════════════════
+// DOM
+// ═══════════════════════════════════════════════════
 const mapImg       = document.getElementById('map-img');
 const canvas       = document.getElementById('path-canvas');
 const ctx          = canvas.getContext('2d');
 const mapArea      = document.getElementById('map-area');
 const mapCont      = document.getElementById('map-container');
 const loading      = document.getElementById('loading');
-const searchInput  = document.getElementById('search-input');
-const searchClear  = document.getElementById('search-clear');
+const inputFrom    = document.getElementById('input-from');
+const inputTo      = document.getElementById('input-to');
+const clearFrom    = document.getElementById('clear-from');
+const clearTo      = document.getElementById('clear-to');
+const fieldFrom    = document.getElementById('field-from');
+const fieldTo      = document.getElementById('field-to');
 const resultsPanel = document.getElementById('results-panel');
 const destCard     = document.getElementById('dest-card');
 const destRoom     = document.getElementById('dest-room');
 const destLabel    = document.getElementById('dest-label');
-const destFloor    = document.getElementById('dest-floor');
+const destFloorEl  = document.getElementById('dest-floor');
+const destDeptBar  = document.getElementById('dest-dept-bar');
 const noRoute      = document.getElementById('no-route');
 const banner       = document.getElementById('crossfloor-banner');
 
-const toggleNodes  = document.getElementById('toggle-nodes');
-const toggleEdges  = document.getElementById('toggle-edges');
-const toggleLabels = document.getElementById('toggle-labels');
-const debugReadout = document.getElementById('debug-readout');
-const btnCopyCoords = document.getElementById('btn-copy-coords');
+// Which field is active: 'from' | 'to'
+let activeField = 'to';
 
+// ═══════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════
 async function boot() {
-  const params = new URLSearchParams(location.search);
+  const params   = new URLSearchParams(location.search);
   const qrFloor  = parseInt(params.get('floor')) || 1;
   const qrAnchor = params.get('anchor') || null;
 
@@ -63,13 +75,11 @@ async function boot() {
   ]);
 
   graphData.forEach(n => { S.nodes[n.id] = n; });
-
   S.rooms = roomsData;
   S.roomIndex = roomsData.map(r => ({
     room: r,
     tokens: [r.id, r.label, ...(r.keywords || [])]
-      .filter(Boolean)
-      .map(t => t.toString().toLowerCase()),
+      .filter(Boolean).map(t => t.toString().toLowerCase()),
   }));
 
   if (qrAnchor && S.nodes[qrAnchor]) {
@@ -80,36 +90,38 @@ async function boot() {
     S.startNodeId = defaultStart(S.floor);
   }
 
-  console.log('Loaded graph nodes:', Object.keys(S.nodes).length);
-
   setFloor(S.floor, false);
   await loadFloorImage(S.floor);
   loading.classList.add('hidden');
+
+  // If QR anchor provided, pre-fill FROM field
+  if (S.startNodeId) {
+    const startNode = S.nodes[S.startNodeId];
+    const startRoom = S.rooms.find(r => r.doorNode === S.startNodeId)
+                   || (startNode ? { id: startNode.label || S.startNodeId, label: startNode.label || '', floor: startNode.floor } : null);
+    if (startRoom) setFrom(startRoom, true);
+  }
+
   renderAll();
 }
 
 function defaultStart(floor) {
-  const n = Object.values(S.nodes).find(n =>
-    n.floor === floor && (n.type === 'anchor' || n.type === 'stair')
+  const n = Object.values(S.nodes).find(
+    n => n.floor === floor && (n.type === 'anchor' || n.type === 'stair')
   );
   return n ? n.id : null;
 }
 
+// ═══════════════════════════════════════════════════
+// IMAGE
+// ═══════════════════════════════════════════════════
 const imgCache = {};
 
 function loadFloorImage(floor) {
   return new Promise(resolve => {
-    if (imgCache[floor]) {
-      applyImage(imgCache[floor]);
-      resolve();
-      return;
-    }
+    if (imgCache[floor]) { applyImage(imgCache[floor]); resolve(); return; }
     const img = new Image();
-    img.onload = () => {
-      imgCache[floor] = img;
-      applyImage(img);
-      resolve();
-    };
+    img.onload  = () => { imgCache[floor] = img; applyImage(img); resolve(); };
     img.onerror = () => resolve();
     img.src = CONFIG.floors[floor];
   });
@@ -119,59 +131,74 @@ function applyImage(img) {
   mapImg.src = img.src;
   S.imgW = img.naturalWidth;
   S.imgH = img.naturalHeight;
-  canvas.width = S.imgW;
+  canvas.width  = S.imgW;
   canvas.height = S.imgH;
   fitToView();
 }
 
 function fitToView() {
-  const aw = mapArea.clientWidth;
-  const ah = mapArea.clientHeight;
+  const aw = mapArea.clientWidth, ah = mapArea.clientHeight;
   S.scale = Math.min(aw / S.imgW, ah / S.imgH);
-  S.panX = (aw - S.imgW * S.scale) / 2;
-  S.panY = (ah - S.imgH * S.scale) / 2;
+  S.panX  = (aw - S.imgW * S.scale) / 2;
+  S.panY  = (ah - S.imgH * S.scale) / 2;
   applyTransform();
 }
 
-function setFloor(floor, redrawPath = true) {
+// ═══════════════════════════════════════════════════
+// FLOOR
+// ═══════════════════════════════════════════════════
+function setFloor(floor, redraw = true) {
   S.floor = floor;
-  document.querySelectorAll('.ftab').forEach(t => {
-    t.classList.toggle('active', parseInt(t.dataset.floor, 10) === floor);
-  });
-  loadFloorImage(floor).then(() => {
-    if (redrawPath) renderAll();
-  });
+  document.querySelectorAll('.ftab').forEach(t =>
+    t.classList.toggle('active', parseInt(t.dataset.floor, 10) === floor)
+  );
+  loadFloorImage(floor).then(() => { if (redraw) renderAll(); });
 }
 
 document.getElementById('floor-tabs').addEventListener('click', e => {
   const tab = e.target.closest('.ftab');
   if (!tab) return;
-  const floor = parseInt(tab.dataset.floor, 10);
-  if (floor !== S.floor) setFloor(floor);
+  const f = parseInt(tab.dataset.floor, 10);
+  if (f !== S.floor) setFloor(f);
 });
 
-searchInput.addEventListener('input', () => {
-  const q = searchInput.value.trim();
-  searchClear.classList.toggle('visible', q.length > 0);
-  if (q.length < 1) { closeResults(); return; }
-  renderResults(search(q));
-});
+// ═══════════════════════════════════════════════════
+// SEARCH
+// ═══════════════════════════════════════════════════
+function setupField(inputEl, clearEl, fieldEl, fieldName) {
+  inputEl.addEventListener('focus', () => {
+    activeField = fieldName;
+    fieldFrom.classList.toggle('active', fieldName === 'from');
+    fieldTo.classList.toggle('active', fieldName === 'to');
+    const q = inputEl.value.trim();
+    if (q) showSearchResults(search(q));
+    else showHistoryResults();
+  });
+  inputEl.addEventListener('input', () => {
+    const q = inputEl.value.trim();
+    clearEl.classList.toggle('visible', q.length > 0);
+    if (!q) { showHistoryResults(); return; }
+    showSearchResults(search(q));
+  });
+  clearEl.addEventListener('click', () => {
+    inputEl.value = '';
+    clearEl.classList.remove('visible');
+    closeResults();
+    if (fieldName === 'from') { S.startNodeId = null; S.startRoom = null; }
+    else { S.dest = null; S.path = null; S.crossFloor = null; destCard.classList.remove('visible'); banner.classList.remove('visible'); }
+    renderAll();
+    inputEl.focus();
+  });
+}
 
-searchInput.addEventListener('focus', () => {
-  if (searchInput.value.trim().length > 0) {
-    renderResults(search(searchInput.value.trim()));
-  }
-});
-
-searchClear.addEventListener('click', () => {
-  searchInput.value = '';
-  searchClear.classList.remove('visible');
-  closeResults();
-  searchInput.focus();
-});
+setupField(inputFrom, clearFrom, fieldFrom, 'from');
+setupField(inputTo,   clearTo,   fieldTo,   'to');
 
 document.addEventListener('pointerdown', e => {
-  if (!resultsPanel.contains(e.target) && e.target !== searchInput) closeResults();
+  const inPanel = resultsPanel.contains(e.target);
+  const inFrom  = fieldFrom.contains(e.target);
+  const inTo    = fieldTo.contains(e.target);
+  if (!inPanel && !inFrom && !inTo) closeResults();
 });
 
 function search(q) {
@@ -179,59 +206,118 @@ function search(q) {
   const scored = [];
   S.roomIndex.forEach(({ room, tokens }) => {
     let score = 0;
-    terms.forEach(term => {
-      tokens.forEach(tok => {
-        if (tok === term) score += 10;
-        else if (tok.startsWith(term)) score += 6;
-        else if (tok.includes(term)) score += 2;
-      });
-    });
+    terms.forEach(term => tokens.forEach(tok => {
+      if (tok === term)              score += 10;
+      else if (tok.startsWith(term)) score += 6;
+      else if (tok.includes(term))   score += 2;
+    }));
     if (score > 0) scored.push({ room, score });
   });
   return scored.sort((a, b) => b.score - a.score).slice(0, 8).map(x => x.room);
 }
 
-function renderResults(rooms) {
-  if (rooms.length === 0) {
-    resultsPanel.innerHTML = '<div class="result-empty">No results</div>';
-  } else {
-    resultsPanel.innerHTML = rooms.map(r => `
-      <div class="result-item" data-rid="${r.id}">
-        <div>
-          <div class="result-room">${r.id}</div>
-          <div class="result-label">${r.label || ''}</div>
-        </div>
-        <div class="result-floor">Floor ${r.floor}</div>
-      </div>`).join('');
-    resultsPanel.querySelectorAll('.result-item').forEach(el => {
-      el.addEventListener('pointerdown', e => {
-        e.preventDefault();
-        selectRoom(S.rooms.find(r => r.id === el.dataset.rid));
-      });
-    });
-  }
+function showSearchResults(rooms) {
+  resultsPanel.innerHTML = rooms.length
+    ? rooms.map(r => resultItemHTML(r)).join('')
+    : '<div class="result-empty">No results</div>';
+  bindResultItems(rooms);
   resultsPanel.classList.add('open');
+}
+
+function showHistoryResults() {
+  const hist  = getHistory();
+  const rooms = hist.map(h => S.rooms.find(r => r.id === h.id)).filter(Boolean);
+  if (!rooms.length) { closeResults(); return; }
+  resultsPanel.innerHTML =
+    '<div class="result-section-label">Recent</div>' +
+    rooms.map(r => resultItemHTML(r)).join('');
+  bindResultItems(rooms);
+  resultsPanel.classList.add('open');
+}
+
+function resultItemHTML(r) {
+  return `<div class="result-item" data-rid="${r.id}">
+    <div class="result-dot" style="background:#FDD023"></div>
+    <div class="result-info">
+      <div class="result-room">${r.id}</div>
+      <div class="result-label">${r.label || ''}</div>
+    </div>
+    <div class="result-floor">F${r.floor}</div>
+  </div>`;
+}
+
+function bindResultItems(rooms) {
+  resultsPanel.querySelectorAll('.result-item').forEach(el => {
+    el.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      const room = rooms.find(r => r.id === el.dataset.rid);
+      if (!room) return;
+      if (activeField === 'from') setFrom(room);
+      else selectRoom(room);
+    });
+  });
 }
 
 function closeResults() {
   resultsPanel.classList.remove('open');
+  fieldFrom.classList.remove('active');
+  fieldTo.classList.remove('active');
+}
+
+// ═══════════════════════════════════════════════════
+// ROOM SELECTION
+// ═══════════════════════════════════════════════════
+
+// S.startRoom holds the full room object for the FROM field
+S.startRoom = null;
+
+function setFrom(room, silent = false) {
+  S.startRoom   = room;
+  S.startNodeId = room.doorNode || S.startNodeId;
+  inputFrom.value = room.id + (room.label ? '  ' + room.label : '');
+  clearFrom.classList.add('visible');
+  closeResults();
+  if (!silent) inputTo.focus();
+  // Re-navigate if dest already set
+  if (S.dest && !silent) navigate();
 }
 
 function selectRoom(room) {
   if (!room) return;
   S.dest = room;
+  inputTo.value = room.id + (room.label ? '  ' + room.label : '');
+  clearTo.classList.add('visible');
   closeResults();
-  searchInput.blur();
-  searchInput.value = '';
-  searchClear.classList.remove('visible');
+  inputTo.blur();
+  saveHistory(room);
+  navigate();
+}
 
-  destRoom.textContent = room.id;
-  destLabel.textContent = room.label || '';
-  destFloor.textContent = `Floor ${room.floor}`;
+function navigate() {
+  console.log('[navigate] startNodeId:', S.startNodeId, '| dest.doorNode:', S.dest?.doorNode, '| startRoom:', S.startRoom?.id);
+  if (!S.startNodeId) {
+    console.warn('[navigate] No start node — set FROM field first');
+    noRoute.style.display = 'block';
+    setTimeout(() => { noRoute.style.display = 'none'; }, 2500);
+    return;
+  }
+  if (!S.dest?.doorNode) {
+    console.warn('[navigate] Dest has no doorNode:', S.dest);
+    noRoute.style.display = 'block';
+    setTimeout(() => { noRoute.style.display = 'none'; }, 2500);
+    return;
+  }
+  const startFloor = S.startRoom?.floor ?? S.floor;
+  console.log('[navigate] startFloor:', startFloor, '| destFloor:', S.dest.floor);
+  const route = computeRoute(S.startNodeId, S.dest.doorNode, startFloor, S.dest.floor);
+  console.log('[navigate] route result:', route);
+
+  destRoom.textContent    = S.dest.id;
+  destLabel.textContent   = S.dest.label || '';
+  destFloorEl.textContent = `Floor ${S.dest.floor}`;
+  destDeptBar.style.background = '#FDD023';
   destCard.classList.add('visible');
   noRoute.style.display = 'none';
-
-  const route = computeRoute(S.startNodeId, room.doorNode, S.floor, room.floor);
 
   if (!route) {
     noRoute.style.display = 'block';
@@ -242,32 +328,43 @@ function selectRoom(room) {
   S.path = route.segment;
   S.crossFloor = route.crossFloor || null;
 
-  setFloor(S.floor, false);
-  setTimeout(() => {
-    renderAll();
-    zoomToPath(S.path);
-    updateBanner(route);
-  }, 50);
+  // Show the floor where the route starts
+  setFloor(startFloor, false);
+  setTimeout(() => { renderAll(); zoomToPath(S.path); updateBanner(route); }, 50);
 }
 
-document.getElementById('btn-clear-dest').addEventListener('click', clearDest);
-
-function clearDest() {
-  S.dest = null;
-  S.path = null;
-  S.crossFloor = null;
+document.getElementById('btn-clear-dest').addEventListener('click', () => {
+  S.dest = null; S.path = null; S.crossFloor = null;
+  inputTo.value = ''; clearTo.classList.remove('visible');
   destCard.classList.remove('visible');
   banner.classList.remove('visible');
   renderAll();
+});
+
+// ═══════════════════════════════════════════════════
+// HISTORY  (localStorage)
+// ═══════════════════════════════════════════════════
+function getHistory() {
+  try { return JSON.parse(localStorage.getItem(CONFIG.historyKey)) || []; }
+  catch { return []; }
 }
 
+function saveHistory(room) {
+  let hist = getHistory().filter(h => h.id !== room.id);
+  hist.unshift({ id: room.id, label: room.label || '', floor: room.floor, ts: Date.now() });
+  if (hist.length > CONFIG.historyMax) hist.length = CONFIG.historyMax;
+  try { localStorage.setItem(CONFIG.historyKey, JSON.stringify(hist)); } catch {}
+}
+
+// ═══════════════════════════════════════════════════
+// ROUTING
+// ═══════════════════════════════════════════════════
 function computeRoute(startId, destDoorId, startFloor, destFloor) {
   if (!startId || !destDoorId) return null;
 
   if (startFloor === destFloor) {
     const path = bfs(startId, destDoorId, startFloor);
-    if (!path) return null;
-    return { segment: path };
+    return path ? { segment: path } : null;
   }
 
   const transits = Object.values(S.nodes).filter(
@@ -278,25 +375,14 @@ function computeRoute(startId, destDoorId, startFloor, destFloor) {
   for (const t of transits) {
     const seg1 = bfs(startId, t.id, startFloor);
     if (!seg1) continue;
-
     const partner = findPartner(t, destFloor);
     if (!partner) continue;
-
     const seg2 = bfs(partner.id, destDoorId, destFloor);
     if (!seg2) continue;
-
     const total = seg1.length + seg2.length;
     if (!best || total < best.total) {
-      best = {
-        total,
-        segment: seg1,
-        crossFloor: {
-          via: t,
-          partner,
-          seg2,
-          targetFloor: destFloor,
-        }
-      };
+      best = { total, segment: seg1,
+        crossFloor: { via: t, partner, seg2, targetFloor: destFloor } };
     }
   }
   return best || null;
@@ -305,20 +391,19 @@ function computeRoute(startId, destDoorId, startFloor, destFloor) {
 function bfs(startId, goalId, floor) {
   if (startId === goalId) return [startId];
   const visited = new Set([startId]);
-  const queue = [[startId, [startId]]];
-
+  const queue   = [[startId, [startId]]];
   while (queue.length) {
     const [cur, path] = queue.shift();
     const node = S.nodes[cur];
     if (!node) continue;
-    for (const neighborId of (node.edges || [])) {
-      if (visited.has(neighborId)) continue;
-      const nb = S.nodes[neighborId];
+    for (const nid of (node.edges || [])) {
+      if (visited.has(nid)) continue;
+      const nb = S.nodes[nid];
       if (!nb || nb.floor !== floor) continue;
-      const newPath = [...path, neighborId];
-      if (neighborId === goalId) return newPath;
-      visited.add(neighborId);
-      queue.push([neighborId, newPath]);
+      const np = [...path, nid];
+      if (nid === goalId) return np;
+      visited.add(nid);
+      queue.push([nid, np]);
     }
   }
   return null;
@@ -330,425 +415,182 @@ function findPartner(node, targetFloor) {
       n => n.shaftId === node.shaftId && n.floor === targetFloor
     ) || null;
   }
-  // Fallback: same type, coords within 0.1, AND the candidate node
-  // must actually exist on targetFloor (handles stairs that only span 1-2F)
   return Object.values(S.nodes).find(n =>
-    n.floor === targetFloor &&
-    n.type === node.type &&
-    Math.abs(n.nx - node.nx) < 0.1 &&
-    Math.abs(n.ny - node.ny) < 0.1
+    n.floor === targetFloor && n.type === node.type &&
+    Math.abs(n.nx - node.nx) < 0.1 && Math.abs(n.ny - node.ny) < 0.1
   ) || null;
 }
 
+// ═══════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════
+let _raf = null;
+
 function renderAll() {
+  if (_raf) cancelAnimationFrame(_raf);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!S.path || !S.dest) return;
   drawRoute();
-  drawDebugEdges();
-  drawDebugNodes();
-  drawLastClick();
 }
 
 function drawRoute() {
-  if (!S.path || !S.dest) return;
-
   let segment = S.path;
-  if (S.crossFloor && S.floor === S.crossFloor.targetFloor) {
-    segment = S.crossFloor.seg2;
-  }
+  if (S.crossFloor && S.floor === S.crossFloor.targetFloor) segment = S.crossFloor.seg2;
 
-  const pts = segment
-    .map(id => S.nodes[id])
-    .filter(n => n && n.floor === S.floor);
+  const pts = segment.map(id => S.nodes[id]).filter(n => n && n.floor === S.floor);
+  if (pts.length < 2) { if (pts.length === 1) drawDestDot(pts[0]); return; }
 
-  if (pts.length < 2) {
-    if (pts.length === 1) drawDestDot(pts[0]);
-    return;
-  }
+  const coords = pts.map(n => ({ x: n.nx * S.imgW, y: n.ny * S.imgH }));
 
-  const coords = pts.map(n => ({
-    x: n.nx * S.imgW,
-    y: n.ny * S.imgH,
-  }));
-
-  const dashLen = 28;
-  const gapLen = 14;
-  const offset = (Date.now() / 30) % (dashLen + gapLen);
-
+  // White halo
   ctx.save();
-  ctx.strokeStyle = '#0a84ff';
-  ctx.lineWidth = 7;
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
-  ctx.setLineDash([dashLen, gapLen]);
-  ctx.lineDashOffset = -offset;
-
-  ctx.beginPath();
-  ctx.moveTo(coords[0].x, coords[0].y);
-  for (let i = 1; i < coords.length; i++) ctx.lineTo(coords[i].x, coords[i].y);
+  ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+  ctx.lineWidth = 11; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(coords[0].x, coords[0].y);
+  coords.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
   ctx.stroke();
 
-  ctx.globalAlpha = 0.25;
-  ctx.strokeStyle = '#ffffff';
-  ctx.lineWidth = 10;
-  ctx.setLineDash([]);
-  ctx.beginPath();
-  ctx.moveTo(coords[0].x, coords[0].y);
-  for (let i = 1; i < coords.length; i++) ctx.lineTo(coords[i].x, coords[i].y);
+  // Animated blue dash
+  const dashLen = 28, gapLen = 14;
+  const offset = (Date.now() / 30) % (dashLen + gapLen);
+  ctx.strokeStyle = '#0a84ff'; ctx.lineWidth = 7;
+  ctx.setLineDash([dashLen, gapLen]); ctx.lineDashOffset = -offset;
+  ctx.beginPath(); ctx.moveTo(coords[0].x, coords[0].y);
+  coords.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
   ctx.stroke();
   ctx.restore();
 
   drawYouAreHere(coords[0]);
 
-  if (!S.crossFloor || S.floor === S.dest.floor) {
-    drawDestDot(pts[pts.length - 1]);
-  } else {
-    drawTransitMarker(coords[coords.length - 1], S.crossFloor.via.type);
-  }
-}
+  const onDestFloor = !S.crossFloor || S.floor === S.dest.floor;
+  if (onDestFloor) drawDestDot(pts[pts.length - 1]);
+  else drawTransitMarker(coords[coords.length - 1], S.crossFloor.via.type);
 
-function drawDebugEdges() {
-  if (!S.debug.showEdges) return;
-
-  const nodes = Object.values(S.nodes).filter(n => n.floor === S.floor);
-  const drawn = new Set();
-
-  ctx.save();
-  ctx.strokeStyle = 'rgba(0,255,140,0.85)';
-  ctx.lineWidth = 4;
-
-  for (const n of nodes) {
-    const x1 = n.nx * S.imgW;
-    const y1 = n.ny * S.imgH;
-
-    for (const edgeId of (n.edges || [])) {
-      const t = S.nodes[edgeId];
-      if (!t || t.floor !== S.floor) continue;
-
-      const key = [n.id, t.id].sort().join('|');
-      if (drawn.has(key)) continue;
-      drawn.add(key);
-
-      const x2 = t.nx * S.imgW;
-      const y2 = t.ny * S.imgH;
-
-      ctx.beginPath();
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.stroke();
-    }
-  }
-  ctx.restore();
-}
-
-function drawDebugNodes() {
-  if (!S.debug.showNodes) return;
-
-  const nodes = Object.values(S.nodes).filter(n => n.floor === S.floor);
-
-  for (const n of nodes) {
-    const x = n.nx * S.imgW;
-    const y = n.ny * S.imgH;
-
-    let color = '#ff453a';
-    let radius = 8;
-
-    if (n.type === 'corridor') { color = '#ffd60a'; radius = 9; }
-    if (n.type === 'door')     { color = '#ff375f'; radius = 7; }
-    if (n.type === 'anchor')   { color = '#64d2ff'; radius = 10; }
-    if (n.type === 'stair')    { color = '#bf5af2'; radius = 9; }
-    if (n.type === 'elevator') { color = '#30d158'; radius = 9; }
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(x, y, radius + 4, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(255,255,255,0.85)';
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = color;
-    ctx.fill();
-    ctx.strokeStyle = '#000';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-
-    if (S.debug.showLabels) {
-      ctx.font = 'bold 16px Arial';
-      ctx.textAlign = 'left';
-      ctx.fillStyle = '#fff';
-      ctx.strokeStyle = '#000';
-      ctx.lineWidth = 4;
-      ctx.strokeText(n.id, x + 12, y - 10);
-      ctx.fillText(n.id, x + 12, y - 10);
-    }
-    ctx.restore();
-  }
-}
-
-function drawLastClick() {
-  if (!S.debug.lastClick || S.debug.lastClick.floor !== S.floor) return;
-
-  const { x, y } = S.debug.lastClick;
-
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.strokeStyle = '#00e5ff';
-  ctx.lineWidth = 3;
-  ctx.stroke();
-
-  ctx.beginPath();
-  ctx.moveTo(x - 14, y);
-  ctx.lineTo(x + 14, y);
-  ctx.moveTo(x, y - 14);
-  ctx.lineTo(x, y + 14);
-  ctx.strokeStyle = '#00e5ff';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-  ctx.restore();
+  _raf = requestAnimationFrame(renderAll);
 }
 
 function drawYouAreHere(pt) {
   ctx.save();
-  ctx.beginPath();
-  ctx.arc(pt.x, pt.y, 18, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(10,132,255,0.2)';
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.arc(pt.x, pt.y, 9, 0, Math.PI * 2);
-  ctx.fillStyle = '#0a84ff';
-  ctx.fill();
-  ctx.strokeStyle = '#fff';
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
+  ctx.beginPath(); ctx.arc(pt.x, pt.y, 18, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(10,132,255,0.2)'; ctx.fill();
+  ctx.beginPath(); ctx.arc(pt.x, pt.y, 9, 0, Math.PI*2);
+  ctx.fillStyle = '#0a84ff'; ctx.fill();
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5; ctx.stroke();
   ctx.restore();
 }
 
 function drawDestDot(node) {
-  const x = node.nx * S.imgW;
-  const y = node.ny * S.imgH;
+  const x = node.nx * S.imgW, y = node.ny * S.imgH;
   ctx.save();
-
-  ctx.beginPath();
-  ctx.arc(x, y, 16, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(255,55,95,0.25)';
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = '#ff375f';
-  ctx.fill();
-  ctx.strokeStyle = '#fff';
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-
-  const label = S.dest?.id || '';
-  ctx.font = 'bold 22px -apple-system, sans-serif';
+  ctx.beginPath(); ctx.arc(x, y, 16, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(255,55,95,0.25)'; ctx.fill();
+  ctx.beginPath(); ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.fillStyle = '#ff375f'; ctx.fill();
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5; ctx.stroke();
+  const lbl = S.dest?.id || '';
+  ctx.font = 'bold 22px -apple-system,sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillStyle = '#fff';
-  ctx.strokeStyle = '#000';
-  ctx.lineWidth = 4;
-  ctx.strokeText(label, x, y - 20);
-  ctx.fillText(label, x, y - 20);
+  ctx.strokeStyle = '#000'; ctx.lineWidth = 4;
+  ctx.strokeText(lbl, x, y - 20);
+  ctx.fillStyle = '#fff'; ctx.fillText(lbl, x, y - 20);
   ctx.restore();
 }
 
 function drawTransitMarker(pt, type) {
-  const label = type === 'elevator' ? 'Elevator' : 'Stairs';
+  const lbl = type === 'elevator' ? 'Elevator' : 'Stairs';
   ctx.save();
-  ctx.beginPath();
-  ctx.arc(pt.x, pt.y, 14, 0, Math.PI * 2);
-  ctx.fillStyle = '#ff9f0a';
-  ctx.fill();
-  ctx.strokeStyle = '#fff';
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-  ctx.font = 'bold 18px -apple-system, sans-serif';
-  ctx.textAlign = 'center';
-  ctx.fillStyle = '#fff';
-  ctx.strokeStyle = '#000';
-  ctx.lineWidth = 4;
-  ctx.strokeText(label, pt.x, pt.y - 22);
-  ctx.fillText(label, pt.x, pt.y - 22);
+  ctx.beginPath(); ctx.arc(pt.x, pt.y, 14, 0, Math.PI*2);
+  ctx.fillStyle = '#ff9f0a'; ctx.fill();
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5; ctx.stroke();
+  ctx.font = 'bold 18px -apple-system,sans-serif'; ctx.textAlign = 'center';
+  ctx.strokeStyle = '#000'; ctx.lineWidth = 4;
+  ctx.strokeText(lbl, pt.x, pt.y - 22);
+  ctx.fillStyle = '#fff'; ctx.fillText(lbl, pt.x, pt.y - 22);
   ctx.restore();
 }
 
+// ═══════════════════════════════════════════════════
+// ZOOM TO PATH
+// ═══════════════════════════════════════════════════
 function zoomToPath(segment) {
-  const pts = segment
-    .map(id => S.nodes[id])
-    .filter(n => n && n.floor === S.floor);
-  if (pts.length === 0) return;
-
+  const pts = segment.map(id => S.nodes[id]).filter(n => n && n.floor === S.floor);
+  if (!pts.length) return;
   const pad = 80;
-  const minNx = Math.min(...pts.map(n => n.nx));
-  const maxNx = Math.max(...pts.map(n => n.nx));
-  const minNy = Math.min(...pts.map(n => n.ny));
-  const maxNy = Math.max(...pts.map(n => n.ny));
-
+  const minNx = Math.min(...pts.map(n => n.nx)), maxNx = Math.max(...pts.map(n => n.nx));
+  const minNy = Math.min(...pts.map(n => n.ny)), maxNy = Math.max(...pts.map(n => n.ny));
   const pxW = (maxNx - minNx) * S.imgW || S.imgW * 0.3;
   const pxH = (maxNy - minNy) * S.imgH || S.imgH * 0.3;
-
-  const aw = mapArea.clientWidth;
-  const ah = mapArea.clientHeight;
-  const scaleX = (aw - pad * 2) / pxW;
-  const scaleY = (ah - pad * 2) / pxH;
-  const newScale = Math.min(scaleX, scaleY, 3);
-
-  const cx = (minNx + maxNx) / 2 * S.imgW;
-  const cy = (minNy + maxNy) / 2 * S.imgH;
-  S.scale = newScale;
-  S.panX = aw / 2 - cx * S.scale;
-  S.panY = ah / 2 - cy * S.scale;
+  const aw = mapArea.clientWidth, ah = mapArea.clientHeight;
+  S.scale = Math.min((aw - pad*2) / pxW, (ah - pad*2) / pxH, 3);
+  S.panX  = aw/2 - (minNx + maxNx)/2 * S.imgW * S.scale;
+  S.panY  = ah/2 - (minNy + maxNy)/2 * S.imgH * S.scale;
   applyTransform();
 }
 
+// ═══════════════════════════════════════════════════
+// BANNER
+// ═══════════════════════════════════════════════════
 function updateBanner(route) {
-  if (!route.crossFloor) {
-    banner.classList.remove('visible');
-    return;
-  }
+  if (!route.crossFloor) { banner.classList.remove('visible'); return; }
   const { via, targetFloor } = route.crossFloor;
-  const verb = via.type === 'elevator' ? 'Take elevator' : 'Take stairs';
-  banner.textContent = `${verb} to floor ${targetFloor} → tap floor tab to continue`;
+  banner.textContent = `${via.type === 'elevator' ? 'Take elevator' : 'Take stairs'} to floor ${targetFloor} → tap floor tab to continue`;
   banner.classList.add('visible');
 }
 
+// ═══════════════════════════════════════════════════
+// PAN & ZOOM
+// ═══════════════════════════════════════════════════
 function applyTransform() {
   mapCont.style.transform = `translate(${S.panX}px,${S.panY}px) scale(${S.scale})`;
 }
 
-toggleNodes?.addEventListener('change', e => {
-  S.debug.showNodes = e.target.checked;
-  renderAll();
-});
-
-toggleEdges?.addEventListener('change', e => {
-  S.debug.showEdges = e.target.checked;
-  renderAll();
-});
-
-toggleLabels?.addEventListener('change', e => {
-  S.debug.showLabels = e.target.checked;
-  renderAll();
-});
-
-btnCopyCoords?.addEventListener('click', async () => {
-  if (!S.debug.lastClick) return;
-  const text = `${S.debug.lastClick.pxX}, ${S.debug.lastClick.pxY}  =>  ${S.debug.lastClick.nx.toFixed(4)}, ${S.debug.lastClick.ny.toFixed(4)}`;
-  try {
-    await navigator.clipboard.writeText(text);
-    debugReadout.textContent = `${text} copied`;
-  } catch {
-    debugReadout.textContent = text;
-  }
-});
-
-mapArea.addEventListener('click', e => {
-  const rect = mapArea.getBoundingClientRect();
-  const localX = (e.clientX - rect.left - S.panX) / S.scale;
-  const localY = (e.clientY - rect.top - S.panY) / S.scale;
-
-  if (localX < 0 || localY < 0 || localX > S.imgW || localY > S.imgH) return;
-
-  const nx = localX / S.imgW;
-  const ny = localY / S.imgH;
-
-  S.debug.lastClick = {
-    floor: S.floor,
-    x: localX,
-    y: localY,
-    pxX: Math.round(localX),
-    pxY: Math.round(localY),
-    nx,
-    ny,
-  };
-
-  debugReadout.textContent =
-    `px(${Math.round(localX)}, ${Math.round(localY)})  norm(${nx.toFixed(4)}, ${ny.toFixed(4)})`;
-
-  console.log('Map click:', S.debug.lastClick);
-  renderAll();
-});
-
 let lastTouches = null;
-mapArea.addEventListener('touchstart', e => {
-  lastTouches = getTouches(e);
-}, { passive: true });
-
+mapArea.addEventListener('touchstart', e => { lastTouches = tc(e); }, { passive: true });
 mapArea.addEventListener('touchmove', e => {
   e.preventDefault();
-  const cur = getTouches(e);
+  const cur = tc(e);
   if (!lastTouches) { lastTouches = cur; return; }
-
   if (cur.length === 1 && lastTouches.length === 1) {
     S.panX += cur[0].x - lastTouches[0].x;
     S.panY += cur[0].y - lastTouches[0].y;
   } else if (cur.length >= 2 && lastTouches.length >= 2) {
-    const prevD = dist(lastTouches[0], lastTouches[1]);
-    const curD  = dist(cur[0], cur[1]);
-    const f = curD / prevD;
-    const cx = (cur[0].x + cur[1].x) / 2 - mapArea.getBoundingClientRect().left;
-    const cy = (cur[0].y + cur[1].y) / 2 - mapArea.getBoundingClientRect().top;
-    S.panX = cx - (cx - S.panX) * f;
-    S.panY = cy - (cy - S.panY) * f;
-    S.scale *= f;
-
-    const pcx = (lastTouches[0].x + lastTouches[1].x) / 2;
-    const pcy = (lastTouches[0].y + lastTouches[1].y) / 2;
-    const ncx = (cur[0].x + cur[1].x) / 2;
-    const ncy = (cur[0].y + cur[1].y) / 2;
-    S.panX += ncx - pcx;
-    S.panY += ncy - pcy;
+    const f = hd(cur[0],cur[1]) / hd(lastTouches[0],lastTouches[1]);
+    const r = mapArea.getBoundingClientRect();
+    const cx = (cur[0].x+cur[1].x)/2-r.left, cy = (cur[0].y+cur[1].y)/2-r.top;
+    S.panX = cx-(cx-S.panX)*f; S.panY = cy-(cy-S.panY)*f; S.scale *= f;
+    S.panX += (cur[0].x+cur[1].x)/2-(lastTouches[0].x+lastTouches[1].x)/2;
+    S.panY += (cur[0].y+cur[1].y)/2-(lastTouches[0].y+lastTouches[1].y)/2;
   }
-  lastTouches = cur;
-  applyTransform();
+  lastTouches = cur; applyTransform();
 }, { passive: false });
-
 mapArea.addEventListener('touchend', () => { lastTouches = null; });
 
 mapArea.addEventListener('wheel', e => {
   e.preventDefault();
   const f = e.deltaY < 0 ? 1.1 : 0.91;
-  const rect = mapArea.getBoundingClientRect();
-  const cx = e.clientX - rect.left;
-  const cy = e.clientY - rect.top;
-  S.panX = cx - (cx - S.panX) * f;
-  S.panY = cy - (cy - S.panY) * f;
-  S.scale *= f;
+  const r = mapArea.getBoundingClientRect();
+  const cx = e.clientX-r.left, cy = e.clientY-r.top;
+  S.panX = cx-(cx-S.panX)*f; S.panY = cy-(cy-S.panY)*f; S.scale *= f;
   applyTransform();
 }, { passive: false });
 
-let mouseDrag = false, mouseOrigin = null, mouseOriginPan = null;
+let mDrag=false, mOrig=null, mPan=null;
 mapArea.addEventListener('mousedown', e => {
-  if (e.button !== 0) return;
-  mouseDrag = true;
-  mouseOrigin = { x: e.clientX, y: e.clientY };
-  mouseOriginPan = { x: S.panX, y: S.panY };
+  if (e.button!==0) return;
+  mDrag=true; mOrig={x:e.clientX,y:e.clientY}; mPan={x:S.panX,y:S.panY};
 });
-
 window.addEventListener('mousemove', e => {
-  if (!mouseDrag) return;
-  S.panX = mouseOriginPan.x + e.clientX - mouseOrigin.x;
-  S.panY = mouseOriginPan.y + e.clientY - mouseOrigin.y;
-  applyTransform();
+  if (!mDrag) return;
+  S.panX=mPan.x+e.clientX-mOrig.x; S.panY=mPan.y+e.clientY-mOrig.y; applyTransform();
 });
+window.addEventListener('mouseup', () => { mDrag=false; });
+window.addEventListener('resize', () => { if (S.imgW>1) { fitToView(); renderAll(); } });
 
-window.addEventListener('mouseup', () => { mouseDrag = false; });
+function tc(e) { return Array.from(e.touches).map(t=>({x:t.clientX,y:t.clientY})); }
+function hd(a,b) { return Math.hypot(b.x-a.x,b.y-a.y); }
 
-function getTouches(e) {
-  return Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
-}
-
-function dist(a, b) {
-  return Math.hypot(b.x - a.x, b.y - a.y);
-}
-
-window.addEventListener('resize', () => {
-  if (S.imgW > 1) {
-    fitToView();
-    renderAll();
-  }
-});
-
+// ═══════════════════════════════════════════════════
+// START
+// ═══════════════════════════════════════════════════
 boot().catch(console.error);

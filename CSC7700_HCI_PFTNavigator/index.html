@@ -1,45 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>PFT Navigator</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>PFT Navigator · LSU</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --purple:#461D7C; --gold:#FDD023;
+  --bg:#0F0C1A; --surf:#1A1528; --card:#221C35; --hover:#2C2445;
+  --border:rgba(255,255,255,0.07);
+  --t1:#F0ECF8; --t2:#A89DC0; --t3:#6B608A;
+  --blue:#0a84ff; --red:#ff375f; --amber:#ff9f0a;
+}
+html,body { height:100%; overflow:hidden; background:var(--bg); color:var(--t1); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+#app { display:flex; flex-direction:column; height:100dvh; }
+
+/* topbar */
+#topbar { flex-shrink:0; z-index:10; background:var(--surf); border-bottom:1px solid var(--border); padding:10px 12px 8px; display:flex; flex-direction:column; gap:8px; position:relative; }
+#hdr-row { display:flex; align-items:center; gap:10px; }
+#hdr-badge { width:36px; height:36px; border-radius:8px; background:var(--gold); color:var(--purple); font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+#hdr-title { font-weight:700; font-size:15px; }
+#hdr-sub   { font-size:10px; color:var(--t3); margin-top:1px; }
+
+/* route fields */
+.route-fields { display:flex; flex-direction:column; gap:5px; position:relative; }
+.route-field {
+  display:flex; align-items:center; gap:8px;
+  background:var(--card); border:1.5px solid rgba(255,255,255,0.1);
+  border-radius:12px; padding:0 10px 0 12px;
+  transition:border-color .15s;
+}
+.route-field.active { border-color:rgba(253,208,35,0.5); }
+.route-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.dot-from { background:#30d158; }
+.dot-to   { background:var(--red); }
+.route-input {
+  flex:1; padding:9px 0; background:transparent; border:none;
+  color:var(--t1); font-size:16px; outline:none; appearance:none;
+  min-width:0;
+}
+.route-input::placeholder { color:var(--t3); }
+.route-field-clear {
+  background:var(--t3); border:none; border-radius:50%;
+  width:16px; height:16px; color:var(--bg); font-size:9px;
+  cursor:pointer; display:none; align-items:center; justify-content:center; flex-shrink:0;
+}
+.route-field-clear.visible { display:flex; }
+.route-connector {
+  position:absolute; left:16px; top:calc(50% - 8px);
+  width:1px; height:16px; background:var(--border);
+}
+
+/* results dropdown — shared, anchored to topbar */
+#results-panel {
+  position:absolute; left:12px; right:12px; top:calc(100% + 4px);
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; max-height:300px; overflow-y:auto;
+  z-index:100; display:none; box-shadow:0 8px 24px rgba(0,0,0,.6);
+}
+#results-panel.open { display:block; }
+.result-section-label { padding:7px 14px 3px; font-size:10px; font-weight:700; letter-spacing:.5px; color:var(--t3); }
+.result-item {
+  padding:10px 14px; border-bottom:1px solid var(--border);
+  cursor:pointer; display:flex; align-items:center; gap:10px;
+}
+.result-item:last-child { border-bottom:none; }
+.result-item:active { background:var(--hover); }
+.result-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.result-info { flex:1; min-width:0; }
+.result-room  { font-size:14px; font-weight:600; color:var(--t1); }
+.result-label { font-size:11px; color:var(--t3); margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.result-floor { font-size:10px; font-weight:700; color:var(--gold); background:rgba(253,208,35,.12); padding:2px 7px; border-radius:6px; white-space:nowrap; flex-shrink:0; }
+.result-empty { padding:16px; color:var(--t3); text-align:center; font-size:13px; }
+
+/* floor tabs */
+#floor-tabs { display:flex; gap:6px; }
+.ftab {
+  flex:1; padding:6px 0; text-align:center;
+  background:var(--card); border:1.5px solid rgba(255,255,255,.08);
+  border-radius:8px; font-size:12px; font-weight:700; color:var(--t3);
+  cursor:pointer; transition:all .15s;
+}
+.ftab.active { background:rgba(70,29,124,.6); border-color:var(--purple); color:var(--gold); }
+
+/* map */
+#map-area { flex:1; overflow:hidden; position:relative; background:#000; touch-action:none; }
+#map-container { position:absolute; transform-origin:0 0; will-change:transform; }
+#map-img { display:block; max-width:none; user-select:none; -webkit-user-drag:none; }
+#path-canvas { position:absolute; top:0; left:0; pointer-events:none; }
+
+/* banner */
+#crossfloor-banner {
+  position:absolute; bottom:0; left:0; right:0;
+  background:rgba(255,159,10,.15); border-top:1px solid rgba(255,159,10,.35);
+  color:var(--amber); font-size:12px; font-weight:500;
+  text-align:center; padding:9px 16px; display:none; pointer-events:none;
+}
+#crossfloor-banner.visible { display:block; }
+
+/* no route */
+#no-route {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  background:rgba(34,28,53,.95); border:1px solid var(--border);
+  border-radius:14px; padding:16px 22px; color:var(--t2);
+  font-size:13px; display:none; pointer-events:none; z-index:20; text-align:center;
+}
+
+/* loading */
+#loading {
+  position:absolute; inset:0; background:var(--bg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; z-index:50;
+}
+#loading.hidden { display:none; }
+.spinner { width:30px; height:30px; border:3px solid var(--card); border-top-color:var(--gold); border-radius:50%; animation:spin .8s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+#loading p { color:var(--t3); font-size:13px; }
+
+/* dest card */
+#dest-card {
+  flex-shrink:0; background:var(--surf); border-top:1px solid var(--border);
+  transform:translateY(100%); transition:transform .28s cubic-bezier(.32,.72,0,1);
+}
+#dest-card.visible { transform:translateY(0); }
+#dest-dept-bar { height:3px; border-radius:0; transition:background .2s; }
+#dest-card-inner { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:12px 14px 14px; }
+#dest-info { flex:1; min-width:0; }
+#dest-room  { font-size:22px; font-weight:800; color:var(--t1); letter-spacing:-.5px; }
+#dest-label { font-size:12px; color:var(--t2); margin-top:2px; }
+#dest-floor { font-size:11px; color:var(--gold); margin-top:4px; font-weight:600; }
+#btn-clear-dest {
+  background:var(--card); border:1.5px solid rgba(255,255,255,.1);
+  border-radius:10px; color:var(--t3); padding:6px 14px;
+  font-size:13px; cursor:pointer; white-space:nowrap; flex-shrink:0;
+}
+#btn-clear-dest:active { border-color:var(--red); color:var(--red); }
+</style>
 </head>
 <body>
 <div id="app">
-
   <div id="topbar">
-    <div id="search-row">
-      <div id="search-wrap">
-        <input id="search-input" type="search" autocomplete="off" autocorrect="off"
-               spellcheck="false" placeholder="Room, course, professor…">
-        <button id="search-clear" aria-label="Clear">✕</button>
-        <div id="results-panel"></div>
+    <div id="hdr-row">
+      <div id="hdr-badge">PFT</div>
+      <div>
+        <div id="hdr-title">Navigator</div>
+        <div id="hdr-sub">Patrick F. Taylor Hall · LSU</div>
       </div>
     </div>
-
+    <div class="route-fields">
+      <div class="route-field" id="field-from">
+        <div class="route-dot dot-from"></div>
+        <input class="route-input" id="input-from" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="From…">
+        <button class="route-field-clear" id="clear-from" aria-label="Clear from">✕</button>
+      </div>
+      <div class="route-connector"></div>
+      <div class="route-field" id="field-to">
+        <div class="route-dot dot-to"></div>
+        <input class="route-input" id="input-to" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="To…">
+        <button class="route-field-clear" id="clear-to" aria-label="Clear to">✕</button>
+      </div>
+    </div>
+    <div id="results-panel"></div>
     <div id="floor-tabs">
       <div class="ftab active" data-floor="1">1F</div>
       <div class="ftab" data-floor="2">2F</div>
       <div class="ftab" data-floor="3">3F</div>
-    </div>
-
-    <div id="debug-toolbar">
-      <label class="debug-toggle">
-        <input type="checkbox" id="toggle-nodes" checked>
-        Nodes
-      </label>
-      <label class="debug-toggle">
-        <input type="checkbox" id="toggle-edges" checked>
-        Edges
-      </label>
-      <label class="debug-toggle">
-        <input type="checkbox" id="toggle-labels" checked>
-        Labels
-      </label>
-      <button id="btn-copy-coords" type="button">Copy coords</button>
-      <div id="debug-readout">Click map…</div>
     </div>
   </div>
 
@@ -50,13 +175,11 @@
     </div>
     <div id="crossfloor-banner"></div>
     <div id="no-route">No path found to this room</div>
-    <div id="loading">
-      <div class="spinner"></div>
-      <p>Loading map…</p>
-    </div>
+    <div id="loading"><div class="spinner"></div><p>Loading…</p></div>
   </div>
 
   <div id="dest-card">
+    <div id="dest-dept-bar"></div>
     <div id="dest-card-inner">
       <div id="dest-info">
         <div id="dest-room">—</div>
@@ -66,7 +189,6 @@
       <button id="btn-clear-dest">Clear</button>
     </div>
   </div>
-
 </div>
 <script src="apps.js" defer></script>
 </body>
