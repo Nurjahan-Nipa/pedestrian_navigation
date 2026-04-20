@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PFT Annotator v20</title>
+<title>PFT Annotator v21</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
@@ -80,7 +80,7 @@ body { font-family: monospace; font-size: 13px; background: #1a1a1a; color: #e0e
     <div class="tab" data-floor="3">3F</div>
   </div>
   <span id="img-status" style="color:#666;font-size:11px;margin-left:8px">Loading floor 1…</span>
-  <span style="color:#555;font-size:11px;margin-left:8px">v20</span>
+  <span style="color:#555;font-size:11px;margin-left:8px">v21</span>
   <label style="margin-left:4px">Mode:</label>
   <div style="display:flex;gap:3px">
     <button class="mode-btn active" data-mode="door">Door</button>
@@ -573,8 +573,8 @@ function buildExport() {
   [1,2,3].forEach(f=>S.edges[f].forEach(([a,b])=>{if(nm[a])nm[a].edges.push(b);if(nm[b])nm[b].edges.push(a);}));
   $('export-area').value=JSON.stringify(all,null,2);
   $('rooms-area').value=JSON.stringify(
-    all.filter(n=>n.type==='door'&&n.roomId)
-       .map(n=>({id:n.roomId,floor:n.floor,label:n.label||n.roomId,doorNode:n.id,keywords:[n.roomId,n.label].filter(Boolean)})),
+    all.filter(n=>n.type==='door'&&n.label)
+       .map(n=>({id:n.roomId||n.id,floor:n.floor,label:n.label||n.roomId||n.id,doorNode:n.id,keywords:[n.roomId,n.label].filter(Boolean)})),
     null,2);
 }
 

@@ -178,6 +178,14 @@ function setupField(inputEl, clearEl, fieldEl, fieldName) {
     const q = inputEl.value.trim();
     clearEl.classList.toggle('visible', q.length > 0);
     if (!q) { showHistoryResults(); return; }
+    // Restroom shortcut: only active on TO field
+    if (fieldName === 'to' && isRestroomQuery(q)) {
+      const rr = nearestRestroom();
+      if (rr) {
+        showSearchResults([rr]);
+        return;
+      }
+    }
     showSearchResults(search(q));
   });
   clearEl.addEventListener('click', () => {
@@ -214,6 +222,36 @@ function search(q) {
     if (score > 0) scored.push({ room, score });
   });
   return scored.sort((a, b) => b.score - a.score).slice(0, 8).map(x => x.room);
+}
+
+function isRestroomQuery(q) {
+  const t = q.toLowerCase().trim();
+  return ['restroom','restrooms','bathroom','bathrooms','toilet','toilets','wc','washroom'].some(k => t.includes(k));
+}
+
+function nearestRestroom() {
+  const startNode = S.nodes[S.startNodeId];
+  const floor = startNode?.floor ?? S.floor;
+
+  // Only consider restrooms on the same floor
+  const restrooms = S.rooms.filter(r =>
+    r.floor === floor && (
+      r.label?.toLowerCase().includes('restroom') ||
+      r.keywords?.some(k => k.toLowerCase().includes('restroom'))
+    )
+  );
+  if (!restrooms.length) return null;
+  if (!startNode) return restrooms[0];
+
+  // Pick nearest by BFS path length
+  let best = null, bestLen = Infinity;
+  for (const rr of restrooms) {
+    if (!rr.doorNode || !S.nodes[rr.doorNode]) continue;
+    const p = bfs(S.startNodeId, rr.doorNode, floor);
+    const len = p ? p.length : Infinity;
+    if (len < bestLen) { bestLen = len; best = rr; }
+  }
+  return best;
 }
 
 function showSearchResults(rooms) {

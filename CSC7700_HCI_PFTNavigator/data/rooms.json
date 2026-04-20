@@ -10,303 +10,6 @@
     ]
   },
   {
-    "id": "1366",
-    "floor": 1,
-    "label": "1366",
-    "doorNode": "1366",
-    "keywords": [
-      "1366"
-    ]
-  },
-  {
-    "id": "1368",
-    "floor": 1,
-    "label": "1368",
-    "doorNode": "1368",
-    "keywords": [
-      "1368"
-    ]
-  },
-  {
-    "id": "1364",
-    "floor": 1,
-    "label": "1364",
-    "doorNode": "1364",
-    "keywords": [
-      "1364"
-    ]
-  },
-  {
-    "id": "1367",
-    "floor": 1,
-    "label": "1367",
-    "doorNode": "1367",
-    "keywords": [
-      "1367"
-    ]
-  },
-  {
-    "id": "1280",
-    "floor": 1,
-    "label": "1280",
-    "doorNode": "1280",
-    "keywords": [
-      "1280"
-    ]
-  },
-  {
-    "id": "1360",
-    "floor": 1,
-    "label": "1360",
-    "doorNode": "1360",
-    "keywords": [
-      "1360"
-    ]
-  },
-  {
-    "id": "1354",
-    "floor": 1,
-    "label": "1354",
-    "doorNode": "1354",
-    "keywords": [
-      "1354"
-    ]
-  },
-  {
-    "id": "1327",
-    "floor": 1,
-    "label": "1327",
-    "doorNode": "1327",
-    "keywords": [
-      "1327"
-    ]
-  },
-  {
-    "id": "1350",
-    "floor": 1,
-    "label": "1350",
-    "doorNode": "1350",
-    "keywords": [
-      "1350"
-    ]
-  },
-  {
-    "id": "1357",
-    "floor": 1,
-    "label": "1357",
-    "doorNode": "1357",
-    "keywords": [
-      "1357"
-    ]
-  },
-  {
-    "id": "1355",
-    "floor": 1,
-    "label": "1355",
-    "doorNode": "1355",
-    "keywords": [
-      "1355"
-    ]
-  },
-  {
-    "id": "1358",
-    "floor": 1,
-    "label": "1358",
-    "doorNode": "1358",
-    "keywords": [
-      "1358"
-    ]
-  },
-  {
-    "id": "1356",
-    "floor": 1,
-    "label": "1356",
-    "doorNode": "1356",
-    "keywords": [
-      "1356"
-    ]
-  },
-  {
-    "id": "1329",
-    "floor": 1,
-    "label": "1329",
-    "doorNode": "1329",
-    "keywords": [
-      "1329"
-    ]
-  },
-  {
-    "id": "1331",
-    "floor": 1,
-    "label": "1331",
-    "doorNode": "1331",
-    "keywords": [
-      "1331"
-    ]
-  },
-  {
-    "id": "1636",
-    "floor": 1,
-    "label": "1636",
-    "doorNode": "1636",
-    "keywords": [
-      "1636"
-    ]
-  },
-  {
-    "id": "1324",
-    "floor": 1,
-    "label": "1324",
-    "doorNode": "1324",
-    "keywords": [
-      "1324"
-    ]
-  },
-  {
-    "id": "1322",
-    "floor": 1,
-    "label": "1322",
-    "doorNode": "1322",
-    "keywords": [
-      "1322"
-    ]
-  },
-  {
-    "id": "1325",
-    "floor": 1,
-    "label": "1325",
-    "doorNode": "1325",
-    "keywords": [
-      "1325"
-    ]
-  },
-  {
-    "id": "1323",
-    "floor": 1,
-    "label": "1323",
-    "doorNode": "1323",
-    "keywords": [
-      "1323"
-    ]
-  },
-  {
-    "id": "1330",
-    "floor": 1,
-    "label": "1330",
-    "doorNode": "1330",
-    "keywords": [
-      "1330"
-    ]
-  },
-  {
-    "id": "1321",
-    "floor": 1,
-    "label": "1321",
-    "doorNode": "1321",
-    "keywords": [
-      "1321"
-    ]
-  },
-  {
-    "id": "1317",
-    "floor": 1,
-    "label": "1317",
-    "doorNode": "1317",
-    "keywords": [
-      "1317"
-    ]
-  },
-  {
-    "id": "1317A",
-    "floor": 1,
-    "label": "1317A",
-    "doorNode": "1317A",
-    "keywords": [
-      "1317A"
-    ]
-  },
-  {
-    "id": "1312",
-    "floor": 1,
-    "label": "1312",
-    "doorNode": "1312",
-    "keywords": [
-      "1312"
-    ]
-  },
-  {
-    "id": "1307",
-    "floor": 1,
-    "label": "1307",
-    "doorNode": "1307",
-    "keywords": [
-      "1307"
-    ]
-  },
-  {
-    "id": "1100R",
-    "floor": 1,
-    "label": "1100R",
-    "doorNode": "1100R",
-    "keywords": [
-      "1100R"
-    ]
-  },
-  {
-    "id": "1300",
-    "floor": 1,
-    "label": "1300",
-    "doorNode": "1300",
-    "keywords": [
-      "1300"
-    ]
-  },
-  {
-    "id": "1245",
-    "floor": 1,
-    "label": "1245",
-    "doorNode": "1245",
-    "keywords": [
-      "1245"
-    ]
-  },
-  {
-    "id": "1342",
-    "floor": 1,
-    "label": "1342",
-    "doorNode": "1342",
-    "keywords": [
-      "1342"
-    ]
-  },
-  {
-    "id": "1340",
-    "floor": 1,
-    "label": "1340",
-    "doorNode": "1340",
-    "keywords": [
-      "1340"
-    ]
-  },
-  {
-    "id": "1344",
-    "floor": 1,
-    "label": "1344",
-    "doorNode": "1344",
-    "keywords": [
-      "1344"
-    ]
-  },
-  {
-    "id": "1278",
-    "floor": 1,
-    "label": "1278",
-    "doorNode": "1278",
-    "keywords": [
-      "1278"
-    ]
-  },
-  {
     "id": "1518",
     "floor": 1,
     "label": "Restroom",
@@ -324,51 +27,6 @@
     "keywords": [
       "1371",
       "Restroom"
-    ]
-  },
-  {
-    "id": "1232",
-    "floor": 1,
-    "label": "1232",
-    "doorNode": "1232",
-    "keywords": [
-      "1232"
-    ]
-  },
-  {
-    "id": "1236",
-    "floor": 1,
-    "label": "1236",
-    "doorNode": "1236",
-    "keywords": [
-      "1236"
-    ]
-  },
-  {
-    "id": "1240",
-    "floor": 1,
-    "label": "1240",
-    "doorNode": "1240",
-    "keywords": [
-      "1240"
-    ]
-  },
-  {
-    "id": "1244",
-    "floor": 1,
-    "label": "1244",
-    "doorNode": "1244",
-    "keywords": [
-      "1244"
-    ]
-  },
-  {
-    "id": "1246",
-    "floor": 1,
-    "label": "1246",
-    "doorNode": "1246",
-    "keywords": [
-      "1246"
     ]
   },
   {
@@ -392,60 +50,6 @@
     ]
   },
   {
-    "id": "1218",
-    "floor": 1,
-    "label": "1218",
-    "doorNode": "1218",
-    "keywords": [
-      "1218"
-    ]
-  },
-  {
-    "id": "1216",
-    "floor": 1,
-    "label": "1216",
-    "doorNode": "1216",
-    "keywords": [
-      "1216"
-    ]
-  },
-  {
-    "id": "1212",
-    "floor": 1,
-    "label": "1212",
-    "doorNode": "1212",
-    "keywords": [
-      "1212"
-    ]
-  },
-  {
-    "id": "1253",
-    "floor": 1,
-    "label": "1253",
-    "doorNode": "1253",
-    "keywords": [
-      "1253"
-    ]
-  },
-  {
-    "id": "1208",
-    "floor": 1,
-    "label": "1208",
-    "doorNode": "1208",
-    "keywords": [
-      "1208"
-    ]
-  },
-  {
-    "id": "1206",
-    "floor": 1,
-    "label": "1206",
-    "doorNode": "1206",
-    "keywords": [
-      "1206"
-    ]
-  },
-  {
     "id": "1106",
     "floor": 1,
     "label": "Restroom",
@@ -456,123 +60,6 @@
     ]
   },
   {
-    "id": "1112",
-    "floor": 1,
-    "label": "1112",
-    "doorNode": "1112",
-    "keywords": [
-      "1112"
-    ]
-  },
-  {
-    "id": "1114",
-    "floor": 1,
-    "label": "1114",
-    "doorNode": "1114",
-    "keywords": [
-      "1114"
-    ]
-  },
-  {
-    "id": "1150",
-    "floor": 1,
-    "label": "1150",
-    "doorNode": "1150",
-    "keywords": [
-      "1150"
-    ]
-  },
-  {
-    "id": "1148",
-    "floor": 1,
-    "label": "1148",
-    "doorNode": "1148",
-    "keywords": [
-      "1148"
-    ]
-  },
-  {
-    "id": "1146",
-    "floor": 1,
-    "label": "1146",
-    "doorNode": "1146",
-    "keywords": [
-      "1146"
-    ]
-  },
-  {
-    "id": "1147",
-    "floor": 1,
-    "label": "1147",
-    "doorNode": "1147",
-    "keywords": [
-      "1147"
-    ]
-  },
-  {
-    "id": "1145",
-    "floor": 1,
-    "label": "1145",
-    "doorNode": "1145",
-    "keywords": [
-      "1145"
-    ]
-  },
-  {
-    "id": "1143",
-    "floor": 1,
-    "label": "1143",
-    "doorNode": "1143",
-    "keywords": [
-      "1143"
-    ]
-  },
-  {
-    "id": "1139",
-    "floor": 1,
-    "label": "1139",
-    "doorNode": "1139",
-    "keywords": [
-      "1139"
-    ]
-  },
-  {
-    "id": "1137",
-    "floor": 1,
-    "label": "1137",
-    "doorNode": "1137",
-    "keywords": [
-      "1137"
-    ]
-  },
-  {
-    "id": "1135",
-    "floor": 1,
-    "label": "1135",
-    "doorNode": "1135",
-    "keywords": [
-      "1135"
-    ]
-  },
-  {
-    "id": "1133",
-    "floor": 1,
-    "label": "1133",
-    "doorNode": "1133",
-    "keywords": [
-      "1133"
-    ]
-  },
-  {
-    "id": "1131",
-    "floor": 1,
-    "label": "1131",
-    "doorNode": "1131",
-    "keywords": [
-      "1131"
-    ]
-  },
-  {
     "id": "1127",
     "floor": 1,
     "label": "Restroom",
@@ -580,213 +67,6 @@
     "keywords": [
       "1127",
       "Restroom"
-    ]
-  },
-  {
-    "id": "1108",
-    "floor": 1,
-    "label": "1108",
-    "doorNode": "1108",
-    "keywords": [
-      "1108"
-    ]
-  },
-  {
-    "id": "1124",
-    "floor": 1,
-    "label": "1124",
-    "doorNode": "1124",
-    "keywords": [
-      "1124"
-    ]
-  },
-  {
-    "id": "1126",
-    "floor": 1,
-    "label": "1126",
-    "doorNode": "1126",
-    "keywords": [
-      "1126"
-    ]
-  },
-  {
-    "id": "1144",
-    "floor": 1,
-    "label": "1144",
-    "doorNode": "1144",
-    "keywords": [
-      "1144"
-    ]
-  },
-  {
-    "id": "1142",
-    "floor": 1,
-    "label": "1142",
-    "doorNode": "1142",
-    "keywords": [
-      "1142"
-    ]
-  },
-  {
-    "id": "1140",
-    "floor": 1,
-    "label": "1140",
-    "doorNode": "1140",
-    "keywords": [
-      "1140"
-    ]
-  },
-  {
-    "id": "1138",
-    "floor": 1,
-    "label": "1138",
-    "doorNode": "1138",
-    "keywords": [
-      "1138"
-    ]
-  },
-  {
-    "id": "1134",
-    "floor": 1,
-    "label": "1134",
-    "doorNode": "1134",
-    "keywords": [
-      "1134"
-    ]
-  },
-  {
-    "id": "1132",
-    "floor": 1,
-    "label": "1132",
-    "doorNode": "1132",
-    "keywords": [
-      "1132"
-    ]
-  },
-  {
-    "id": "1130",
-    "floor": 1,
-    "label": "1130",
-    "doorNode": "1130",
-    "keywords": [
-      "1130"
-    ]
-  },
-  {
-    "id": "1154",
-    "floor": 1,
-    "label": "1154",
-    "doorNode": "1154",
-    "keywords": [
-      "1154"
-    ]
-  },
-  {
-    "id": "1233",
-    "floor": 1,
-    "label": "1233",
-    "doorNode": "1233",
-    "keywords": [
-      "1233"
-    ]
-  },
-  {
-    "id": "1237",
-    "floor": 1,
-    "label": "1237",
-    "doorNode": "1237",
-    "keywords": [
-      "1237"
-    ]
-  },
-  {
-    "id": "1272",
-    "floor": 1,
-    "label": "1272",
-    "doorNode": "1272",
-    "keywords": [
-      "1272"
-    ]
-  },
-  {
-    "id": "1257",
-    "floor": 1,
-    "label": "1257",
-    "doorNode": "1257",
-    "keywords": [
-      "1257"
-    ]
-  },
-  {
-    "id": "1259",
-    "floor": 1,
-    "label": "1259",
-    "doorNode": "1259",
-    "keywords": [
-      "1259"
-    ]
-  },
-  {
-    "id": "1258",
-    "floor": 1,
-    "label": "1258",
-    "doorNode": "1258",
-    "keywords": [
-      "1258"
-    ]
-  },
-  {
-    "id": "1262",
-    "floor": 1,
-    "label": "1262",
-    "doorNode": "1262",
-    "keywords": [
-      "1262"
-    ]
-  },
-  {
-    "id": "1263",
-    "floor": 1,
-    "label": "1263",
-    "doorNode": "1263",
-    "keywords": [
-      "1263"
-    ]
-  },
-  {
-    "id": "1202",
-    "floor": 1,
-    "label": "1202",
-    "doorNode": "1202",
-    "keywords": [
-      "1202"
-    ]
-  },
-  {
-    "id": "1200",
-    "floor": 1,
-    "label": "1200",
-    "doorNode": "1200",
-    "keywords": [
-      "1200"
-    ]
-  },
-  {
-    "id": "1221",
-    "floor": 1,
-    "label": "1221",
-    "doorNode": "1221",
-    "keywords": [
-      "1221"
-    ]
-  },
-  {
-    "id": "1225",
-    "floor": 1,
-    "label": "1225",
-    "doorNode": "1225",
-    "keywords": [
-      "1225"
     ]
   },
   {
@@ -1017,16 +297,6 @@
     "keywords": [
       "2348",
       "room 2348 door"
-    ]
-  },
-  {
-    "id": "2301",
-    "floor": 2,
-    "label": "Restroom",
-    "doorNode": "w_d2_2301",
-    "keywords": [
-      "2301",
-      "Restroom"
     ]
   },
   {
@@ -1297,16 +567,6 @@
     "keywords": [
       "2272",
       "room 2272 door"
-    ]
-  },
-  {
-    "id": "2410A",
-    "floor": 2,
-    "label": "room 2410A door",
-    "doorNode": "w_d2_2410A",
-    "keywords": [
-      "2410A",
-      "room 2410A door"
     ]
   },
   {
@@ -1770,6 +1030,15 @@
     ]
   },
   {
+    "id": "w_d2_2255",
+    "floor": 2,
+    "label": "Restroom",
+    "doorNode": "w_d2_2255",
+    "keywords": [
+      "Restroom"
+    ]
+  },
+  {
     "id": "3320",
     "floor": 3,
     "label": "room 3320 door",
@@ -2057,6 +1326,15 @@
     "keywords": [
       "3202",
       "room 3202 door"
+    ]
+  },
+  {
+    "id": "w_d3_31",
+    "floor": 3,
+    "label": "room 3204 door",
+    "doorNode": "w_d3_31",
+    "keywords": [
+      "room 3204 door"
     ]
   },
   {
@@ -2457,6 +1735,56 @@
     "keywords": [
       "3107",
       "room 3107 door"
+    ]
+  },
+  {
+    "id": "3203",
+    "floor": 3,
+    "label": "Restroom",
+    "doorNode": "3203",
+    "keywords": [
+      "3203",
+      "Restroom"
+    ]
+  },
+  {
+    "id": "3117",
+    "floor": 3,
+    "label": "Restroom",
+    "doorNode": "3117",
+    "keywords": [
+      "3117",
+      "Restroom"
+    ]
+  },
+  {
+    "id": "3273",
+    "floor": 3,
+    "label": "Restroom",
+    "doorNode": "3273",
+    "keywords": [
+      "3273",
+      "Restroom"
+    ]
+  },
+  {
+    "id": "3327",
+    "floor": 3,
+    "label": "Restroom",
+    "doorNode": "3327",
+    "keywords": [
+      "3327",
+      "Restroom"
+    ]
+  },
+  {
+    "id": "3303",
+    "floor": 3,
+    "label": "Restroom",
+    "doorNode": "3303",
+    "keywords": [
+      "3303",
+      "Restroom"
     ]
   }
 ]
